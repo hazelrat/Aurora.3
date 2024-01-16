@@ -33,13 +33,11 @@
 	// Opens the wiring panel. Required to hack it!
 	if(W.isscrewdriver() && !open)
 		wiringopen = !wiringopen
-		to_chat(user, "You [open ? "open" : "close"] the wiring panel.")
+		to_chat(user, "You [wiringopen ? "open" : "close"] the wiring panel.")
 		return
 
 	// Hacking.
-	if (wiringopen)
-		if(W.iswirecutter() || W.ismultitool())
-
+	if(W.iswirecutter() || W.ismultitool())
 			if(wiringopen)
 				wires.interact(user)
 			else
