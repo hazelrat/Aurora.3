@@ -38,11 +38,11 @@
 
 	// Hacking.
 	if(W.iswirecutter() || W.ismultitool())
-			if(wiringopen)
-				wires.interact(user)
-			else
-				to_chat(user, "You can't reach the wiring.")
-
+		if(wiringopen)
+			wires.interact(user)
+			return
+		else
+			to_chat(user, "You can't reach the wiring.")
 			return
 
 	// Opens the access panel. Can only be done if unlocked!
