@@ -33,7 +33,7 @@
 	// Opens the wiring panel. Required to hack it!
 	if(W.isscrewdriver() && !open)
 
-		wiringopen = !wiring open
+		wiringopen = !wiringopen
 		to_chat(user, "You [wiringopen ? "open" : "close"] the wiring panel.")
 		return
 
