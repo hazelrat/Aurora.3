@@ -30,6 +30,24 @@
 		to_chat(user, "You [locked ? "lock" : "unlock"] \the [src] access panel.")
 		return
 
+	// Opens the wiring panel. Required to hack it!
+	if(W.isscrewdriver() && !open)
+
+		wiringopen = !wiring open
+		to_chat(user, "You [wiringopen ? "open" : "close"] the wiring panel.")
+		return
+
+	// Hacking.
+	if(W.iswirecutter() || W.ismultitool())
+
+		if(wiringopen)
+			wires.interact(user)
+		else
+			to_chat(user, "You can't reach the wiring.")
+
+		return
+
+	// Opens the access panel. Can only be done if unlocked!
 	else if(W.iscrowbar())
 
 		if(!open && locked)
@@ -41,16 +59,6 @@
 		return
 
 	if(open)
-
-		// Hacking.
-		if(W.iswirecutter() || W.ismultitool())
-
-			if(open)
-				wires.interact(user)
-			else
-				to_chat(user, "You can't reach the wiring.")
-
-			return
 		// Air tank.
 		if(istype(W,/obj/item/tank)) //Todo, some kind of check for suits without integrated air supplies.
 

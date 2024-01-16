@@ -71,6 +71,7 @@
 	var/list/installed_modules = list()                       // Power consumption/use bookkeeping.
 
 	// Rig status vars.
+	var/wiringopen = 0                                        // Wiring panel status.
 	var/open = 0                                              // Access panel status.
 	var/locked = 1                                            // Lock status.
 	var/dnaLock                                               // To whom do we belong?
