@@ -60,6 +60,6 @@
 	if(!..())
 		return FALSE
 	var/obj/item/rig/rig = holder
-	if(rig.open)
+	if(rig.wiringopen)
 		return TRUE
 	return FALSE
