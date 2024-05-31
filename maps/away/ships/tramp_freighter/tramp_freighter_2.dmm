@@ -152,14 +152,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/tramp_freighter/lounge)
 "gk" = (
-,
 /obj/effect/floor_decal/carpet{
 	dir = 1
 	},
 /turf/simulated/floor/carpet,
 /area/tramp_freighter/crew_quarters)
 "hi" = (
-,
 /obj/effect/floor_decal/carpet{
 	dir = 8
 	},
@@ -189,7 +187,6 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/tramp_freighter/kitchen)
 "jZ" = (
-,
 /obj/machinery/hologram/holopad/long_range,
 /obj/effect/overmap/visitable/ship/tramp_freighter,
 /obj/effect/floor_decal/industrial/outline/security,
@@ -612,7 +609,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/tramp_freighter/armory)
 "nr" = (
-,
 /obj/effect/floor_decal/industrial/hatch/grey,
 /obj/machinery/computer/ship/engines/terminal{
 	dir = 8
@@ -645,10 +641,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tramp_freighter/centralhallway)
-"nE" = (
-,
-/turf/space,
-/area/shuttle/freighter_shuttle)
 "nI" = (
 /obj/structure/bed/stool/chair/sofa/left/brown,
 /obj/item/gamehelm/red{
@@ -1015,11 +1007,6 @@
 /obj/effect/shuttle_landmark/freighter_shuttle/transit,
 /turf/space,
 /area/space)
-"qm" = (
-,
-/obj/structure/table/steel,
-/turf/simulated/floor/carpet/rubber,
-/area/tramp_freighter/bridge)
 "qs" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -2902,7 +2889,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/freighter_shuttle)
 "CZ" = (
-,
 /obj/effect/floor_decal/carpet{
 	dir = 8
 	},
@@ -3054,7 +3040,6 @@
 /turf/simulated/floor/carpet/rubber,
 /area/tramp_freighter/cargo)
 "DN" = (
-,
 /obj/effect/floor_decal/carpet{
 	dir = 4
 	},
@@ -6448,7 +6433,6 @@
 /turf/simulated/floor/carpet/rubber,
 /area/tramp_freighter/bridge)
 "Zt" = (
-,
 /obj/structure/table/wood,
 /turf/simulated/floor/carpet,
 /area/tramp_freighter/crew_quarters)
@@ -38786,7 +38770,7 @@ Ku
 Ku
 Ku
 TY
-nE
+xG
 Pu
 KM
 Dq
@@ -39610,10 +39594,10 @@ Zl
 vB
 fh
 UL
-qm
+wg
 mY
 Kg
-qm
+wg
 uh
 Ku
 Ku
