@@ -3371,10 +3371,6 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/tramp_freighter/power)
-"qJ" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark/full,
-/area/space)
 "qN" = (
 /obj/effect/shuttle_landmark/tramp_freighter/nav2,
 /turf/template_noop,
@@ -6833,6 +6829,7 @@
 /obj/item/roller,
 /obj/item/reagent_containers/blood/OMinus,
 /obj/item/reagent_containers/blood/OMinus,
+/obj/item/storage/box/bodybags,
 /turf/simulated/floor/tiled/dark/full,
 /area/tramp_freighter/cargo)
 "HC" = (
@@ -63165,9 +63162,9 @@ Eo
 Eo
 Eo
 ji
-qJ
-qJ
-qJ
+Rm
+ao
+kT
 ji
 Eo
 Eo
@@ -63422,9 +63419,9 @@ Eo
 Eo
 Eo
 ji
-qJ
-qJ
-qJ
+aC
+Um
+Um
 ji
 Eo
 Eo
