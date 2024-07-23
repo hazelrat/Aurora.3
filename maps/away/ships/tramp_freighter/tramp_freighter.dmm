@@ -490,6 +490,12 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/ridged,
 /area/tramp_freighter/starboardthrust)
+"ce" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "cf" = (
 /obj/machinery/mineral/stacking_machine,
 /turf/simulated/floor/plating,
@@ -965,17 +971,25 @@
 /area/shuttle/freighter_shuttle)
 "eq" = (
 /obj/structure/table/steel,
-/obj/item/storage/bag/inflatable,
-/obj/item/storage/bag/inflatable,
-/obj/item/storage/bag/inflatable,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/tank/jetpack/oxygen,
-/obj/item/tank/jetpack/oxygen,
-/obj/item/tank/jetpack/oxygen,
-/obj/item/tank/jetpack/oxygen,
+/obj/item/tank/jetpack/oxygen{
+	pixel_x = 6
+	},
+/obj/item/storage/bag/inflatable{
+	pixel_x = -9;
+	pixel_y = 6
+	},
+/obj/item/storage/bag/inflatable{
+	pixel_x = -9;
+	pixel_y = 6
+	},
+/obj/item/storage/bag/inflatable{
+	pixel_x = -9;
+	pixel_y = 6
+	},
 /turf/simulated/floor/carpet/rubber,
 /area/tramp_freighter/equipment)
 "eu" = (
@@ -2993,6 +3007,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/tramp_freighter/disposals)
+"oC" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "oL" = (
 /obj/effect/floor_decal/corner/dark_green{
 	dir = 5
@@ -4180,6 +4198,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/tramp_freighter/crew_quarters)
+"up" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "uq" = (
 /obj/effect/floor_decal/corner/dark_green{
 	dir = 5
@@ -6370,6 +6394,12 @@
 	},
 /turf/simulated/wall/shuttle/space_ship,
 /area/tramp_freighter/power)
+"EY" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "Fi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -7095,6 +7125,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tramp_freighter/port_docking)
+"IO" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "IQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	dir = 4;
@@ -7198,6 +7234,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/tramp_freighter/afthallway)
+"Jv" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "Jw" = (
 /obj/machinery/cryopod,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -8113,8 +8155,9 @@
 	pixel_y = 3
 	},
 /obj/item/stack/material/plastic/full,
-/obj/item/storage/belt/utility,
 /obj/item/stack/material/plasteel/full,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
 /turf/simulated/floor/carpet/rubber,
 /area/tramp_freighter/engi)
 "NW" = (
@@ -8514,14 +8557,15 @@
 	pixel_y = 9
 	},
 /obj/item/reagent_containers/pill/corophenidate{
-	pixel_y = -2
+	pixel_y = -2;
+	pixel_x = -7
 	},
 /obj/item/reagent_containers/pill/corophenidate{
 	pixel_x = 7;
 	pixel_y = 5
 	},
 /obj/item/reagent_containers/pill/corophenidate{
-	pixel_x = 15;
+	pixel_x = 6;
 	pixel_y = -1
 	},
 /turf/simulated/floor/carpet/rubber,
@@ -8579,7 +8623,6 @@
 /obj/random/melee,
 /obj/random/melee,
 /obj/random/melee,
-/obj/random/melee/highvalue,
 /obj/random/civgun/rifle,
 /obj/random/civgun,
 /obj/random/civgun,
@@ -9461,6 +9504,12 @@
 /obj/effect/map_effect/marker/airlock/docking/tramp_freighter/starboard_berth,
 /turf/simulated/floor/plating,
 /area/tramp_freighter/starboard_docking)
+"Ut" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "Uu" = (
 /obj/effect/floor_decal/industrial/hatch/grey,
 /obj/effect/decal/cleanable/dirt,
@@ -10071,6 +10120,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark/full,
 /area/tramp_freighter/centralhallway)
+"WE" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "WF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
@@ -62129,19 +62184,19 @@ hX
 hX
 hX
 hX
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
+Jv
+IO
+IO
+IO
+IO
+IO
+IO
+IO
+IO
+IO
+IO
+IO
+WE
 hX
 hX
 hX
@@ -62386,7 +62441,7 @@ hX
 hX
 hX
 hX
-ji
+ce
 Eo
 Eo
 Eo
@@ -62398,7 +62453,7 @@ ji
 Eo
 Eo
 Eo
-ji
+oC
 hX
 hX
 hX
@@ -62643,7 +62698,7 @@ hX
 hX
 hX
 hX
-ji
+ce
 Eo
 Eo
 Eo
@@ -62655,7 +62710,7 @@ ji
 Eo
 Eo
 Eo
-ji
+oC
 hX
 hX
 hX
@@ -62900,6 +62955,7 @@ hX
 hX
 hX
 hX
+ce
 ji
 ji
 ji
@@ -62911,8 +62967,7 @@ ji
 ji
 ji
 ji
-ji
-ji
+oC
 hX
 hX
 hX
@@ -63157,7 +63212,7 @@ hX
 hX
 hX
 hX
-ji
+ce
 Eo
 Eo
 Eo
@@ -63169,7 +63224,7 @@ ji
 Eo
 Eo
 Eo
-ji
+oC
 hX
 hX
 hX
@@ -63414,7 +63469,7 @@ hX
 hX
 hX
 hX
-ji
+ce
 Eo
 Eo
 Eo
@@ -63426,7 +63481,7 @@ ji
 Eo
 Eo
 Eo
-ji
+oC
 hX
 hX
 hX
@@ -63671,6 +63726,7 @@ hX
 hX
 hX
 hX
+ce
 ji
 ji
 ji
@@ -63682,8 +63738,7 @@ ji
 ji
 ji
 ji
-ji
-ji
+oC
 hX
 hX
 hX
@@ -63928,7 +63983,7 @@ hX
 hX
 hX
 hX
-ji
+ce
 Eo
 Eo
 Eo
@@ -63940,7 +63995,7 @@ ji
 Eo
 Eo
 Eo
-ji
+oC
 hX
 hX
 hX
@@ -64185,7 +64240,7 @@ hX
 hX
 hX
 hX
-ji
+ce
 Eo
 Eo
 Eo
@@ -64197,7 +64252,7 @@ ji
 Eo
 Eo
 Eo
-ji
+oC
 hX
 hX
 hX
@@ -64442,19 +64497,19 @@ hX
 hX
 hX
 hX
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
-ji
+up
+EY
+EY
+EY
+EY
+EY
+EY
+EY
+EY
+EY
+EY
+EY
+Ut
 hX
 hX
 hX
