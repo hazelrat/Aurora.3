@@ -16,6 +16,7 @@
 	environment_smash = 1
 	attack_sound = 'sound/weapons/pierce.ogg'
 	can_repair = TRUE
+	//Harvesters are endgame stuff, no harm giving them construct spells
 	construct_spells = list(
 			/spell/aoe_turf/cultify_area,
 			/spell/targeted/harvest,
@@ -30,6 +31,14 @@
 			/spell/aoe_turf/conjure/pylon,
 			/spell/aoe_turf/conjure/forcewall/lesser
 		)
-	//Harvesters are endgame stuff, no harm giving them construct spells
+
+	construct_armor = list(
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_LASER_MINOR,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_RESISTANT
+	)
 
 	flying = TRUE

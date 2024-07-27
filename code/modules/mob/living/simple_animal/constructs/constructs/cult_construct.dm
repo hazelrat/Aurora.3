@@ -40,6 +40,15 @@
 	var/list/construct_spells = list()
 	var/can_repair = FALSE
 
+	var/list/construct_armor = list(
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_LASER_MINOR,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_RESISTANT
+	)
+
 	var/health_prefix = ""
 	appearance_flags = NO_CLIENT_COLOR|KEEP_TOGETHER
 
@@ -55,6 +64,7 @@
 
 /mob/living/simple_animal/construct/Initialize()
 	. = ..()
+	AddComponent(/datum/component/armor, construct_armor)
 	var/static/list/construct_descriptors = list("lumbering", "ponderous", "rumbling", "sleek", "solid", "ephemeral", "dense", "shimmering", "dull", "glittering", "shining", "sluggish", "quiet", "ominious", "weighty", "mysterious")
 	name = "[capitalize(pick(construct_descriptors))] [initial(name)]"
 	real_name = name
