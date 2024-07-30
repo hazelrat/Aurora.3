@@ -31,14 +31,16 @@
 			/spell/aoe_turf/conjure/pylon,
 			/spell/aoe_turf/conjure/forcewall/lesser
 		)
+<<<<<<< Updated upstream
+	//Harvesters are endgame stuff, no harm giving them construct spells
+=======
 
 	construct_armor = list(
 		melee = ARMOR_MELEE_RESISTANT,
 		bullet = ARMOR_BALLISTIC_MINOR,
 		laser = ARMOR_LASER_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
-		bio = ARMOR_BIO_SHIELDED,
-		rad = ARMOR_RAD_RESISTANT
+		bomb = ARMOR_BOMB_PADDED
 	)
+>>>>>>> Stashed changes
 
 	flying = TRUE
