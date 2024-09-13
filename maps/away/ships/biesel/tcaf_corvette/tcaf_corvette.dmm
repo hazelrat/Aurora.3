@@ -8793,12 +8793,12 @@
 /turf/simulated/wall/shuttle/legion,
 /area/shuttle/tcaf)
 "Vb" = (
-/obj/machinery/computer/ship/navigation/terminal{
-	dir = 8
-	},
 /obj/structure/railing/mapped,
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/machinery/computer/ship/helm/terminal{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/ridged,
 /area/tcaf_corvette/cic)
