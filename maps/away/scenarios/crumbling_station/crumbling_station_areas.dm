@@ -7,6 +7,13 @@
 	holomap_color = "#2c301f"
 	area_blurb = "The air reeks of damp stagnancy and something faintly like a distant rot. The noises of small mechanical faults emanate from every direction - the hissing of pressurised air most of them all - and scuttering can be heard in the walls. This place is old, and the years have not been kind to it."
 
+// For the asteroid bits.
+/area/crumbling_station/asteroid
+	name = "Asteroid Interior"
+	icon_state = "exterior"
+	requires_power = FALSE
+	holomap_color = "#1c1c1c"
+
 // Docking.
 /area/crumbling_station/docking
 	icon_state = "dk_yellow"
