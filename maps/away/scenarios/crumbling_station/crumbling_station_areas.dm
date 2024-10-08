@@ -9,10 +9,15 @@
 
 // For the asteroid bits.
 /area/crumbling_station/asteroid
-	name = "Asteroid Interior"
 	icon_state = "exterior"
 	requires_power = FALSE
 	holomap_color = "#1c1c1c"
+
+/area/crumbling_station/asteroid/exterior
+	name = "Asteroid Exterior"
+
+/area/crumbling_station/asteroid/interior
+	name = "Asteroid Interior"
 
 // Docking.
 /area/crumbling_station/docking
@@ -58,6 +63,15 @@
 /area/crumbling_station/service/shop
 	name = "Station Commissary"
 
+/area/crumbling_station/service/shop_storage
+	name = "Station Commissary Storage"
+
+/area/crumbling_station/service/utilities
+	name = "Utilities Closet"
+
+/area/crumbling_station/service/disposals
+	name = "Disposals"
+
 // Public areas and crew quarters.
 /area/crumbling_station/civilian
 	icon_state = "yellow"
@@ -92,3 +106,130 @@
 /area/crumbling_station/civilian/quarters_7
 	name = "Private Habitation Unit #7"
 
+// Medical
+/area/crumbling_station/medical
+	icon_state = "medbay"
+
+/area/crumbling_station/medical/lobby
+	name = "Medical Lobby"
+
+/area/crumbling_station/medical/hallway
+	name = "Medical Hallway"
+
+/area/crumbling_station/medical/gtr
+	name = "General Treatment Room"
+
+/area/crumbling_station/medical/surgery
+	name = "Operating Theatre"
+
+/area/crumbling_station/medical/pharmacy
+	name = "Pharmacy"
+
+/area/crumbling_station/medical/recovery1
+	name = "Recovery Room #1"
+
+/area/crumbling_station/medical/recovery2
+	name = "Recovery Room #2"
+
+// Maintenance
+/area/crumbling_station/maints
+	icon_state = "maintenance"
+
+/area/crumbling_station/maints/medical
+	name = "Medical Maintenance"
+
+/area/crumbling_station/maints/custodial
+	name = "Custodial Maintenance"
+
+/area/crumbling_station/maints/civilian
+	name = "Civilian Maintenance"
+
+/area/crumbling_station/maints/hydroponics
+	name = "Hydroponics Maintenance"
+
+/area/crumbling_station/maints/security
+	name = "Security Maintenance"
+
+/area/crumbling_station/maints/solar1
+	name = "Solar Array #1 Maintenance"
+
+/area/crumbling_station/maints/solar2
+	name = "Solar Array #2 Maintenance"
+
+/area/crumbling_station/maints/reactor
+	name = "Reactor Maintenance"
+
+/area/crumbling_station/maints/engi
+	name = "Engineering Maintenance"
+
+/area/crumbling_station/maints/disposals
+	name = "Disposals Maintenance"
+
+/area/crumbling_station/maints/auxiliary
+	name = "Auxiliary Supplies"
+
+/area/crumbling_station/maints/radiator
+	name = "Radiator Access Maintenance"
+
+/area/crumbling_station/maints/atmospherics
+	name = "Auxiliary Atmospherics"
+
+// Security
+/area/crumbling_station/security
+	icon_state = "security"
+
+/area/crumbling_station/security/ready
+	name = "Security Ready Room"
+
+/area/crumbling_station/security/brig
+	name = "Brig"
+
+/area/crumbling_station/security/hallway
+	name = "Security Hallway"
+
+// Command
+/area/crumbling_station/command
+	icon_state = "bridge"
+
+/area/crumbling_station/command/foyer
+	name = "Command Foyer"
+
+/area/crumbling_station/command/lounge
+	name = "Command Lounge"
+
+/area/crumbling_station/command/vault
+	name = "Secure Storage"
+
+/area/crumbling_station/command/control
+	name = "Control Room"
+
+/area/crumbling_station/command/administrator
+	name = "Administrator's Office"
+
+/area/crumbling_station/command/washroom
+	name = "Privileged Washroom"
+
+// Engineering
+/area/crumbling_station/engi
+	icon_state = "engineering"
+
+/area/crumbling_station/engi/lobby
+	name = "Engineering Lobby"
+
+/area/crumbling_station/engi/hallway
+	name = "Engineering Hallway"
+
+/area/crumbling_station/engi/storage
+	name = "Engineering Storage"
+
+/area/crumbling_station/engi/atmospherics
+	name = "Atmospherics"
+
+/area/crumbling_station/engi/hard_storage
+	name = "Hard Storage"
+
+/area/crumbling_station/engi/reactor
+	name = "Supermatter Reactor"
+
+/area/crumbling_station/engi/workshop
+	name = "Workshop"
