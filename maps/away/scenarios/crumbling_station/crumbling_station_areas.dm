@@ -174,6 +174,9 @@
 /area/crumbling_station/maints/atmospherics
 	name = "Auxiliary Atmospherics"
 
+/area/crumbling_station/maints/hangar
+	name = "Auxiliary Hangar"
+
 // Security
 /area/crumbling_station/security
 	icon_state = "security"
@@ -193,9 +196,6 @@
 
 /area/crumbling_station/command/foyer
 	name = "Command Foyer"
-
-/area/crumbling_station/command/lounge
-	name = "Command Lounge"
 
 /area/crumbling_station/command/vault
 	name = "Secure Storage"
