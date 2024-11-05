@@ -26,8 +26,8 @@
 /area/crumbling_station/docking/docking_ports
 	name = "Docking Ports"
 
-/area/crumbling_station/docking/checkpoint
-	name = "Security Checkpoint"
+/area/crumbling_station/docking/storage
+	name = "Storage Compartment"
 
 /area/crumbling_station/docking/docking_approach
 	name = "Docking Foyer"
