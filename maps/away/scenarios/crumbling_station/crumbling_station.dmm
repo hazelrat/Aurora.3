@@ -6,10 +6,15 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/dark_blue{
-	dir = 10
+	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/security/hallway)
+"ab" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/light/small,
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_ports)
 "ac" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/security/hallway)
@@ -26,10 +31,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crumbling_station/command/administrator)
-"af" = (
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/service/disposals)
 "ag" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -44,6 +45,12 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/crumbling_station/service/smoking)
+"aj" = (
+/obj/effect/floor_decal/corner_wide/blue/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
 "ak" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -54,6 +61,10 @@
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
 /area/crumbling_station/civilian/hallway_west)
+"aq" = (
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/techfloor,
+/area/crumbling_station/civilian/quarters_3)
 "ar" = (
 /turf/simulated/floor,
 /area/crumbling_station/docking/docking_ports)
@@ -67,12 +78,9 @@
 /turf/simulated/floor/plating,
 /area/crumbling_station/engi/atmospherics)
 "au" = (
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 9
-	},
 /obj/machinery/alarm/west,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/command/control)
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/civilian/hallway_east)
 "aA" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -160,11 +168,24 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/maints/civilian)
+"bb" = (
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/service/hydro_secure)
 "bf" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
 /turf/simulated/floor,
+/area/crumbling_station/engi/atmospherics)
+"bg" = (
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crumbling_station/engi/atmospherics)
 "bi" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
@@ -182,10 +203,6 @@
 "bn" = (
 /turf/simulated/floor/carpet/brown,
 /area/crumbling_station/service/smoking)
-"bo" = (
-/obj/effect/map_effect/window_spawner/full/reinforced/grille/firedoor,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/docking/storage)
 "bp" = (
 /obj/effect/map_effect/window_spawner/full/reinforced/firedoor,
 /turf/simulated/floor/tiled/dark/full,
@@ -246,14 +263,19 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crumbling_station/civilian/quarters_1)
-"bJ" = (
-/obj/effect/floor_decal/corner/dark_blue{
+"bH" = (
+/obj/effect/floor_decal/corner/brown{
 	dir = 10
 	},
+/obj/machinery/light/colored/decayed,
 /turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
+/area/crumbling_station/docking/docking_ports)
 "bL" = (
 /obj/effect/floor_decal/corner_wide/yellow/full,
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/gtr)
 "bN" = (
@@ -287,17 +309,24 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/engi/atmospherics)
+"bW" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/maints/atmospherics)
 "bX" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
 /turf/space/dynamic,
 /area/crumbling_station/asteroid/exterior)
-"bZ" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 6
+"bY" = (
+/obj/machinery/light/small{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/storage)
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_approach)
 "cb" = (
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 4
@@ -329,6 +358,17 @@
 	},
 /turf/simulated/floor/tiled/gridded,
 /area/crumbling_station/command/administrator)
+"ch" = (
+/obj/effect/floor_decal/corner_wide/blue{
+	dir = 6
+	},
+/obj/machinery/power/apc/east,
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
 "ci" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -371,6 +411,10 @@
 /obj/effect/floor_decal/corner/dark_blue/full,
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/command/foyer)
+"cv" = (
+/obj/machinery/alarm/north,
+/turf/simulated/floor/lino,
+/area/crumbling_station/service/kitchen)
 "cx" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -399,6 +443,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/docking_approach)
+"cE" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_ports)
 "cG" = (
 /obj/machinery/power/generator{
 	anchored = 1
@@ -430,6 +481,13 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/shop)
+"cN" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_ports)
 "cO" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -437,14 +495,14 @@
 /turf/simulated/floor,
 /area/crumbling_station/maints/reactor)
 "cP" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 6
 	},
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 5
+/obj/machinery/light/colored/decayed{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/crumbling_station/command/foyer)
+/area/crumbling_station/civilian/hallway_west)
 "cR" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -461,12 +519,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/crumbling_station/asteroid/exterior)
-"cS" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/hard_storage)
 "cT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -481,33 +533,29 @@
 /obj/effect/floor_decal/corner/brown,
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/docking_ports)
+"cW" = (
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/solar2)
 "cX" = (
 /obj/effect/floor_decal/corner_wide/yellow/full{
+	dir = 4
+	},
+/obj/machinery/light/colored/decayed{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/lobby)
 "cZ" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 10
 	},
-/obj/machinery/alarm/east,
 /turf/simulated/floor/tiled/dark,
-/area/crumbling_station/maints/solar2)
+/area/crumbling_station/security/hallway)
 "da" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/machinery/alarm/east,
+/obj/machinery/alarm/west,
 /turf/simulated/floor,
-/area/crumbling_station/maints/disposals)
-"db" = (
-/obj/effect/floor_decal/corner_wide/blue/full{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
+/area/crumbling_station/maints/radiator)
 "dc" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/dark/full,
@@ -642,26 +690,24 @@
 "dI" = (
 /obj/machinery/appliance/cooker/oven,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/kitchen)
-"dK" = (
-/obj/effect/floor_decal/corner_wide/blue/full,
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
 "dL" = (
 /obj/machinery/media/jukebox{
 	anchored = 1
 	},
 /obj/effect/floor_decal/industrial/outline/medical,
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/dining)
 "dM" = (
 /turf/simulated/mineral/lava,
 /area/space)
-"dN" = (
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/gridded,
-/area/crumbling_station/medical/recovery2)
 "dR" = (
 /obj/structure/table/reinforced/steel,
 /turf/simulated/floor/tiled/dark/full,
@@ -688,6 +734,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_east)
+"dX" = (
+/obj/effect/floor_decal/corner_wide/yellow{
+	dir = 6
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/hallway)
 "dY" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
@@ -727,6 +782,19 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/gtr)
+"eg" = (
+/obj/machinery/power/apc/west,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/docking/storage)
+"ej" = (
+/obj/effect/floor_decal/corner_wide/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
 "el" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -750,21 +818,26 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/hallway)
 "eu" = (
 /obj/effect/floor_decal/industrial/outline/service,
 /obj/machinery/seed_storage,
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/hydro)
-"ev" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+"ey" = (
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 5
 	},
-/turf/simulated/floor/tiled/gunmetal/full,
-/area/crumbling_station/engi/storage)
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/brig)
 "ez" = (
 /turf/simulated/wall,
 /area/crumbling_station/service/dining)
@@ -827,12 +900,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_central)
 "eV" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/firedoor/noid{
-	dir = 8
+/obj/effect/floor_decal/corner/dark_blue/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/hallway)
+"eX" = (
+/obj/machinery/light/colored/decayed{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/security/hallway)
+/area/crumbling_station/engi/workshop)
 "fa" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -868,6 +946,11 @@
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
 /area/crumbling_station/docking/storage)
+"fj" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/alarm/south,
+/turf/simulated/floor,
+/area/crumbling_station/maints/civilian)
 "fl" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -949,19 +1032,38 @@
 /obj/effect/floor_decal/corner_wide/yellow/full{
 	dir = 1
 	},
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/gtr)
-"fE" = (
-/obj/effect/floor_decal/corner/dark_green{
-	dir = 10
+"fF" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
 	},
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/civilian/hallway_central)
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hallway)
 "fK" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
 /area/crumbling_station/maints/reactor)
+"fL" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/alarm/west,
+/turf/simulated/floor,
+/area/crumbling_station/maints/radiator)
+"fM" = (
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/hallway)
 "fU" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -980,18 +1082,27 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/medical)
+"fX" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/gunmetal/full,
+/area/crumbling_station/engi/hard_storage)
 "fZ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/reactor)
-"gb" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
+"gd" = (
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
 	},
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/medical/hallway)
+/turf/simulated/floor/tiled/cargo{
+	name = "white tiles"
+	},
+/area/crumbling_station/service/washroom)
 "ge" = (
 /obj/machinery/power/apc/north,
 /obj/structure/cable/green{
@@ -1004,6 +1115,9 @@
 	dir = 8
 	},
 /obj/machinery/alarm/north,
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/lobby)
 "gg" = (
@@ -1013,13 +1127,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/command/control)
 "gh" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+/obj/machinery/light/small{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/command/control)
+/turf/simulated/floor/carpet/rubber,
+/area/crumbling_station/civilian/quarters_4)
 "gj" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
@@ -1040,12 +1152,9 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/disposals)
 "gt" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/security)
+/obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/maints/solar2)
 "gu" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
@@ -1061,6 +1170,10 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/gtr)
@@ -1094,11 +1207,6 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/maints/reactor)
-"gE" = (
-/obj/machinery/alarm/south,
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor,
-/area/crumbling_station/maints/engi)
 "gG" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -1109,25 +1217,16 @@
 /turf/simulated/floor,
 /area/crumbling_station/maints/engi)
 "gI" = (
-/obj/effect/floor_decal/corner/lime/full{
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/hard_storage)
-"gM" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_approach)
+"gJ" = (
 /obj/machinery/alarm/south,
 /turf/simulated/floor,
-/area/crumbling_station/maints/solar2)
-"gO" = (
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 5
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
+/area/crumbling_station/maints/radiator)
 "gQ" = (
 /obj/effect/floor_decal/corner_wide/yellow{
 	dir = 10
@@ -1165,13 +1264,10 @@
 "hh" = (
 /turf/simulated/floor,
 /area/crumbling_station/maints/hangar)
-"hi" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/firedoor/noid{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/gunmetal/full,
-/area/crumbling_station/engi/hallway)
+"hm" = (
+/obj/machinery/alarm/east,
+/turf/simulated/floor,
+/area/crumbling_station/maints/solar1)
 "hq" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1179,17 +1275,14 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/maints/hydroponics)
 "hw" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 9
 	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
+/obj/machinery/light/colored/decayed{
+	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/command/foyer)
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_central)
 "hy" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -1260,6 +1353,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/hallway)
 "hR" = (
@@ -1272,12 +1369,25 @@
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
 	},
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/gridded,
 /area/crumbling_station/service/shop)
 "hV" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/maints/atmospherics)
+"hW" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/custodial)
 "hY" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/hallway_central)
@@ -1312,6 +1422,11 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar2)
+"in" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/light/small,
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_approach)
 "ip" = (
 /obj/structure/closet/crate{
 	opened = 1
@@ -1331,6 +1446,13 @@
 /obj/effect/map_effect/perma_light/starlight/wide,
 /turf/space/dynamic,
 /area/crumbling_station/asteroid/exterior)
+"iB" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/alarm/west,
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_ports)
 "iF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -1347,8 +1469,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/docking_ports)
 "iI" = (
-/turf/simulated/wall/r_wall,
-/area/crumbling_station/docking/storage)
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/security)
 "iJ" = (
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -1381,16 +1507,35 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/reactor)
+"iQ" = (
+/obj/structure/table/rack/retail_shelf,
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
+/area/crumbling_station/service/shop)
+"iT" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/reactor)
 "iU" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/radiator)
-"iW" = (
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/command/washroom)
+"iV" = (
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 10
+	},
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_east)
 "iX" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1420,16 +1565,6 @@
 "jg" = (
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/maints/solar2)
-"jk" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/disposals)
 "jl" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -1447,12 +1582,24 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/hallway_west)
+"jp" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/crumbling_station/civilian/quarters_1)
 "jq" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/maints/solar2)
 "jt" = (
 /turf/simulated/floor/tiled/gridded,
 /area/crumbling_station/medical/recovery1)
+"ju" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/crumbling_station/civilian/quarters_2)
 "jv" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow{
@@ -1466,9 +1613,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/maints/atmospherics)
+"jx" = (
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/service/utilities)
 "jy" = (
 /turf/simulated/wall,
 /area/crumbling_station/service/smoking)
+"jz" = (
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/holofloor/carpet/rubber,
+/area/crumbling_station/medical/recovery2)
 "jA" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -1536,6 +1693,13 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/custodial)
+"jV" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/service/kitchen)
 "jY" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -1552,26 +1716,30 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/hallway)
-"kj" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+"ke" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/maints/auxiliary)
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/command/foyer)
+"kg" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hallway)
 "kk" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/lobby)
-"km" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/alarm/east,
-/turf/simulated/floor,
-/area/crumbling_station/maints/civilian)
 "kp" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
@@ -1579,11 +1747,6 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/shop_storage)
-"kr" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/machinery/alarm/south,
-/turf/simulated/floor,
-/area/crumbling_station/maints/civilian)
 "ks" = (
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 1
@@ -1593,12 +1756,6 @@
 "ku" = (
 /turf/simulated/floor,
 /area/crumbling_station/maints/engi)
-"kw" = (
-/obj/effect/floor_decal/corner_wide/paleblue/full{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/ready)
 "kx" = (
 /obj/machinery/power/apc/north,
 /obj/structure/cable/green{
@@ -1607,17 +1764,14 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/utilities)
 "kz" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/corner/lime{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/storage)
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/service,
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/lino,
+/area/crumbling_station/service/shop)
 "kA" = (
 /obj/effect/floor_decal/corner/lime{
-	dir = 5
+	dir = 6
 	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/hard_storage)
@@ -1636,27 +1790,15 @@
 	},
 /turf/simulated/floor/tiled/gunmetal/full,
 /area/crumbling_station/engi/storage)
-"kG" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/corner_wide/blue{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
 "kH" = (
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 4
 	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/hallway)
-"kI" = (
-/obj/machinery/alarm/west,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/civilian/hallway_east)
 "kJ" = (
 /turf/simulated/wall,
 /area/crumbling_station/maints/medical)
@@ -1667,6 +1809,13 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/disposals)
+"kN" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/maints/solar1)
 "kO" = (
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar1)
@@ -1674,23 +1823,25 @@
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
 /area/crumbling_station/maints/reactor)
-"kQ" = (
-/obj/machinery/alarm/south,
+"kV" = (
+/obj/machinery/alarm/north,
 /turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/maints/civilian)
-"kR" = (
-/obj/effect/floor_decal/corner/lime/full{
-	dir = 4
-	},
-/obj/structure/table/rack,
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/storage)
+/area/crumbling_station/service/disposals)
 "kW" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar1)
+"kX" = (
+/obj/effect/floor_decal/corner/lime/full{
+	dir = 4
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hard_storage)
 "kZ" = (
 /turf/simulated/wall,
 /area/crumbling_station/maints/custodial)
@@ -1735,6 +1886,12 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/engi/atmospherics)
+"lj" = (
+/obj/effect/floor_decal/corner_wide/blue/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
 "lk" = (
 /obj/machinery/power/apc/north,
 /obj/structure/cable/green{
@@ -1758,12 +1915,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/command/washroom)
-"lr" = (
-/obj/effect/floor_decal/corner/dark_blue/full{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/brig)
 "lv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -1782,6 +1933,14 @@
 "lz" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/medical/lobby)
+"lB" = (
+/obj/effect/floor_decal/corner/lime/full{
+	dir = 4
+	},
+/obj/structure/table/rack,
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/storage)
 "lC" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
@@ -1789,10 +1948,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/docking_ports)
 "lD" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/machinery/alarm/west,
-/turf/simulated/floor,
-/area/crumbling_station/maints/civilian)
+/obj/effect/floor_decal/corner/dark_blue/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/hallway)
 "lG" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/command/administrator)
@@ -1801,12 +1961,6 @@
 /obj/machinery/portable_atmospherics/powered/pump,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/hallway)
-"lJ" = (
-/obj/effect/floor_decal/industrial/outline/custodial,
-/obj/structure/table/rack,
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/gunmetal/full,
-/area/crumbling_station/service/custodial)
 "lK" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -1818,6 +1972,13 @@
 "lN" = (
 /turf/simulated/wall,
 /area/crumbling_station/service/freezer)
+"lO" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_approach)
 "lS" = (
 /obj/effect/floor_decal/corner/dark_green/full{
 	dir = 1
@@ -1855,6 +2016,7 @@
 "md" = (
 /obj/effect/floor_decal/industrial/outline/medical,
 /obj/machinery/vending/cigarette,
+/obj/machinery/light/colored/decayed,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/dining)
 "me" = (
@@ -1878,6 +2040,10 @@
 	},
 /turf/simulated/floor/reinforced/reactor,
 /area/crumbling_station/engi/reactor)
+"mi" = (
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/lino,
+/area/crumbling_station/service/shop)
 "mk" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -1911,21 +2077,30 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/docking_approach)
-"ms" = (
-/obj/effect/floor_decal/corner/lime/full,
-/obj/structure/table/rack,
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/storage)
 "mt" = (
 /obj/effect/map_effect/window_spawner/full/reinforced/firedoor,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/dining)
+"mu" = (
+/obj/effect/floor_decal/corner/dark_blue/full,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/hallway)
 "mv" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
 /turf/simulated/floor/wood,
 /area/crumbling_station/command/administrator)
+"mx" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/noid{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/security/hallway)
 "my" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{
@@ -2000,6 +2175,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/crumbling_station/command/control)
+"mO" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/docking/docking_approach)
 "mR" = (
 /turf/simulated/floor/carpet/rubber,
 /area/crumbling_station/civilian/quarters_7)
@@ -2032,17 +2214,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/lobby)
-"nb" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/security)
 "nd" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/shop)
+"ne" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/reactor)
 "nf" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/maints/radiator)
@@ -2062,10 +2244,6 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/reactor)
-"ni" = (
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/solar2)
 "nk" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -2074,16 +2252,6 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/lobby)
-"nm" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/hydroponics)
 "nn" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
@@ -2091,6 +2259,15 @@
 	},
 /turf/space/dynamic,
 /area/crumbling_station/asteroid/exterior)
+"np" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/dark_blue/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/hallway)
 "nq" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -2136,6 +2313,12 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/security/hallway)
+"nA" = (
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/holofloor/carpet/rubber,
+/area/crumbling_station/medical/recovery1)
 "nB" = (
 /obj/effect/floor_decal/corner/dark_green{
 	dir = 5
@@ -2153,13 +2336,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/lobby)
-"nG" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
+"nE" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/noid{
+	dir = 8
 	},
-/obj/machinery/alarm/west,
-/turf/simulated/floor,
-/area/crumbling_station/maints/radiator)
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/security/hallway)
 "nH" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -2173,6 +2356,11 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/airless,
 /area/crumbling_station/asteroid/exterior)
+"nJ" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/security)
 "nK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -2190,6 +2378,10 @@
 "nO" = (
 /turf/simulated/floor/carpet/rubber,
 /area/crumbling_station/civilian/quarters_1)
+"nU" = (
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/gridded,
+/area/crumbling_station/medical/recovery1)
 "nV" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -2223,14 +2415,21 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/engi)
-"oc" = (
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/techfloor,
-/area/crumbling_station/civilian/quarters_6)
+"od" = (
+/obj/effect/decal/fake_object/light_source/invisible,
+/turf/simulated/floor/reinforced/airmix,
+/area/crumbling_station/engi/atmospherics)
 "of" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
 /area/crumbling_station/maints/custodial)
+"og" = (
+/obj/effect/floor_decal/corner_wide/yellow{
+	dir = 6
+	},
+/obj/machinery/alarm/east,
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/lobby)
 "oh" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark/full,
@@ -2263,11 +2462,23 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/storage)
-"ot" = (
-/obj/effect/floor_decal/corner/dark_green/diagonal,
+"or" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/service/shop_storage)
+"os" = (
+/obj/effect/floor_decal/corner/dark_blue/full,
 /turf/simulated/floor/tiled/dark,
-/area/crumbling_station/service/dining)
+/area/crumbling_station/security/brig)
+"ot" = (
+/obj/effect/floor_decal/corner_wide/paleblue/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/ready)
 "ou" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -2337,6 +2548,12 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/engi/atmospherics)
+"oJ" = (
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/civilian/hallway_east)
 "oK" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -2344,6 +2561,13 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar1)
+"oL" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/service/shop_storage)
 "oM" = (
 /turf/simulated/floor,
 /area/crumbling_station/civilian/hallway_east)
@@ -2367,16 +2591,6 @@
 	},
 /turf/simulated/floor/lino,
 /area/crumbling_station/service/shop)
-"oS" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/hangar)
 "oT" = (
 /obj/effect/floor_decal/industrial/outline/security,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -2406,6 +2620,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/pharmacy)
+"oZ" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/crumbling_station/engi/reactor)
+"pa" = (
+/obj/effect/decal/fake_object/light_source/invisible,
+/turf/simulated/floor/reinforced/carbon_dioxide,
+/area/crumbling_station/engi/atmospherics)
 "pb" = (
 /obj/effect/map_effect/window_spawner/full/reinforced/firedoor,
 /turf/simulated/floor/tiled/dark/full,
@@ -2458,13 +2683,12 @@
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/crumbling_station/engi/atmospherics)
-"pn" = (
-/obj/machinery/alarm/west,
-/obj/effect/floor_decal/corner_wide/blue{
-	dir = 9
+"pq" = (
+/obj/effect/floor_decal/corner/dark_blue/full{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/brig)
 "ps" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -2498,14 +2722,10 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/hallway_central)
 "pB" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/corner/lime{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/hard_storage)
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/solar1)
 "pC" = (
 /obj/structure/table/wood,
 /obj/effect/floor_decal/corner/brown{
@@ -2570,20 +2790,6 @@
 	},
 /turf/simulated/floor/lino,
 /area/crumbling_station/service/shop)
-"pR" = (
-/obj/machinery/power/apc/west,
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/docking/storage)
-"pS" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 9
-	},
-/obj/machinery/alarm/west,
-/turf/simulated/floor/tiled/gridded,
-/area/crumbling_station/service/shop)
 "pX" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/engi/hallway)
@@ -2634,6 +2840,13 @@
 	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/service/custodial)
+"qo" = (
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 10
+	},
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_central)
 "qq" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
@@ -2654,10 +2867,6 @@
 "qx" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/service/shop_storage)
-"qy" = (
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/techfloor,
-/area/crumbling_station/civilian/quarters_1)
 "qz" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -2667,6 +2876,12 @@
 "qD" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/maints/auxiliary)
+"qE" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/lino,
+/area/crumbling_station/service/kitchen)
 "qF" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/crumbling_station/civilian/quarters_6)
@@ -2682,8 +2897,10 @@
 "qK" = (
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/medical/gtr)
-"qO" = (
-/obj/effect/floor_decal/corner/dark_blue/full,
+"qN" = (
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/security/brig)
 "qQ" = (
@@ -2695,15 +2912,15 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/hydroponics)
-"qU" = (
-/obj/effect/floor_decal/corner_wide/paleblue{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/ready)
 "qV" = (
 /turf/simulated/wall,
 /area/crumbling_station/civilian/quarters_3)
+"qZ" = (
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/brig)
 "re" = (
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 8
@@ -2725,6 +2942,17 @@
 "rg" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_ports)
+"rh" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
 	},
 /turf/simulated/floor,
 /area/crumbling_station/docking/docking_ports)
@@ -2751,6 +2979,13 @@
 "rq" = (
 /turf/simulated/wall,
 /area/crumbling_station/civilian/quarters_2)
+"ru" = (
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 4
+	},
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/docking/docking_approach)
 "rv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -2766,6 +3001,17 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/docking/docking_ports)
+"rz" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner_wide/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
 "rB" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -2774,12 +3020,6 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/hydro)
-"rD" = (
-/obj/effect/floor_decal/corner_wide/paleblue/full{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/ready)
 "rF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -2792,13 +3032,7 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/hallway_east)
-"rH" = (
-/obj/effect/floor_decal/corner_wide/blue{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
-"rI" = (
+"rJ" = (
 /obj/machinery/alarm/west,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/docking/storage)
@@ -2807,12 +3041,11 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_central)
-"rL" = (
-/obj/machinery/alarm/nobreach/north,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/service/hydro_secure)
 "rN" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -2832,14 +3065,6 @@
 	},
 /turf/simulated/floor/reinforced/airmix,
 /area/crumbling_station/engi/atmospherics)
-"rS" = (
-/obj/structure/table/standard,
-/obj/machinery/alarm/freezer/north,
-/turf/simulated/floor/tiled/freezer{
-	name = "cooled tiles";
-	temperature = 253.15
-	},
-/area/crumbling_station/service/freezer)
 "rV" = (
 /obj/effect/floor_decal/corner/dark_green/diagonal,
 /obj/structure/cable/green{
@@ -2861,11 +3086,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/service/dining)
 "sa" = (
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/brig)
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/solar2)
 "se" = (
 /turf/simulated/wall,
 /area/crumbling_station/maints/solar2)
@@ -2926,6 +3150,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/crumbling_station/engi/atmospherics)
+"sz" = (
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/gridded,
+/area/crumbling_station/medical/recovery2)
 "sA" = (
 /turf/simulated/floor,
 /area/crumbling_station/maints/radiator)
@@ -2943,11 +3171,6 @@
 	},
 /turf/simulated/floor/reinforced/airmix,
 /area/crumbling_station/engi/atmospherics)
-"sD" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/civilian)
 "sE" = (
 /obj/effect/floor_decal/corner/dark_green,
 /turf/simulated/floor/tiled/dark,
@@ -2999,28 +3222,20 @@
 /obj/machinery/hologram/holopad/long_range,
 /turf/simulated/floor/carpet/red,
 /area/crumbling_station/command/administrator)
-"sV" = (
-/obj/effect/floor_decal/corner/lime/full{
+"sW" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/hard_storage)
-"sW" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor,
-/area/crumbling_station/maints/medical)
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/lobby)
 "sX" = (
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/corner/lime{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/gunmetal,
+/turf/simulated/floor/tiled/gunmetal/full,
 /area/crumbling_station/engi/storage)
 "td" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
@@ -3071,11 +3286,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/engi/workshop)
 "tn" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 5
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/crumbling_station/command/control)
+/area/crumbling_station/civilian/hallway_central)
 "to" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -3101,6 +3319,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/security/ready)
+"tt" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/machinery/light/small{
+	dir = 1;
+	must_start_working = 1
+	},
+/turf/simulated/floor,
+/area/crumbling_station/engi/atmospherics)
 "tv" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3152,6 +3378,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/surgery)
+"tK" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/alarm/east,
+/turf/simulated/floor,
+/area/crumbling_station/maints/civilian)
 "tM" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3162,6 +3395,10 @@
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
 	icon_state = "1-4"
+	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
 	},
 /turf/simulated/floor,
 /area/crumbling_station/engi/atmospherics)
@@ -3247,6 +3484,11 @@
 "ug" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/dining)
+"uh" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/alarm/west,
+/turf/simulated/floor,
+/area/crumbling_station/maints/civilian)
 "ui" = (
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/gtr)
@@ -3256,22 +3498,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crumbling_station/civilian/quarters_7)
-"uk" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/firedoor/noid{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/gunmetal/full,
-/area/crumbling_station/engi/hallway)
-"ul" = (
-/obj/effect/floor_decal/corner/dark_blue/full{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/brig)
 "um" = (
 /obj/effect/floor_decal/corner/dark_green{
 	dir = 10
@@ -3320,6 +3546,12 @@
 	},
 /turf/simulated/floor/reinforced/airmix,
 /area/crumbling_station/engi/atmospherics)
+"ux" = (
+/obj/effect/floor_decal/corner_wide/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/ready)
 "uA" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
@@ -3353,6 +3585,15 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/reactor)
+"uG" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hallway)
 "uH" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -3384,6 +3625,13 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/command/foyer)
+"uL" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/gunmetal/full,
+/area/crumbling_station/engi/storage)
 "uN" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -3478,9 +3726,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_east)
 "vl" = (
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/techfloor,
-/area/crumbling_station/civilian/quarters_3)
+/obj/effect/floor_decal/corner_wide/paleblue/full,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/ready)
 "vn" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -3489,13 +3737,6 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/medical/hallway)
-"vo" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/machinery/alarm/east,
-/turf/simulated/floor,
-/area/crumbling_station/maints/engi)
 "vp" = (
 /turf/simulated/wall,
 /area/crumbling_station/civilian/hallway_east)
@@ -3512,6 +3753,22 @@
 "vt" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/smoking)
+"vu" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
+	},
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_approach)
+"vv" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/alarm/east,
+/turf/simulated/floor,
+/area/crumbling_station/maints/disposals)
 "vx" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/maints/atmospherics)
@@ -3535,15 +3792,6 @@
 	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/hallway)
-"vI" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/corner/dark_blue/full{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
 "vJ" = (
 /obj/effect/floor_decal/corner_wide/lime/full{
 	dir = 4
@@ -3555,6 +3803,11 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/turf/simulated/floor,
+/area/crumbling_station/maints/reactor)
+"vO" = (
+/obj/machinery/alarm/south,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
 /area/crumbling_station/maints/reactor)
 "vS" = (
@@ -3598,13 +3851,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crumbling_station/command/control)
-"wc" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 5
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/service/disposals)
 "wd" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -3644,6 +3890,13 @@
 	},
 /turf/simulated/floor/airless,
 /area/crumbling_station/asteroid/exterior)
+"wm" = (
+/obj/machinery/light/small{
+	dir = 1;
+	must_start_working = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/medical/gtr)
 "wo" = (
 /turf/simulated/floor/carpet/rubber,
 /area/crumbling_station/civilian/quarters_4)
@@ -3707,12 +3960,15 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/hallway_central)
-"wB" = (
-/obj/effect/floor_decal/corner/dark_blue/full{
-	dir = 1
+"wE" = (
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 9
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
+/area/crumbling_station/civilian/hallway_east)
 "wJ" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark/full,
@@ -3723,12 +3979,25 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crumbling_station/maints/civilian)
+"wN" = (
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/techfloor,
+/area/crumbling_station/civilian/quarters_7)
 "wO" = (
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/lobby)
+"wP" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/docking/docking_approach)
 "wQ" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -3750,11 +4019,6 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/shop_storage)
-"wS" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/reactor)
 "wV" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/dark/full,
@@ -3777,17 +4041,46 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_west)
-"xa" = (
-/obj/machinery/alarm/north,
+"xb" = (
+/obj/structure/table/wood,
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/brown,
+/area/crumbling_station/service/smoking)
+"xd" = (
 /obj/effect/floor_decal/corner/dark_blue/full{
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
+/area/crumbling_station/security/brig)
+"xf" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/docking/docking_ports)
 "xg" = (
 /obj/machinery/smartfridge/foodheater,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/service/kitchen)
+"xi" = (
+/obj/effect/floor_decal/industrial/outline/service,
+/obj/structure/closet/crate/hydroponics{
+	opened = 1
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/service/hydro)
+"xl" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor,
+/area/crumbling_station/maints/medical)
 "xn" = (
 /obj/effect/floor_decal/industrial/outline/security,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -3820,6 +4113,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/service/dining)
+"xt" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/docking/docking_ports)
 "xv" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
@@ -3827,10 +4125,6 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/engi/atmospherics)
-"xw" = (
-/obj/machinery/alarm/west,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/maints/solar2)
 "xz" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
@@ -3841,6 +4135,13 @@
 	},
 /turf/simulated/floor/airless,
 /area/crumbling_station/asteroid/exterior)
+"xD" = (
+/obj/effect/floor_decal/corner_wide/yellow{
+	dir = 5
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/gtr)
 "xF" = (
 /turf/simulated/wall,
 /area/crumbling_station/service/shop)
@@ -3868,6 +4169,15 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/civilian/hallway_central)
+"xP" = (
+/obj/effect/floor_decal/corner/lime/full{
+	dir = 1
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hard_storage)
 "xQ" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
@@ -3901,6 +4211,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/maints/solar2)
+"yb" = (
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/workshop)
 "yc" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -3925,12 +4242,6 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/maints/reactor)
-"ym" = (
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
 "yn" = (
 /turf/template_noop,
 /area/space)
@@ -3943,18 +4254,17 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/reactor)
-"yr" = (
-/obj/machinery/alarm/west,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/maints/auxiliary)
 "ys" = (
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 6
+/obj/machinery/light/colored/decayed{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/docking/storage)
 "yu" = (
 /obj/structure/platform_stairs/full,
 /obj/structure/platform{
@@ -3997,6 +4307,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
 /turf/simulated/floor,
 /area/crumbling_station/docking/docking_ports)
 "yF" = (
@@ -4034,12 +4348,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/docking_ports)
-"yS" = (
-/obj/effect/floor_decal/corner/lime/full{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/storage)
 "yT" = (
 /obj/effect/floor_decal/industrial/outline/operations,
 /obj/machinery/portable_atmospherics/powered/scrubber,
@@ -4051,6 +4359,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_east)
+"za" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/engi)
 "zb" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
@@ -4061,13 +4374,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crumbling_station/command/administrator)
-"zc" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/machinery/alarm/south,
-/turf/simulated/floor,
-/area/crumbling_station/maints/hydroponics)
 "zd" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -4081,12 +4387,9 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/hydro_secure)
 "zi" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/alarm/east,
-/turf/simulated/floor,
-/area/crumbling_station/maints/solar2)
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/engi/workshop)
 "zk" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -4154,6 +4457,22 @@
 	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/lobby)
+"zC" = (
+/obj/effect/floor_decal/corner_wide/blue{
+	dir = 9
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
+"zD" = (
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 5
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/hallway)
 "zH" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -4203,6 +4522,10 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/docking/docking_ports)
+"zU" = (
+/obj/effect/floor_decal/corner_wide/blue/full,
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
 "zV" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{
@@ -4241,6 +4564,15 @@
 	},
 /turf/simulated/floor/tiled/gridded,
 /area/crumbling_station/service/shop)
+"Ad" = (
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/command/foyer)
 "Af" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -4267,6 +4599,11 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/engi)
+"Am" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/reactor)
 "Aq" = (
 /obj/machinery/power/smes/buildable/main_engine{
 	RCon_tag = "Supermatter - Grid"
@@ -4274,6 +4611,9 @@
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/reactor)
@@ -4299,6 +4639,13 @@
 "Aw" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/security/ready)
+"AA" = (
+/obj/effect/floor_decal/corner/grey{
+	dir = 9
+	},
+/obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/gridded,
+/area/crumbling_station/service/shop)
 "AB" = (
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/effect/floor_decal/industrial/warning,
@@ -4307,6 +4654,16 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/crumbling_station/engi/reactor)
+"AC" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/noid{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/gunmetal/full,
+/area/crumbling_station/engi/hallway)
 "AE" = (
 /obj/structure/safe/station{
 	name = "Secure Safe"
@@ -4318,13 +4675,13 @@
 /obj/machinery/power/apc/west,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/command/vault)
-"AF" = (
-/obj/effect/floor_decal/corner_wide/blue{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
 "AG" = (
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/ready)
+"AH" = (
+/obj/effect/floor_decal/corner_wide/paleblue{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/security/ready)
 "AI" = (
@@ -4353,13 +4710,19 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/workshop)
-"AO" = (
-/obj/effect/floor_decal/industrial/outline/security,
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/reagent_dispensers/watertank,
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/command/vault)
+"AQ" = (
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/brig)
+"AS" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/engi/workshop)
 "AT" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
@@ -4375,11 +4738,18 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/command/control)
 "Ba" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 9
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/hard_storage)
+/obj/machinery/alarm/south,
+/turf/simulated/floor,
+/area/crumbling_station/maints/hydroponics)
+"Bb" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/docking/storage)
 "Be" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4396,9 +4766,10 @@
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/hallway)
 "Bh" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/machinery/alarm/north,
-/turf/simulated/floor/lino,
-/area/crumbling_station/service/shop)
+/turf/simulated/floor,
+/area/crumbling_station/maints/civilian)
 "Bi" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/hallway_west)
@@ -4417,6 +4788,10 @@
 "Bn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
+	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/hallway)
@@ -4450,6 +4825,16 @@
 "BA" = (
 /turf/simulated/wall,
 /area/crumbling_station/maints/reactor)
+"BB" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/noid,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/docking/docking_approach)
 "BE" = (
 /obj/effect/floor_decal/corner_wide/yellow/full{
 	dir = 8
@@ -4461,11 +4846,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/lobby)
-"BG" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/solar1)
+"BH" = (
+/obj/machinery/appliance/cooker/oven,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/service/kitchen)
 "BI" = (
 /obj/structure/bed/stool/chair/padded/beige{
 	dir = 1
@@ -4482,22 +4870,36 @@
 /turf/simulated/floor,
 /area/crumbling_station/maints/atmospherics)
 "BR" = (
-/obj/effect/floor_decal/industrial/hatch/security,
+/obj/machinery/door/firedoor/noid,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/command/control)
+"BS" = (
+/obj/effect/floor_decal/corner_wide/yellow{
+	dir = 9
+	},
 /obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/dark/full,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/hallway)
+"BT" = (
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 9
+	},
+/obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/dark,
 /area/crumbling_station/command/control)
 "BU" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/hallway)
-"BV" = (
-/obj/effect/floor_decal/corner_wide/blue/full{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
 "BW" = (
 /obj/machinery/atmospherics/binary/circulator{
 	anchored = 1;
@@ -4515,18 +4917,25 @@
 /obj/machinery/power/apc/east,
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/lobby)
-"BY" = (
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/brig)
 "Ca" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/hydro_secure)
 "Cb" = (
 /turf/simulated/floor/lino,
 /area/crumbling_station/service/kitchen)
+"Cd" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/hangar)
 "Ce" = (
 /obj/machinery/power/apc/north,
 /obj/structure/cable/green{
@@ -4573,10 +4982,6 @@
 "Cn" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/maints/solar1)
-"Cp" = (
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/hallway)
 "Cq" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -4587,6 +4992,13 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/civilian/hallway_east)
+"Cs" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hallway)
 "Cu" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -4602,6 +5014,11 @@
 	},
 /turf/simulated/floor/tiled/gridded,
 /area/crumbling_station/command/administrator)
+"Cy" = (
+/obj/machinery/door/firedoor/noid,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/docking/docking_approach)
 "Cz" = (
 /obj/effect/floor_decal/corner_wide/lime{
 	dir = 5
@@ -4660,13 +5077,9 @@
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/service/custodial)
 "CO" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/techfloor,
+/area/crumbling_station/civilian/quarters_4)
 "CP" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -4676,19 +5089,18 @@
 "CQ" = (
 /turf/template_noop,
 /area/crumbling_station/docking/docking_ports)
-"CR" = (
-/obj/effect/floor_decal/corner/brown{
-	dir = 9
-	},
-/obj/machinery/alarm/west,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/docking/docking_approach)
 "CS" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar1)
+"CU" = (
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/hallway)
 "CW" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4706,10 +5118,6 @@
 "CY" = (
 /turf/simulated/wall,
 /area/crumbling_station/service/washroom)
-"Dc" = (
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/maints/hangar)
 "De" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -4724,6 +5132,12 @@
 /obj/effect/map_effect/window_spawner/full/reinforced/grille/firedoor,
 /turf/simulated/floor,
 /area/crumbling_station/maints/reactor)
+"Di" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/crumbling_station/civilian/quarters_6)
 "Dj" = (
 /obj/effect/floor_decal/corner/dark_green/full{
 	dir = 4
@@ -4733,6 +5147,12 @@
 "Dk" = (
 /turf/simulated/floor,
 /area/crumbling_station/docking/docking_approach)
+"Dn" = (
+/obj/effect/floor_decal/corner_wide/paleblue/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/ready)
 "Dr" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -4773,6 +5193,15 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/engi/atmospherics)
+"Dz" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/engi/atmospherics)
 "DA" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
@@ -4796,35 +5225,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/storage)
 "DE" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/machinery/light/small{
+	dir = 8
 	},
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/command/foyer)
-"DF" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/reactor)
-"DH" = (
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/techfloor,
-/area/crumbling_station/civilian/quarters_7)
+/turf/simulated/floor/carpet/rubber,
+/area/crumbling_station/civilian/quarters_5)
 "DI" = (
 /turf/simulated/wall,
 /area/crumbling_station/engi/lobby)
 "DJ" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/engi/atmospherics)
-"DL" = (
-/obj/effect/floor_decal/corner/lime/full{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/hard_storage)
 "DO" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -4852,33 +5263,37 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor,
 /area/crumbling_station/maints/disposals)
-"DW" = (
-/obj/effect/floor_decal/corner_wide/paleblue{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/ready)
 "DX" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/command/control)
+"DY" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hard_storage)
 "DZ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/hydroponics)
-"Eb" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/radiator)
 "Ec" = (
 /turf/simulated/floor/carpet/rubber,
 /area/crumbling_station/civilian/quarters_3)
 "Ed" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/lime{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hard_storage)
+"Ee" = (
 /obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/maints/auxiliary)
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/engi/workshop)
 "Ef" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor,
@@ -4896,6 +5311,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/docking_approach)
+"Ei" = (
+/obj/effect/floor_decal/corner/lime/full,
+/obj/structure/table/rack,
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/storage)
 "Ek" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -4919,10 +5340,6 @@
 /obj/machinery/alarm/south,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/command/washroom)
-"Er" = (
-/obj/machinery/alarm/east,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/maints/solar1)
 "Es" = (
 /turf/simulated/wall,
 /area/crumbling_station/service/kitchen)
@@ -4932,13 +5349,15 @@
 	},
 /turf/simulated/floor/tiled/gridded,
 /area/crumbling_station/medical/recovery2)
-"EB" = (
-/obj/effect/floor_decal/corner/brown{
+"EA" = (
+/obj/effect/floor_decal/corner/dark_blue{
 	dir = 5
 	},
-/obj/machinery/alarm/north,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
-/area/crumbling_station/service/shop_storage)
+/area/crumbling_station/command/foyer)
 "EC" = (
 /obj/effect/floor_decal/industrial/hatch/security,
 /obj/structure/cable/green{
@@ -4946,6 +5365,15 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/command/control)
+"ED" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/docking/docking_approach)
 "EE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4979,15 +5407,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/storage)
-"EN" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/machinery/alarm/west,
-/turf/simulated/floor,
-/area/crumbling_station/maints/solar1)
-"EO" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/gunmetal/full,
-/area/crumbling_station/engi/hard_storage)
 "EP" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -5017,10 +5436,24 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/docking/docking_ports)
-"Fa" = (
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/techfloor,
-/area/crumbling_station/civilian/quarters_4)
+"EY" = (
+/obj/effect/floor_decal/corner/lime/full{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hard_storage)
+"EZ" = (
+/obj/structure/table/standard,
+/obj/machinery/alarm/freezer/north,
+/turf/simulated/floor/tiled/freezer{
+	name = "cooled tiles";
+	temperature = 253.15
+	},
+/area/crumbling_station/service/freezer)
 "Fd" = (
 /obj/machinery/reagentgrinder{
 	pixel_x = 4;
@@ -5049,6 +5482,12 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/disposals)
+"Fh" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/crumbling_station/civilian/quarters_3)
 "Fi" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -5099,6 +5538,10 @@
 "Fr" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/docking/docking_ports)
+"Ft" = (
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/techfloor,
+/area/crumbling_station/civilian/quarters_1)
 "Fv" = (
 /obj/effect/floor_decal/corner/grey/full,
 /obj/structure/table/steel,
@@ -5111,6 +5554,10 @@
 /obj/effect/floor_decal/corner_wide/mauve/full{
 	dir = 1
 	},
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/surgery)
 "FC" = (
@@ -5122,6 +5569,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/crumbling_station/engi/atmospherics)
+"FE" = (
+/obj/machinery/alarm/east,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/maints/solar1)
 "FG" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -5176,30 +5627,21 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar2)
-"Gb" = (
-/obj/machinery/alarm/east,
-/turf/simulated/floor,
-/area/crumbling_station/maints/solar1)
 "Ge" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/medical/pharmacy)
-"Gf" = (
-/obj/machinery/alarm/north,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/gunmetal/full,
-/area/crumbling_station/engi/hard_storage)
+"Gg" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/command/control)
 "Gl" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/quarters_5)
-"Gn" = (
-/obj/effect/floor_decal/corner/dark_blue/full{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
 "Go" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -5218,6 +5660,10 @@
 "Gr" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
+	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
 	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/service/custodial)
@@ -5261,14 +5707,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/storage)
-"GF" = (
-/obj/machinery/alarm/south,
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor,
-/area/crumbling_station/maints/reactor)
 "GG" = (
 /obj/effect/floor_decal/corner_wide/mauve/full{
 	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/surgery)
@@ -5287,6 +5732,15 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/hallway_east)
+"GM" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/reactor)
 "GO" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -5329,6 +5783,9 @@
 /area/crumbling_station/maints/radiator)
 "Hc" = (
 /obj/effect/floor_decal/corner/dark_green/full{
+	dir = 4
+	},
+/obj/machinery/light/colored/decayed{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -5376,6 +5833,12 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/engi/atmospherics)
+"Hm" = (
+/obj/effect/floor_decal/corner_wide/paleblue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/ready)
 "Hn" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
@@ -5468,10 +5931,21 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/command/administrator)
 "HJ" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/lime{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/storage)
+"HK" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/alarm/north,
 /turf/simulated/floor,
-/area/crumbling_station/maints/hydroponics)
+/area/crumbling_station/maints/medical)
 "HL" = (
 /obj/effect/floor_decal/corner/dark_green{
 	dir = 10
@@ -5508,6 +5982,18 @@
 	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/lobby)
+"HT" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/alarm/south,
+/turf/simulated/floor,
+/area/crumbling_station/maints/solar2)
+"HW" = (
+/obj/effect/floor_decal/corner/brown/full,
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/docking/docking_approach)
 "HX" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -5550,23 +6036,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_west)
-"Ik" = (
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/brig)
 "Il" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
 /area/crumbling_station/maints/hydroponics)
-"Im" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/machinery/alarm/west,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/maints/solar1)
 "Io" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5576,16 +6049,33 @@
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
 /area/crumbling_station/command/control)
+"Ip" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/reactor)
+"Ir" = (
+/obj/machinery/alarm/north,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/gunmetal/full,
+/area/crumbling_station/engi/hard_storage)
 "It" = (
 /obj/effect/floor_decal/industrial/hatch/security,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/security/brig)
-"Iv" = (
-/obj/effect/floor_decal/corner_wide/paleblue/full{
-	dir = 4
+"Iw" = (
+/obj/structure/table/steel,
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
 	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/ready)
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/workshop)
 "Iy" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -5597,6 +6087,10 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar2)
+"Iz" = (
+/obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/maints/auxiliary)
 "IA" = (
 /obj/structure/bed/stool/bar/padded/black{
 	dir = 8
@@ -5604,12 +6098,12 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/dining)
 "IB" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 10
 	},
-/obj/machinery/alarm/west,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/service/shop_storage)
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/brig)
 "IC" = (
 /obj/effect/floor_decal/corner/dark_green{
 	dir = 5
@@ -5620,10 +6114,6 @@
 /obj/machinery/power/apc/north,
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_central)
-"ID" = (
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/techfloor,
-/area/crumbling_station/civilian/quarters_5)
 "IE" = (
 /obj/effect/floor_decal/corner/grey/full{
 	dir = 8
@@ -5635,23 +6125,17 @@
 "II" = (
 /turf/simulated/wall,
 /area/crumbling_station/medical/recovery2)
+"IJ" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/atmospherics)
 "IL" = (
-/obj/effect/floor_decal/corner/brown{
-	dir = 5
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/hallway)
-"IM" = (
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/cargo{
-	name = "white tiles"
-	},
-/area/crumbling_station/service/washroom)
-"IN" = (
-/obj/machinery/alarm/south,
-/turf/simulated/floor,
-/area/crumbling_station/maints/radiator)
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/lino,
+/area/crumbling_station/service/kitchen)
 "IO" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -5661,29 +6145,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/security/brig)
-"IP" = (
-/obj/effect/floor_decal/corner_wide/yellow{
-	dir = 9
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/obj/machinery/alarm/west,
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/hallway)
 "IQ" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/command/control)
+/obj/effect/floor_decal/corner/dark_green/diagonal,
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/service/dining)
 "IS" = (
 /obj/machinery/power/apc/north,
 /obj/structure/cable/green{
@@ -5695,6 +6161,9 @@
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 8
 	},
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/docking_approach)
 "IW" = (
@@ -5703,12 +6172,33 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/engi/workshop)
+"Ja" = (
+/obj/effect/map_effect/window_spawner/full/reinforced/grille/firedoor,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/docking/storage)
+"Jb" = (
+/obj/effect/floor_decal/industrial/outline/security,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/command/vault)
 "Jc" = (
 /obj/effect/floor_decal/corner_wide/yellow/full{
 	dir = 4
 	},
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/gtr)
+"Ji" = (
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/crumbling_station/engi/reactor)
 "Jj" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -5746,21 +6236,43 @@
 /turf/simulated/floor/reinforced/airmix,
 /area/crumbling_station/engi/atmospherics)
 "Js" = (
-/obj/effect/floor_decal/corner/dark_green{
-	dir = 9
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
 	},
-/obj/machinery/alarm/west,
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
-/area/crumbling_station/service/hydro)
+/area/crumbling_station/docking/docking_ports)
 "Jv" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/maints/hydroponics)
+"Jx" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/command/foyer)
 "Jy" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/gridded,
 /area/crumbling_station/command/administrator)
+"JA" = (
+/obj/effect/floor_decal/corner_wide/paleblue/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/ready)
 "JC" = (
 /obj/effect/floor_decal/corner_wide/yellow/full{
 	dir = 8
@@ -5768,6 +6280,10 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc/north,
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/hallway)
 "JD" = (
@@ -5776,6 +6292,10 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/engi)
+"JE" = (
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/maints/hangar)
 "JF" = (
 /obj/machinery/power/supermatter,
 /obj/effect/floor_decal/industrial/warning/full,
@@ -5798,6 +6318,19 @@
 "JK" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/hallway)
+"JN" = (
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 6
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_east)
+"JO" = (
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/techfloor,
+/area/crumbling_station/civilian/quarters_5)
 "JP" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
@@ -5805,11 +6338,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/docking/docking_ports)
 "JQ" = (
-/obj/structure/cable/green{
-	icon_state = "1-8"
+/obj/effect/floor_decal/corner_wide/blue/full{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/docking/storage)
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
 "JS" = (
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/dark/full,
@@ -5865,18 +6398,23 @@
 /turf/simulated/floor,
 /area/crumbling_station/maints/custodial)
 "Kg" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/firedoor/noid,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/docking/docking_approach)
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/lobby)
 "Ki" = (
 /turf/simulated/wall,
 /area/crumbling_station/civilian/quarters_4)
+"Kj" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/disposals)
 "Km" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -5892,6 +6430,16 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/hallway)
+"Ks" = (
+/obj/effect/floor_decal/corner_wide/yellow{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/hallway)
 "Kt" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -5927,6 +6475,9 @@
 /area/crumbling_station/docking/docking_approach)
 "Kz" = (
 /obj/effect/floor_decal/corner/dark_green/full{
+	dir = 4
+	},
+/obj/machinery/light/colored/decayed{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -6001,6 +6552,12 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/engi)
+"KQ" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hard_storage)
 "KR" = (
 /obj/effect/floor_decal/corner_wide/yellow{
 	dir = 9
@@ -6015,6 +6572,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/lobby)
+"KS" = (
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 9
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_west)
 "KT" = (
 /obj/structure/platform_deco{
 	dir = 4
@@ -6034,6 +6600,16 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/hydro)
+"KX" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/hallway)
 "La" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
@@ -6041,10 +6617,6 @@
 "Lc" = (
 /turf/simulated/floor/carpet/rubber,
 /area/crumbling_station/civilian/quarters_2)
-"Le" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/gunmetal/full,
-/area/crumbling_station/engi/storage)
 "Lf" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/maints/custodial)
@@ -6061,13 +6633,6 @@
 /obj/effect/floor_decal/industrial/hatch/security,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/hallway_west)
-"Li" = (
-/obj/machinery/alarm/west,
-/obj/effect/floor_decal/corner/lime{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/storage)
 "Ll" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -6077,6 +6642,13 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar2)
+"Lp" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_ports)
 "Lq" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -6097,6 +6669,10 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
 	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/hallway)
 "Lv" = (
@@ -6112,6 +6688,20 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/reactor)
+"Lx" = (
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/medical/pharmacy)
+"Ly" = (
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 9
+	},
+/obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/service/hydro)
 "LA" = (
 /turf/simulated/wall,
 /area/crumbling_station/service/utilities)
@@ -6148,9 +6738,22 @@
 /obj/machinery/power/apc/east,
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/service/custodial)
+"LI" = (
+/obj/effect/floor_decal/corner/lime/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/storage)
 "LJ" = (
 /turf/simulated/floor/carpet/rubber,
 /area/crumbling_station/civilian/quarters_6)
+"LL" = (
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 5
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/command/foyer)
 "LM" = (
 /obj/structure/cable/green{
 	d2 = 4;
@@ -6159,10 +6762,18 @@
 /obj/machinery/power/apc/north,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/hydro_secure)
-"LP" = (
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/service/utilities)
+"LO" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/disposals)
+"LT" = (
+/obj/effect/floor_decal/corner_wide/yellow{
+	dir = 10
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/gtr)
 "LV" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6225,11 +6836,6 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/engi/atmospherics)
-"Mp" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/machinery/alarm/east,
-/turf/simulated/floor,
-/area/crumbling_station/maints/hydroponics)
 "Mq" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
@@ -6280,6 +6886,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/utilities)
 "ME" = (
@@ -6297,6 +6907,12 @@
 "MI" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/command/foyer)
+"MK" = (
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/hallway)
 "MN" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/machinery/appliance/cooker/fryer,
@@ -6375,12 +6991,6 @@
 /obj/machinery/power/apc/east,
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_west)
-"Nk" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/storage)
 "Nl" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6392,21 +7002,6 @@
 	},
 /turf/simulated/floor/lino,
 /area/crumbling_station/service/kitchen)
-"Nm" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/engi/hallway)
-"Nn" = (
-/obj/effect/floor_decal/corner/brown{
-	dir = 5
-	},
-/obj/structure/table/reinforced/wood,
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/gridded,
-/area/crumbling_station/command/administrator)
 "Np" = (
 /obj/effect/floor_decal/corner/dark_green{
 	dir = 8
@@ -6427,6 +7022,13 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/hallway)
+"Ny" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_ports)
 "Nz" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -6459,6 +7061,13 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/custodial)
+"NJ" = (
+/obj/machinery/alarm/west,
+/obj/effect/floor_decal/corner/lime{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/storage)
 "NK" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -6473,6 +7082,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crumbling_station/civilian/quarters_7)
+"NM" = (
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 9
+	},
+/obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_west)
 "NN" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -6495,22 +7111,18 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/reactor)
-"NR" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/engi)
 "NT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/reactor)
+"NU" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/crumbling_station/civilian/quarters_7)
 "NV" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/maints/disposals)
@@ -6536,9 +7148,26 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/maints/atmospherics)
+"Ob" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/noid{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/gunmetal/full,
+/area/crumbling_station/engi/hallway)
 "Oc" = (
 /turf/simulated/wall,
 /area/crumbling_station/maints/engi)
+"Of" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/hydroponics)
 "Oh" = (
 /obj/effect/floor_decal/corner/dark_blue/full{
 	dir = 8
@@ -6576,21 +7205,23 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/security/ready)
 "Oo" = (
-/obj/effect/map_effect/window_spawner/full/reinforced/firedoor,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/civilian/hallway_central)
-"Oq" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/steel,
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
 	},
-/obj/machinery/alarm/west,
-/turf/simulated/floor,
-/area/crumbling_station/docking/docking_ports)
-"Or" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/lobby)
+"Op" = (
 /obj/machinery/alarm/south,
 /turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/engi/atmospherics)
+/area/crumbling_station/maints/civilian)
+"Oq" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/hydroponics)
 "Os" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/crumbling_station/civilian/quarters_5)
@@ -6613,6 +7244,10 @@
 /area/crumbling_station/docking/docking_approach)
 "Oy" = (
 /obj/effect/floor_decal/industrial/hatch/grey,
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/freezer{
 	name = "cooled tiles";
 	temperature = 253.15
@@ -6657,16 +7292,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/command/control)
-"OP" = (
-/obj/effect/floor_decal/corner_wide/blue/full{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
-"OQ" = (
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/engi/workshop)
 "OR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -6700,7 +7325,7 @@
 /area/crumbling_station/docking/storage)
 "OX" = (
 /obj/effect/floor_decal/corner/lime{
-	dir = 6
+	dir = 9
 	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/hard_storage)
@@ -6710,6 +7335,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/reactor)
@@ -6722,17 +7350,18 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/hangar)
+"Pb" = (
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/techfloor,
+/area/crumbling_station/civilian/quarters_6)
 "Pc" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/service,
+/obj/machinery/light/colored/decayed{
+	dir = 1
 	},
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
+/turf/simulated/floor/lino,
+/area/crumbling_station/service/shop)
 "Pd" = (
 /turf/simulated/wall,
 /area/crumbling_station/civilian/quarters_5)
@@ -6778,6 +7407,16 @@
 "Px" = (
 /turf/simulated/mineral/lava,
 /area/crumbling_station/asteroid/interior)
+"Py" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/engi)
 "Pz" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -6797,10 +7436,22 @@
 	},
 /turf/simulated/floor/wood,
 /area/crumbling_station/command/control)
+"PD" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/atmospherics)
 "PG" = (
 /obj/machinery/optable,
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/engi/workshop)
+"PK" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/alarm/east,
+/turf/simulated/floor,
+/area/crumbling_station/maints/engi)
 "PL" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -6817,8 +7468,19 @@
 /area/crumbling_station/medical/hallway)
 "PO" = (
 /obj/structure/table/steel,
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/workshop)
+"PR" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/service/disposals)
 "PV" = (
 /turf/simulated/wall,
 /area/crumbling_station/asteroid/interior)
@@ -6834,11 +7496,19 @@
 /area/space)
 "Qa" = (
 /obj/effect/floor_decal/corner/dark_green/full,
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/service/hydro)
 "Qb" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/command/vault)
+"Qc" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/radiator)
 "Qf" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/cable/green{
@@ -6849,6 +7519,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/service/kitchen)
+"Qh" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/storage)
 "Ql" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -6856,12 +7532,23 @@
 /turf/simulated/floor,
 /area/crumbling_station/maints/disposals)
 "Qo" = (
-/obj/effect/floor_decal/industrial/hatch/security,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/command/control)
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 6
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_central)
 "Qs" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/engi/storage)
+"Qt" = (
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/engi/workshop)
 "Qu" = (
 /obj/machinery/door/blast/regular{
 	dir = 8
@@ -6936,20 +7623,17 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/custodial)
 "QK" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/structure/table/reinforced/wood,
 /obj/machinery/alarm/south,
 /turf/simulated/floor/tiled/gridded,
-/area/crumbling_station/medical/recovery1)
+/area/crumbling_station/command/administrator)
 "QM" = (
 /obj/machinery/door/blast/regular,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/disposals)
-"QN" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/maints/atmospherics)
 "QQ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -6969,10 +7653,20 @@
 "QV" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/command/washroom)
+"QW" = (
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 1
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/docking/docking_approach)
 "QX" = (
-/obj/machinery/alarm/freezer/north,
-/turf/simulated/floor/lino,
-/area/crumbling_station/service/kitchen)
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/custodial)
 "QY" = (
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 4
@@ -7034,9 +7728,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_east)
 "Rk" = (
-/obj/effect/floor_decal/corner/dark_blue/full,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/alarm/south,
 /turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
+/area/crumbling_station/maints/auxiliary)
 "Rl" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
@@ -7062,6 +7759,18 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/radiator)
+"Rv" = (
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/cargo{
+	name = "white tiles"
+	},
+/area/crumbling_station/service/washroom)
+"Ry" = (
+/obj/effect/floor_decal/industrial/outline/custodial,
+/obj/structure/table/rack,
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/gunmetal/full,
+/area/crumbling_station/service/custodial)
 "RB" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -7082,6 +7791,24 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/hallway_central)
+"RD" = (
+/obj/machinery/alarm/west,
+/obj/effect/floor_decal/corner_wide/blue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
+"RG" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/machinery/alarm/east,
+/turf/simulated/floor,
+/area/crumbling_station/maints/hydroponics)
+"RH" = (
+/obj/effect/floor_decal/corner/dark_blue/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/brig)
 "RJ" = (
 /turf/simulated/wall,
 /area/crumbling_station/maints/atmospherics)
@@ -7113,13 +7840,6 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/shop)
-"RP" = (
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 5
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/command/foyer)
 "RQ" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -7127,11 +7847,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/maints/auxiliary)
 "RS" = (
-/obj/effect/floor_decal/corner_wide/paleblue{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/ready)
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/docking/storage)
 "RT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -7163,12 +7880,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/maints/atmospherics)
-"Sb" = (
-/obj/effect/floor_decal/corner_wide/blue{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
 "Sc" = (
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/engi/atmospherics)
@@ -7219,6 +7930,9 @@
 	name = "produce box";
 	icon_state = "largebox"
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/kitchen)
 "Sq" = (
@@ -7240,6 +7954,15 @@
 "Ss" = (
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar2)
+"St" = (
+/obj/effect/floor_decal/corner_wide/blue{
+	dir = 6
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
 "Sv" = (
 /obj/effect/map_effect/window_spawner/full/reinforced/firedoor,
 /turf/simulated/floor/tiled/dark/full,
@@ -7247,12 +7970,6 @@
 "Sw" = (
 /turf/simulated/wall,
 /area/crumbling_station/engi/hard_storage)
-"Sz" = (
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/brig)
 "SA" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/maints/hangar)
@@ -7267,16 +7984,21 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/civilian/hallway_west)
-"SF" = (
+"SE" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/machinery/alarm/west,
 /turf/simulated/floor,
-/area/crumbling_station/maints/radiator)
+/area/crumbling_station/maints/solar1)
 "SG" = (
 /obj/structure/table/standard,
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/north,
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/freezer{
 	name = "cooled tiles";
 	temperature = 253.15
@@ -7288,6 +8010,10 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/washroom)
+"SK" = (
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/maints/auxiliary)
 "SN" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -7317,12 +8043,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar2)
-"SY" = (
-/obj/effect/floor_decal/corner/dark_blue/full{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/brig)
 "SZ" = (
 /obj/effect/floor_decal/corner_wide/lime/full,
 /turf/simulated/floor/tiled/white,
@@ -7338,6 +8058,14 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
 /area/crumbling_station/maints/auxiliary)
+"Td" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
+/turf/simulated/floor,
+/area/crumbling_station/engi/atmospherics)
 "Te" = (
 /obj/effect/floor_decal/industrial/hatch_small/yellow,
 /obj/effect/floor_decal/industrial/warning,
@@ -7361,9 +8089,16 @@
 "Tl" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/table/steel,
-/obj/machinery/alarm/freezer/south,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/alarm/south,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/service/kitchen)
+"Tm" = (
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/plating,
+/area/crumbling_station/engi/reactor)
 "To" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/security/brig)
@@ -7401,19 +8136,23 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/maints/atmospherics)
+"TA" = (
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 10
+	},
+/obj/machinery/light/colored/decayed,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_central)
 "TC" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/security/brig)
-"TE" = (
-/obj/effect/floor_decal/corner/dark_blue{
-	dir = 10
-	},
-/obj/machinery/alarm/south,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/brig)
+"TD" = (
+/obj/machinery/alarm/nobreach/north,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/service/hydro_secure)
 "TJ" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
@@ -7463,6 +8202,12 @@
 "TY" = (
 /turf/simulated/floor/tiled/gunmetal/full,
 /area/crumbling_station/engi/hard_storage)
+"Uc" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor,
+/area/crumbling_station/docking/docking_approach)
 "Uf" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -7489,6 +8234,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/hallway)
+"Um" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/dark_blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/hallway)
 "Ur" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -7502,6 +8258,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/crumbling_station/command/control)
+"Uu" = (
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 4
+	},
+/obj/machinery/alarm/south,
+/turf/simulated/floor/tiled/red,
+/area/crumbling_station/service/smoking)
 "Uw" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -7511,12 +8274,26 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/engi/atmospherics)
+"Ux" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/hallway)
 "UB" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/disposals)
+"UF" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/alarm/east,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/maints/solar2)
 "UG" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/crumbling_station/civilian/quarters_2)
@@ -7543,12 +8320,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crumbling_station/command/control)
-"UN" = (
-/obj/effect/floor_decal/corner/dark_blue/full{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/hallway)
 "UP" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
@@ -7582,6 +8353,9 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/civilian/hallway_east)
 "UX" = (
@@ -7614,6 +8388,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/crumbling_station/docking/docking_approach)
 "Vg" = (
@@ -7634,11 +8411,8 @@
 /turf/simulated/floor,
 /area/crumbling_station/engi/atmospherics)
 "Vo" = (
-/obj/effect/floor_decal/corner_wide/blue{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
+/turf/simulated/wall/r_wall,
+/area/crumbling_station/docking/storage)
 "Vp" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor,
@@ -7653,6 +8427,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_central)
+"Vs" = (
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/east,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_east)
 "Vt" = (
 /obj/effect/floor_decal/corner/dark_green{
 	dir = 6
@@ -7710,7 +8495,6 @@
 /obj/structure/bed/stool/chair/sofa/beige{
 	dir = 4
 	},
-/obj/machinery/alarm/west,
 /turf/simulated/floor/tiled/red,
 /area/crumbling_station/service/smoking)
 "VC" = (
@@ -7764,6 +8548,12 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/auxiliary)
+"VL" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/storage)
 "VN" = (
 /obj/machinery/power/apc/north,
 /obj/structure/cable/green{
@@ -7772,6 +8562,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crumbling_station/civilian/quarters_1)
+"VP" = (
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/workshop)
 "VR" = (
 /obj/effect/floor_decal/corner_wide/yellow,
 /turf/simulated/floor/tiled/white,
@@ -7837,23 +8634,22 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
+/obj/machinery/light/small{
+	dir = 4;
+	must_start_working = 1
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/hallway)
 "Wb" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/engi/atmospherics)
+/area/crumbling_station/command/foyer)
 "Wd" = (
 /obj/structure/table/rack/retail_shelf,
 /turf/simulated/floor/lino,
 /area/crumbling_station/service/shop)
-"We" = (
-/obj/effect/floor_decal/corner_wide/yellow{
-	dir = 5
-	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/gtr)
 "Wh" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 4
@@ -7871,6 +8667,10 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/docking/docking_approach)
+"Wl" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/gunmetal/full,
+/area/crumbling_station/engi/hard_storage)
 "Wp" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -7892,10 +8692,10 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/reactor)
 "Ws" = (
+/obj/machinery/alarm/south,
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/alarm/north,
 /turf/simulated/floor,
-/area/crumbling_station/maints/solar2)
+/area/crumbling_station/maints/engi)
 "Wt" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/reactor)
@@ -7906,18 +8706,21 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/engi)
-"Wx" = (
-/obj/effect/floor_decal/corner_wide/yellow{
-	dir = 6
-	},
-/obj/machinery/alarm/east,
+"Wy" = (
+/obj/machinery/alarm/south,
 /turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/lobby)
-"WE" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
+/area/crumbling_station/command/washroom)
+"WB" = (
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/medical/pharmacy)
+"WD" = (
 /obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/disposals)
+/turf/simulated/floor/lino,
+/area/crumbling_station/service/shop)
 "WF" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
@@ -7937,6 +8740,12 @@
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/hallway)
 "WH" = (
+/turf/simulated/floor/plating,
+/area/crumbling_station/engi/reactor)
+"WJ" = (
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/crumbling_station/engi/reactor)
 "WK" = (
@@ -7963,6 +8772,14 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/solar2)
+"WR" = (
+/obj/machinery/door/firedoor/noid,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/command/control)
 "WS" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -7973,11 +8790,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/command/foyer)
-"WV" = (
-/obj/effect/floor_decal/corner/dark_green/diagonal,
-/obj/machinery/alarm/east,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/civilian/hallway_central)
 "WX" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/maints/disposals)
@@ -8014,6 +8826,9 @@
 /obj/effect/floor_decal/corner_wide/yellow/full{
 	dir = 1
 	},
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/lobby)
 "Xe" = (
@@ -8024,6 +8839,13 @@
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/crumbling_station/engi/atmospherics)
+"Xf" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/alarm/east,
+/turf/simulated/floor,
+/area/crumbling_station/maints/solar2)
 "Xg" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -8041,6 +8863,21 @@
 	},
 /turf/simulated/floor/tiled/gridded,
 /area/crumbling_station/command/administrator)
+"Xi" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/cargo{
+	name = "white tiles"
+	},
+/area/crumbling_station/service/washroom)
+"Xk" = (
+/obj/effect/floor_decal/corner/dark_green/diagonal,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_central)
 "Xl" = (
 /turf/simulated/wall/r_wall,
 /area/crumbling_station/maints/engi)
@@ -8129,13 +8966,26 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/engi/atmospherics)
+"XK" = (
+/obj/effect/floor_decal/corner/dark_green{
+	dir = 5
+	},
+/obj/machinery/light/colored/decayed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_east)
 "XL" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/gunmetal/full,
-/area/crumbling_station/engi/hard_storage)
+/obj/effect/floor_decal/corner/lime{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/storage)
 "XM" = (
+/obj/machinery/light/colored/decayed,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/docking/storage)
 "XN" = (
@@ -8154,20 +9004,21 @@
 /obj/structure/janitorialcart{
 	dir = 4
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/gunmetal/full,
 /area/crumbling_station/service/custodial)
-"XT" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/storage)
-"XU" = (
-/obj/effect/floor_decal/corner/lime/full{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/gunmetal,
-/area/crumbling_station/engi/storage)
+"XP" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/alarm/north,
+/turf/simulated/floor,
+/area/crumbling_station/maints/reactor)
+"XR" = (
+/obj/effect/floor_decal/corner/dark_green/diagonal,
+/obj/machinery/alarm/west,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/service/dining)
 "XW" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
@@ -8181,19 +9032,16 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/medical)
+"Yd" = (
+/obj/machinery/alarm/north,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/engi/atmospherics)
 "Ye" = (
 /obj/effect/floor_decal/corner/dark_green{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_central)
-"Yg" = (
-/obj/effect/floor_decal/corner/dark_green{
-	dir = 9
-	},
-/obj/machinery/alarm/west,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/civilian/hallway_west)
 "Yi" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -8201,9 +9049,11 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/engi/reactor)
 "Yk" = (
-/obj/effect/floor_decal/corner_wide/paleblue/full,
-/turf/simulated/floor/tiled/dark,
-/area/crumbling_station/security/ready)
+/obj/effect/floor_decal/corner/lime/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/storage)
 "Yo" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -8211,17 +9061,6 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/civilian/hallway_central)
-"Yq" = (
-/obj/effect/floor_decal/corner_wide/blue{
-	dir = 6
-	},
-/obj/machinery/power/apc/east,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/pharmacy)
 "Yr" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -8250,6 +9089,12 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/civilian)
+"YA" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/medical/hallway)
 "YB" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/cable/green{
@@ -8260,10 +9105,12 @@
 /turf/simulated/floor,
 /area/crumbling_station/maints/security)
 "YC" = (
-/obj/machinery/door/firedoor/noid,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/docking/docking_approach)
+/obj/machinery/alarm/north,
+/obj/effect/floor_decal/corner/dark_blue/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/hallway)
 "YE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -8286,18 +9133,19 @@
 /obj/structure/bed/stool/chair/sofa/left/beige{
 	dir = 4
 	},
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/red,
 /area/crumbling_station/service/smoking)
-"YK" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
+"YJ" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/custodial)
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
 "YL" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
@@ -8313,11 +9161,6 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/command/control)
-"YR" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/machinery/alarm/north,
-/turf/simulated/floor/tiled/white,
-/area/crumbling_station/medical/lobby)
 "YS" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -8358,11 +9201,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crumbling_station/medical/surgery)
-"Zc" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/engi)
 "Zd" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -8384,6 +9222,9 @@
 /area/crumbling_station/command/administrator)
 "Zh" = (
 /obj/effect/floor_decal/corner/brown/full,
+/obj/machinery/light/colored/decayed{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/gunmetal,
 /area/crumbling_station/engi/lobby)
 "Zi" = (
@@ -8395,6 +9236,16 @@
 	},
 /turf/simulated/floor,
 /area/crumbling_station/maints/civilian)
+"Zk" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/machinery/light/small{
+	dir = 8;
+	must_start_working = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/reactor)
 "Zl" = (
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/crumbling_station/engi/atmospherics)
@@ -8411,11 +9262,6 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/maints/radiator)
-"Zr" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/machinery/alarm/north,
-/turf/simulated/floor,
-/area/crumbling_station/maints/custodial)
 "Zs" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -8434,16 +9280,11 @@
 "Zx" = (
 /turf/simulated/mineral/lava,
 /area/crumbling_station/maints/engi)
-"Zz" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/firedoor/noid{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark/full,
-/area/crumbling_station/security/hallway)
+"ZB" = (
+/obj/effect/floor_decal/corner/dark_green/diagonal,
+/obj/machinery/alarm/east,
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/civilian/hallway_central)
 "ZD" = (
 /obj/machinery/photocopier,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -8455,6 +9296,12 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/crumbling_station/command/vault)
+"ZH" = (
+/obj/effect/floor_decal/corner_wide/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/crumbling_station/medical/pharmacy)
 "ZI" = (
 /obj/effect/floor_decal/corner/grey/full{
 	dir = 1
@@ -8481,9 +9328,27 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crumbling_station/civilian/hallway_east)
+"ZO" = (
+/obj/machinery/light/colored/decayed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/crumbling_station/engi/reactor)
 "ZP" = (
 /turf/simulated/floor/wood,
 /area/crumbling_station/command/control)
+"ZQ" = (
+/obj/effect/floor_decal/corner/dark_blue/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crumbling_station/security/hallway)
+"ZY" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/gunmetal,
+/area/crumbling_station/engi/storage)
 "ZZ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/noid{
@@ -15261,7 +16126,7 @@ Px
 Px
 Px
 Vw
-wc
+PR
 vV
 vV
 vV
@@ -16804,7 +17669,7 @@ Px
 Px
 Px
 Vw
-af
+kV
 ud
 Vw
 Px
@@ -17544,7 +18409,7 @@ yn
 yn
 Px
 SA
-Dc
+JE
 Pa
 pH
 mc
@@ -18362,7 +19227,7 @@ cI
 cI
 Px
 cI
-WE
+LO
 RT
 cI
 Px
@@ -19858,7 +20723,7 @@ Px
 Px
 Px
 SA
-oS
+Cd
 aG
 hh
 hh
@@ -21162,7 +22027,7 @@ Px
 Px
 Px
 CA
-Ed
+SK
 qD
 tQ
 Hn
@@ -21733,11 +22598,11 @@ Px
 Ls
 lU
 sJ
-fZ
+Zk
 la
 AB
 la
-lU
+Ip
 sJ
 fZ
 Ls
@@ -21951,7 +22816,7 @@ Px
 Px
 Px
 cI
-jk
+Kj
 RT
 cI
 Px
@@ -22240,25 +23105,25 @@ Px
 Px
 Px
 Px
-Ls
+Px
 Ls
 Ls
 Ls
 Ls
 to
-Lw
+Am
 Ls
 Ls
 wf
 Ls
 Ls
-to
+GM
 Lw
 Ls
 Ls
 Ls
 Ls
-Ls
+Px
 Px
 nf
 Ha
@@ -22497,11 +23362,11 @@ Px
 Px
 Px
 Px
+Px
 Ls
 xz
 xz
-xz
-xz
+oZ
 to
 Lw
 la
@@ -22511,11 +23376,11 @@ Xt
 la
 to
 Lw
-xz
-xz
+oZ
 xz
 xz
 Ls
+Px
 Px
 nf
 La
@@ -22524,7 +23389,7 @@ La
 La
 La
 Rr
-IN
+gJ
 nf
 Px
 Px
@@ -22711,7 +23576,7 @@ FT
 qD
 Hn
 Hn
-kj
+Rk
 CA
 Px
 Px
@@ -22754,8 +23619,8 @@ Px
 Px
 Px
 Px
+Px
 Ls
-WH
 WH
 WH
 WH
@@ -22771,8 +23636,8 @@ Lw
 WH
 WH
 WH
-WH
 Ls
+Px
 Px
 nf
 Ha
@@ -23011,9 +23876,9 @@ Px
 Px
 Px
 Px
+Px
 Ls
-WH
-WH
+WJ
 WH
 WH
 to
@@ -23027,9 +23892,9 @@ to
 Lw
 WH
 WH
-WH
-WH
+Tm
 Ls
+Px
 Px
 nf
 nf
@@ -23186,7 +24051,7 @@ iN
 iN
 iN
 jq
-xw
+gt
 jq
 iN
 Px
@@ -23268,25 +24133,25 @@ Px
 Px
 Px
 Px
+Px
 Ls
-WH
 WH
 WH
 WH
 to
+Am
+Ls
+la
+la
+la
+Ls
+GM
 Lw
-Ls
-la
-la
-la
-Ls
-to
-Lw
-WH
 WH
 WH
 WH
 Ls
+Px
 Px
 Px
 Px
@@ -23478,7 +24343,7 @@ Tc
 CJ
 CA
 qD
-yr
+Iz
 qD
 tQ
 Hn
@@ -23525,8 +24390,8 @@ Px
 Px
 Px
 Px
+Px
 Ls
-WH
 WH
 WH
 WH
@@ -23542,8 +24407,8 @@ Lw
 WH
 WH
 WH
-WH
 Ls
+Px
 Px
 Px
 Px
@@ -23782,8 +24647,8 @@ Px
 Px
 Px
 Px
+Px
 Ls
-WH
 WH
 WH
 WH
@@ -23799,8 +24664,8 @@ iF
 WH
 WH
 WH
-WH
 Ls
+Px
 Px
 Px
 Px
@@ -23954,7 +24819,7 @@ iN
 iN
 iN
 RK
-cZ
+UF
 iN
 RK
 RK
@@ -24039,6 +24904,7 @@ Px
 Px
 Px
 Px
+Px
 Ls
 WH
 WH
@@ -24055,9 +24921,8 @@ WH
 WH
 WH
 WH
-WH
-WH
 Ls
+Px
 Px
 Px
 Px
@@ -24296,7 +25161,9 @@ Px
 Px
 Px
 Px
+Px
 Ls
+WJ
 WH
 WH
 WH
@@ -24310,11 +25177,9 @@ WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
+Tm
 Ls
+Px
 Px
 Px
 Px
@@ -24323,7 +25188,7 @@ Px
 Px
 Px
 XB
-Eb
+Qc
 XB
 Px
 Px
@@ -24480,7 +25345,7 @@ Px
 Px
 Px
 se
-Ws
+sa
 il
 sr
 sr
@@ -24553,10 +25418,10 @@ Px
 Px
 Px
 Px
+Px
 Ls
 NA
 xz
-WH
 WH
 WH
 WH
@@ -24569,9 +25434,9 @@ WH
 WH
 WH
 WH
-xz
 ST
 Ls
+Px
 Px
 Px
 Px
@@ -24752,7 +25617,7 @@ ak
 ak
 ak
 ak
-zi
+Xf
 ak
 ak
 rl
@@ -24810,6 +25675,7 @@ Px
 Px
 Px
 Px
+Px
 Ls
 NA
 xz
@@ -24825,10 +25691,9 @@ WH
 WH
 WH
 WH
-WH
-xz
 ST
 Ls
+Px
 Px
 Px
 Px
@@ -25067,12 +25932,12 @@ Px
 Px
 Px
 Px
+Px
 Ls
+Ji
 WH
 WH
-WH
-WH
-WH
+Ji
 WH
 WH
 BW
@@ -25080,12 +25945,12 @@ cG
 Mg
 WH
 WH
+Ji
 WH
 WH
-WH
-WH
-WH
+Ji
 Ls
+Px
 Px
 Px
 Px
@@ -25324,25 +26189,25 @@ Px
 Px
 Px
 Px
-Ls
-Ls
-Ls
-Wt
-Ls
-Ls
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+Px
 Ls
 Ls
 Wt
 Ls
 Ls
+WH
+WH
+WH
+WH
+WH
+WH
+WH
 Ls
+Ls
+Wt
+Ls
+Ls
+Px
 Px
 Px
 Px
@@ -25813,7 +26678,7 @@ Px
 Px
 Px
 Px
-Px
+Oc
 Oc
 TP
 Oc
@@ -25844,7 +26709,7 @@ Ds
 Vk
 ou
 Ls
-sJ
+iT
 sJ
 sJ
 sJ
@@ -25852,7 +26717,7 @@ sJ
 sJ
 sJ
 Ls
-DF
+XP
 kP
 BA
 Px
@@ -26056,7 +26921,7 @@ sr
 sr
 NP
 hB
-da
+vv
 hB
 Cf
 cI
@@ -26070,8 +26935,8 @@ Px
 Px
 Px
 Px
-Px
 Oc
+Ds
 oa
 ou
 Oc
@@ -26107,7 +26972,7 @@ OZ
 Wq
 yo
 Na
-Wt
+ZO
 Ls
 fK
 kP
@@ -26128,7 +26993,7 @@ Px
 Px
 nf
 sA
-SF
+da
 sA
 nf
 Px
@@ -26306,7 +27171,7 @@ se
 se
 se
 ak
-zi
+Xf
 ak
 se
 se
@@ -26328,7 +27193,7 @@ Oc
 Oc
 Oc
 Oc
-Oc
+Ds
 oa
 ou
 Oc
@@ -26390,7 +27255,7 @@ iU
 nf
 nf
 nf
-nG
+fL
 zd
 Ha
 Ha
@@ -26874,7 +27739,7 @@ KH
 Vk
 ou
 pX
-Nm
+Ux
 zW
 wJ
 pX
@@ -27101,8 +27966,8 @@ Oc
 Al
 KH
 Ww
-Oc
-Oc
+Si
+Al
 Oc
 Oc
 Oc
@@ -27352,15 +28217,15 @@ Px
 Oc
 Ds
 Vk
-vo
+PK
 ku
 Oc
 Oc
 Ds
 Ww
+ou
+ku
 Oc
-Px
-Px
 Px
 Px
 Px
@@ -27384,7 +28249,7 @@ Px
 Px
 Px
 Oc
-Zc
+za
 Vk
 Vk
 pX
@@ -27392,7 +28257,7 @@ Wa
 Kn
 hP
 pX
-wS
+ne
 kP
 kP
 NQ
@@ -27564,7 +28429,7 @@ Px
 Px
 Px
 se
-Ws
+sa
 oE
 YF
 se
@@ -27608,7 +28473,7 @@ Px
 Px
 Oc
 Oc
-Oc
+RM
 Oc
 Oc
 Oc
@@ -27616,8 +28481,8 @@ Oc
 AI
 gG
 Oc
-Px
-Px
+Oc
+Oc
 Px
 Px
 Px
@@ -27835,7 +28700,7 @@ Px
 se
 SX
 oE
-gM
+HT
 se
 Px
 Px
@@ -27902,7 +28767,7 @@ Ds
 Vk
 pX
 BU
-Kx
+KX
 pu
 Lu
 FI
@@ -28122,7 +28987,7 @@ Px
 Px
 Oc
 ou
-gE
+Ws
 Oc
 Px
 Px
@@ -28397,7 +29262,7 @@ Px
 Px
 Px
 Oc
-NR
+Py
 Vk
 Vk
 Vk
@@ -28898,7 +29763,7 @@ Px
 Px
 Px
 Oc
-Zc
+za
 Vk
 Oc
 Px
@@ -29444,8 +30309,8 @@ Oc
 Oc
 Oc
 th
-Kx
-Fi
+uG
+kg
 th
 eF
 BA
@@ -29701,7 +30566,7 @@ Px
 Px
 Px
 th
-IL
+Cs
 Fi
 th
 eF
@@ -29964,7 +30829,7 @@ th
 eF
 hT
 iP
-GF
+vO
 BA
 Px
 Px
@@ -30157,11 +31022,11 @@ Px
 Px
 Px
 Px
-Qb
-Qb
-Qb
 Px
 Px
+Qb
+Qb
+Qb
 Px
 Px
 Px
@@ -30413,13 +31278,13 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
 Qb
 AE
 Qb
 Qb
-Px
-Px
 Px
 Px
 Px
@@ -30450,13 +31315,13 @@ ou
 Xl
 wg
 oz
+Td
 oz
 oz
 oz
 oz
 oz
-oz
-oz
+Td
 oz
 bv
 DJ
@@ -30670,13 +31535,13 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
 Sq
 cr
 Sq
 Qb
-Px
-Px
 Px
 Px
 Px
@@ -30710,7 +31575,7 @@ KL
 zp
 fA
 DJ
-oz
+tt
 DJ
 bT
 pe
@@ -30927,13 +31792,13 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
 Nt
 cr
 Nt
 Qb
-Px
-Px
 Px
 Px
 Wi
@@ -30978,10 +31843,10 @@ Px
 Sw
 Sw
 Sw
-EO
-EO
-EO
-EO
+Wl
+Wl
+Wl
+Wl
 Sw
 Px
 th
@@ -30992,7 +31857,7 @@ th
 eF
 hT
 iP
-GF
+vO
 BA
 Px
 Px
@@ -31161,7 +32026,7 @@ Px
 Px
 Px
 se
-ni
+cW
 SX
 oE
 oE
@@ -31184,13 +32049,13 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
 oT
 cr
 xn
 Qb
-Px
-Px
 Px
 Px
 Wi
@@ -31211,40 +32076,40 @@ Px
 Px
 Px
 gB
-yx
+eX
 YX
 Sg
-YX
+zi
 Oc
 oa
 ou
 Xl
 FC
 sm
-sm
+od
 sm
 sw
 oz
 DR
 Zl
-Zl
+pa
 Zl
 NW
 DJ
 Px
 Sw
-EO
-DL
-Ba
-Ba
+Wl
+EY
+OX
+OX
 Re
 aU
 Sw
 Px
 th
 th
-Kx
-Fi
+uG
+kg
 th
 eF
 BA
@@ -31441,21 +32306,21 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
-AO
+Jb
 cr
 xn
 Qb
 Px
 Px
-Px
-Px
 Wi
 Wi
 Wi
 nL
 nL
-iW
+Wy
 Wi
 Px
 Px
@@ -31469,7 +32334,7 @@ gB
 gB
 gB
 gB
-OQ
+Ee
 Sg
 YX
 Oc
@@ -31490,12 +32355,12 @@ oI
 DJ
 Px
 Sw
-Gf
-kA
+Ir
+DY
 TY
 TY
-XL
-cS
+fX
+KQ
 Sw
 Px
 Px
@@ -31698,13 +32563,13 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
 oT
 cr
 xn
 Qb
-Px
-Px
 Px
 Px
 Wi
@@ -31721,7 +32586,7 @@ Px
 Px
 Px
 gB
-yx
+yb
 PG
 ur
 PO
@@ -31738,7 +32603,7 @@ as
 ly
 yc
 DJ
-oz
+tt
 DJ
 KB
 rv
@@ -31747,12 +32612,12 @@ DJ
 DJ
 Px
 Sw
-EO
-gI
-OX
-OX
-pB
-sV
+Wl
+xP
+kA
+kA
+Ed
+kX
 Sw
 Px
 Px
@@ -31955,13 +32820,13 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
 Nt
 cr
 Nt
 Qb
-Px
-Px
 Px
 Px
 Wi
@@ -31990,7 +32855,7 @@ Oc
 oa
 ou
 Xl
-oz
+Td
 oz
 oz
 oz
@@ -32014,8 +32879,8 @@ th
 th
 th
 th
-hi
-uk
+Ob
+AC
 th
 eF
 cO
@@ -32060,7 +32925,7 @@ yn
 yn
 yn
 Fr
-gj
+Ny
 gj
 Fr
 Fr
@@ -32212,13 +33077,13 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
 Sq
 cr
 Sq
 Qb
-Px
-Px
 Px
 Px
 Px
@@ -32261,14 +33126,14 @@ Fk
 oU
 zZ
 zZ
-zZ
+fF
 zZ
 zZ
 zZ
 pM
 zZ
 zZ
-zZ
+fF
 zZ
 zZ
 mE
@@ -32320,7 +33185,7 @@ Fr
 xW
 xW
 Fr
-sf
+xf
 gj
 Fr
 yn
@@ -32469,13 +33334,13 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
 Qb
 oi
 Qb
 Qb
-Px
-Px
 Px
 Px
 Px
@@ -32492,10 +33357,10 @@ Px
 Px
 Px
 gB
-yx
+VP
 PG
 ur
-PO
+Iw
 FL
 YX
 Sg
@@ -32727,11 +33592,11 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
 ZG
 Qb
-Px
-Px
 Px
 Px
 Px
@@ -32763,7 +33628,7 @@ ou
 Xl
 DJ
 DJ
-XJ
+Dz
 XJ
 XJ
 hf
@@ -32984,11 +33849,11 @@ Px
 Px
 Px
 Px
+Px
+Px
 Qb
 ZG
 Qb
-Px
-Px
 Px
 Px
 Px
@@ -33004,18 +33869,18 @@ Px
 Px
 Px
 gB
+Qt
 YX
 YX
 YX
-YX
-YX
+Qt
 gB
 YX
 YX
 Sg
 tm
 Oc
-NR
+Py
 ou
 ku
 ku
@@ -33027,14 +33892,14 @@ uv
 oU
 oU
 Sc
-Or
+PD
 DJ
-Le
-yS
-Nk
-kz
-Li
-ms
+uL
+Yk
+ZY
+XL
+NJ
+Ei
 Qs
 gf
 kk
@@ -33087,7 +33952,7 @@ yn
 yn
 yn
 Fr
-YZ
+Js
 sf
 Zd
 sf
@@ -33236,6 +34101,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 DX
 DX
 DX
@@ -33249,8 +34116,6 @@ DX
 DX
 DX
 Px
-Px
-Px
 MI
 PW
 UL
@@ -33261,7 +34126,7 @@ Px
 Px
 Px
 gB
-OQ
+Ee
 YX
 YX
 YX
@@ -33270,28 +34135,28 @@ yx
 YX
 Sg
 Sg
-tm
+AS
 Oc
 oa
 JD
 HY
 HY
 DJ
-Sc
+Yd
 oU
 oU
 oU
 oU
 oU
 Sc
-Wb
+IJ
 DJ
 fo
+HJ
 sX
-ev
 kE
 pi
-XT
+VL
 kB
 oj
 qH
@@ -33491,6 +34356,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 DX
 DX
 DX
@@ -33501,12 +34368,10 @@ ql
 dm
 OL
 Xo
-au
+BT
 Xo
 tU
 DX
-Px
-Px
 Px
 MI
 WS
@@ -33534,21 +34399,21 @@ fl
 fl
 me
 DJ
+bg
 Sc
 Sc
 Sc
 Sc
 Sc
 Sc
-Sc
-Wb
+PD
 DJ
-Le
-XU
-bZ
-bZ
-bZ
-kR
+uL
+LI
+Qh
+Qh
+Qh
+lB
 Qs
 wO
 zA
@@ -33748,6 +34613,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 DX
 jJ
 Ut
@@ -33761,8 +34628,6 @@ hR
 hR
 hR
 mf
-DX
-DX
 DX
 DX
 MI
@@ -33860,7 +34725,7 @@ yn
 Fr
 YZ
 gj
-Zd
+bH
 Fr
 sf
 sf
@@ -34005,6 +34870,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 DX
 jJ
 mN
@@ -34019,9 +34886,7 @@ hR
 hR
 mf
 Nc
-Qo
-hR
-Qo
+BR
 is
 PW
 hL
@@ -34032,21 +34897,22 @@ Sm
 Lh
 Th
 GU
+KS
 GU
 GU
 GU
+KS
 GU
 GU
 GU
-GU
-GU
-GU
+KS
 tj
 GU
 GU
 GU
 GU
 KE
+KS
 GU
 GU
 GU
@@ -34054,6 +34920,7 @@ GU
 GU
 GU
 GU
+KS
 GU
 GU
 GU
@@ -34061,14 +34928,12 @@ GU
 GU
 GU
 GU
-GU
-GU
-Yg
-GU
-GU
+NM
+KS
 GU
 GU
 GU
+KS
 tj
 GU
 Mv
@@ -34122,7 +34987,7 @@ lC
 lC
 FX
 uR
-gj
+cN
 gj
 uR
 yn
@@ -34262,6 +35127,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 DX
 jJ
 ed
@@ -34275,15 +35142,13 @@ Io
 iX
 Io
 el
-IQ
-DX
-hR
-DX
-is
-PW
-hL
-oW
-is
+Gg
+WR
+uK
+EA
+Jx
+Ad
+ke
 QC
 Sm
 QC
@@ -34519,6 +35384,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 DX
 jJ
 UM
@@ -34532,20 +35399,19 @@ hR
 Cl
 hR
 mf
-gh
+Nc
 BR
-tn
-BR
-uK
-cP
-hw
-DE
-uK
+is
+PW
+hL
+oW
+Wb
 UK
 aA
 UK
 Mu
 Ig
+cP
 Ig
 Ig
 Ig
@@ -34553,36 +35419,35 @@ Ig
 Ig
 Ig
 Ig
+cP
 Ig
 Ig
 Ig
 Ig
 Ig
 Ig
+cP
 Ig
 Ig
 Ig
+cP
 Ig
 Ig
 Ig
+cP
 Ig
 Ig
 Ig
-Ig
-Ig
-Ig
-Ig
-Ig
-Ig
+cP
 wZ
 Pk
 sE
 Ig
-Ig
+cP
 Nh
 Ig
 Ig
-Ig
+cP
 Ig
 Ig
 lZ
@@ -34629,7 +35494,7 @@ PY
 yn
 yn
 Fr
-YZ
+Js
 sf
 Zd
 fg
@@ -34776,6 +35641,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 DX
 jJ
 PB
@@ -34789,8 +35656,6 @@ hR
 Cl
 hR
 mf
-DX
-DX
 DX
 DX
 MI
@@ -35014,9 +35879,11 @@ Cn
 Px
 Px
 Xn
-BG
+pB
 kW
 Xn
+Px
+Px
 Px
 Px
 Px
@@ -35048,10 +35915,8 @@ rX
 yz
 DX
 Px
-Px
-Px
 MI
-RP
+LL
 UL
 oW
 MI
@@ -35072,7 +35937,7 @@ Uk
 ce
 ce
 ce
-IP
+BS
 lm
 vn
 gw
@@ -35083,7 +35948,7 @@ bL
 lz
 Mw
 Mw
-sM
+Oo
 cB
 Dv
 SZ
@@ -35265,7 +36130,7 @@ Px
 Px
 Cn
 uE
-EN
+SE
 uE
 Cn
 Px
@@ -35274,6 +36139,8 @@ Xn
 FW
 kW
 Xn
+Px
+Px
 Px
 Px
 Px
@@ -35305,8 +36172,6 @@ DX
 DX
 DX
 Px
-Px
-Px
 MI
 PW
 UL
@@ -35319,15 +36184,15 @@ Px
 ad
 fx
 VR
-Bf
-Bf
-dF
-Bf
-Bf
+dX
 Bf
 dF
 Bf
+dX
 Bf
+dF
+Bf
+dX
 Bf
 dF
 tG
@@ -35554,11 +36419,11 @@ Px
 Px
 Px
 Px
+Px
+Px
 lG
 NC
 lG
-Px
-Px
 Px
 Px
 Px
@@ -35574,7 +36439,7 @@ Px
 Px
 Px
 ad
-gb
+YA
 PN
 II
 pK
@@ -35811,11 +36676,11 @@ Px
 Px
 Px
 Px
+Px
+Px
 lG
 NC
 lG
-Px
-Px
 Px
 Px
 Px
@@ -35852,7 +36717,7 @@ gU
 QA
 Tr
 vh
-YR
+Kg
 Mw
 sM
 Cz
@@ -36067,13 +36932,13 @@ Px
 Px
 Px
 Px
+Px
+Px
 lG
 lG
 uU
 lG
 lG
-Px
-Px
 Px
 Px
 Px
@@ -36087,31 +36952,31 @@ Px
 Px
 Px
 ad
-gk
+CU
 fx
 CH
 II
 UX
 Ew
-dN
+sz
 pf
 IS
 Hz
-QK
+nU
 mo
 QT
 Hp
 Hs
 mo
-qK
+wm
 qK
 ui
 qz
-Tr
+LT
 vh
 Mw
 Mw
-Mw
+sW
 na
 nC
 vJ
@@ -36169,7 +37034,7 @@ yn
 yn
 yn
 uR
-gj
+Lp
 uR
 YZ
 sf
@@ -36323,6 +37188,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 lG
 lG
 Gt
@@ -36330,8 +37197,6 @@ NC
 Gt
 lG
 lG
-Px
-Px
 Px
 Px
 Px
@@ -36344,17 +37209,17 @@ Px
 Px
 Px
 ad
-Cp
+gk
 fx
 CH
 II
+jz
 OU
-OU
-OU
+jz
 pf
+nA
 EK
-EK
-EK
+nA
 mo
 FB
 tH
@@ -36381,7 +37246,7 @@ Br
 Br
 Br
 lN
-rS
+EZ
 Go
 Xa
 lN
@@ -36431,7 +37296,7 @@ Fr
 YZ
 gj
 Zd
-DO
+cE
 Fr
 Fr
 yn
@@ -36580,6 +37445,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 lG
 bN
 zb
@@ -36587,8 +37454,6 @@ hH
 mv
 Jy
 lG
-Px
-Px
 Px
 Px
 Px
@@ -36617,7 +37482,7 @@ mo
 mo
 mo
 mo
-We
+xD
 ui
 ui
 VE
@@ -36685,7 +37550,7 @@ PY
 yn
 yn
 Fr
-YZ
+Js
 gj
 Zd
 DO
@@ -36837,36 +37702,36 @@ Px
 Px
 Px
 Px
+Px
+Px
 lG
 HA
 dG
 ae
 mn
-Nn
+QK
 lG
 Px
 Px
 Px
-Px
-Px
 qh
-eV
-Zz
-eV
+nE
+mx
+nE
 qh
 Px
 Px
 Px
 ad
-gk
+CU
 fx
 CH
 WK
-db
-Vo
-pn
-dK
-Ge
+JQ
+zC
+RD
+zU
+WB
 WK
 Px
 Px
@@ -36881,7 +37746,7 @@ pI
 Jc
 lz
 Xd
-Wx
+og
 AK
 AK
 BX
@@ -36894,7 +37759,7 @@ bp
 zQ
 zQ
 Es
-dI
+BH
 Nd
 QB
 eo
@@ -37064,7 +37929,7 @@ Cn
 Px
 Cn
 kO
-Gb
+hm
 kO
 Cn
 Px
@@ -37073,6 +37938,8 @@ WF
 FW
 kW
 Xn
+Px
+Px
 Px
 Px
 Px
@@ -37104,25 +37971,23 @@ lG
 Px
 Px
 Px
-Px
-Px
 qh
-ym
+fM
 Wp
-bJ
+cZ
 qh
 Px
 Px
 Px
 ad
 ad
-fx
+Ks
 CH
 Ge
-rH
+ZH
 by
 by
-Sb
+ej
 Ge
 WK
 Px
@@ -37131,8 +37996,8 @@ Px
 Px
 Px
 kJ
-ub
 kJ
+ub
 kJ
 Fx
 Fx
@@ -37161,7 +38026,7 @@ fb
 Kb
 wY
 wY
-cb
+Uu
 jy
 kP
 Dg
@@ -37349,6 +38214,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 lG
 VV
 HF
@@ -37361,12 +38228,10 @@ lG
 Px
 Px
 Px
-Px
-Px
 qh
-gO
+zD
 ny
-bJ
+cZ
 qh
 Px
 Px
@@ -37376,10 +38241,10 @@ ad
 kd
 iM
 wv
-kG
+rz
 oX
-CO
-Sb
+YJ
+ej
 Ge
 WK
 Px
@@ -37388,8 +38253,8 @@ Px
 Px
 Px
 kJ
+xl
 qq
-sW
 kJ
 Px
 Px
@@ -37401,11 +38266,11 @@ Px
 Px
 Px
 RY
-VY
+tn
 aS
-HL
+TA
 Es
-QX
+cv
 fC
 de
 UY
@@ -37454,7 +38319,7 @@ yn
 yn
 PY
 Fr
-gj
+Ny
 sf
 YZ
 sf
@@ -37606,6 +38471,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 lG
 lG
 lG
@@ -37618,12 +38485,10 @@ lG
 Px
 Px
 Px
-Px
-Px
 qh
-ym
+fM
 ny
-bJ
+cZ
 qh
 qh
 qh
@@ -37633,11 +38498,11 @@ Aw
 Aw
 Aw
 Aw
-BV
-AF
-Yq
-OP
-Ge
+aj
+St
+ch
+lj
+Lx
 WK
 Px
 qx
@@ -37645,8 +38510,8 @@ qx
 qx
 Px
 kJ
+xl
 qq
-sW
 kJ
 Px
 Px
@@ -37663,7 +38528,7 @@ ns
 HL
 Pp
 Cb
-do
+IL
 Es
 Sp
 MN
@@ -37673,7 +38538,7 @@ dI
 Es
 UR
 cb
-yL
+xb
 yL
 yL
 jy
@@ -37865,6 +38730,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 lG
 lG
 Zg
@@ -37875,20 +38742,18 @@ lG
 Px
 Px
 Px
-Px
-Px
 qh
-ym
+fM
 ny
-bJ
+cZ
 ac
-Gn
-Rk
+lD
+mu
 Aw
-kw
+JA
 ts
-DW
-Yk
+ux
+vl
 Aw
 WK
 WK
@@ -37902,8 +38767,8 @@ dc
 qx
 qx
 ec
+HK
 qq
-sW
 kJ
 kJ
 kJ
@@ -38123,6 +38988,8 @@ Px
 Px
 Px
 Px
+Px
+Px
 lG
 Xh
 pC
@@ -38132,20 +38999,18 @@ Px
 Px
 Px
 Px
-Px
-Px
 qh
 tA
 ci
-aa
+Um
 sk
-Pc
+aa
 wy
 Xb
 uD
 Om
 AG
-qU
+AH
 Aw
 Px
 Px
@@ -38159,9 +39024,9 @@ OH
 OH
 oC
 ec
+xl
 qq
 fW
-Yc
 Yc
 Yc
 Yc
@@ -38183,10 +39048,10 @@ Ab
 Fd
 Ab
 Ab
-Cb
+qE
 Pp
 Pp
-Pp
+jV
 BA
 kP
 kP
@@ -38227,7 +39092,7 @@ PY
 yn
 yn
 Fr
-YZ
+Js
 gj
 Zd
 DO
@@ -38380,29 +39245,29 @@ Px
 Px
 Px
 Px
-lG
-lG
-lG
-lG
-lG
 Px
 Px
+lG
+lG
+lG
+lG
+lG
 Px
 Px
 Px
 Px
 qh
-wB
-ys
-UN
+ZQ
+MK
+eV
 qh
-xa
-vI
+YC
+np
 Aw
-rD
-RS
-RS
-Iv
+ot
+Hm
+Hm
+Dn
 Aw
 Px
 Px
@@ -38416,7 +39281,7 @@ Mk
 fr
 RB
 ec
-qq
+xl
 qq
 qq
 qq
@@ -38487,7 +39352,7 @@ Fr
 YZ
 sf
 Zd
-DO
+cE
 Fr
 Fr
 yn
@@ -38653,7 +39518,7 @@ qh
 qh
 qh
 qh
-eV
+nE
 sN
 Aw
 Aw
@@ -38909,14 +39774,14 @@ Px
 Px
 Px
 To
-lr
-sa
+xd
+qZ
 IO
-sa
-sa
-sa
-sa
-qO
+qZ
+qZ
+qZ
+qZ
+os
 To
 To
 To
@@ -38931,7 +39796,7 @@ ip
 pz
 wR
 Dr
-IB
+or
 Dr
 Dr
 wR
@@ -38939,7 +39804,7 @@ cM
 RN
 IE
 hU
-pS
+AA
 hU
 Fv
 pb
@@ -38996,7 +39861,7 @@ yn
 yn
 yn
 Fr
-gj
+Ny
 sf
 YZ
 gj
@@ -39173,7 +40038,7 @@ zx
 zx
 zx
 zx
-Sz
+qN
 It
 zx
 zx
@@ -39212,7 +40077,7 @@ IA
 IA
 IA
 IA
-ot
+XR
 md
 ez
 kP
@@ -39257,7 +40122,7 @@ sf
 Fr
 YZ
 gj
-Zd
+bH
 Fr
 Fr
 Fr
@@ -39387,7 +40252,7 @@ Px
 Px
 Px
 Xn
-BG
+pB
 kW
 Xn
 Px
@@ -39423,14 +40288,14 @@ Mq
 Mq
 Mq
 zx
-Ik
+ey
 zx
 zx
 EF
 zx
 zx
 zx
-TE
+IB
 To
 To
 To
@@ -39438,7 +40303,7 @@ To
 To
 To
 To
-EB
+oL
 fr
 Mk
 dY
@@ -39457,9 +40322,9 @@ wV
 wV
 wV
 xF
-VY
+tn
 ns
-HL
+TA
 ez
 Xs
 hD
@@ -39474,10 +40339,10 @@ rp
 ez
 kP
 iP
-eL
-yn
-yn
-yn
+Ox
+Ox
+Ox
+Ox
 yn
 yn
 yn
@@ -39516,7 +40381,7 @@ YZ
 gj
 Zd
 BJ
-gj
+rh
 BJ
 yn
 yn
@@ -39680,14 +40545,14 @@ Pm
 Pm
 Pm
 To
-SY
-BY
-BY
-BY
-BY
-BY
-BY
-ul
+RH
+AQ
+AQ
+AQ
+AQ
+AQ
+AQ
+pq
 To
 Px
 Px
@@ -39706,14 +40571,14 @@ Px
 Px
 Px
 xF
-Wd
+iQ
 zJ
 KK
 KK
 KK
 KK
-KK
-pb
+mi
+xF
 VY
 aS
 HL
@@ -39732,9 +40597,10 @@ ez
 kP
 eL
 Ox
+bj
+bj
 Ox
-Ox
-Ox
+yn
 yn
 yn
 yn
@@ -39742,28 +40608,27 @@ yn
 yn
 yn
 yn
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
 yn
-yn
-Ox
-Ox
-Ox
-Ox
-Ox
-Ox
-Ox
-Ox
-Ox
-Ox
-Ox
-Ox
-yn
-iI
-iI
-bo
-bo
-bo
-iI
-iI
+Vo
+Vo
+Ja
+Ja
+Ja
+Vo
+Vo
 yn
 yn
 yn
@@ -39999,11 +40864,11 @@ Ox
 Ox
 Ox
 yn
-yn
-yn
 Ox
+Ox
+WM
 AT
-AT
+vu
 AT
 AT
 AT
@@ -40014,13 +40879,13 @@ AT
 AT
 Ox
 Ox
-iI
-pR
-XM
-XM
-XM
-rI
-iI
+Vo
+eg
+RS
+RS
+RS
+rJ
+Vo
 yn
 yn
 Fr
@@ -40187,7 +41052,7 @@ Px
 Px
 Px
 zm
-nb
+nJ
 wh
 zm
 Px
@@ -40220,7 +41085,7 @@ Px
 Px
 Px
 xF
-Bh
+WD
 vT
 pP
 pP
@@ -40247,18 +41112,18 @@ kP
 eL
 Ox
 Ox
+gI
 AT
 AT
-AT
-AT
+lO
 AT
 AT
 AT
 Ox
 Ox
 Ox
-Ox
-Ox
+bj
+Uc
 AT
 Ox
 Ox
@@ -40272,18 +41137,18 @@ Vu
 yA
 yA
 Ve
-JQ
+Bb
 oh
 oh
 oh
-XM
-iI
+RS
+Vo
 yn
 yn
 Fr
-gj
+ab
 Fr
-YZ
+Js
 gj
 Zd
 fg
@@ -40477,18 +41342,18 @@ Px
 Px
 Px
 xF
-ox
+Pc
 ox
 eH
 eH
 KK
 zJ
-ox
+kz
 xF
 IC
 Ok
 HL
-ug
+mt
 hD
 hD
 hD
@@ -40498,7 +41363,7 @@ hD
 hD
 hD
 hD
-hD
+IQ
 ez
 kP
 kP
@@ -40511,7 +41376,7 @@ Ox
 Ox
 Ox
 AT
-AT
+vu
 AT
 ok
 AT
@@ -40519,22 +41384,22 @@ AT
 AT
 Ox
 Dk
+bY
 Dk
-Dk
-Dk
+bY
 Dk
 Ox
 WM
 bq
 Rd
 lv
-iI
-XM
+Vo
+ys
 oh
 oh
 oh
 XM
-iI
+Vo
 Fr
 Fr
 Fr
@@ -40734,7 +41599,7 @@ RY
 RY
 RY
 xF
-pb
+xF
 pb
 pb
 xF
@@ -40745,17 +41610,17 @@ xF
 Vq
 ns
 HL
-ug
-ug
-ug
-ug
-ug
-ug
-ug
-ug
+ez
+mt
+mt
+mt
+ez
 ug
 ug
 ez
+mt
+mt
+mt
 ez
 RY
 hY
@@ -40763,16 +41628,16 @@ Gw
 Gw
 IT
 TJ
-CR
+mO
 TJ
-ea
+HW
 Ox
 Ox
 Ox
 Ox
 Ox
 Ox
-Ox
+ok
 Ox
 Ox
 bj
@@ -40785,15 +41650,15 @@ Ox
 tv
 Ox
 Ox
-iI
+Vo
 tP
 tP
 tP
 tP
 tP
-iI
+Vo
 EX
-Oq
+iB
 yD
 gj
 Wh
@@ -40801,7 +41666,7 @@ YZ
 gj
 Zd
 fg
-fg
+xt
 Fr
 Fr
 Fr
@@ -40989,7 +41854,7 @@ eq
 eq
 Vz
 LD
-LD
+hw
 LD
 LD
 LD
@@ -40998,10 +41863,11 @@ LD
 LD
 Cm
 LD
-LD
+hw
 Ye
 aS
 Np
+hw
 LD
 LD
 LD
@@ -41011,8 +41877,7 @@ LD
 LD
 LD
 LD
-LD
-LD
+hw
 LD
 LD
 LD
@@ -41023,11 +41888,12 @@ ok
 ok
 ok
 lf
-Kg
+BB
 Ky
 TJ
 TJ
 TJ
+wP
 TJ
 TJ
 TJ
@@ -41037,8 +41903,7 @@ TJ
 TJ
 TJ
 TJ
-TJ
-TJ
+wP
 CM
 TJ
 ea
@@ -41061,7 +41926,7 @@ lC
 lC
 FX
 uR
-gj
+cN
 gj
 uR
 yn
@@ -41239,7 +42104,7 @@ Vp
 Vp
 Vp
 Vp
-Mp
+RG
 Vp
 Vp
 Vp
@@ -41280,7 +42145,7 @@ qv
 mD
 qv
 qk
-YC
+Cy
 uH
 Wk
 Wk
@@ -41503,7 +42368,7 @@ eq
 eq
 lS
 eT
-eT
+Qo
 eT
 cL
 eT
@@ -41512,7 +42377,7 @@ eT
 eT
 eT
 eT
-eT
+Qo
 YW
 aS
 aC
@@ -41522,11 +42387,11 @@ eT
 eT
 eT
 eT
-eT
+Qo
 cL
 eT
 eT
-eT
+Qo
 eT
 eT
 eT
@@ -41537,22 +42402,22 @@ ok
 tv
 ok
 JH
-YC
+Cy
 Eh
 So
 So
 So
+ED
 So
 So
 So
 So
+ED
 So
 So
 So
 So
-So
-So
-So
+ED
 So
 So
 eK
@@ -41768,15 +42633,15 @@ Ty
 wp
 wp
 wp
-wp
-wp
+Ty
+Ty
 VY
 ns
 HL
-Oo
-Oo
-Oo
-Oo
+hY
+hY
+hY
+hY
 hY
 hY
 eQ
@@ -41789,11 +42654,11 @@ RY
 hY
 Gw
 Gw
-Eh
+QW
 So
 RL
 So
-eK
+ru
 Ox
 Ox
 Ox
@@ -41813,13 +42678,13 @@ Ox
 Ox
 Ox
 AT
-iI
+Vo
 rN
 rN
 rN
 rN
 rN
-iI
+Vo
 ry
 vr
 rg
@@ -41829,7 +42694,7 @@ YZ
 gj
 Zd
 fg
-fg
+xt
 Fr
 Fr
 yn
@@ -41944,7 +42809,7 @@ Cn
 Cn
 Cn
 Rf
-Im
+kN
 Cn
 Rf
 Rf
@@ -42010,27 +42875,27 @@ OI
 eq
 Px
 Px
-nZ
-nZ
-nZ
-nZ
+Px
+Px
+Px
+Px
 Jo
 Ty
-cJ
+xi
 Sf
 Sf
 hO
 Sf
-Js
+Ly
 Sf
 Sf
 Sf
 Qa
-wp
+Ty
 VY
 ns
 HL
-Oo
+hY
 Ie
 Ie
 Ie
@@ -42062,7 +42927,7 @@ yn
 yn
 Ox
 ok
-AT
+vu
 ok
 Ox
 yn
@@ -42070,13 +42935,13 @@ yn
 yn
 Ox
 ow
-iI
-XM
+Vo
+ys
 oh
 oh
 oh
 XM
-iI
+Vo
 Fr
 Fr
 Fr
@@ -42268,8 +43133,8 @@ eq
 Px
 Px
 nZ
-Ca
-Ca
+nZ
+nZ
 nZ
 Jo
 Ty
@@ -42287,17 +43152,17 @@ wp
 VY
 ns
 HL
-Oo
+hY
+Xk
 Ie
+ZB
 Ie
-WV
-Ie
-Ie
+Xk
 eQ
 As
 Pv
 CN
-lJ
+Ry
 eQ
 ma
 of
@@ -42326,20 +43191,20 @@ yn
 yn
 yn
 Ox
-AT
-iI
-XM
+in
+Vo
+RS
 oh
 oh
 oh
-XM
-iI
+RS
+Vo
 yn
 yn
 Fr
-gj
+ab
 Fr
-YZ
+Js
 gj
 Zd
 fg
@@ -42499,7 +43364,7 @@ zm
 zm
 zm
 zm
-gt
+iI
 Pm
 Pm
 Pm
@@ -42520,7 +43385,7 @@ Px
 Px
 eq
 Vp
-zc
+Ba
 eq
 Px
 Px
@@ -42543,7 +43408,7 @@ eP
 wp
 VY
 aS
-fE
+qo
 RY
 RY
 RY
@@ -42584,13 +43449,13 @@ yn
 yn
 Ox
 ow
-iI
-XM
-XM
-XM
-XM
-XM
-iI
+Vo
+RS
+RS
+RS
+RS
+RS
+Vo
 yn
 yn
 Fr
@@ -42718,7 +43583,7 @@ Cn
 Cn
 Cn
 uE
-Er
+FE
 uE
 Cn
 Px
@@ -42738,7 +43603,7 @@ Px
 Px
 Xn
 kO
-Gb
+hm
 kO
 kO
 Xn
@@ -42841,13 +43706,13 @@ yn
 yn
 yn
 yn
-iI
-iI
-bo
-bo
-bo
-iI
-iI
+Vo
+Vo
+Ja
+Ja
+Ja
+Vo
+Vo
 yn
 yn
 yn
@@ -43039,8 +43904,8 @@ eq
 Px
 Px
 nZ
-rL
-Ca
+TD
+bb
 nZ
 Ty
 Ty
@@ -43055,9 +43920,9 @@ zw
 zw
 Kz
 Ty
-VY
+tn
 ns
-HL
+TA
 CY
 CY
 CY
@@ -43071,7 +43936,7 @@ of
 kZ
 Px
 kZ
-Zr
+QX
 Lf
 yn
 yn
@@ -43296,8 +44161,8 @@ eq
 Px
 Px
 nZ
-Ca
-Ca
+nZ
+nZ
 nZ
 Jo
 Ty
@@ -43317,7 +44182,7 @@ ns
 HL
 CY
 ua
-nM
+gd
 CY
 Px
 Px
@@ -43369,7 +44234,7 @@ sf
 Fr
 YZ
 gj
-Zd
+bH
 Fr
 Fr
 Fr
@@ -43552,10 +44417,10 @@ eq
 eq
 Px
 Px
-nZ
-nZ
-nZ
-nZ
+Px
+Px
+Px
+Px
 Px
 Px
 Px
@@ -43622,7 +44487,7 @@ yn
 yn
 yn
 Fr
-gj
+Ny
 sf
 YZ
 gj
@@ -43803,7 +44668,7 @@ eq
 eq
 eq
 eq
-HJ
+Oq
 Vp
 OI
 eq
@@ -43830,8 +44695,8 @@ VY
 aS
 HL
 CY
-IM
-nM
+Rv
+Xi
 CY
 Px
 Px
@@ -44395,12 +45260,12 @@ PY
 yn
 yn
 Fr
-YZ
+Js
 gj
 Zd
 xp
 Qu
-sf
+xf
 Qu
 yn
 yn
@@ -44582,7 +45447,7 @@ nH
 eq
 Px
 eq
-nm
+Of
 OI
 eq
 eq
@@ -45111,9 +45976,9 @@ Px
 Px
 Px
 RY
-VY
+tn
 aS
-HL
+TA
 LA
 LA
 LA
@@ -45125,7 +45990,7 @@ Px
 Px
 Px
 kZ
-YK
+hW
 EP
 Hw
 yn
@@ -45164,7 +46029,7 @@ yn
 yn
 PY
 Fr
-gj
+Ny
 sf
 YZ
 sf
@@ -45425,7 +46290,7 @@ sf
 Fr
 YZ
 sf
-Zd
+bH
 Fr
 Fr
 Fr
@@ -45613,15 +46478,15 @@ eq
 nH
 OI
 RJ
-QN
+bW
 Tz
 Tz
 RZ
 hV
 Pd
+DE
 CE
-CE
-CE
+DE
 Pd
 Px
 RY
@@ -45630,7 +46495,7 @@ ns
 HL
 LA
 kx
-LP
+jx
 LA
 Px
 Px
@@ -45680,7 +46545,7 @@ yn
 Fr
 Fr
 Fr
-YZ
+Js
 gj
 Zd
 DO
@@ -46135,7 +47000,7 @@ hV
 Pd
 lk
 Ze
-ID
+JO
 Pd
 Px
 RY
@@ -46147,9 +47012,9 @@ Px
 Px
 Px
 qV
+Fh
 Ec
-Ec
-Ec
+Fh
 qV
 lX
 ma
@@ -46663,7 +47528,7 @@ Px
 qV
 NB
 zH
-vl
+aq
 qV
 lg
 jT
@@ -46706,14 +47571,14 @@ yn
 yn
 yn
 uR
-gj
+Lp
 uR
 YZ
 sf
 Zd
-BJ
-ar
-BJ
+uR
+Lp
+uR
 yn
 yn
 yn
@@ -46907,8 +47772,8 @@ Jv
 EJ
 GI
 TL
-kI
-TL
+oJ
+au
 pD
 yV
 GI
@@ -47169,7 +48034,7 @@ EJ
 EJ
 yV
 GI
-bR
+iV
 vp
 vp
 vp
@@ -47222,7 +48087,7 @@ PY
 yn
 yn
 Fr
-YZ
+Js
 gj
 Zd
 sf
@@ -47406,17 +48271,17 @@ yO
 oM
 FP
 Rh
+wE
 Rh
 Rh
 Rh
 Rh
+wE
 Rh
 Rh
 Rh
 Rh
-Rh
-Rh
-Rh
+wE
 Rh
 Rh
 ZN
@@ -47429,12 +48294,12 @@ GI
 Ne
 Rh
 Rh
-Rh
+wE
 Rh
 Rh
 Rh
 ZN
-Rh
+wE
 Rh
 Rh
 Rh
@@ -47661,7 +48526,7 @@ yO
 yO
 yO
 vp
-yV
+XK
 TL
 GO
 sT
@@ -47695,7 +48560,7 @@ sT
 GY
 GY
 rG
-bR
+iV
 vp
 VU
 jI
@@ -47925,30 +48790,30 @@ vk
 vk
 vk
 vk
+JN
 vk
 vk
 vk
 vk
-vk
-vk
-vk
-vk
-Vt
-vk
+JN
 vk
 vk
 Vt
 vk
+JN
+vk
+Vt
+vk
+Vs
+vk
+vk
+Vt
+JN
 vk
 vk
 vk
 Vt
-vk
-vk
-vk
-vk
-Vt
-vk
+JN
 vk
 vk
 Vt
@@ -47995,7 +48860,7 @@ yn
 Fr
 YZ
 sf
-Zd
+bH
 Fr
 sf
 sf
@@ -48211,7 +49076,7 @@ Oz
 OV
 Oz
 Oz
-sD
+Bh
 jI
 Ml
 yn
@@ -48257,7 +49122,7 @@ lC
 lC
 FX
 uR
-gj
+cN
 gj
 uR
 yn
@@ -48692,7 +49557,7 @@ Px
 df
 NL
 bu
-DH
+wN
 df
 VU
 jI
@@ -48705,11 +49570,11 @@ Fl
 sL
 Ce
 jb
-oc
+Pb
 sL
 ff
 zz
-Fa
+CO
 Ki
 ME
 HO
@@ -48723,7 +49588,7 @@ UG
 rq
 VN
 Ow
-qy
+Ft
 Oz
 VU
 jI
@@ -48766,7 +49631,7 @@ yn
 Fr
 YZ
 gj
-Zd
+bH
 Fr
 sf
 sf
@@ -49204,9 +50069,9 @@ Px
 Px
 Px
 df
+NU
 mR
-mR
-mR
+NU
 df
 VU
 HO
@@ -49217,13 +50082,13 @@ HO
 VJ
 VJ
 sL
+Di
 LJ
-LJ
-LJ
+Di
 sL
+gh
 wo
-wo
-wo
+gh
 Ki
 ME
 HO
@@ -49231,13 +50096,13 @@ wx
 HO
 ME
 rq
+ju
 Lc
-Lc
-Lc
+ju
 rq
+jp
 nO
-nO
-nO
+jp
 Oz
 VU
 jI
@@ -49792,7 +50657,7 @@ yn
 yn
 yn
 Fr
-YZ
+Js
 sf
 Zd
 Fr
@@ -50242,7 +51107,7 @@ nK
 nK
 nK
 nK
-km
+tK
 nK
 nK
 nK
@@ -50310,7 +51175,7 @@ Fr
 xW
 xW
 Fr
-gj
+Lp
 sf
 Fr
 yn
@@ -50516,13 +51381,13 @@ Px
 Px
 Px
 HO
-kr
+fj
 HO
 Px
 Px
 Px
 HO
-sD
+Bh
 HO
 Px
 Px
@@ -50564,7 +51429,7 @@ yn
 yn
 yn
 Fr
-gj
+Ny
 gj
 Fr
 Fr
@@ -51054,7 +51919,7 @@ VU
 VU
 VU
 Pw
-lD
+uh
 VU
 VU
 yN
@@ -51802,7 +52667,7 @@ VU
 VU
 VU
 Pw
-kQ
+Op
 HO
 Px
 Px

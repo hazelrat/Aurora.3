@@ -4,7 +4,7 @@
 	prefix = "scenarios/crumbling_station/"
 	suffix = "crumbling_station.dmm"
 	sectors = list(ALL_POSSIBLE_SECTORS)
-	spawn_weight = 1
+	spawn_weight = 0 // So it doesn't spawn as a normal away-site.
 	spawn_cost = 1
 	id = "crumbling_station"
 	unit_test_groups = list(3)

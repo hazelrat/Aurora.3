@@ -4,7 +4,7 @@
 	scenario_site_id = "crumbling_station"
 
 	horizon_announcement_title = "SCC Central Command Outpost"
-	horizon_announcement_message = "This station sucks ass. Make it suck less ass."
+	horizon_late_announcement_message = "This station sucks ass. Make it suck less ass."
 
 	min_player_amount = 0
 	min_actor_amount = 0 //should be 4 todomatt
