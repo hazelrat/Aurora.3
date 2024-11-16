@@ -1308,6 +1308,12 @@
 	identifier = "lone_spacer";
 	name = "igs - lone_spacer"
 	},
+/obj/effect/ghostspawpoint/button{
+	desc = "This button is used for summoning an assistant from the upper floors.";
+	dir = 4;
+	identifier = "lone_spacer_secondary";
+	pixel_x = -26
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/lone_spacer/bridge)
 "sO" = (

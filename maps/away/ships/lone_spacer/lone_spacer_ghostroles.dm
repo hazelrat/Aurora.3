@@ -1,7 +1,7 @@
 /datum/ghostspawner/human/lone_spacer
 	short_name = "lone_spacer"
 	name = "Lone Spacer"
-	desc = "You never did mind the quiet. By whatever path your life has taken, you have found yourself the captain and sole crew of a small warp-capable vessel, scratching out a meek living from the stars. Are you a scientist, exploring the great unknown, or an opportunist scavenger? Are you a vicious pirate, or a hounded fugitive? You have only to decide for yourself."
+	desc = "You never did mind the quiet. By whatever path your life has taken, you have found yourself the captain of a small warp-capable vessel, scratching out a meek living from the stars. Are you a scientist, exploring the great unknown, or an opportunist scavenger? Are you a vicious pirate, or a hounded fugitive? You have only to decide for yourself."
 	tags = list("External")
 
 	spawnpoints = list("lone_spacer")
@@ -56,6 +56,14 @@
 
 /obj/outfit/admin/lone_spacer/get_id_access()
 	return list(ACCESS_EXTERNAL_AIRLOCKS, ACCESS_LONE_SPACER)
+
+/datum/ghostspawner/human/lone_spacer/secondary
+	short_name = "lone_spacer_secondary"
+	name = "Lone Spacer, Secondary"
+	desc = "You are the second crewmate aboard a small warp-capable vessel, scratching out a meek living from the stars. You may be a scientific assistant to the captain of your ship, or a fellow scavenger in collaboration You may be a conditionally friendly pirate, or a derelict soul your captain retrieved from a wreck. You have only to decide for yourself. This role is only opened when the existing Lone Spacer opts into it."
+
+	spawnpoints = list("lone_spacer_secondary")
+	enabled = FALSE
 
 /obj/item/card/id/lone_spacer_ship
 	name = "independent ship id"

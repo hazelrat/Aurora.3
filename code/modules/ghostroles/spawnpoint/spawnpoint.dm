@@ -168,20 +168,21 @@
 /obj/effect/ghostspawpoint/button
 	name = "button"
 	desc = "A button used for some kind of purpose."
-	icon = 'icons/obj/stationobjs.dmi'
-	icon_state = "doorctrl0"
+	icon = 'icons/obj/airlock_machines.dmi'
+	icon_state = "airlock_control_standby"
 
 	identifier = null
 
-	icon_unavailable = "doorctrl0"
-	icon_available = "doorctrl-p"
-	icon_recharging = "doorctrl-p"
-	icon_used = "doorctrl-p"
+	icon_unavailable = "airlock_control_standby"
+	icon_available = "airlock_control_off"
+	icon_recharging = "airlock_control_process"
+	icon_used = "airlock_control_off"
 
 	anchored = 1
 	unacidable = 1
 	simulated = 1
 	invisibility = 0
+	mouse_opacity = 1
 
 	var/use_message = "An assistant has been requested. One will be with you shortly if available."
 	var/message_used = FALSE
@@ -192,3 +193,11 @@
 		message_used = TRUE
 		visible_message(SPAN_NOTICE(use_message))
 		playsound(src.loc, 'sound/machines/chime.ogg', 25, 1)
+
+/obj/effect/ghostspawpoint/button/attack_ghost(mob/user)
+	return
+
+/obj/effect/ghostspawpoint/button/attack_hand(mob/user)
+	set_available()
+	var/datum/ghostspawner/S = spawners[params["enable"]]
+	S.enable()
