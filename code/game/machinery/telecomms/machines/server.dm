@@ -14,7 +14,7 @@
 
 /obj/machinery/telecomms/server
 	name = "telecommunication server"
-	icon_state = "comm_server"
+	icon_state = "AAS"
 	desc = "A machine used to store data and network statistics."
 	telecomms_type = /obj/machinery/telecomms/server
 	density = TRUE
