@@ -185,8 +185,9 @@
 			radio.autosay("WARNING: SUPERMATTER CRYSTAL DELAMINATION IMMINENT!", "Supermatter Monitor")
 			public_alert = 1
 			for(var/mob/M in GLOB.player_list)
+				var/list/connected_z_levels = GetConnectedZlevels(z)
 				var/turf/T = get_turf(M)
-				if(T && !istype(M, /mob/abstract/new_player) && !isdeaf(M))
+				if(T && !istype(M, /mob/abstract/new_player) && !isdeaf(M) && (M.z in connected_z_levels))
 					sound_to(M, 'sound/effects/nuclearsiren.ogg')
 		else if(safe_warned && public_alert)
 			radio.autosay(alert_msg, "Supermatter Monitor")
