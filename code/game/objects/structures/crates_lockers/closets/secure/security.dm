@@ -255,11 +255,11 @@
 	else
 		new /obj/item/storage/backpack/satchel/sec(src)
 	new /obj/item/storage/backpack/duffel/sec(src)
-	new /obj/item/clothing/suit/armor/carrier/officer(src)
-	new /obj/item/clothing/accessory/arm_guard(src)
-	new /obj/item/clothing/accessory/leg_guard(src)
-	new /obj/item/clothing/head/helmet/security(src)
-	new /obj/item/clothing/accessory/badge/officer(src)
+	new /obj/item/clothing/suit/armor/carrier/hoplan(src)
+	new /obj/item/clothing/accessory/leg_guard/hoplan/skirt(src)
+	new /obj/item/clothing/head/helmet/hoplan(src)
+	new /obj/item/clothing/head/goldendeep/hoplan(src)
+	new /obj/item/clothing/under/goldendeep/hoplan(src)
 	new /obj/item/clothing/mask/gas/alt(src)
 	new /obj/item/clothing/mask/gas/half(src)
 	//Tools
