@@ -787,6 +787,31 @@ ABSTRACT_TYPE(/obj/machinery/power/apc)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 
+		// Supports IPC using APCs to charge.
+		if(isipc(H) && H.a_intent == I_GRAB)
+			if(cell && cell.charge > 0)
+				var/obj/item/organ/internal/cell/C = H.internal_organs_by_name[BP_CELL]
+				var/obj/item/cell/HC
+				if(C)
+					HC = C.cell
+				if(HC && HC.percent() < 95)
+					var/used = cell.use(500)
+					HC.give(used)
+					to_chat(user, SPAN_NOTICE("You slot your fingers into the APC interface and siphon off some of the stored charge for your own use."))
+					if (cell.charge < 0)
+						cell.charge = 0
+					if (prob(0.5))
+						spark(src, 5, GLOB.alldirs)
+						to_chat(H, SPAN_DANGER("The APC power currents surge eratically, damaging your chassis!"))
+						H.adjustFireLoss(10, 0)
+
+					charging = CHARGING_ON
+				else
+					to_chat(user, SPAN_NOTICE("You are already fully charged."))
+			else
+				to_chat(user, SPAN_NOTICE("There is no charge to draw from that APC."))
+			return
+
 		if(H.species.can_shred(H))
 			user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 			user.visible_message(SPAN_WARNING("[user.name] slashes at the [name]!"), SPAN_NOTICE("You slash at the [name]!"))

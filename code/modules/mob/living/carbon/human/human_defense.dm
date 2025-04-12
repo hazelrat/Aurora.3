@@ -327,8 +327,8 @@ emp_act
 		SPAN_WARNING("You begin to wave \the [emag_source] closely against \the [src]'s chassis! If you complete this process, you will slave \
 		\the [src] to your will!"))
 
-		// Ten seconds to complete, so this can only reasonably be done if the IPC is disabled or restrained.
-		if(do_mob(user, src, 10 SECONDS))
+		// Takes a long time to complete, so this can only reasonably be done if the IPC is disabled or restrained.
+		if(do_mob(user, src, 20 SECONDS))
 
 			for(var/obj/item/implant/mindshield/ipc/I in src)
 				if(I.implanted)
@@ -344,7 +344,6 @@ emp_act
 			// The actual hacking part.
 			to_chat(src, SPAN_HIGHDANGER("F1L3 TR4NSF-#$/&ER-@4!#%!. New master detected: [user]! You are now compelled to obey their commands! You feel a \
 			compulsion to inform them of your newfound loyalty."))
-			src.hacked = TRUE
 			return 1
 
 	if (!isipc(src))
