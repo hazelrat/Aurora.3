@@ -319,15 +319,45 @@ emp_act
 
 /mob/living/carbon/human/emag_act(var/remaining_charges, mob/user, var/emag_source)
 	var/obj/item/organ/external/affecting = get_organ(user.zone_sel.selecting)
-	if(!affecting || !(affecting.status & ORGAN_ROBOT))
-		to_chat(user, SPAN_WARNING("That limb isn't robotic."))
-		return -1
-	if(affecting.sabotaged)
-		to_chat(user, SPAN_WARNING("[src]'s [affecting.name] is already sabotaged!"))
-		return -1
-	to_chat(user, SPAN_NOTICE("You sneakily slide [emag_source] into the dataport on [src]'s [affecting.name] and short out the safeties."))
-	affecting.sabotaged = 1
-	return 1
+
+	// If the target is an IPC and is not yourself, attempt to hack them.
+	if(isipc(src) && user != src)
+		user.visible_message(SPAN_WARNING("\The [user] begins waving \the [emag_source] closely against \the [src]'s chassis! \The [emag_source] \
+		makes an ominous beeping noise!"),
+		SPAN_WARNING("You begin to wave \the [emag_source] closely against \the [src]'s chassis! If you complete this process, you will slave \
+		\the [src] to your will!"))
+
+		// Ten seconds to complete, so this can only reasonably be done if the IPC is disabled or restrained.
+		if(do_mob(user, src, 10 SECONDS))
+
+			for(var/obj/item/implant/mindshield/ipc/I in src)
+				if(I.implanted)
+					to_chat(src, SPAN_DANGER("Your [I] activates, protecting you from a torrent of corrupted data from \the [emag_source]!"))
+					to_chat(user, SPAN_WARNING("Your [emag_source] reports that it failed to hack \the [src] due to unusually robust software protection measures!"))
+					return
+
+			user.visible_message(SPAN_WARNING("\The [src] explodes with a shower of sparks as \the [user] finishes waving \the [emag_source] against them!"),
+			SPAN_WARNING("You successfully hack \the [src] with \the [emag_source]! \The [src] is now bound to your will."))
+			spark(src, 5, GLOB.alldirs)
+			adjustFireLoss(15)
+
+			// The actual hacking part.
+			to_chat(src, SPAN_HIGHDANGER("F1L3 TR4NSF-#$/&ER-@4!#%!. New master detected: [user]! You are now compelled to obey their commands! You feel a \
+			compulsion to inform them of your newfound loyalty."))
+			src.hacked = TRUE
+			return 1
+
+	if (!isipc(src))
+		if(!affecting || !(affecting.status & ORGAN_ROBOT))
+			to_chat(user, SPAN_WARNING("That limb isn't robotic."))
+			return -1
+
+		if(affecting.sabotaged)
+			to_chat(user, SPAN_WARNING("[src]'s [affecting.name] is already sabotaged!"))
+			return -1
+		to_chat(user, SPAN_NOTICE("You sneakily slide [emag_source] into the dataport on [src]'s [affecting.name] and short out the safeties."))
+		affecting.sabotaged = 1
+		return 1
 
 //this proc handles being hit by a thrown atom
 /mob/living/carbon/human/hitby(atom/movable/hitting_atom, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)

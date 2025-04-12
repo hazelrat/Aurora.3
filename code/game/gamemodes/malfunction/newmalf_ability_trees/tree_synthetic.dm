@@ -145,7 +145,7 @@
 		A.infected = 1
 		A.hacker = user
 		if(A.infected == 1)
-			to_chat(user, "Hack successful. The next robotic thing to download files will be hacked.")
+			to_chat(user, "Hack successful.")
 		else
 			to_chat(user, SPAN_NOTICE("Hack failed. Connection to APC has been lost. Please verify wire connection and try again."))
 	else

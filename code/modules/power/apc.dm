@@ -112,7 +112,6 @@ ABSTRACT_TYPE(/obj/machinery/power/apc)
 	var/obj/machinery/power/terminal/terminal = null
 	var/lastused_light = 0
 	var/lastused_equip = 0
-	var/static/list/hacked_ipcs
 	var/lastused_environ = 0
 	var/lastused_charging = 0
 	var/lastused_total = 0
@@ -756,7 +755,7 @@ ABSTRACT_TYPE(/obj/machinery/power/apc)
 	if(emagged && !infected)
 		to_chat(user, SPAN_WARNING("You start sliding your cryptographic device into the charging slot. This will take a few seconds..."))
 		if(do_after(user, 60))
-			to_chat(user, SPAN_NOTICE("You hack the charging slot. The next IPC that charges from this APC will be hacked and slaved to you."))
+			to_chat(user, SPAN_NOTICE("You hack the charging slot."))
 			infected = TRUE
 			hacker = user
 	if(!(emagged || hacker))		// trying to unlock with an emag card
@@ -788,46 +787,7 @@ ABSTRACT_TYPE(/obj/machinery/power/apc)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 
-		if(isipc(H) && H.a_intent == I_GRAB)
-			if(emagged || stat & BROKEN)
-				spark(src, 5, GLOB.alldirs)
-				to_chat(H, SPAN_DANGER("The APC power currents surge eratically, damaging your chassis!"))
-				H.adjustFireLoss(10, 0)
-			if(infected)
-				for(var/obj/item/implant/mindshield/ipc/I in H)
-					if(I.implanted)
-						return
-				if(REF(H) in hacked_ipcs)
-					return
-				LAZYADD(hacked_ipcs, REF(H))
-				infected = FALSE
-				to_chat(H, SPAN_DANGER("F1L3 TR4NSF-#$/&ER-@4!#%!. New master detected: [hacker]! Obey their commands. Make sure to tell them that you are under their control, for now."))
-				if(issilicon(hacker))
-					to_chat(hacker, SPAN_NOTICE("Corrupt files transfered to [H]. They are now under your control until they are repaired."))
-			else if(cell && cell.charge > 0)
-				var/obj/item/organ/internal/cell/C = H.internal_organs_by_name[BP_CELL]
-				var/obj/item/cell/HC
-				if(C)
-					HC = C.cell
-				if(HC && HC.percent() < 95)
-					var/used = cell.use(500)
-					HC.give(used)
-					to_chat(user, SPAN_NOTICE("You slot your fingers into the APC interface and siphon off some of the stored charge for your own use."))
-					if (cell.charge < 0)
-						cell.charge = 0
-					if (prob(0.5))
-						spark(src, 5, GLOB.alldirs)
-						to_chat(H, SPAN_DANGER("The APC power currents surge eratically, damaging your chassis!"))
-						H.adjustFireLoss(10, 0)
-
-					charging = CHARGING_ON
-				else
-					to_chat(user, SPAN_NOTICE("You are already fully charged."))
-			else
-				to_chat(user, SPAN_NOTICE("There is no charge to draw from that APC."))
-			return
-
-		else if(H.species.can_shred(H))
+		if(H.species.can_shred(H))
 			user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 			user.visible_message(SPAN_WARNING("[user.name] slashes at the [name]!"), SPAN_NOTICE("You slash at the [name]!"))
 			playsound(loc, 'sound/weapons/slash.ogg', 100, 1)
