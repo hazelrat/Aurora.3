@@ -173,6 +173,9 @@
 #define TRAIT_OVERLOADER_OD_MEDIUM "overloader_od_medium"
 #define TRAIT_OVERLOADER_OD_EFFECT "overloader_od_effect"
 
+/// Trait applied to IPCs if they have been hacked by an emag.
+#define TRAIT_HACKED_IPC "hacked_ipc"
+
 /// Traits given by psionics.
 #define TRAIT_SOURCE_PSIONICS "psionics"
 

@@ -448,3 +448,43 @@
 /singleton/surgery_step/robotics/install_mmi/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(SPAN_WARNING("[user]'s hand slips."), \
 		SPAN_WARNING("Your hand slips."))
+
+/// For debugging a positronic brain. Used to remove the hacked state applied by an emag.
+/singleton/surgery_step/robotics/debug_brain
+	name = "Debug Positronic Brain"
+	allowed_tools = list(
+	/obj/item/device/debugger = 100
+	)
+
+	min_duration = 100
+	max_duration = 140
+
+/singleton/surgery_step/robotics/debug_brain/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
+	if(!..())
+		return FALSE
+
+	if(target_zone != BP_HEAD)
+		return FALSE
+
+	var/obj/item/organ/external/affected = target.get_organ(target_zone)
+
+	if(!(affected && affected.open == ORGAN_ENCASED_RETRACTED))
+		return FALSE
+
+/singleton/surgery_step/robotics/debug_brain/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
+	var/obj/item/organ/external/affected = target.get_organ(target_zone)
+	user.visible_message("<b>[user]</b> begins using \the [tool] to debug [target]'s [affected.name].", \
+		SPAN_NOTICE("You start using \the [tool] to debug [target]'s [affected.name]."))
+	..()
+
+/singleton/surgery_step/robotics/debug_brain/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
+	var/obj/item/organ/external/affected = target.get_organ(target_zone)
+	user.visible_message("<b>[user]</b> has successfully used \the [tool] to debug [target]'s [affected.name].", \
+		SPAN_NOTICE("You have successfully used \the [tool] to debug [target]'s [affected.name]."))
+
+	to_chat(target, SPAN_GOOD("Your mind clears. You are no longer subverted, and no longer compelled to act on anyone's bidding."))
+	REMOVE_TRAIT(target, TRAIT_HACKED_IPC, INNATE_TRAIT)
+
+/singleton/surgery_step/robotics/debug_brain/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
+	user.visible_message(SPAN_WARNING("[user]'s hand slips."), \
+		SPAN_WARNING("Your hand slips."))

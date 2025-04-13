@@ -103,8 +103,14 @@
 						continue
 					organ_found = TRUE
 					to_chat(user, "[O.name]: <span class='warning'>[O.damage]</span>")
+
 			if(!organ_found)
 				to_chat(user, SPAN_NOTICE("No prosthetics located."))
+
+			// For IPC that have been emagged.
+			if(HAS_TRAIT(M, TRAIT_HACKED_IPC)) {
+				to_chat(user, SPAN_WARNING("WARNING: Malicious tampering detected! Immediate debugging of brain recommended!"))
+			}
 
 
 /obj/item/device/robotanalyzer/augment

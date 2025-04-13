@@ -1113,6 +1113,10 @@
 			else
 				output += "[IO.name] - <span style='color:green;'>OK</span>\n"
 
+		// Tells an IPC if they have been emagged.
+		if(HAS_TRAIT(src, TRAIT_HACKED_IPC))
+			output += "<span class='warning'>WARNING: ONGOING SUBVERSION DETECTED! SEEK IMM4D-#$EK-@4!#%!</span>\n"
+
 		to_chat(src, output)
 
 /mob/living/carbon/human/proc/check_tag()

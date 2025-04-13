@@ -344,6 +344,7 @@ emp_act
 			// The actual hacking part.
 			to_chat(src, SPAN_HIGHDANGER("F1L3 TR4NSF-#$/&ER-@4!#%!. New master detected: [user]! You are now compelled to obey their commands! You feel a \
 			compulsion to inform them of your newfound loyalty."))
+			ADD_TRAIT(src, TRAIT_HACKED_IPC, INNATE_TRAIT)
 			return 1
 
 	if (!isipc(src))
