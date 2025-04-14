@@ -73,6 +73,7 @@
 	new /obj/item/device/multitool(src)
 	new /obj/item/ipc_tag_scanner(src)
 	new /obj/item/device/robotanalyzer(src)
+	new /obj/item/device/debugger(src)
 
 // Miner
 /obj/structure/closet/secure_closet/miner

@@ -471,10 +471,12 @@
 	if(!(affected && affected.open == ORGAN_ENCASED_RETRACTED))
 		return FALSE
 
+	return TRUE
+
 /singleton/surgery_step/robotics/debug_brain/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<b>[user]</b> begins using \the [tool] to debug [target]'s [affected.name].", \
-		SPAN_NOTICE("You start using \the [tool] to debug [target]'s [affected.name]."))
+	user.visible_message("<b>[user]</b> begins using \the [tool] to debug [target]'s [affected.name], attempting to undo any subversion of its systems....", \
+		SPAN_NOTICE("You start using \the [tool] to debug [target]'s [affected.name], attempting to undo any subversion of its systems..."))
 	..()
 
 /singleton/surgery_step/robotics/debug_brain/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)

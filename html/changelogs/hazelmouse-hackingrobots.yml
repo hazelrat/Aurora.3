@@ -55,5 +55,7 @@ delete-after: True
 # Also, this gets changed to [] after reading.  Just remove the brackets when you add new shit.
 # Please surround your changes in  double quotes ("). It works without them, but if you use certain characters it screws up compiling. The quotes will not show up in the changelog.
 changes:
-  - rscadd: "It is now possible to hack an IPC, binding it to your will, by directly interfacing with it with a Cryptographic Sequencer."
+  - rscadd: "It is now possible to hack an IPC, binding it to your will, by directly interfacing with it with a Cryptographic Sequencer. You can detect the subterfuge with a robot analyzer, and it can be undone by exposing the brain of the subverted IPC and debugging it with a debugger."
+  - rscadd: "Expanded description of debugger to include new functionalities."
+  - rscadd: "Added a debugger to workshop closets for access by machinists to resolve subverted IPC."
   - rscdel: "It is no longer possible to hack an IPC by emagging an APC and prompting it to charge off it."

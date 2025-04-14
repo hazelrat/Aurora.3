@@ -109,7 +109,9 @@
 
 			// For IPC that have been emagged.
 			if(HAS_TRAIT(M, TRAIT_HACKED_IPC)) {
-				to_chat(user, SPAN_WARNING("WARNING: Malicious tampering detected! Immediate debugging of brain recommended!"))
+				to_chat(user, ("Software status: <span class='warning'>Malicious tampering detected! Immediate debugging recommended!</span>"))
+			} else {
+				to_chat(user, ("Software status: <font color='#FFA500'>OK</font>"))
 			}
 
 
