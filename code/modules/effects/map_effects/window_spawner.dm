@@ -177,6 +177,9 @@
 	icon_state = "full_i_rwindow"
 	window_path = /obj/structure/window/full/reinforced/indestructible
 
+/obj/effect/map_effect/window_spawner/full/reinforced/indestructible/scc
+	frame_color = "#74777f"
+
 // Reinforced Polarized Window
 /obj/effect/map_effect/window_spawner/full/reinforced/polarized
 	name = "full reinforced polarized window spawner"

@@ -64,6 +64,10 @@
 		/obj/structure/window_frame/empty
 	)
 
+// Used for CC's walls.
+/turf/unsimulated/wall/darkshuttlewall/scc
+	color = "#767a91"
+
 /turf/unsimulated/wall/fakeairlock
 	icon = 'icons/obj/doors/Doorele.dmi'
 	icon_state = "door_closed"
