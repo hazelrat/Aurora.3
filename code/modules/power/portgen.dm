@@ -80,6 +80,10 @@
 /obj/machinery/power/portgen/emp_act(severity)
 	. = ..()
 
+	// Return if the generator isn't actually turned on.
+	if(!active)
+		return
+
 	var/duration = 6000 //ten minutes
 	switch(severity)
 		if(EMP_HEAVY)

@@ -12,9 +12,10 @@
  * * light_range - The range, higher or equal than `heavy_range`, where `EMP_LIGHT` is applied, as a number
  * * log - Boolean, if you want this call to be logged
  * * exclude - A `/list` of objects to exclude, and/or paths to exclude
+ * * multiz - Toggle to false if you don't want this to go across multiple z-levels
  *
  */
-/proc/empulse(turf/epicenter, heavy_range, light_range, log = FALSE, list/exclude = null)
+/proc/empulse(turf/epicenter, heavy_range, light_range, log = FALSE, list/exclude = null, multiz = TRUE)
 	if(!epicenter)
 		return FALSE
 
