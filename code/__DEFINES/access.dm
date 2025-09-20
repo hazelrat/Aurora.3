@@ -886,3 +886,8 @@
 #define ACCESS_HIMEO_PATROL_SHIP 253
 	id = ACCESS_HIMEO_PATROL_SHIP
 	desc = "Himean Military Patrol Vessel"
+
+#define ACCESS_CRUMBLING_STATION_COMMAND 254
+/datum/access/crumbling_station_command
+	id = ACCESS_CRUMBLING_STATION_COMMAND
+	desc = "Independent Commercial Station Command"
