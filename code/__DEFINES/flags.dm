@@ -12,26 +12,28 @@
 
 // Movable flags.
 #define ZMM_IGNORE 1	//! Do not copy this movable.
-#define ZMM_MANGLE_PLANES  2	//! Check this movable's overlays/underlays for explicit plane use and mangle for compatibility with Z-Mimic. If you're using emissive overlays, you probably should be using this flag. Expensive, only use if necessary.
 
 // Convenience flag.
 #define ZM_MIMIC_DEFAULTS (ZM_MIMIC_BELOW)
 
 // For debug purposes, should contain the above defines in ascending order.
-var/list/mimic_defines = list(
-	"ZM_MIMIC_BELOW",
+GLOBAL_LIST_INIT(mimic_defines, list("ZM_MIMIC_BELOW",
 	"ZM_MIMIC_OVERWRITE",
 //	"ZM_ALLOW_LIGHTING", //Exists on Nebula, but not Aurora?
 	"ZM_ALLOW_ATMOS",
 	"ZM_MIMIC_NO_AO",
 	"ZM_NO_OCCLUDE",
-	"ZM_MIMIC_BASETURF"
-)
+	"ZM_MIMIC_BASETURF"))
 
-//EMP protection
+///EMP will protect itself.
 #define EMP_PROTECT_SELF (1<<0)
+///EMP will protect the contents from also being EMPed.
 #define EMP_PROTECT_CONTENTS (1<<1)
+///EMP will protect the wires.
 #define EMP_PROTECT_WIRES (1<<2)
+
+///Protects against all EMP types.
+#define EMP_PROTECT_ALL (EMP_PROTECT_SELF | EMP_PROTECT_CONTENTS | EMP_PROTECT_WIRES)
 
 // Flags bitmask
 
@@ -62,6 +64,11 @@ var/list/mimic_defines = list(
 #define MOVABLE_FLAG_EFFECTMOVE FLAG(2)
 ///Shuttle transition will delete this.
 #define MOVABLE_FLAG_DEL_SHUTTLE FLAG(3)
+
+// Atom flags
+
+/// Use when this shouldn't be obscured by large icons.
+#define CRITICAL_ATOM FLAG(20)
 
 // Obj flags
 
@@ -106,3 +113,6 @@ var/list/mimic_defines = list(
 #define ITEM_FLAG_NO_MOVE FLAG(12)
 /// Can be used for surgery, giving the "You're not sure what you can do with this." message if no surgery is available.
 #define ITEM_FLAG_SURGERY FLAG(13)
+
+///All the cardinal direction bitflags.
+#define ALL_CARDINALS (NORTH|SOUTH|EAST|WEST)

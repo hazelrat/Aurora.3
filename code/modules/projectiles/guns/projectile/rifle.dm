@@ -45,7 +45,7 @@
 	icon = 'icons/obj/guns/bolt_scope.dmi'
 
 /obj/item/gun/projectile/shotgun/pump/rifle/scope/verb/scope()
-	set category = "Object"
+	set category = "Object.Held"
 	set name = "Use Scope"
 	set src in usr
 
@@ -105,8 +105,9 @@
 
 	jam_chance = -10
 
-/obj/item/gun/projectile/shotgun/pump/rifle/magazine_fed/pipegun/get_examine_text(mob/user, distance, is_adjacent, infix, suffix)
-	. = ..()
+/obj/item/gun/projectile/shotgun/pump/rifle/magazine_fed/pipegun/condition_hints(mob/user, distance, is_adjacent, infix, suffix)
+	. = list()
+	. += ..()
 	switch(jam_chance)
 		if(10 to 20)
 			. += SPAN_NOTICE("\The [src] is starting to accumulate fouling. Might want to grab a rag.")
@@ -147,7 +148,7 @@
 	load_method = SPEEDLOADER
 
 /obj/item/gun/projectile/shotgun/pump/rifle/dominia/verb/scope()
-	set category = "Object"
+	set category = "Object.Held"
 	set name = "Use Scope"
 	set src in usr
 
@@ -216,7 +217,7 @@
 		return
 	..()
 
-/obj/item/gun/projectile/contender/unload_ammo(mob/user, var/allow_dump=1)
+/obj/item/gun/projectile/contender/unload_ammo(mob/user, allow_dump = TRUE, drop_mag = FALSE)
 	if(!retracted_bolt)
 		to_chat(user, SPAN_NOTICE("You can't unload \the [src] without cycling the bolt."))
 		return
@@ -369,8 +370,8 @@
 	max_shots = 3
 	charge_cost = 500
 	projectile_type = /obj/projectile/bullet/gauss/highex
-	self_recharge = 1
-	use_external_power = 1
+	self_recharge = TRUE
+	use_external_power = TRUE
 	recharge_time = 12
 	needspin = FALSE
 

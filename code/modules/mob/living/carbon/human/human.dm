@@ -86,7 +86,7 @@
 	. = ..()
 
 	hide_underwear.Cut()
-	for(var/category in global_underwear.categories_by_name)
+	for(var/category in GLOB.global_underwear.categories_by_name)
 		hide_underwear[category] = FALSE
 
 	if(dna)
@@ -188,6 +188,15 @@
 		var/obj/item/organ/internal/stomach/stomach = internal_organs_by_name[BP_STOMACH]
 		if(stomach)
 			return stomach.ingested
+
+	if(should_have_organ(BP_REACTOR))
+		var/obj/item/organ/internal/machine/reactor/reactor = internal_organs_by_name[BP_REACTOR]
+		if(!reactor)
+			return
+		if(reactor.is_broken())
+			return FALSE
+		if(reactor.power_supply_type & POWER_SUPPLY_BIOLOGICAL)
+			return reactor.bio_reagents
 	return touching
 
 /mob/living/carbon/human/proc/metabolize_ingested_reagents()
@@ -206,6 +215,21 @@
 
 /mob/living/carbon/human/get_status_tab_items()
 	. = ..()
+
+	/// This needs to be updated to use signals.
+	var/holding_gps = FALSE
+	if(istype(src.get_active_hand(), /obj/item/device/gps) || istype(src.get_inactive_hand(), /obj/item/device/gps))
+		holding_gps = TRUE
+
+	var/area/A = get_area(src)
+	var/area_name
+	if(holding_gps)
+		area_name = get_area_display_name(A)
+		. += "[area_name]"
+		. += ""
+	if(A.area_blurb)
+		. += "[A.area_blurb]"
+		. += ""
 	. += "Intent: [a_intent]"
 	. += "Move Mode: [m_intent]"
 	if(is_diona() && DS)
@@ -213,17 +237,27 @@
 		. += "Energy: [round(DS.stored_energy)] / [round(DS.max_energy)]"
 		if(DS.regen_limb)
 			. += "Regeneration Progress: [round(DS.regen_limb_progress)] / [LIMB_REGROW_REQUIREMENT]"
-	if (internal)
-		if (!internal.air_contents)
+	var/custom_time = culture.get_custom_time()
+	if(custom_time)
+		. += custom_time
+	if(internal)
+		if(!internal.air_contents)
 			qdel(internal)
 		else
 			. += "Internal Atmosphere Info: [internal.name]"
 			. += "Tank Pressure: [internal.air_contents.return_pressure()]"
 			. += "Distribution Pressure: [internal.distribute_pressure]"
 
-	var/obj/item/organ/internal/cell/IC = internal_organs_by_name[BP_CELL]
+	var/obj/item/organ/internal/machine/power_core/IC = internal_organs_by_name[BP_CELL]
 	if(IC && IC.cell)
-		. += "Battery charge: [IC.get_charge()]/[IC.cell.maxcharge]"
+		. += "Battery Charge: [IC.get_charge()]/[IC.cell.maxcharge]"
+
+	var/obj/item/organ/internal/machine/internal_diagnostics/diagnostics = internal_organs_by_name[BP_DIAGNOSTICS_SUITE]
+	if(diagnostics)
+		if((diagnostics.get_integrity() < IPC_INTEGRITY_THRESHOLD_HIGH) || !diagnostics.is_broken())
+			. += "Temperature: [round(bodytemperature - T0C, 1)]°C"
+		else
+			. += "Temperature: E#RR"
 
 	if(mind)
 		var/datum/vampire/vampire = mind.antag_datums[MODE_VAMPIRE]
@@ -350,13 +384,13 @@
 		if((slot_ref["slot"] in list(slot_l_store, slot_r_store)))
 			continue
 		var/obj/item/thing_in_slot = get_equipped_item(slot_ref["slot"])
-		dat += "<BR><B>[slot_ref["name"]]:</b> <a href='?src=[REF(src)];item=[slot_ref["slot"]]'>[istype(thing_in_slot) ? thing_in_slot : "nothing"]</a>"
+		dat += "<BR><B>[slot_ref["name"]]:</b> <a href='byond://?src=[REF(src)];item=[slot_ref["slot"]]'>[istype(thing_in_slot) ? thing_in_slot : "nothing"]</a>"
 
 	dat += "<BR><HR>"
 
 	if(species.hud.has_hands)
-		dat += "<BR><b>Left hand:</b> <A href='?src=[REF(src)];item=[slot_l_hand]'>[istype(l_hand) ? l_hand : "nothing"]</A>"
-		dat += "<BR><b>Right hand:</b> <A href='?src=[REF(src)];item=[slot_r_hand]'>[istype(r_hand) ? r_hand : "nothing"]</A>"
+		dat += "<BR><b>Left hand:</b> <A href='byond://?src=[REF(src)];item=[slot_l_hand]'>[istype(l_hand) ? l_hand : "nothing"]</A>"
+		dat += "<BR><b>Right hand:</b> <A href='byond://?src=[REF(src)];item=[slot_r_hand]'>[istype(r_hand) ? r_hand : "nothing"]</A>"
 
 	var/has_mask // 0, no mask | 1, mask but it's down | 2, mask and it's ready
 	var/has_helmet
@@ -373,29 +407,29 @@
 		has_tank = TRUE
 
 	if((has_mask == 2|| has_helmet) && has_tank)
-		dat += "<BR><A href='?src=[REF(src)];item=internals'>Toggle internals [internal ? "off" : "on"]</A>"
+		dat += "<BR><A href='byond://?src=[REF(src)];item=internals'>Toggle internals [internal ? "off" : "on"]</A>"
 
 	// Other incidentals.
 	if(istype(suit) && suit.has_sensor == 1)
-		dat += "<BR><A href='?src=[REF(src)];item=sensors'>Set sensors</A>"
+		dat += "<BR><A href='byond://?src=[REF(src)];item=sensors'>Set sensors</A>"
 	if(handcuffed)
-		dat += "<BR><A href='?src=[REF(src)];item=[slot_handcuffed]'>Handcuffed</A>"
+		dat += "<BR><A href='byond://?src=[REF(src)];item=[slot_handcuffed]'>Handcuffed</A>"
 	if(legcuffed)
-		dat += "<BR><A href='?src=[REF(src)];item=[slot_legcuffed]'>Legcuffed</A>"
+		dat += "<BR><A href='byond://?src=[REF(src)];item=[slot_legcuffed]'>Legcuffed</A>"
 
 	if(has_mask)
 		var/obj/item/clothing/mask/M = wear_mask
 		if(M.adjustable)
-			dat += "<BR><A href='?src=[REF(src)];item=mask'>Adjust mask</A>"
+			dat += "<BR><A href='byond://?src=[REF(src)];item=mask'>Adjust mask</A>"
 	if(has_tank && internal)
-		dat += "<BR><A href='?src=[REF(src)];item=tank'>Check air tank</A>"
+		dat += "<BR><A href='byond://?src=[REF(src)];item=tank'>Check air tank</A>"
 	if(suit && LAZYLEN(suit.accessories))
-		dat += "<BR><A href='?src=[REF(src)];item=tie'>Remove accessory</A>"
-	dat += "<BR><A href='?src=[REF(src)];item=splints'>Remove splints</A>"
-	dat += "<BR><A href='?src=[REF(src)];item=pockets'>Empty pockets</A>"
+		dat += "<BR><A href='byond://?src=[REF(src)];item=tie'>Remove accessory</A>"
+	dat += "<BR><A href='byond://?src=[REF(src)];item=splints'>Remove splints</A>"
+	dat += "<BR><A href='byond://?src=[REF(src)];item=pockets'>Empty pockets</A>"
 	dat += species.get_strip_info("[REF(src)]")
-	dat += "<BR><A href='?src=[REF(user)];refresh=1'>Refresh</A>"
-	dat += "<BR><A href='?src=[REF(user)];mach_close=mob[name]'>Close</A>"
+	dat += "<BR><A href='byond://?src=[REF(user)];refresh=1'>Refresh</A>"
+	dat += "<BR><A href='byond://?src=[REF(user)];mach_close=mob[name]'>Close</A>"
 
 	var/datum/browser/mob_win = new(user, "mob[name]", capitalize_first_letters(name), 350, 550)
 	mob_win.set_content(dat)
@@ -625,7 +659,7 @@
 						+ "<b>Criminal Status:</b> [R.security.criminal]\n" \
 						+ "<b>Crimes:</b> [R.security.crimes]\n" \
 						+ "<b>Notes:</b> [R.security.notes]\n" \
-						+ "<a href='?src=[REF(src)];secrecordComment=`'>\[View Comment Log\]</a>"
+						+ "<a href='byond://?src=[REF(src)];secrecordComment=`'>\[View Comment Log\]</a>"
 					to_chat(usr, EXAMINE_BLOCK_RED(message))
 					read = 1
 
@@ -652,7 +686,7 @@
 							message += comment + "\n\n"
 					else
 						message += "No comments found.\n"
-					message += "<a href='?src=[REF(src)];secrecordadd=`'>\[Add Comment\]</a>"
+					message += "<a href='byond://?src=[REF(src)];secrecordadd=`'>\[Add Comment\]</a>"
 					to_chat(usr, EXAMINE_BLOCK_RED(message))
 
 			if(!read)
@@ -726,7 +760,7 @@
 						+ "<b>DNA:</b> [R.medical.blood_dna]\n" \
 						+ "<b>Disabilities:</b> [R.medical.disabilities]\n" \
 						+ "<b>Notes:</b> [R.medical.notes]\n" \
-						+ "<a href='?src=[REF(src)];medrecordComment=`'>\[View Comment Log\]</a>"
+						+ "<a href='byond://?src=[REF(src)];medrecordComment=`'>\[View Comment Log\]</a>"
 					to_chat(usr, EXAMINE_BLOCK_DEEP_CYAN(message))
 					read = 1
 
@@ -753,7 +787,7 @@
 							message += comment + "\n\n"
 					else
 						message += "No comments found.\n"
-					message += "<a href='?src=[REF(src)];medrecordadd=`'>\[Add Comment\]</a>"
+					message += "<a href='byond://?src=[REF(src)];medrecordadd=`'>\[Add Comment\]</a>"
 					to_chat(usr, EXAMINE_BLOCK_DEEP_CYAN(message))
 
 			if(!read)
@@ -952,6 +986,13 @@
 	return
 
 /mob/living/carbon/human/proc/check_has_mouth()
+	// Look, it's not really a mouth, but you gotta do what you gotta do.
+	// Imagine the Bender shit from Futurama where he opens his stomach hatch and drops shit in there.
+	if(should_have_organ(BP_REACTOR))
+		var/obj/item/organ/internal/machine/reactor/reactor = internal_organs_by_name[BP_REACTOR]
+		if(reactor && (reactor.power_supply_type & POWER_SUPPLY_BIOLOGICAL))
+			return TRUE
+
 	// Todo, check stomach organ when implemented.
 	var/obj/item/organ/external/E = get_organ(BP_HEAD)
 	if(E && !E.is_stump())
@@ -1266,7 +1307,7 @@
 	if (client)
 		prefs = client.prefs
 	else if (ckey)	// Mob might be logged out.
-		prefs = preferences_datums[ckey(ckey)]	// run the ckey through ckey() here so that aghosted mobs can be rejuv'd too. (Their ckeys are prefixed with @)
+		prefs = GLOB.preferences_datums[ckey(ckey)]	// run the ckey through ckey() here so that aghosted mobs can be rejuv'd too. (Their ckeys are prefixed with @)
 
 	if (prefs && real_name == prefs.real_name)
 		// Re-apply the mob's markings and prosthetics if their pref is their current char.
@@ -1294,6 +1335,7 @@
 
 	..()
 
+/// Passes the gas_mixture to the lungs for them to deal with. If lungs exist.
 /mob/living/carbon/human/handle_breath(datum/gas_mixture/breath)
 	if(status_flags & GODMODE)
 		return
@@ -1537,6 +1579,8 @@
 	nutrition_loss = HUNGER_FACTOR * species.nutrition_loss_factor
 	hydration_loss = THIRST_FACTOR * species.hydration_loss_factor
 
+	default_lighting_alpha = species.default_lighting_alpha
+
 	speech_bubble_type = species.possible_speech_bubble_types[1]
 	if(typing_indicator)
 		adjust_typing_indicator_offsets(typing_indicator)
@@ -1653,10 +1697,6 @@
 		W.message = message
 		W.add_fingerprint(src)
 
-#define INJECTION_FAIL     0
-#define BASE_INJECTION_MOD 1 // x1 multiplier with no effects
-#define SUIT_INJECTION_MOD 2 // x2 multiplier if target is wearing spacesuit
-
 /mob/living/carbon/human/can_inject(var/mob/user, var/error_msg, var/target_zone, var/handle_coverage = TRUE)
 	. = BASE_INJECTION_MOD
 
@@ -1716,10 +1756,6 @@
 			. = injection_modifier
 		if(. == INJECTION_FAIL)
 			return
-
-#undef INJECTION_FAIL
-#undef BASE_INJECTION_MOD
-#undef SUIT_INJECTION_MOD
 
 /mob/living/carbon/human/print_flavor_text(var/shrink = 1)
 	var/list/equipment = list(src.head,src.wear_mask,src.glasses,src.w_uniform,src.wear_suit,src.gloves,src.shoes)
@@ -1875,6 +1911,10 @@
 	return 0
 
 /mob/living/carbon/human/proc/can_drink(var/obj/item/I)
+	if(should_have_organ(BP_REACTOR))
+		var/obj/item/organ/internal/machine/reactor/reactor = internal_organs_by_name[BP_REACTOR]
+		if(reactor && (reactor.power_supply_type & POWER_SUPPLY_BIOLOGICAL))
+			return TRUE
 	if(!check_has_mouth())
 		to_chat(src, SPAN_NOTICE("Where do you intend to put \the [I]? You don't have a mouth!"))
 		return FALSE
@@ -1909,11 +1949,11 @@
 /mob/living/carbon/human/verb/toggle_underwear()
 	set name = "Toggle Underwear"
 	set desc = "Shows/hides selected parts of your underwear."
-	set category = "Object"
+	set category = "Object.Equipped"
 
 	if(stat)
 		return
-	var/datum/category_group/underwear/UWC = tgui_input_list(usr, "Choose underwear.", "Show/Hide Underwear", global_underwear.categories)
+	var/datum/category_group/underwear/UWC = tgui_input_list(usr, "Choose underwear.", "Show/Hide Underwear", GLOB.global_underwear.categories)
 	if(!UWC)
 		return
 	var/datum/category_item/underwear/UWI = all_underwear[UWC.name]
@@ -1989,7 +2029,7 @@
 
 /mob/living/carbon/human/proc/pulse()
 	var/obj/item/organ/internal/heart/heart = internal_organs_by_name[BP_HEART]
-	return heart ? heart.pulse : PULSE_NONE
+	return heart ? heart.fake_pulse ? PULSE_NORM : heart.pulse : PULSE_NONE
 
 /mob/living/carbon/human/proc/move_to_stomach(atom/movable/victim)
 	var/obj/item/organ/internal/stomach/stomach = internal_organs_by_name[BP_STOMACH]
@@ -2057,8 +2097,8 @@
 
 // Check if we should die.
 /mob/living/carbon/human/proc/handle_death_check()
-	if(should_have_organ(BP_BRAIN) && !is_mechanical()) //robots don't die via brain damage
-		var/obj/item/organ/internal/brain/brain = internal_organs_by_name[BP_BRAIN]
+	if(should_have_organ(BP_BRAIN))
+		var/obj/item/organ/internal/brain = internal_organs_by_name[BP_BRAIN]
 		if(!brain || (brain.status & ORGAN_DEAD))
 			return TRUE
 	return species.handle_death_check(src)
@@ -2257,18 +2297,19 @@
 /mob/living/carbon/human/verb/lookup()
 	set name = "Look Up"
 	set desc = "If you want to know what's above."
-	set category = "IC"
+	set category = "IC.Maneuver"
 
+	look_up_open_space(get_turf(src))
 
+/mob/living/proc/look_up_open_space(var/turf/T)
 	if(client && !is_physically_disabled())
 		if(z_eye)
 			reset_view(null)
 			QDEL_NULL(z_eye)
 			return
-		var/turf/T = get_turf(src)
 		var/turf/above = GET_TURF_ABOVE(T)
 		if(TURF_IS_MIMICING(above))
-			z_eye = new /atom/movable/z_observer/z_up(src, src)
+			z_eye = new /atom/movable/z_observer/z_up(src, src, T)
 			visible_message(SPAN_NOTICE("[src] looks up."), SPAN_NOTICE("You look up."))
 			reset_view(z_eye)
 			return
@@ -2279,23 +2320,25 @@
 /mob/living/verb/lookdown()
 	set name = "Look Down"
 	set desc = "If you want to know what's below."
-	set category = "IC"
+	set category = "IC.Maneuver"
 
+	look_down_open_space(get_turf(src))
+
+/mob/living/proc/look_down_open_space(var/turf/T)
 	if(client && !is_physically_disabled())
 		if(z_eye)
 			reset_view(null)
 			QDEL_NULL(z_eye)
 			return
-		var/turf/T = get_turf(src)
 		if(TURF_IS_MIMICING(T) && GET_TURF_BELOW(T))
-			z_eye = new /atom/movable/z_observer/z_down(src, src)
+			z_eye = new /atom/movable/z_observer/z_down(T, src, T)
 			visible_message(SPAN_NOTICE("[src] looks below."), SPAN_NOTICE("You look below."))
 			reset_view(z_eye)
 			return
 		else
 			T = get_step(T, dir)
 			if(TURF_IS_MIMICING(T) && GET_TURF_BELOW(T))
-				z_eye = new /atom/movable/z_observer/z_down(src, src, TRUE)
+				z_eye = new /atom/movable/z_observer/z_down(T, src, T)
 				visible_message(SPAN_NOTICE("[src] leans over to look below."), SPAN_NOTICE("You lean over to look below."))
 				reset_view(z_eye)
 				return

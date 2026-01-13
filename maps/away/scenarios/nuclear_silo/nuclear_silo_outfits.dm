@@ -43,10 +43,9 @@
 	)
 	head = list(
 		/obj/item/clothing/head/beanie/random,
-		/obj/item/clothing/head/beanie/submariner,
-		/obj/item/clothing/head/beanie/winter,
+		/obj/item/clothing/head/beanie/submariner/random,
+		/obj/item/clothing/head/beanie/earflap/random,
 		/obj/item/clothing/head/flatcap,
-		/obj/item/clothing/head/newsboy,
 		/obj/item/clothing/head/softcap,
 		/obj/item/clothing/head/wool,
 	)
@@ -174,7 +173,7 @@
 	)
 	suit = list(
 		/obj/item/clothing/suit/storage/toggle/highvis,
-		/obj/item/clothing/suit/storage/toggle/highvis_alt,
+		/obj/item/clothing/suit/storage/toggle/highvis/alt,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,
 		/obj/item/clothing/suit/storage/hazardvest,
 		/obj/item/clothing/suit/storage/hazardvest/blue,

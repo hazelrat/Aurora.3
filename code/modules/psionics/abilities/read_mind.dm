@@ -33,14 +33,14 @@
 		to_chat(user, SPAN_WARNING("Not even a psion of your level can speak to the dead."))
 		return
 
-	var/psi_blocked = target.is_psi_blocked()
+	var/psi_blocked = target.is_psi_blocked(user)
 	if(psi_blocked)
 		to_chat(user, psi_blocked)
 		return
 
 	var/safe_mode = FALSE
-	var/mob/living/L = user
-	if(L.psi.get_rank() < PSI_RANK_HARMONIOUS)
+	// Safe mode triggers if the caster's psi-sensitivity isn't 2 or more points greater than the receiver's sensitivity.
+	if(user.check_psi_sensitivity() - target.check_psi_sensitivity() < PSI_RANK_HARMONIOUS)
 		safe_mode = TRUE
 
 	user.visible_message(SPAN_WARNING("[user] lays a palm on [hit_atom]'s forehead..."))

@@ -146,7 +146,7 @@
 			if(MOD_SILENCE)
 				suppressed = TRUE
 			if(MOD_NUCLEAR_CHARGE)
-				self_recharge = 1
+				self_recharge = TRUE
 				criticality *= 2
 		fire_delay *= modifier.fire_delay
 		reliability += modifier.reliability
@@ -253,7 +253,7 @@
 		toggle_wield(usr)
 
 /obj/item/gun/energy/laser/prototype/verb/scope()
-	set category = "Object"
+	set category = "Object.Held"
 	set name = "Use Scope"
 	set src in usr
 
@@ -293,7 +293,7 @@
 
 /obj/item/gun/energy/laser/prototype/verb/rename_gun()
 	set name = "Name Prototype"
-	set category = "Object"
+	set category = "Object.Held"
 	set desc = "Name your invention so that its glory might be eternal"
 	set src in usr
 
@@ -311,7 +311,7 @@
 
 /obj/item/gun/energy/laser/prototype/verb/describe_gun()
 	set name = "Describe Prototype"
-	set category = "Object"
+	set category = "Object.Held"
 	set desc = "Describe your invention so that its glory might be eternal"
 	set src in usr
 

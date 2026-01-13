@@ -48,7 +48,7 @@
 
 /obj/item/clothing/suit/storage/toggle/verb/toggle()
 	set name = "Toggle Coat Buttons"
-	set category = "Object"
+	set category = "Object.Equipped"
 	set src in usr
 
 	if(use_check_and_message(usr))
@@ -84,7 +84,7 @@
 
 /obj/item/clothing/suit/storage/vest/verb/toggle()
 	set name ="Adjust Badge"
-	set category = "Object"
+	set category = "Object.Equipped"
 	set src in usr
 	if(!usr.canmove || usr.stat || usr.restrained())
 		return 0
@@ -112,7 +112,7 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	armor = list(
-		bio = ARMOR_BIO_MINOR
+		BIO = ARMOR_BIO_MINOR
 	)
 	siemens_coefficient = 0.8
 	protects_against_weather = TRUE

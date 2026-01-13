@@ -18,6 +18,7 @@ SUBSYSTEM_DEF(atlas)
 
 	var/datum/space_sector/current_sector
 	var/list/possible_sectors = list()
+
 	//Note that the dirs here are REVERSE because they're used for entry points, so it'd be the dir facing starboard for example.
 	//These are strings because otherwise the list indexes would be out of bounds. Thanks BYOND.
 	var/list/naval_to_dir = list(
@@ -266,7 +267,7 @@ SUBSYSTEM_DEF(atlas)
 	SHOULD_NOT_SLEEP(TRUE)
 	// This needs to be done after current_map is set, but before mapload.
 
-	admin_departments = list(
+	GLOB.admin_departments = list(
 		"[current_map.boss_name]",
 		"External Routing",
 		"Supply"

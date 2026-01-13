@@ -10,8 +10,9 @@ BREATH ANALYZER
 /obj/item/device/healthanalyzer
 	name = "health analyzer"
 	desc = "A hand-held body scanner able to distinguish vital signs of the subject."
+	icon = 'icons/obj/item/device/healthanalyzer.dmi'
 	icon_state = "health"
-	item_state = "healthanalyzer"
+	item_state = "analyzer"
 	obj_flags = OBJ_FLAG_CONDUCTABLE
 	slot_flags = SLOT_BELT
 	throwforce = 3
@@ -30,7 +31,6 @@ BREATH ANALYZER
 		last_scan = world.time
 		sound_scan = TRUE
 	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
-	user.do_attack_animation(src)
 	flick("[icon_state]-scan", src)	//makes it so that it plays the scan animation on a successful scan
 	health_scan_mob(target_mob, user, mode, sound_scan = sound_scan)
 	add_fingerprint(user)
@@ -41,48 +41,50 @@ BREATH ANALYZER
 		last_scan = world.time
 		sound_scan = TRUE
 	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
-	user.do_attack_animation(src)
 	flick("[icon_state]-scan", src)	//makes it so that it plays the scan animation on a successful scan
 	health_scan_mob(user, user, mode, sound_scan = sound_scan)
 	add_fingerprint(user)
 
-/proc/get_wound_severity(var/damage_ratio, var/uppercase = FALSE) //Used for ratios.
+/// Calculates severity based on the ratios defined external limbs.
+/proc/get_wound_severity(damage_ratio, uppercase = FALSE)
 	var/degree = "none"
 
 	switch(damage_ratio)
-		if(0.001 to 0.1)
+		if (0 to 10)
 			degree = "minor"
-		if(0.1 to 0.2)
+		if (11 to 25)
 			degree = "moderate"
-		if(0.2 to 0.4)
+		if (26 to 50)
 			degree = "significant"
-		if(0.4 to 0.6)
+		if (51 to 75)
 			degree = "severe"
-		if(0.6 to 0.8)
-			degree = "critical"
-		if(0.8 to 1)
-			degree = "fatal"
+		if (76 to 99)
+			degree = "extreme"
+		if (99 to INFINITY)
+			degree = "irreparable"
 
 	if(uppercase)
 		degree = capitalize(degree)
 	return degree
 
-/proc/get_severity(amount, var/uppercase = FALSE)
+/proc/get_severity(amount, uppercase = FALSE)
 	var/output = "none"
-	if(!amount)
-		output = "none"
-	else if(amount > 100)
-		output = "fatal"
-	else if(amount > 75)
-		output = "critical"
-	else if(amount > 50)
-		output = "severe"
-	else if(amount > 25)
-		output = "significant"
-	else if(amount > 10)
-		output = "moderate"
-	else
-		output = "minor"
+
+	switch(amount)
+		if (0)
+			output = "none"
+		if (1 to 10)
+			output = "minor"
+		if (11 to 25)
+			output = "moderate"
+		if (26 to 50)
+			output = "significant"
+		if (51 to 75)
+			output = "severe"
+		if (76 to 99)
+			output = "extreme"
+		if (100 to INFINITY)
+			output = "irreparable"
 
 	if(uppercase)
 		output = capitalize(output)
@@ -360,7 +362,7 @@ BREATH ANALYZER
 
 /obj/item/device/healthanalyzer/verb/toggle_mode()
 	set name = "Switch Verbosity"
-	set category = "Object"
+	set category = "Object.Held"
 	set src in usr
 
 	mode = !mode
@@ -373,10 +375,9 @@ BREATH ANALYZER
 /obj/item/device/analyzer
 	name = "analyzer"
 	desc = "A hand-held environmental scanner which reports current gas levels."
-	icon = 'icons/obj/item/tools/air_analyzer.dmi'
+	icon = 'icons/obj/item/device/air_analyzer.dmi'
 	icon_state = "analyzer"
 	item_state = "analyzer"
-	contained_sprite = TRUE
 	w_class = WEIGHT_CLASS_SMALL
 	obj_flags = OBJ_FLAG_CONDUCTABLE
 	slot_flags = SLOT_BELT
@@ -409,8 +410,9 @@ BREATH ANALYZER
 /obj/item/device/mass_spectrometer
 	name = "mass spectrometer"
 	desc = "A hand-held mass spectrometer which identifies trace chemicals in a blood sample."
+	icon = 'icons/obj/item/device/mass_spectrometer.dmi'
 	icon_state = "spectrometer"
-	item_state = "analyzer"
+	item_state = "spectrometer"
 	w_class = WEIGHT_CLASS_SMALL
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	obj_flags = OBJ_FLAG_CONDUCTABLE
@@ -471,6 +473,7 @@ BREATH ANALYZER
 /obj/item/device/mass_spectrometer/adv
 	name = "advanced mass spectrometer"
 	icon_state = "adv_spectrometer"
+	item_state = "adv_spectrometer"
 	details = TRUE
 	origin_tech = list(TECH_MAGNET = 4, TECH_BIO = 2)
 
@@ -483,6 +486,7 @@ BREATH ANALYZER
 /obj/item/device/reagent_scanner
 	name = "reagent scanner"
 	desc = "A hand-held reagent scanner which identifies chemical agents."
+	icon = 'icons/obj/item/device/reagent_scanner.dmi'
 	icon_state = "reagent_scanner"
 	item_state = "analyzer"
 	w_class = WEIGHT_CLASS_SMALL
@@ -518,12 +522,14 @@ BREATH ANALYZER
 /obj/item/device/reagent_scanner/adv
 	name = "advanced reagent scanner"
 	icon_state = "adv_reagent_scanner"
+	item_state = "analyzer"
 	details = 1
 	origin_tech = list(TECH_MAGNET = 4, TECH_BIO = 2)
 
 /obj/item/device/slime_scanner
 	name = "slime scanner"
-	icon_state = "adv_spectrometer"
+	icon = 'icons/obj/item/device/slime_scanner.dmi'
+	icon_state = "slime_scanner"
 	item_state = "analyzer"
 	origin_tech = list(TECH_BIO = 1)
 	w_class = WEIGHT_CLASS_SMALL
@@ -568,8 +574,8 @@ BREATH ANALYZER
 /obj/item/device/price_scanner
 	name = "price scanner"
 	desc = "Using an up-to-date database of various costs and prices, this device estimates the market price of an item up to 0.001% accuracy."
+	icon = 'icons/obj/item/device/price_scanner.dmi'
 	icon_state = "price_scanner"
-	item_state = "price_scanner"
 	item_flags = ITEM_FLAG_NO_BLUDGEON
 	slot_flags = SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
@@ -583,12 +589,13 @@ BREATH ANALYZER
 		return
 
 	var/value = get_value(target)
-	user.visible_message("\The [user] scans \the [target] with \the [src]")
-	user.show_message("Price estimation of \the [target]: [value ? value : "N/A"] Credits")
+	user.visible_message(SPAN_NOTICE("\The [user] scans \the [target] with \the [src]."))
+	to_chat(user, SPAN_NOTICE("\The [src] estimates the price of \the [target] at <b>[value ? value : "N/A"]</b>."))
 
 /obj/item/device/breath_analyzer
 	name = "breath analyzer"
 	desc = "A hand-held breath analyzer that provides a robust amount of information about the subject's respiratory system."
+	icon = 'icons/obj/item/device/breath_analyzer.dmi'
 	icon_state = "breath_analyzer"
 	item_state = "analyzer"
 	w_class = WEIGHT_CLASS_SMALL
@@ -625,7 +632,6 @@ BREATH ANALYZER
 		return
 
 	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
-	user.do_attack_animation(H)
 
 	user.visible_message(SPAN_NOTICE("[user] is trying to take a breath sample from [H]."),
 							SPAN_NOTICE("You gently insert \the [src] into [H]'s mouth."))
@@ -698,9 +704,10 @@ BREATH ANALYZER
 
 /obj/item/device/advanced_healthanalyzer
 	name = "advanced health analyzer"
-	desc = "An expensive and varied-use health analyzer of Zeng-Hu design that prints full-body scans after a short scanning delay."
-	icon_state = "adv-analyzer"
-	item_state = "adv-analyzer"
+	desc = "An expensive and varied-use health analyzer that prints full-body scans after a short scanning delay."
+	icon = 'icons/obj/item/device/advanced_healthanalyzer.dmi'
+	icon_state = "health_adv"
+	item_state = "analyzer"
 	slot_flags = SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 3)
@@ -723,8 +730,8 @@ BREATH ANALYZER
 	if(!connected)
 		return
 	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
-	user.do_attack_animation(src)
 	user.visible_message("<b>[user]</b> starts scanning \the [target_mob] with \the [src].", SPAN_NOTICE("You start scanning \the [target_mob] with \the [src]."))
+	flick("[icon_state]-scan", src)
 	if(do_after(user, 7 SECONDS, target_mob, DO_UNIQUE))
 		print_scan(target_mob, user)
 		add_fingerprint(user)

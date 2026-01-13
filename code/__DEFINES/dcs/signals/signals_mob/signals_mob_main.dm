@@ -1,3 +1,14 @@
+
+///from base of mob/clickon(): (atom/A, params)
+#define COMSIG_MOB_CLICKON "mob_clickon"
+///from base of mob/MiddleClickOn(): (atom/A)
+#define COMSIG_MOB_MIDDLECLICKON "mob_middleclickon"
+///from base of mob/AltClickOn(): (atom/A)
+#define COMSIG_MOB_ALTCLICKON "mob_altclickon"
+	#define COMSIG_MOB_CANCEL_CLICKON (1<<0)
+///from base of mob/alt_click_on_secodary(): (atom/A)
+#define COMSIG_MOB_ALTCLICKON_SECONDARY "mob_altclickon_secondary"
+
 /// From base of /client/Move(): (list/move_args)
 #define COMSIG_MOB_CLIENT_PRE_LIVING_MOVE "mob_client_pre_living_move"
 	/// Should we stop the current living movement attempt
@@ -20,6 +31,17 @@
 
 ///from base of /obj/item/attack(): (mob/M, mob/user)
 #define COMSIG_MOB_ITEM_ATTACK "mob_item_attack"
+///from base of mob/RangedAttack(): (atom/A, modifiers)
+#define COMSIG_MOB_ATTACK_RANGED "mob_attack_ranged"
 
 ///From base of mob/update_movespeed():area
 #define COMSIG_MOB_MOVESPEED_UPDATED "mob_update_movespeed"
+
+/// For loss of limbs.
+#define COMSIG_LIMB_LOSS "lost_limb"
+
+/// From /mob/living/verb/execute_resist(). Resisting.
+#define COMSIG_MOB_RESISTED "mob_resist"
+
+/// From /obj/item/organ/external/take_damage. Updates the limb's colour matrix. Very laggy, so we do it on reaction to stuff.
+#define COMSIG_UPDATE_LIMB_IMAGE "update_limb_image"

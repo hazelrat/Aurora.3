@@ -5,7 +5,6 @@
 	icon_state = "rustlamp_l"
 	anchored = TRUE
 	density = TRUE
-	light_wedge = LIGHT_OMNI
 	light_color = LIGHT_COLOR_HALOGEN
 	light_range = 8
 	light_power = 8
@@ -29,7 +28,6 @@
 	anchored = TRUE
 	density = FALSE
 	light_color = "#FA644B"
-	light_wedge = LIGHT_OMNI
 	light_range = 6
 	light_power = 1
 
@@ -58,7 +56,7 @@
 /obj/effect/overlay/street_light
 	icon = 'icons/obj/structure/urban/poles.dmi'
 	icon_state = "street_light"
-	plane = EFFECTS_ABOVE_LIGHTING_PLANE
+	plane = ABOVE_LIGHTING_PLANE
 
 /obj/effect/overlay/street_light/classic
 	icon_state = "classic_lamp_light"
@@ -66,7 +64,6 @@
 
 /obj/structure/utility_pole/street/on
 	desc = "A tall light source. This one shines brightly."
-	light_wedge = LIGHT_OMNI
 	light_color = "#e8ffeb"
 	light_range = 8
 	light_power = 1.9
@@ -74,7 +71,7 @@
 /obj/structure/utility_pole/street/on/Initialize(mapload)
 	. = ..()
 	ClearOverlays()
-	overlays += /obj/effect/overlay/street_light
+	AddOverlays(/obj/effect/overlay/street_light)
 	return
 
 /obj/structure/utility_pole/street/classic
@@ -82,7 +79,6 @@
 
 /obj/structure/utility_pole/street/classic/on
 	desc = "A tall light source. This one shines brightly."
-	light_wedge = LIGHT_OMNI
 	light_color = LIGHT_COLOR_TUNGSTEN
 	light_range = 8
 	light_power = 1.9
@@ -90,7 +86,7 @@
 /obj/structure/utility_pole/street/classic/on/Initialize(mapload)
 	. = ..()
 	ClearOverlays()
-	overlays += /obj/effect/overlay/street_light/classic
+	AddOverlays(/obj/effect/overlay/street_light/classic)
 	return
 
 /obj/effect/overlay/street_light/crosswalk
@@ -107,7 +103,7 @@
 /obj/structure/utility_pole/street/crosswalk/Initialize(mapload)
 	. = ..()
 	ClearOverlays()
-	overlays += /obj/effect/overlay/street_light/crosswalk
+	AddOverlays(/obj/effect/overlay/street_light/crosswalk)
 	return
 
 /obj/effect/overlay/street_light/traffic
@@ -127,13 +123,13 @@
 /obj/structure/utility_pole/street/traffic/base/Initialize(mapload)
 	. = ..()
 	ClearOverlays()
-	overlays += /obj/effect/overlay/street_light/traffic
+	AddOverlays(/obj/effect/overlay/street_light/traffic)
 	return
 
 /obj/structure/utility_pole/street/traffic/inverted/Initialize(mapload)
 	. = ..()
 	ClearOverlays()
-	overlays += /obj/effect/overlay/street_light/traffic/inverted
+	AddOverlays(/obj/effect/overlay/street_light/traffic/inverted)
 	return
 
 /obj/structure/utility_pole/power

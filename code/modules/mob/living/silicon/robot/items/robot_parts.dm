@@ -8,7 +8,7 @@
 	var/list/part = null // Order of args is important for installing robolimbs.
 	var/sabotaged = 0 //Emagging limbs can have repercussions when installed as prosthetics.
 	var/model_info
-	var/linked_frame = SPECIES_IPC_UNBRANDED
+	var/linked_frame = SPECIES_IPC
 	dir = SOUTH
 
 /obj/item/robot_parts/set_dir()
@@ -255,7 +255,7 @@
 
 				var/mob/living/carbon/human/new_shell = new(get_turf(src), chest.linked_frame)
 				// replace the IPC's microbattery cell with the one that was in the robot chest
-				var/obj/item/organ/internal/cell/C = new_shell.internal_organs_by_name[BP_CELL]
+				var/obj/item/organ/internal/machine/power_core/C = new_shell.internal_organs_by_name[BP_CELL]
 				C.replace_cell(chest.cell)
 				//so people won't mess around with the chassis until it is deleted
 				forceMove(new_shell)
@@ -268,7 +268,7 @@
 					newname = L.get_random_name()
 				new_shell.real_name = newname
 				new_shell.name = new_shell.real_name
-				var/obj/item/organ/internal/mmi_holder/posibrain/P = new_shell.internal_organs_by_name[BP_BRAIN]
+				var/obj/item/organ/internal/machine/posibrain/P = new_shell.internal_organs_by_name[BP_BRAIN]
 				P.setup_brain()
 				new_shell.change_appearance(APPEARANCE_PLASTICSURGERY, new_shell)
 				qdel(src)
@@ -277,6 +277,11 @@
 			else
 				if(jobban_isbanned(M.brainmob, "Cyborg"))
 					to_chat(user, SPAN_WARNING("\The [attacking_item] does not seem to fit. (The player has been banned from playing this role)"))
+					return
+
+				// So you cannot make a cyborg with a positronic in it.
+				if(istype(M, /obj/item/device/mmi/digital/posibrain))
+					to_chat(user, SPAN_WARNING("Positronic brains are not compatible with this kind of chassis."))
 					return
 
 				var/mob/living/silicon/robot/O = new /mob/living/silicon/robot(get_turf(src), TRUE)
@@ -306,7 +311,7 @@
 				callHook("borgify", list(O))
 				O.Namepick()
 				qdel(src)
-		else
+		else if(!istype(M, /obj/item/device/mmi/digital/posibrain))
 			to_chat(user, SPAN_WARNING("\The [attacking_item] can only be inserted after everything else is installed."))
 		return
 

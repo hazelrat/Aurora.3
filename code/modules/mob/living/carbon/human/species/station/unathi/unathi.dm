@@ -7,6 +7,7 @@
 	species_height = HEIGHT_CLASS_TALL
 	height_min = 175
 	height_max = 215
+	selectable_pronouns = list(NEUTER, MALE, FEMALE, PLURAL)
 	icobase = 'icons/mob/human_races/unathi/r_unathi.dmi'
 	deform = 'icons/mob/human_races/unathi/r_def_unathi.dmi'
 	preview_icon = 'icons/mob/human_races/unathi/unathi_preview.dmi'
@@ -36,7 +37,7 @@
 
 	ethanol_resistance = 0.8
 	taste_sensitivity = TASTE_SENSITIVE
-	economic_modifier = 7
+	economic_modifier = 9
 
 	num_alternate_languages = 2
 	secondary_langs = list(LANGUAGE_UNATHI, LANGUAGE_AZAZIBA)
@@ -60,6 +61,7 @@
 	rarity_value = 3
 	break_cuffs = TRUE
 	mob_size = 10
+	mob_weight = MOB_WEIGHT_HEAVY
 	climb_coeff = 1.35
 
 	blurb = "A heavily reptillian species, Unathi (or 'Sinta as they call themselves) hail from the Uuosa-Eso \

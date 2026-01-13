@@ -19,6 +19,16 @@
 
 	can_hold_mob = TRUE
 
+/obj/vehicle/train/feedback_hints(mob/user, distance, is_adjacent)
+	. += ..()
+	if(lead)
+		. += SPAN_NOTICE("It is being towed by \the [lead] in the [dir2text(get_dir(src, lead))].")
+	if(tow)
+		. += SPAN_NOTICE("It towing \the [tow] in the [dir2text(get_dir(src, tow))].")
+
+/obj/vehicle/train/cargo/engine/antagonist_hints(mob/user, distance, is_adjacent)
+	. = ..()
+	. += "When emagged, it can be used to run people over with."
 
 //-------------------------------------------
 // Standard procs
@@ -28,16 +38,10 @@
 	for(var/obj/vehicle/train/T in orange(1, src))
 		latch(T)
 
-/obj/vehicle/train/get_examine_text(mob/user, distance, is_adjacent, infix, suffix)
-	. = ..()
-	if(lead)
-		. += SPAN_NOTICE("It is being towed by \the [lead] in the [dir2text(get_dir(src, lead))].")
-	if(tow)
-		. += SPAN_NOTICE("It towing \the [tow] in the [dir2text(get_dir(src, tow))].")
-
 /obj/vehicle/train/Move()
 	var/old_loc = get_turf(src)
-	if(..())
+	. = ..()
+	if(.)
 		if(tow)
 			tow.Move(old_loc)
 		return 1
@@ -67,7 +71,7 @@
 			if(isliving(load))
 				var/mob/living/D = load
 				to_chat(D, SPAN_WARNING("You hit [M]!"))
-				msg_admin_attack("[D.name] ([D.ckey]) hit [M.name] ([M.ckey]) with [src]. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>)",ckey=key_name(D),ckey_target=key_name(M))
+				msg_admin_attack("[D.name] ([D.ckey]) hit [M.name] ([M.ckey]) with [src]. (<A href='byond://?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>)",ckey=key_name(D),ckey_target=key_name(M))
 
 
 //-------------------------------------------

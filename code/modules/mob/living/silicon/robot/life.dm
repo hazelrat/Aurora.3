@@ -154,10 +154,10 @@
 		set_see_invisible(SEE_INVISIBLE_LEVEL_TWO)
 	else if((sight_mode & BORGMESON) && (sight_mode & BORGTHERM))
 		set_sight(sight|SEE_TURFS|SEE_MOBS)
-		set_see_invisible(SEE_INVISIBLE_NOLIGHTING)
+		lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	else if(sight_mode & BORGMESON)
 		set_sight(sight|SEE_TURFS)
-		set_see_invisible(SEE_INVISIBLE_NOLIGHTING)
+		lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	else if(sight_mode & BORGMATERIAL)
 		set_sight(sight|SEE_OBJS)
 	else if(sight_mode & BORGTHERM)
@@ -210,7 +210,7 @@
 			healths.icon_state = "health7"
 
 	if(syndicate && client)
-		for(var/datum/mind/tra in traitors.current_antagonists)
+		for(var/datum/mind/tra in GLOB.traitors.current_antagonists)
 			if(tra.current)
 				// TODO: Update to new antagonist system.
 				var/I = image('icons/mob/mob.dmi', loc = tra.current, icon_state = "traitor")
@@ -220,7 +220,7 @@
 			// TODO: Update to new antagonist system.
 			if(!mind.special_role)
 				mind.special_role = "traitor"
-				traitors.current_antagonists |= mind
+				GLOB.traitors.current_antagonists |= mind
 
 	if(cells)
 		if(cell)

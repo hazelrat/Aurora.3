@@ -2,11 +2,10 @@
 	name = "portable suit cooling unit"
 	desc = "A portable heat sink and liquid cooled radiator that can be hooked up to a space suit's existing temperature controls to provide industrial levels of cooling."
 	w_class = WEIGHT_CLASS_BULKY
-	icon = 'icons/obj/item/tools/suitcooler.dmi'
+	icon = 'icons/obj/item/device/suitcooler.dmi'
 	icon_state = "suitcooler0"
 	item_state = "coolingpack"
 	action_button_name = "Toggle Cooling Unit"
-	contained_sprite = TRUE
 	slot_flags = SLOT_BACK	//you can carry it on your back if you want, but it won't do anything unless attached to suit storage
 
 	//copied from tank.dm
@@ -24,11 +23,40 @@
 	var/on = 0				//is it turned on?
 	var/cover_open = 0		//is the cover open?
 	var/obj/item/cell/cell
-	var/max_cooling = 12				//in degrees per second - probably don't need to mess with heat capacity here
+	var/max_cooling = 24				//in degrees per second - probably don't need to mess with heat capacity here
 	var/charge_consumption = 8.3		//charge per second at max_cooling
 	var/thermostat = T20C
 
 	//TODO: make it heat up the surroundings when not in space
+
+/obj/item/device/suit_cooling_unit/feedback_hints(mob/user, distance, is_adjacent)
+	. += ..()
+
+	if(!distance <= 1)
+		return
+
+	if(on)
+		if(attached_to_suit(src.loc))
+			. += SPAN_NOTICE("It's switched on and running.")
+		else if(ishuman(loc))
+			var/mob/living/carbon/human/H = loc
+			if(H.species.flags & ACCEPTS_COOLER)
+				. += SPAN_NOTICE("It's switched on and running, connected to the cooling systems of [H].")
+		else
+			. += SPAN_NOTICE("It's switched on, but not attached to anything.")
+	else
+		. += SPAN_NOTICE("It is switched off.")
+
+	if(cover_open)
+		if(cell)
+			. += SPAN_NOTICE("The panel is open, exposing \the [cell].")
+		else
+			. += SPAN_NOTICE("The panel is open.")
+
+	if(cell)
+		. += SPAN_NOTICE("The charge meter reads [round(cell.percent())]%.")
+	else
+		. += SPAN_NOTICE("It doesn't have a power cell installed.")
 
 /obj/item/device/suit_cooling_unit/Initialize()
 	. = ..()
@@ -67,7 +95,7 @@
 
 	var/charge_usage = (temp_adj/max_cooling)*charge_consumption
 
-	H.bodytemperature -= temp_adj*efficiency
+	H.bodytemperature = max(T0C, H.bodytemperature - temp_adj*efficiency)
 
 	cell.use(charge_usage)
 
@@ -212,35 +240,6 @@
 		var/mob/M = loc
 		M.update_inv_back()
 		M.update_inv_s_store()
-
-/obj/item/device/suit_cooling_unit/get_examine_text(mob/user, distance, is_adjacent, infix, suffix)
-	. = ..()
-
-	if(!distance <= 1)
-		return
-
-	if(on)
-		if(attached_to_suit(src.loc))
-			. += SPAN_NOTICE("It's switched on and running.")
-		else if(ishuman(loc))
-			var/mob/living/carbon/human/H = loc
-			if(H.species.flags & ACCEPTS_COOLER)
-				. += SPAN_NOTICE("It's switched on and running, connected to the cooling systems of [H].")
-		else
-			. += SPAN_NOTICE("It's switched on, but not attached to anything.")
-	else
-		. += SPAN_NOTICE("It is switched off.")
-
-	if(cover_open)
-		if(cell)
-			. += SPAN_NOTICE("The panel is open, exposing \the [cell].")
-		else
-			. += SPAN_NOTICE("The panel is open.")
-
-	if(cell)
-		. += SPAN_NOTICE("The charge meter reads [round(cell.percent())]%.")
-	else
-		. += SPAN_NOTICE("It doesn't have a power cell installed.")
 
 /obj/item/device/suit_cooling_unit/no_cell
 	celltype = null

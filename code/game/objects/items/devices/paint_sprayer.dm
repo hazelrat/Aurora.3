@@ -6,11 +6,9 @@
 /obj/item/device/paint_sprayer
 	name = "paint gun"
 	desc = "A Hephaestus-made paint gun that uses microbes to replenish its paint storage. Very high-tech and fancy too!"
-	desc_info = "Use control-click on a coloured decal on a turf to copy its colour. You can also use shift-click on a turf with the paint gun in hand to clear all decals on it."
-	icon = 'icons/obj/item/tools/paint_sprayer.dmi'
-	icon_state = "floor_painter"
-	item_state = "floor_painter"
-	contained_sprite = TRUE
+	icon = 'icons/obj/item/device/paint_sprayer.dmi'
+	icon_state = "paint_sprayer"
+	item_state = "mister"
 	var/decal =        "remove all decals"
 	var/paint_dir =    "precise"
 	var/paint_colour = COLOR_WHITE
@@ -80,6 +78,19 @@
 		"hull blue" =      COLOR_HULL,
 		"bulkhead black" = COLOR_WALL_GUNMETAL
 		)
+
+/obj/item/device/paint_sprayer/mechanics_hints(mob/user, distance, is_adjacent)
+	. += ..()
+	. += "CTRL-click a turf with the paint sprayer to copy the color(s) used on it."
+	. += "SHIFT-click a turf with the paint sprayer to clear all decals from it."
+
+/obj/item/device/paint_sprayer/feedback_hints(mob/user, distance, is_adjacent)
+	. += ..()
+	. += "It is configured to produce the '[SPAN_NOTICE(decal)]' decal with a direction of '[SPAN_NOTICE(paint_dir)]' using [SPAN_NOTICE(paint_colour)] paint."
+
+/obj/item/device/paint_sprayer/update_icon()
+	ClearOverlays()
+	AddOverlays(overlay_image(icon, "paint_sprayer_color", paint_colour))
 
 /obj/item/device/paint_sprayer/afterattack(var/atom/A, var/mob/user, proximity, params)
 	if(!proximity)
@@ -194,17 +205,20 @@
 	return FALSE
 
 /turf/simulated/floor/Click(location, control, params)
-	if(ishuman(usr))
-		var/mob/living/carbon/human/H = usr
+	if(ishuman(usr) || isrobot(usr))
+		var/mob/living/L = usr
 		var/list/modifiers = params2list(params)
-		var/obj/item/device/paint_sprayer/paint_sprayer = H.get_active_hand()
+		var/obj/item/device/paint_sprayer/paint_sprayer = L.get_active_hand()
 		if(istype(paint_sprayer))
-			if(!istype(H.buckled_to))
-				H.face_atom(src)
-			if(modifiers["ctrl"] && paint_sprayer.pick_color(src, H))
+			if(!istype(L.buckled_to))
+				L.face_atom(src)
+
+			if(modifiers["ctrl"] && paint_sprayer.pick_color(src, L))
 				return
-			if(modifiers["shift"] && paint_sprayer.remove_paint(src, H))
+
+			if(modifiers["shift"] && paint_sprayer.remove_paint(src, L))
 				return
+
 	. = ..()
 
 /obj/item/device/paint_sprayer/proc/pick_color(atom/A, mob/user)
@@ -298,14 +312,10 @@
 		playsound(get_turf(src), 'sound/effects/spray3.ogg', 30, 1, -6)
 	return .
 
-/obj/item/device/paint_sprayer/get_examine_text(mob/user, distance, is_adjacent, infix, suffix)
-	. = ..()
-	. += "It is configured to produce the '[SPAN_NOTICE(decal)]' decal with a direction of '[SPAN_NOTICE(paint_dir)]' using [SPAN_NOTICE(paint_colour)] paint."
-
 /obj/item/device/paint_sprayer/verb/choose_colour()
 	set name = "Choose Colour"
 	set desc = "Choose a paintgun colour."
-	set category = "Object"
+	set category = "Object.Held"
 	set src in usr
 
 	if(usr.incapacitated())
@@ -316,7 +326,7 @@
 /obj/item/device/paint_sprayer/verb/choose_preset_colour()
 	set name = "Choose Preset Colour"
 	set desc = "Choose a paintgun colour."
-	set category = "Object"
+	set category = "Object.Held"
 	set src in usr
 
 	if(usr.incapacitated())
@@ -324,12 +334,13 @@
 	var/new_colour = input(usr, "Choose a colour.", "paintgun", paint_colour) as null|anything in preset_colors
 	if(new_colour && new_colour != paint_colour)
 		paint_colour = preset_colors[new_colour]
+		update_icon()
 		to_chat(usr, SPAN_NOTICE("You set \the [src] to paint with <font color='[paint_colour]'>a new colour</font>."))
 
 /obj/item/device/paint_sprayer/verb/choose_decal()
 	set name = "Choose Decal"
 	set desc = "Choose a paintgun decal."
-	set category = "Object"
+	set category = "Object.Held"
 	set src in usr
 
 	if(usr.incapacitated())
@@ -343,7 +354,7 @@
 /obj/item/device/paint_sprayer/verb/choose_direction()
 	set name = "Choose Direction"
 	set desc = "Choose a paintgun direction."
-	set category = "Object"
+	set category = "Object.Held"
 	set src in usr
 
 	if(usr.incapacitated())

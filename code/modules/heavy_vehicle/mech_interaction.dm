@@ -16,7 +16,7 @@
 		body.mouse_drop_receive(arglist(args))
 	else . = ..()
 
-/mob/living/heavy_vehicle/ClickOn(var/atom/A, params, var/mob/user)
+/mob/living/heavy_vehicle/ClickOn(atom/A, params, mob/user)
 
 	if(!user || incapacitated() || user.incapacitated() || lockdown)
 		return
@@ -153,7 +153,7 @@
 			user.attack_log += "\[[time_stamp()]\]<span class='warning'> Attacked [target.name] ([target.ckey]) with [arms] (INTENT: [uppertext(user.a_intent)]) (DAMTYE: [uppertext(arms.damagetype)])</span>"
 			src.attack_log += "\[[time_stamp()]\]<span class='warning'> [user] ([user.ckey]) attacked [target.name] ([target.ckey]) with [arms] (INTENT: [uppertext(user.a_intent)]) (DAMTYE: [uppertext(arms.damagetype)])</span>"
 			target.attack_log += "\[[time_stamp()]\]<font color='orange'> Attacked by [user.name] ([user.ckey]) with [arms] (INTENT: [uppertext(user.a_intent)]) (DAMTYE: [uppertext(arms.damagetype)])</font>"
-			msg_admin_attack("[key_name(user, highlight_special = 1)] attacked [key_name(target, highlight_special = 1)] with [arms] (INTENT: [uppertext(user.a_intent)]) (DAMTYE: [uppertext(arms.damagetype)]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)",ckey=key_name(user),ckey_target=key_name(target) )
+			msg_admin_attack("[key_name(user, highlight_special = 1)] attacked [key_name(target, highlight_special = 1)] with [arms] (INTENT: [uppertext(user.a_intent)]) (DAMTYE: [uppertext(arms.damagetype)]) (<A href='byond://?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)",ckey=key_name(user),ckey_target=key_name(target) )
 		return A.attack_generic(src, arms.melee_damage, "attacked")
 	return
 
@@ -309,7 +309,8 @@
 			Move(target_loc, new_direction)
 
 /mob/living/heavy_vehicle/Move()
-	if(..() && !istype(loc, /turf/space))
+	. = ..()
+	if(. && !istype(loc, /turf/space))
 		if(legs)
 			if(legs.mech_step_sound)
 				playsound(src.loc, legs.mech_step_sound, 40, TRUE)
@@ -508,7 +509,7 @@
 	update_icon()
 	return
 
-/mob/living/heavy_vehicle/attack_generic(var/mob/user, var/damage, var/attack_message, var/armor_penetration, var/attack_flags, var/damage_type = DAMAGE_BRUTE)
+/mob/living/heavy_vehicle/attack_generic(mob/user, damage, attack_message, environment_smash, armor_penetration, attack_flags, damage_type)
 	if(!(user in pilots))
 		. = ..()
 
@@ -532,7 +533,7 @@
 			return h
 	return 0
 
-/var/global/datum/ui_state/default/mech_state = new()
+GLOBAL_DATUM_INIT(mech_state, /datum/ui_state/default, new())
 
 /datum/ui_state/default/mech/can_use_topic(var/mob/living/heavy_vehicle/src_object, var/mob/user)
 	if(istype(src_object))
@@ -555,6 +556,8 @@
 		return
 	if(!isliving(H))
 		return
+	if(src == H)
+		return
 
 	if(legs?.trample_damage)
 		if(ishuman(H))
@@ -562,7 +565,7 @@
 			if(D.lying)
 				D.attack_log += "\[[time_stamp()]\]<font color='orange'> Was trampled by [src]</font>"
 				attack_log += "\[[time_stamp()]\] <span class='warning'>trampled [D.name] ([D.ckey]) with \the [src].</span>"
-				msg_admin_attack("[src] trampled [key_name(D)] at (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[D.x];Y=[D.y];Z=[D.z]'>JMP</a>)" )
+				msg_admin_attack("[src] trampled [key_name(D)] at (<A href='byond://?_src_=holder;adminplayerobservecoodjump=1;X=[D.x];Y=[D.y];Z=[D.z]'>JMP</a>)" )
 				src.visible_message(SPAN_DANGER("\The [src] runs over \the [D]!"))
 				D.apply_damage(legs.trample_damage, DAMAGE_BRUTE)
 				return TRUE
@@ -628,6 +631,13 @@
 
 		// Checking whether we have a leader or not
 		if(!leader)
+			if(findtext(text, "toggle maintenance protocols")) // Allow for engaging maintenance protocols if no pilot
+				if(pilots)
+					say("Unlinked toggling of maintenance protocols requires no active pilots.")
+					return
+				if(toggle_maintenance_protocols())
+					say("Maintenance protocols toggled [maintenance_protocols ? "on" : "off"].")
+				return
 			if(!maintenance_protocols) // don't select a leader unless we have maintenance protocols set
 				say("Maintenance protocols must be enabled to link.")
 				return
@@ -682,6 +692,18 @@
 					return
 				if(toggle_hatch())
 					say("Hatch [hatch_closed ? "closed" : "opened"].")
+				return
+
+			// simply toggle on or off the power
+			if(findtext(text, "toggle power"))
+				if(power == MECH_POWER_TRANSITION)
+					say("Power transition in progress. Please wait.")
+					return
+				else if(power == MECH_POWER_OFF && !get_cell(TRUE))
+					say("Insufficent power to power systems.")
+					return
+				if(toggle_power_remote())
+					say("Systems [power == MECH_POWER_ON ? "online" : "offline"].")
 				return
 
 			// simply toggle the lock status

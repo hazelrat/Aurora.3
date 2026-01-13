@@ -14,7 +14,7 @@
 	respawn_flag = null
 
 /obj/outfit/admin/konyang/post_equip(mob/living/carbon/human/H, visualsOnly)
-	var/obj/item/organ/internal/ipc_tag/tag = H.internal_organs_by_name[BP_IPCTAG]
+	var/obj/item/organ/internal/machine/ipc_tag/tag = H.internal_organs_by_name[BP_IPCTAG]
 	if(istype(tag))
 		tag.serial_number = uppertext(dd_limittext(md5(H.real_name), 12))
 		tag.ownership_info = IPC_OWNERSHIP_SELF
@@ -128,7 +128,7 @@
 
 /obj/outfit/admin/konyang/goon
 	name = "5-Cheung Thug"
-	uniform = /obj/item/clothing/under/pants/tan
+	uniform = /obj/item/clothing/pants/tan
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	id = null
 	l_pocket = /obj/item/storage/wallet/random
@@ -172,7 +172,7 @@
 
 /obj/outfit/admin/konyang/vendor
 	name = "Konyang Vendor"
-	uniform = /obj/item/clothing/under/pants/jeans
+	uniform = /obj/item/clothing/pants/jeans
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	suit = /obj/item/clothing/suit/storage/toggle/konyang/akira
 	back = /obj/item/storage/backpack/satchel
