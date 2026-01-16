@@ -8,7 +8,6 @@ the same transit landmark on the main map.
 /area/ship/nanotrasen_patrol
 	name = "NanoTrasen Patrol Vessel"
 	requires_power = TRUE
-	dynamic_lighting = TRUE
 	no_light_control = FALSE
 	base_turf = /turf/space
 	area_flags = AREA_FLAG_RAD_SHIELDED
@@ -63,7 +62,6 @@ the same transit landmark on the main map.
 /area/ship/zeng_science_ship
 	name = "Zeng-Hu Research Vessel"
 	requires_power = TRUE
-	dynamic_lighting = TRUE
 	no_light_control = FALSE
 	base_turf = /turf/space
 	area_flags = AREA_FLAG_RAD_SHIELDED
@@ -97,7 +95,6 @@ the same transit landmark on the main map.
 /area/ship/orion_light_freight
 	name = "Orion Express Light Freighter"
 	requires_power = TRUE
-	dynamic_lighting = TRUE
 	no_light_control = FALSE
 	base_turf = /turf/space
 	area_flags = AREA_FLAG_RAD_SHIELDED

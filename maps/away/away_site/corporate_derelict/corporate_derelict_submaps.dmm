@@ -1,6 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ad" = (
 /obj/machinery/door/firedoor/noid,
+/obj/machinery/door/airlock/hatch,
 /turf/simulated/floor/tiled/full,
 /area/ship/nanotrasen_patrol/ammo)
 "ag" = (
@@ -20,6 +21,7 @@
 /turf/simulated/floor/tiled/gridded,
 /area/ship/orion_light_freight/main_hall)
 "ar" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/template_noop,
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/junction)
@@ -28,6 +30,7 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/atmospherics)
 "aA" = (
+/obj/structure/table/rack,
 /turf/simulated/floor/tiled/bitile{
 	dir = 1
 	},
@@ -37,6 +40,15 @@
 /obj/structure/grille/broken,
 /turf/simulated/floor/airless,
 /area/ship/orion_light_freight/crew_quarters)
+"aQ" = (
+/obj/machinery/door/airlock/vault/bolted{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/noid{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ship/nanotrasen_patrol/port_nacelle)
 "aT" = (
 /obj/effect/floor_decal/corner/paleblue,
 /turf/simulated/floor/tiled,
@@ -88,6 +100,9 @@
 "bI" = (
 /obj/machinery/door/firedoor/noid{
 	dir = 4
+	},
+/obj/machinery/door/airlock/engineering{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/reactor)
@@ -154,6 +169,9 @@
 /obj/machinery/door/firedoor/noid{
 	dir = 8
 	},
+/obj/machinery/door/airlock/maintenance{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/gunnery)
 "cX" = (
@@ -190,6 +208,9 @@
 /obj/machinery/door/firedoor/noid{
 	dir = 4
 	},
+/obj/machinery/door/airlock/engineering{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/atmospherics)
 "dI" = (
@@ -210,6 +231,7 @@
 /obj/effect/floor_decal/industrial/hatch_door/red{
 	dir = 1
 	},
+/obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/dark/full,
 /area/shuttle/corporate_derelict)
 "ed" = (
@@ -220,6 +242,9 @@
 /area/ship/orion_light_freight/life_support)
 "ee" = (
 /obj/effect/floor_decal/industrial/hatch_door/red,
+/obj/machinery/door/airlock/external{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/zeng_science_ship/main_hall)
 "ef" = (
@@ -270,6 +295,7 @@
 /area/ship/orion_light_freight/engineering)
 "eQ" = (
 /obj/machinery/door/firedoor/noid,
+/obj/machinery/door/airlock/service,
 /turf/simulated/floor/tiled/full,
 /area/ship/nanotrasen_patrol/mess)
 "eZ" = (
@@ -305,6 +331,9 @@
 "fL" = (
 /obj/machinery/door/firedoor/noid{
 	dir = 4
+	},
+/obj/machinery/door/airlock/engineering{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/aft)
@@ -383,6 +412,7 @@
 /area/ship/orion_light_freight/life_support)
 "hs" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack,
 /turf/template_noop,
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/gunnery)
@@ -517,6 +547,9 @@
 "kr" = (
 /obj/effect/floor_decal/spline/plain/yellow{
 	dir = 9
+	},
+/obj/structure/bed/stool/bar/padded/red{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/rubber,
 /area/ship/orion_light_freight/kitchen)
@@ -653,8 +686,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/nanotrasen_patrol/gunnery)
+"mH" = (
+/obj/machinery/door/firedoor/noid{
+	dir = 4
+	},
+/obj/machinery/door/airlock/hatch{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ship/nanotrasen_patrol/eva)
 "mM" = (
 /obj/machinery/door/firedoor/noid,
+/obj/machinery/door/airlock/hatch,
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/aft)
 "mS" = (
@@ -692,6 +735,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
+/obj/structure/table/wood,
 /turf/simulated/floor/wood/bamboo,
 /area/ship/nanotrasen_patrol/captain)
 "nj" = (
@@ -724,6 +768,11 @@
 "nJ" = (
 /turf/simulated/wall/shuttle/scc_space_ship,
 /area/ship/nanotrasen_patrol/captain)
+"nP" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/full,
+/area/ship/nanotrasen_patrol/junction)
 "nZ" = (
 /obj/effect/floor_decal/industrial/loading/yellow{
 	dir = 4
@@ -749,6 +798,13 @@
 "ov" = (
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/orion_light_freight/storage_pod_6)
+"ox" = (
+/obj/effect/floor_decal/industrial/hatch_door/red{
+	dir = 1
+	},
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/tiled/dark/full,
+/area/ship/orion_light_freight/engineering)
 "oz" = (
 /obj/effect/floor_decal/corner_wide/brown{
 	dir = 5
@@ -764,6 +820,7 @@
 /area/ship/orion_light_freight/storage_pod_5)
 "pb" = (
 /obj/machinery/door/firedoor/noid,
+/obj/machinery/door/airlock/glass_command,
 /turf/simulated/floor/tiled/full,
 /area/ship/nanotrasen_patrol/bridge)
 "pd" = (
@@ -929,6 +986,11 @@
 "sr" = (
 /turf/simulated/wall/shuttle/raider,
 /area/ship/orion_light_freight/storage_pod_6)
+"ss" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/dark/full,
+/area/ship/nanotrasen_patrol/utilities)
 "sw" = (
 /obj/structure/table/reinforced/steel,
 /turf/simulated/floor/tiled/full,
@@ -1138,6 +1200,9 @@
 /obj/machinery/door/firedoor/noid{
 	dir = 8
 	},
+/obj/machinery/door/airlock/command/gold{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/full,
 /area/ship/nanotrasen_patrol/captain)
 "wY" = (
@@ -1151,6 +1216,7 @@
 /obj/effect/floor_decal/industrial/hatch_door/red{
 	dir = 1
 	},
+/obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/shuttle_dock)
 "xf" = (
@@ -1159,6 +1225,9 @@
 "xl" = (
 /obj/machinery/door/firedoor/noid{
 	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/junction)
@@ -1306,6 +1375,9 @@
 /obj/machinery/door/firedoor/noid{
 	dir = 8
 	},
+/obj/machinery/door/airlock/glass_command{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/full,
 /area/ship/nanotrasen_patrol/bridge)
 "zQ" = (
@@ -1353,10 +1425,14 @@
 /obj/effect/floor_decal/industrial/hatch_door/red{
 	dir = 1
 	},
+/obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/zeng_science_ship/lab_atrium)
 "AO" = (
 /obj/machinery/door/firedoor/noid{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/hatch_door/yellow{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/full,
@@ -1365,6 +1441,15 @@
 /obj/structure/table/reinforced/steel,
 /turf/simulated/floor/tiled/full,
 /area/ship/zeng_science_ship/starboard_nacelle)
+"AR" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/structure/table/rack/clothing{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/ship/nanotrasen_patrol/gunnery)
 "AU" = (
 /turf/simulated/floor/tiled/full,
 /area/ship/zeng_science_ship/main_hall)
@@ -1382,6 +1467,9 @@
 /area/ship/nanotrasen_patrol/junction)
 "BM" = (
 /obj/effect/floor_decal/industrial/hatch_door/red,
+/obj/machinery/door/airlock/external{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/aft)
 "BT" = (
@@ -1416,6 +1504,15 @@
 /obj/structure/lattice/catwalk/indoor/grate,
 /turf/simulated/floor,
 /area/ship/nanotrasen_patrol/gunnery)
+"CO" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/structure/bed/stool/bar/padded/red{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/ship/orion_light_freight/kitchen)
 "CU" = (
 /turf/simulated/wall/shuttle/palepurple,
 /area/ship/zeng_science_ship/lab_atrium)
@@ -1473,6 +1570,7 @@
 "EE" = (
 /obj/structure/plasticflaps/airtight,
 /obj/machinery/door/firedoor/noid,
+/obj/machinery/door/airlock/freezer,
 /turf/simulated/floor/tiled/full,
 /area/ship/nanotrasen_patrol/freezer)
 "EU" = (
@@ -1510,6 +1608,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
+/obj/structure/table/wood,
 /turf/simulated/floor/wood/bamboo,
 /area/ship/nanotrasen_patrol/captain)
 "FS" = (
@@ -1548,6 +1647,7 @@
 /turf/simulated/floor/tiled/gridded,
 /area/ship/orion_light_freight/life_support)
 "GR" = (
+/obj/structure/table/rack,
 /turf/simulated/floor/tiled/bitile,
 /area/ship/nanotrasen_patrol/junction)
 "Ha" = (
@@ -1582,6 +1682,9 @@
 /obj/machinery/door/firedoor/noid{
 	dir = 4
 	},
+/obj/machinery/door/airlock/engineering{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/starboard_nacelle)
 "HE" = (
@@ -1593,6 +1696,9 @@
 /area/ship/orion_light_freight/main_hall)
 "HL" = (
 /obj/machinery/door/firedoor/noid{
+	dir = 4
+	},
+/obj/machinery/door/airlock/hatch{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/full,
@@ -1627,6 +1733,9 @@
 /obj/machinery/door/firedoor/noid{
 	dir = 4
 	},
+/obj/machinery/door/airlock/hatch{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/full,
 /area/ship/nanotrasen_patrol/junction)
 "Iv" = (
@@ -1650,6 +1759,7 @@
 /obj/effect/floor_decal/spline/plain/yellow{
 	dir = 5
 	},
+/obj/structure/table/wood/gamblingtable,
 /turf/simulated/floor/carpet/rubber,
 /area/ship/orion_light_freight/kitchen)
 "Jb" = (
@@ -1708,12 +1818,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/nanotrasen_patrol/gunnery)
+"Kg" = (
+/obj/machinery/door/firedoor/noid{
+	dir = 4
+	},
+/obj/machinery/door/airlock/engineering{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ship/nanotrasen_patrol/port_nacelle)
 "Kt" = (
 /obj/machinery/atmospherics/unary/engine,
 /turf/simulated/floor,
 /area/ship/zeng_science_ship/port_nacelle)
 "KF" = (
 /obj/machinery/door/firedoor/noid,
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/gunnery)
 "KJ" = (
@@ -1761,6 +1881,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/structure/bed/stool/chair/office/bridge,
 /turf/simulated/floor/wood/bamboo,
 /area/ship/nanotrasen_patrol/captain)
 "Ly" = (
@@ -1932,6 +2053,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
+/obj/structure/closet/cabinet,
 /turf/simulated/floor/wood/bamboo,
 /area/ship/nanotrasen_patrol/captain)
 "Oo" = (
@@ -2057,6 +2179,8 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
+/obj/structure/bed/padded,
+/obj/item/bedsheet/captain,
 /turf/simulated/floor/wood/bamboo,
 /area/ship/nanotrasen_patrol/captain)
 "QZ" = (
@@ -2204,6 +2328,9 @@
 /area/space)
 "Ug" = (
 /obj/machinery/door/firedoor/noid,
+/obj/effect/floor_decal/industrial/hatch_door/yellow{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/eva)
 "Um" = (
@@ -2437,10 +2564,16 @@
 /obj/machinery/door/firedoor/noid{
 	dir = 4
 	},
+/obj/machinery/door/airlock/hatch{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/nanotrasen_patrol/utilities)
 "Zm" = (
 /obj/effect/floor_decal/industrial/hatch_door/red,
+/obj/machinery/door/airlock/external{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ship/zeng_science_ship/lab_atrium)
 "Zo" = (
@@ -6078,7 +6211,7 @@ Sd
 Dn
 XR
 XR
-TW
+mH
 XR
 XR
 ai
@@ -6615,7 +6748,7 @@ EE
 PE
 PE
 qS
-tM
+AR
 CM
 LR
 MA
@@ -6874,7 +7007,7 @@ qS
 qS
 tM
 CM
-LR
+yd
 MA
 MA
 MA
@@ -7112,7 +7245,7 @@ XR
 Ha
 Ym
 cj
-xf
+nP
 ds
 ds
 ds
@@ -7131,7 +7264,7 @@ VJ
 eQ
 CM
 CM
-LR
+yd
 MA
 MA
 MA
@@ -7388,7 +7521,7 @@ mk
 Ij
 tM
 CM
-LR
+yd
 MA
 MA
 MA
@@ -7883,9 +8016,9 @@ XR
 Ha
 Ym
 cj
+ss
 ij
-ij
-ij
+ss
 xD
 xD
 xl
@@ -8637,14 +8770,14 @@ tS
 tS
 tS
 tS
+Kg
+tS
+tS
+tS
+aQ
+tS
+tS
 Fq
-tS
-tS
-tS
-xn
-tS
-tS
-xn
 tS
 cj
 Yn
@@ -23026,7 +23159,7 @@ So
 MA
 MA
 xZ
-Tk
+CO
 Tk
 ex
 Tk
@@ -23544,10 +23677,10 @@ MA
 Ua
 Ua
 Ua
-LP
-Ur
-Ur
-LP
+ox
+jY
+jY
+ox
 MP
 Xf
 ra
@@ -27401,9 +27534,9 @@ lA
 dO
 RV
 dO
-LP
+ox
 jY
-LP
+ox
 LW
 ra
 MA
