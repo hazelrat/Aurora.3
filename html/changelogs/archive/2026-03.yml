@@ -351,3 +351,31 @@
   FabianK3:
   - code_imp: Overhauled the current persistence subsystem for upcoming additions.
       No changes to current mechanics.
+2026-03-26:
+  GeneralCamo:
+  - code_imp: Repathed, reorganized, and cleaned up the guns.
+  - refactor: Removed redundant guns, and marked abstract weapons as such.
+  - rscadd: Fake guns now use new sprites, and updated code.
+  - rscadd: All guns are now referred to by their model, in addition to a basic descriptor.
+  - rscdel: Removed the spike thrower, sonic gun, and phoron pistol.
+  - qol: Retooled a few existing gun sprites to better match their intended descriptions.
+  TheGreyWolf:
+  - rscadd: Replaces security officers and the wardens disruptors with .45 loaded
+      with rubbers, and a spare rubber mag.
+  - rscadd: Replaced investigators disruptor with a .45 revolver loaded with rubbers,
+      and a spare rubber speedloader.
+  - rscadd: Added the ability for the autolathe to print .45 speedloaders for the
+      investigators handgun.
+  - rscadd: Added .45 revolver speedloaders to the armory.
+  - rscadd: Added practice rounds to the autolathe.
+  - balance: Reduced the effectiveness of rubber bullets.
+  - rscdel: Removed all disruptors, replacing them with ballistics and for the elyran
+      ERT with plasma pistols.
+  - bugfix: The tent roofs no longre block clicking on objects inside.
+  - bugfix: Fixed the invisible pixels on the headphones.
+  - rscadd: Tracking implants can now be ordered from operations under the security
+      category.
+  Yonnimer:
+  - rscadd: Adds a voidtamer awayship.
+  - rscadd: Adds various voitamer-themed items, including a sm growth tray, banners,
+      and lights.
