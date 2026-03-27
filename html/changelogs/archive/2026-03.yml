@@ -379,3 +379,40 @@
   - rscadd: Adds a voidtamer awayship.
   - rscadd: Adds various voitamer-themed items, including a sm growth tray, banners,
       and lights.
+2026-03-27:
+  Baldos:
+  - bugfix: Fixed the Tajaran automatic rifles  being able to load more ammo than
+      intended.
+  Batrachophrenoboocosmomachia, Sammy, Fyni:
+  - rscadd: Adds additional configuration data to the Light's Edge sector.
+  - soundadd: Adds a Welcome AI voiceline for the Light's Edge sector.
+  - imageadd: Adds Light's Edge sector skybox.
+  - imageadd: Adds Light's Edge sector state to the Stargazer.
+  - balance: Slightly decreases default light brightness, slightly increases night
+      mode light range.
+  CatsinHD:
+  - rscadd: Adds an AP option for 6.8mm to the cargo order list.
+  - bugfix: Rebalances 6.8mm and 6.8mm AP.
+  - bugfix: Rebalances costs of 6.8mm and the Tsarratyun in the cargo order list.
+  TheGreyWolf:
+  - bugfix: Fixed that the quikpay and cash register prices could be wrong.
+  - rscadd: The commissary register now has categories.
+  - refactor: Changed the commissary and quikpay to rely on a component, making them
+      easier to maintan and ensuring they function almost identical.
+  - rscadd: The commissary now has a wall terminal, that can be enabled by hangar
+      technicians.
+  - bugfix: The noticeboard in operations is now properly on one side of the wall,
+      instead of on the wall turf itself.
+  - rscadd: The food and drink fridges in the commissary can now be renamed.
+  - rscadd: The shelves in the commissary now has a message when an item are taken
+      from them.
+  - rscadd: "The quick-e-meals vendor was readded behind the caf\xE9."
+  arrow768:
+  - bugfix: Adds a delete for a dbquery that was missing.
+  kermit:
+  - rscadd: Splits the Bluespace Drive Control Console into a Control Console (energisation/purging
+      contents; located in BSD Control Room) and Jump Console (actually jumping; located
+      in Bridge).
+  - rscadd: Minor remapping of the Bridge to make room for said Jump Console. Moves
+      the Medical/Security Consoles to a new command station at the back; BSD Jump
+      Computer takes its place.
