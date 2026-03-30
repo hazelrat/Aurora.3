@@ -416,3 +416,14 @@
   - rscadd: Minor remapping of the Bridge to make room for said Jump Console. Moves
       the Medical/Security Consoles to a new command station at the back; BSD Jump
       Computer takes its place.
+2026-03-30:
+  Batrachophrenoboocosmomachia:
+  - bugfix: Submariner's beanie visible again (icon_state typo).
+  Fenodyree:
+  - bugfix: Fixes grabs sometimes breaking when the grabber is moved.
+  - bugfix: Fixes a grabbed mob not being moved along with it's grabber.
+  - balance: Prevents people from pulling blue grabbed mobs.
+  - balance: Prevents people from grabbing red grabbed mobs.
+  arrow768:
+  - rscadd: Added a indicator for the normalized flow rate to atmos pumps, as well
+      as a measurement functionality.
