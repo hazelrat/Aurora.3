@@ -13,3 +13,8 @@
   TheGreyWolf:
   - bugfix: Fixed investigator's lethal revolver ammo.
   - bugfix: Fixed the suit storage slot permitted any item in it.
+2026-04-03:
+  TheGreyWolf:
+  - bugfix: Fixed a rat missing one handheld and one ear slot sprite.
+  - bugfix: Made the RFID card slot eject ID cards when removed from a pda, such as
+      when a pda explodes.
