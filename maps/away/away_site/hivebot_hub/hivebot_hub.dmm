@@ -918,6 +918,7 @@
 	dir = 1
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/mob/living/simple_animal/hostile/hivebot/bomber,
 /turf/simulated/floor/tiled/dark/full/airless,
 /area/hivebothub/centralhall)
 "fC" = (
@@ -1038,10 +1039,9 @@
 /obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/effect/decal/cleanable/floor_damage/broken1,
-/mob/living/simple_animal/hostile/hivebot/bomber,
-/mob/living/simple_animal/hostile/hivebotbeacon/weakened,
 /obj/effect/decal/cleanable/floor_damage/broken5,
 /obj/effect/decal/cleanable/floor_damage/broken0,
+/mob/living/simple_animal/hostile/hivebotbeacon/incendiary,
 /turf/simulated/floor/tiled/dark/full/airless,
 /area/hivebothub/centralhall)
 "gg" = (

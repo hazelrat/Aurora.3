@@ -116,12 +116,6 @@
 	landmark_tag = "hivebot_nav6"
 
 // Unique Stuff
-/mob/living/simple_animal/hostile/hivebotbeacon/weakened
-	name = "dilapidated hivebot beacon"
-	desc = "An odd and primitive looking machine. It emanates of strange and powerful energies. It bears no manufacturer markings of any kind. This one appears to have been badly damaged."
-	maxhealth = 100
-	health = 100
-
 /obj/item/paper/hivebot_hub/diary
 	name = "Diary Entry 2463-03-01"
 	desc = "A page torn from a handwritten diary."

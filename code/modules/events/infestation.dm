@@ -151,7 +151,9 @@
 /datum/event/infestation/proc/hivebot_message()
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(isipc(H) && (H.z in affecting_z))
-			to_chat(H, SPAN_CULT("Suddenly, an anomalous pinging makes itself known in your internals. It rises to a shrill high, setting your mind on edge, and it then disappears just as abruptly..."))
+			to_chat(H, SPAN_MACHINE_DANGER("Suddenly, an anomalous pinging makes itself \
+				known to your internals. It rises to a shrill high, setting your mind on edge, \
+				and it then disappears just as abruptly..."))
 
 /datum/event/infestation/announce()
 	location_name = get_area_display_name(chosen_area)

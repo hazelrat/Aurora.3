@@ -1,6 +1,6 @@
 /obj/projectile/beam/hivebot
 	name = "electrical discharge"
-	damage = 20
+	damage = 40
 	damage_type = DAMAGE_BURN
 	agony = 20
 	armor_penetration = 40
@@ -17,7 +17,7 @@
 /obj/projectile/beam/hivebot/incendiary
 	name = "archaic energy welder"
 	damage_type = DAMAGE_BURN
-	damage = 20
+	damage = 30
 	armor_penetration = 15
 	incinerate = 2
 	muzzle_type = /obj/effect/projectile/muzzle/laser/blue

@@ -3,8 +3,8 @@
 	desc = "An odd and primitive looking machine. It emanates of powerful thermal radiation. It bears no manufacturer markings of any kind."
 	icon = 'icons/mob/npc/hivebot.dmi'
 	icon_state = "hivebotharvester"
-	health = 100
-	maxhealth = 100
+	health = 159
+	maxhealth = 150
 	blood_type = COLOR_OIL
 	blood_overlay_icon = 'icons/mob/npc/blood_overlay_hivebot.dmi'
 	melee_damage_lower = 30

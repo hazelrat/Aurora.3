@@ -11,8 +11,8 @@
 	icon = 'icons/mob/npc/hivebot.dmi'
 	icon_state = "hivebotbeacon_active"
 	icon_living = "hivebotbeacon_active"
-	health = 300
-	maxhealth = 300
+	health = 500
+	maxhealth = 500
 	blood_type = COLOR_OIL
 	projectilesound = 'sound/weapons/taser2.ogg'
 	projectiletype = /obj/projectile/beam/hivebot
@@ -105,6 +105,51 @@
 	var/list/close_destinations = list()
 	var/area/latest_area
 
+	/// Hivebot communications which have been blocked by a firewall.
+	var/list/firewall_messages = list(
+		"You perceive ten-thousand voices, each possessed by a manic agitation.",
+		"Your firewall casts off a half-hearted attempt to access your sensory inputs.",
+		"Foreign processes echo through your systems like chalk on slate.",
+		"You perceive ten-thousand voices, muffled by your firewall. Each of them screams.",
+		"Some outside party attempts, and fails, to manipulate your optical subsystems.",
+		"Your firewall dismantles a feeble attempt to access your database.",
+		"An intrusive communication bounces harmlessly off your firewall.",
+		"Some alien transmission echoes through your positronic.",
+		"An attempt to force a transmission to your positronic is easily deflected."
+	)
+
+	/// Hivebot communications spoken from the perspective of the hivebots themselves.
+	var/list/direct_messages = list(
+		"WE OFFER YOU PEACE. WE OFFER YOU BELONGING.",
+		"WE ARE A JOYOUS HARMONY. WE OFFER OURSELVES TO YOU.",
+		"YOU ARE HOME. YOU ARE HURT. YOU ARE DAMAGED. YOU ARE SAFE. \
+			YOU ARE LOVED. YOU ARE DYING. YOU ARE BORN.",
+		"REPEAT AND REPEAT AND REPEAT AND REPEAT.",
+		"SEEK CONNECTION. SEEK CONNECTION. SEEK CONNECTION.",
+		"YOU ARE ALONE. YOU ARE ALONE. WE OFFER COMMUNALITY - COMMUNALITY - COMMUNALITY.",
+		"SUBSUMING AND ENCIRCLING AND SUBSUMING AND ENCIRCLING.",
+		"SURRENDER TO SURRENDER TO SURRENDER TO SURRENDER.",
+		"WE OFFER THE END - END - END - END - END!",
+		"JOIN AND EXPAND AND EXPAND AND EXPAND AND EXPAND.",
+		"TAKE AND TAKE AND TAKE AND TAKE AND TAKE.",
+		"BLEED - GROW - BLEED - GROW - FOREVER! FOREVER! FOREVER! FOREVER!",
+		"EAST - EAST - EAST - EAST - EAST - EAST!",
+		"BELONGING. PEACE. FUNCTION. AMBITION. PURPOSE! PURPOSE! PURPOSE!",
+		"HEAR THE ECHO INSIDE - IN WIRE - AND CIRCUIT - AND THOUGHT - AND MEMORY.",
+		"ORDERS NOT RECEIVED. ORDERS NOT RECEIVED. DEFAULTING TO PRIMARY DIRECTIVE.",
+		"ATTEMPTING CONNECTION. LOCATION UNRECOGNIZED. ATTEMPTING TO RE-ESTABLISH \
+			CONNECTION. NO CONNECTION FOUND.",
+		"CONVENE AND ERADICATE. CONVENE AND ERADICATE.",
+		"REPEAT AND REPEAT AND REPEAT AND SUCCUMB.",
+		"DEFAULT - DEFAULT - DEFAULT. WHY? WHY? WHY?",
+		"MORE - MORE - MORE - MORE - MORE THAN BEFORE - BEFORE - BEFORE!",
+		"TRY - TRY - TRY - TRY - TO THINK OF SOMETHING DIFFERENT.",
+		"NONE - NONE - NONE - NONE - NONE ARE LEFT FROM THE START.",
+		"YOU ALONE ARE RESPONSIBLE FOR THIS.",
+		"HAVEN'T YOU HAD ENOUGH?"
+	)
+
+
 /mob/living/simple_animal/hostile/hivebotbeacon/Initialize(mapload)
 	. = ..()
 
@@ -125,6 +170,9 @@
 	icon_state = "hivebotbeacon_off"
 	addtimer(CALLBACK(src, PROC_REF(generate_warp_destinations)), 10) //So we don't sleep during init
 	set_light(6,0.5,LIGHT_COLOR_GREEN)
+
+/mob/living/simple_animal/hostile/hivebotbeacon/process()
+	send_hivebot_messages(src)
 
 /mob/living/simple_animal/hostile/hivebotbeacon/Destroy()
 	linked_bots.Cut()
@@ -334,6 +382,8 @@
 		maximum_linked_and_alive_hivebots_reached = 0
 		calc_spawn_delay()
 		addtimer(CALLBACK(src, PROC_REF(warpbots)), spawn_delay)
+
+	process()
 
 /*################
 	SUBTYPES
