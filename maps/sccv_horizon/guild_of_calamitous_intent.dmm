@@ -66,10 +66,6 @@
 	},
 /turf/unsimulated/floor/dark,
 /area/space)
-"bo" = (
-/obj/effect/floor_decal/industrial/warning,
-/turf/unsimulated/floor/rubber_carpet,
-/area/space)
 "bM" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 1
@@ -77,6 +73,12 @@
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/railing/mapped,
 /turf/simulated/floor/plating,
+/area/space)
+"bR" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/unsimulated/floor/rubber_carpet,
 /area/space)
 "ca" = (
 /obj/structure/machinery/door/airlock/centcom{
@@ -176,6 +178,12 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
+"gO" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/unsimulated/floor/rubber_carpet,
+/area/space)
 "iQ" = (
 /obj/structure/flora/ausbushes/pointybush,
 /turf/unsimulated/floor/grass,
@@ -202,6 +210,13 @@
 /obj/effect/landmark/actor_spawn,
 /turf/unsimulated/floor/wood,
 /area/space)
+"jp" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/unsimulated/floor/dark_monotile,
+/area/space)
 "kk" = (
 /obj/effect/floor_decal/corner/teal{
 	dir = 10
@@ -210,12 +225,6 @@
 	dir = 1
 	},
 /turf/unsimulated/floor/dark,
-/area/space)
-"lk" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/unsimulated/floor/dark_monotile,
 /area/space)
 "lo" = (
 /obj/effect/floor_decal/corner/grey{
@@ -252,12 +261,6 @@
 	},
 /turf/unsimulated/floor/dark_monotile,
 /area/space)
-"mk" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
-/turf/unsimulated/floor/rubber_carpet,
-/area/space)
 "mr" = (
 /turf/unsimulated/floor/blue_circuit,
 /area/space)
@@ -266,15 +269,15 @@
 /obj/structure/bed/stool/chair/sofa,
 /turf/unsimulated/floor/wood,
 /area/space)
+"nq" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/unsimulated/floor/rubber_carpet,
+/area/space)
 "ov" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/unsimulated/floor/grass,
-/area/space)
-"oN" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
-	},
-/turf/unsimulated/floor/rubber_carpet,
 /area/space)
 "oO" = (
 /obj/effect/floor_decal/corner/teal{
@@ -284,6 +287,12 @@
 	dir = 1
 	},
 /turf/unsimulated/floor/dark,
+/area/space)
+"oW" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/unsimulated/floor/dark_monotile,
 /area/space)
 "pl" = (
 /turf/template_noop,
@@ -303,6 +312,10 @@
 	},
 /turf/unsimulated/floor/dark_monotile,
 /area/space)
+"pV" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/unsimulated/floor/dark_monotile,
+/area/space)
 "ri" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -316,6 +329,13 @@
 /obj/structure/machinery/light/small/floor,
 /turf/unsimulated/floor/wood,
 /area/space)
+"rt" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/unsimulated/floor/dark_monotile,
+/area/space)
 "rE" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -324,7 +344,7 @@
 /obj/structure/table/rack,
 /turf/unsimulated/floor/linoleum,
 /area/space)
-"sY" = (
+"rL" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
@@ -340,11 +360,6 @@
 "tl" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/unsimulated/floor/grass,
-/area/space)
-"tC" = (
-/turf/unsimulated/wall/fakepdoor{
-	name = "Blast door"
-	},
 /area/space)
 "tF" = (
 /turf/unsimulated/floor/marble,
@@ -362,12 +377,6 @@
 	dir = 8
 	},
 /turf/unsimulated/floor/dark_monotile,
-/area/space)
-"ug" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/turf/unsimulated/floor/plating,
 /area/space)
 "uw" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -410,6 +419,11 @@
 	},
 /obj/structure/table/reinforced/steel,
 /turf/unsimulated/floor/linoleum,
+/area/space)
+"wW" = (
+/turf/unsimulated/wall/fakepdoor{
+	name = "Blast door"
+	},
 /area/space)
 "xd" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -458,6 +472,10 @@
 	},
 /obj/effect/floor_decal/industrial/outline_straight/yellow,
 /turf/unsimulated/floor/dark,
+/area/space)
+"zB" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/unsimulated/floor/plating,
 /area/space)
 "zK" = (
 /obj/structure/table/fancy,
@@ -534,12 +552,6 @@
 "Cn" = (
 /turf/unsimulated/floor/linoleum,
 /area/space)
-"Cv" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/turf/unsimulated/floor/rubber_carpet,
-/area/space)
 "Db" = (
 /turf/unsimulated/floor/dark,
 /area/space)
@@ -548,6 +560,12 @@
 	dir = 8
 	},
 /turf/unsimulated/floor/plating,
+/area/space)
+"Dp" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/unsimulated/floor/rubber_carpet,
 /area/space)
 "DD" = (
 /turf/unsimulated/wall/steel,
@@ -565,12 +583,6 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
-"Ek" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/unsimulated/floor/rubber_carpet,
-/area/space)
 "Ew" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 6
@@ -579,6 +591,11 @@
 	dir = 4
 	},
 /turf/unsimulated/floor/dark,
+/area/space)
+"ES" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/machinery/door/firedoor/noid,
+/turf/unsimulated/floor/dark_monotile,
 /area/space)
 "EV" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -645,12 +662,6 @@
 "HQ" = (
 /turf/unsimulated/floor/rubber_carpet,
 /area/space)
-"If" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
-/turf/unsimulated/floor/rubber_carpet,
-/area/space)
 "II" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/floor_decal/industrial/warning{
@@ -663,6 +674,12 @@
 "IL" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"IU" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -702,12 +719,6 @@
 	},
 /obj/structure/bed/stool/chair/padded/red,
 /turf/unsimulated/floor/wood,
-/area/space)
-"JL" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
-	},
-/turf/unsimulated/floor/rubber_carpet,
 /area/space)
 "JM" = (
 /obj/structure/machinery/door/airlock/centcom{
@@ -759,13 +770,6 @@
 /obj/structure/table/rack,
 /turf/unsimulated/floor/linoleum,
 /area/space)
-"LQ" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/turf/unsimulated/floor/dark_monotile,
-/area/space)
 "Nf" = (
 /obj/structure/table/fancy,
 /turf/unsimulated/floor/wood,
@@ -802,11 +806,6 @@
 /area/space)
 "OD" = (
 /turf/unsimulated/floor/plating,
-/area/space)
-"Pp" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/machinery/door/firedoor/noid,
-/turf/unsimulated/floor/dark_monotile,
 /area/space)
 "PM" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -867,22 +866,17 @@
 	},
 /turf/unsimulated/floor/wood,
 /area/space)
-"RB" = (
-/obj/effect/floor_decal/industrial/warning/corner,
-/turf/unsimulated/floor/plating,
-/area/space)
 "Sc" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 1
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
-"TH" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
+"TK" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 4
+	dir = 10
 	},
-/turf/unsimulated/floor/dark_monotile,
+/turf/unsimulated/floor/rubber_carpet,
 /area/space)
 "TQ" = (
 /obj/effect/map_effect/window_spawner/full/reinforced/indestructible,
@@ -940,10 +934,6 @@
 	},
 /turf/unsimulated/floor/dark,
 /area/space)
-"WH" = (
-/obj/effect/floor_decal/industrial/warning,
-/turf/unsimulated/floor/dark_monotile,
-/area/space)
 "XB" = (
 /obj/structure/machinery/door/airlock/centcom{
 	locked = 1;
@@ -956,6 +946,12 @@
 "Yg" = (
 /obj/effect/floor_decal/corner/grey,
 /turf/unsimulated/floor/dark,
+/area/space)
+"YB" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/unsimulated/floor/rubber_carpet,
 /area/space)
 "YS" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -989,6 +985,10 @@
 "YT" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/unsimulated/floor/plating,
+/area/space)
+"Zg" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/unsimulated/floor/rubber_carpet,
 /area/space)
 
 (1,1,1) = {"
@@ -42758,7 +42758,7 @@ pl
 pl
 DD
 DD
-RB
+zB
 Gs
 Gs
 Gs
@@ -43218,18 +43218,18 @@ DD
 DD
 DD
 DD
-tC
-tC
-tC
-tC
-tC
-tC
-tC
-tC
-tC
-tC
-tC
-tC
+wW
+wW
+wW
+wW
+wW
+wW
+wW
+wW
+wW
+wW
+wW
+wW
 DD
 DD
 DD
@@ -43475,18 +43475,18 @@ DD
 DD
 DD
 DD
-TH
-TH
-TH
-TH
-TH
-TH
-TH
-TH
-TH
-TH
-TH
-TH
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
 DD
 DD
 DD
@@ -43532,10 +43532,10 @@ DD
 YT
 Qu
 Db
-If
-Cv
-Cv
-JL
+bR
+gO
+gO
+TK
 Db
 Qu
 gk
@@ -43789,10 +43789,10 @@ DD
 YT
 Qu
 Db
-Ek
+nq
 HQ
 HQ
-bo
+Zg
 Db
 Qu
 gk
@@ -44046,10 +44046,10 @@ DD
 YT
 Qu
 Db
-Ek
+nq
 HQ
 HQ
-bo
+Zg
 Db
 Qu
 gk
@@ -44282,7 +44282,7 @@ DD
 Db
 Db
 Db
-Qu
+Db
 Db
 Db
 Db
@@ -44303,10 +44303,10 @@ DD
 YT
 Qu
 Db
-mk
-sY
-sY
-oN
+Dp
+rL
+rL
+YB
 Db
 Qu
 gk
@@ -45056,7 +45056,7 @@ Qu
 Qu
 Qu
 Qu
-Qu
+Db
 DD
 DD
 OD
@@ -45071,7 +45071,7 @@ OD
 OD
 DD
 DD
-ug
+IU
 Dl
 Dl
 Dl
@@ -45824,7 +45824,7 @@ DD
 Db
 Db
 Db
-Qu
+Db
 Db
 Db
 Db
@@ -46624,7 +46624,7 @@ uw
 Gs
 Gs
 Gs
-Pp
+ES
 Gs
 ri
 Qu
@@ -46881,7 +46881,7 @@ Qu
 Qu
 Qu
 Qu
-Pp
+ES
 Qu
 Qu
 Qu
@@ -47138,7 +47138,7 @@ IL
 Dl
 Dl
 Dl
-Pp
+ES
 Dl
 Rd
 Qu
@@ -48153,8 +48153,8 @@ pl
 pl
 pl
 pl
-lk
-WH
+oW
+pV
 OD
 OD
 OD
@@ -48410,8 +48410,8 @@ pl
 pl
 pl
 pl
-lk
-WH
+oW
+pV
 OD
 OD
 OD
@@ -48667,8 +48667,8 @@ pl
 pl
 pl
 pl
-lk
-WH
+oW
+pV
 OD
 OD
 OD
@@ -48924,8 +48924,8 @@ pl
 pl
 pl
 pl
-lk
-WH
+oW
+pV
 OD
 OD
 OD
@@ -49181,8 +49181,8 @@ pl
 pl
 pl
 pl
-lk
-WH
+oW
+pV
 OD
 OD
 OD
@@ -49438,8 +49438,8 @@ pl
 pl
 pl
 pl
-lk
-WH
+oW
+pV
 OD
 OD
 OD
@@ -49695,8 +49695,8 @@ pl
 pl
 pl
 pl
-lk
-WH
+oW
+pV
 OD
 OD
 OD
@@ -49952,8 +49952,8 @@ pl
 pl
 pl
 pl
-lk
-WH
+oW
+pV
 OD
 OD
 OD
@@ -50157,18 +50157,18 @@ DD
 DD
 DD
 DD
-LQ
-LQ
-LQ
-LQ
-LQ
-LQ
-LQ
-LQ
-LQ
-LQ
-LQ
-LQ
+rt
+rt
+rt
+rt
+rt
+rt
+rt
+rt
+rt
+rt
+rt
+rt
 DD
 DD
 DD
@@ -50209,8 +50209,8 @@ pl
 pl
 pl
 pl
-lk
-WH
+oW
+pV
 OD
 OD
 OD
@@ -50414,18 +50414,18 @@ DD
 DD
 DD
 DD
-tC
-tC
-tC
-tC
-tC
-tC
-tC
-tC
-tC
-tC
-tC
-tC
+wW
+wW
+wW
+wW
+wW
+wW
+wW
+wW
+wW
+wW
+wW
+wW
 DD
 DD
 DD
