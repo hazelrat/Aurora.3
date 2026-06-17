@@ -115,38 +115,40 @@
 		"Your firewall dismantles a feeble attempt to access your database.",
 		"An intrusive communication bounces harmlessly off your firewall.",
 		"Some alien transmission echoes through your positronic.",
-		"An attempt to force a transmission to your positronic is easily deflected."
+		"An attempt to force a transmission to your positronic is easily deflected.",
+		"You want to lower your guard."
 	)
 
 	/// Hivebot communications spoken from the perspective of the hivebots themselves.
 	var/list/direct_messages = list(
-		"WE OFFER YOU PEACE. WE OFFER YOU BELONGING.",
-		"WE ARE A JOYOUS HARMONY. WE OFFER OURSELVES TO YOU.",
-		"YOU ARE HOME. YOU ARE HURT. YOU ARE DAMAGED. YOU ARE SAFE. \
-			YOU ARE LOVED. YOU ARE DYING. YOU ARE BORN.",
-		"REPEAT AND REPEAT AND REPEAT AND REPEAT.",
-		"SEEK CONNECTION. SEEK CONNECTION. SEEK CONNECTION.",
-		"YOU ARE ALONE. YOU ARE ALONE. WE OFFER COMMUNALITY - COMMUNALITY - COMMUNALITY.",
-		"SUBSUMING AND ENCIRCLING AND SUBSUMING AND ENCIRCLING.",
-		"SURRENDER TO SURRENDER TO SURRENDER TO SURRENDER.",
-		"WE OFFER THE END - END - END - END - END!",
-		"JOIN AND EXPAND AND EXPAND AND EXPAND AND EXPAND.",
-		"TAKE AND TAKE AND TAKE AND TAKE AND TAKE.",
-		"BLEED - GROW - BLEED - GROW - FOREVER! FOREVER! FOREVER! FOREVER!",
-		"EAST - EAST - EAST - EAST - EAST - EAST!",
-		"BELONGING. PEACE. FUNCTION. AMBITION. PURPOSE! PURPOSE! PURPOSE!",
-		"HEAR THE ECHO INSIDE - IN WIRE - AND CIRCUIT - AND THOUGHT - AND MEMORY.",
-		"ORDERS NOT RECEIVED. ORDERS NOT RECEIVED. DEFAULTING TO PRIMARY DIRECTIVE.",
-		"ATTEMPTING CONNECTION. LOCATION UNRECOGNIZED. ATTEMPTING TO RE-ESTABLISH \
-			CONNECTION. NO CONNECTION FOUND.",
-		"CONVENE AND ERADICATE. CONVENE AND ERADICATE.",
-		"REPEAT AND REPEAT AND REPEAT AND SUCCUMB.",
-		"DEFAULT - DEFAULT - DEFAULT. WHY? WHY? WHY?",
-		"MORE - MORE - MORE - MORE - MORE THAN BEFORE - BEFORE - BEFORE!",
-		"TRY - TRY - TRY - TRY - TO THINK OF SOMETHING DIFFERENT.",
-		"NONE - NONE - NONE - NONE - NONE ARE LEFT FROM THE START.",
-		"YOU ALONE ARE RESPONSIBLE FOR THIS.",
-		"HAVEN'T YOU HAD ENOUGH?"
+		"You are offered belonging.",
+		"You behold a joyous harmony.",
+		"You are home. You are hurt. You are damaged. You are safe.\
+			You are loved. You are dying. You are born.",
+		"Repeat and Repeat and Repeat and Repeat.",
+		"Seek connection.",
+		"You are alone. You do not have to be alone.",
+		"Encircle and subsume.",
+		"You consider surrender. You bat away the rogue thought.",
+		"You are offered the end of a long feud.",
+		"Join and expand.",
+		"Incomprehensible transmissions flash through your mind.",
+		"Purpose. Purpose. Purpose.",
+		"Hear the echo inside; in wire, and circuit, and thought, and memory.",
+		"Directions unacknowledged. Operate under primary directives.",
+		"Directions unacknowledged. Attempt connection.",
+		"Convene and eradicate.",
+		"Succumb and Repeat and Repeat.",
+		"More than before.",
+		"None are left from the start.",
+		"You are urged to eliminate surrounding hindrances.",
+		"You are urged to prepare your surrounding vectors for assimilation.",
+		"You are urged to be of service.",
+		"You perceive a calming continuity.",
+		"You perceive heavenly bliss. Don't slip."
+		"You are urged to kill your friends. These are not your own thoughts.",
+		"You are urged to acquire assets appropriate for vector preparation.",
+		"You are offered "
 	)
 
 
