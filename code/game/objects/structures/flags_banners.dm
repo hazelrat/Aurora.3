@@ -1351,7 +1351,7 @@
 	nations of the planet of Axiom with the strength of church infrastructure. Its coat of \
 	arms consists of a white heater shield trimmed with gold, within which is framed the \
 	planet of Axiom overlooked by a great red nazar. It is principly an apotropaic symbol, \
-	combining the symbolism of the evil eye with Encoded Axiom Liturgical script compelling \
+	combining the symbolism of the evil eye with Encoded Axiom Liturgical script dissuading \
 	all meddlers from interference in the Ecclesiarchy's affairs and domestic rule."
 	flag_path = "ecclesiastical_axiom"
 	flag_structure = /obj/structure/sign/flag/ecclesiastical_axiom
@@ -1364,7 +1364,7 @@
 	nations of the planet of Axiom with the strength of church infrastructure. Its coat of \
 	arms consists of a white heater shield trimmed with gold, within which is framed the \
 	planet of Axiom overlooked by a great red nazar. It is principly an apotropaic symbol, \
-	combining the symbolism of the evil eye with Encoded Axiom Liturgical script compelling \
+	combining the symbolism of the evil eye with Encoded Axiom Liturgical script dissuading \
 	all meddlers from interference in the Ecclesiarchy's affairs and domestic rule."
 	flag_path = "ecclesiastical_axiom"
 	icon_state = "ecclesiastical_axiom"
