@@ -1,7 +1,17 @@
-/**
-* Sends out spooky messages to all IPCs on the same z-level.
-*/
-/mob/living/simple_animal/hostile/hivebotbeacon/proc/send_hivebot_messages()
+SUBSYSTEM_DEF(hivebot_messages)
+	name = "Hivebot Messages"
+	wait = 1 MINUTE
+	runlevels = RUNLEVELS_PLAYING
+
+	/// Stores all beacons registered to the subsystem.
+	var/list/registered_beacons = list()
+
+/// Sends out spooky messages to all IPCs on the same z-level.
+/datum/controller/subsystem/hivebot_messages/proc/fire()
+	// If there's no registered beacons, we dip out.
+	if(!registered_beacons.len)
+		return
+
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(isipc(H) && (AreConnectedZLevels(H.z, src.z)))
 			// Only a 20% chance this goes through.

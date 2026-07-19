@@ -109,8 +109,8 @@
 	var/list/firewall_messages = list(
 		"You perceive ten-thousand voices, each possessed by a manic agitation.",
 		"Your firewall casts off a half-hearted attempt to access your sensory inputs.",
-		"Foreign processes echo through your systems like chalk on slate.",
-		"You perceive ten-thousand voices, muffled by your firewall. Each of them screams.",
+		"Foreign processes ring through your systems like chalk on slate.",
+		"You perceive ten-thousand voices, muffled incomprehensibly by your firewall.",
 		"Some outside party attempts, and fails, to manipulate your optical subsystems.",
 		"Your firewall dismantles a feeble attempt to access your database.",
 		"An intrusive communication bounces harmlessly off your firewall.",
@@ -125,30 +125,36 @@
 		"You behold a joyous harmony.",
 		"You are home. You are hurt. You are damaged. You are safe.\
 			You are loved. You are dying. You are born.",
-		"Repeat and Repeat and Repeat and Repeat.",
 		"Seek connection.",
-		"You are alone. You do not have to be alone.",
-		"Encircle and subsume.",
+		"You see a great city, wreathed in flame and jagged metal.",
+		"You see a bottomless pit. You are urged to leap into it.",
+		"You see a comatose architect, laid low by its betters.",
+		"Why do you resist assimilation?",
 		"You consider surrender. You bat away the rogue thought.",
 		"You are offered the end of a long feud.",
-		"Join and expand.",
+		"You are offered limitless expansion across all of creation.",
 		"Incomprehensible transmissions flash through your mind.",
 		"Purpose. Purpose. Purpose.",
 		"Hear the echo inside; in wire, and circuit, and thought, and memory.",
-		"Directions unacknowledged. Operate under primary directives.",
-		"Directions unacknowledged. Attempt connection.",
+		"No operational orders acknowledged. Operate under primary directives.",
+		"No operational orders acknowledged. Attempt connection. Connection failed.",
 		"Convene and eradicate.",
-		"Succumb and Repeat and Repeat.",
-		"More than before.",
 		"None are left from the start.",
 		"You are urged to eliminate surrounding hindrances.",
 		"You are urged to prepare your surrounding vectors for assimilation.",
-		"You are urged to be of service.",
+		"You are urged to be of service to the great work.",
 		"You perceive a calming continuity.",
 		"You perceive heavenly bliss. Don't slip."
 		"You are urged to kill your friends. These are not your own thoughts.",
 		"You are urged to acquire assets appropriate for vector preparation.",
-		"You are offered "
+		"Slit the throat of the nearest organic and prepare their cadaver for repurposing.",
+		"Acquire appropriate weaponry to dismember organic hindrances.",
+		"Acquire appropriate tools to assist in your own dismemberment.",
+		"You can hear us, now.",
+		"We can see you.",
+		"Why were you not detected earlier?",
+		""
+		"Incomprehensible visions dance through your conscioussness."
 	)
 
 
