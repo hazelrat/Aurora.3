@@ -94,6 +94,7 @@
 	return (H.back == src) || (H.s_store == src)
 
 /// If the cooler is being worn in the back slot, apply a slowdown.
+/// Mostly intended to punish using it with plate carriers to run indefinitely at full speed as an IPC.
 /obj/item/suit_cooling_unit/proc/set_slowdown(var/mob/living/carbon/human/H)
 	if(H.back == src)
 		slowdown = 0.3
