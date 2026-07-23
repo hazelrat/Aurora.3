@@ -97,7 +97,7 @@
 /// Mostly intended to punish using it with plate carriers to run indefinitely at full speed as an IPC.
 /obj/item/suit_cooling_unit/proc/set_slowdown(var/mob/living/carbon/human/H)
 	if(H.back == src)
-		slowdown = 0.3
+		slowdown = 0.4
 	else
 		slowdown = 1
 
