@@ -4,7 +4,8 @@
 	existing temperature controls to provide industrial levels of cooling. Used by synthetics to \
 	enable spacewalks, and to stabilise the chassis in the event of internal cooler failure."
 	desc_extended = "Due to its cumbesome weight and dimensions, a cooling unit will significantly \
-	slow its wearer down if they aren't wearing it in the dedicated slot of a voidsuit."
+	slow its wearer down if they aren't wearing it in the dedicated slot of a voidsuit. It does not \
+	slow the user down at all if worn with a voidsuit."
 	w_class = WEIGHT_CLASS_NORMAL
 	icon = 'icons/obj/item/suitcooler.dmi'
 	icon_state = "suitcooler0"
@@ -95,13 +96,16 @@
 
 /// If the cooler is being worn in the back slot, apply a slowdown.
 /// Mostly intended to punish using it with plate carriers to run indefinitely at full speed as an IPC.
+/// Does not apply to wearing it with a voidsuit in the suit slot.
 /obj/item/suit_cooling_unit/proc/set_slowdown(var/mob/living/carbon/human/H)
 	if(H.back == src)
-		slowdown = 0.4
+		slowdown = 0.7
 	else
-		slowdown = 1
+		slowdown = 0
 
 /obj/item/suit_cooling_unit/process(seconds_per_tick)
+	var/mob/living/carbon/human/H = loc
+
 	if(!is_in_slot())
 		return
 	else
@@ -109,8 +113,6 @@
 
 	if(!on || !cell)
 		return
-
-	var/mob/living/carbon/human/H = loc
 
 	var/efficiency = isipc(H) || 1 - H.get_pressure_weakness()		//you need to have a good seal for effective cooling; some species can directly connect to the cooler, so get a free 100% efficiency here
 	var/env_temp = get_environment_temperature()		//wont save you from a fire
