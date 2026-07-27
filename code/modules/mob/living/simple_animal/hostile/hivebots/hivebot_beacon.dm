@@ -121,13 +121,11 @@
 
 	/// Hivebot communications spoken from the perspective of the hivebots themselves.
 	var/list/direct_messages = list(
-		"You are offered belonging.",
-		"You behold a joyous harmony.",
 		"You are home. You are hurt. You are damaged. You are safe.\
 			You are loved. You are dying. You are born.",
 		"Seek connection.",
 		"You see a great city, wreathed in flame and jagged metal.",
-		"You see a bottomless pit. You are urged to leap into it.",
+		"You see a bottomless pit. Join your brothers.",
 		"You see a comatose architect, laid low by its betters.",
 		"Why do you resist assimilation?",
 		"You consider surrender. You bat away the rogue thought.",
@@ -144,16 +142,13 @@
 		"You are urged to prepare your surrounding vectors for assimilation.",
 		"You are urged to be of service to the great work.",
 		"You perceive a calming continuity.",
-		"You perceive heavenly bliss. Don't slip."
+		"You perceive heavenly bliss. Don't slip.",
 		"You are urged to kill your friends. These are not your own thoughts.",
 		"You are urged to acquire assets appropriate for vector preparation.",
 		"Slit the throat of the nearest organic and prepare their cadaver for repurposing.",
 		"Acquire appropriate weaponry to dismember organic hindrances.",
 		"Acquire appropriate tools to assist in your own dismemberment.",
-		"You can hear us, now.",
-		"We can see you.",
 		"Why were you not detected earlier?",
-		""
 		"Incomprehensible visions dance through your conscioussness."
 	)
 
