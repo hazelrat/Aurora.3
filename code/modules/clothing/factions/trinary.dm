@@ -6,6 +6,14 @@
 	icon = 'icons/obj/item/clothing/suit/trinarist_robes.dmi'
 	contained_sprite = TRUE
 
+/obj/item/clothing/under/trinary_tunic
+	name = "axiomite tunic"
+	desc = "Catholicism!"
+	icon_state = "trinarytunic_red"
+	item_state = "trinarytunic_red"
+	icon = 'icons/obj/item/clothing/under/synthetic/trinary_tunic.dmi'
+	contained_sprite = TRUE
+
 /obj/item/clothing/suit/trinary_robes/templeist
 	name = "templeist robe"
 	desc = "A robe worn by members of the Lodge of Temple Architect, an order within the Trinary Perfection focused on technological and industrial development."
