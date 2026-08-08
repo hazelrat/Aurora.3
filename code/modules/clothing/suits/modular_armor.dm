@@ -164,10 +164,11 @@
 
 /obj/item/clothing/suit/armor/carrier/guardian
 	starting_accessories = list(
-		/obj/item/clothing/accessory/armor_plate/guardian,
-		/obj/item/clothing/accessory/leg_guard/guardian,
-		/obj/item/clothing/accessory/arm_guard/guardian,
+		/obj/item/clothing/accessory/armor_plate/heavy/guardian,
+		/obj/item/clothing/accessory/leg_guard/heavy/guardian,
+		/obj/item/clothing/accessory/arm_guard/heavy/guardian,
 		/obj/item/clothing/accessory/storage/chestpouch
+	)
 
 /obj/item/clothing/accessory/armor_plate
 	name = "corporate armor plate"

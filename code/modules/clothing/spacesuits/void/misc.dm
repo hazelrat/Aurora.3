@@ -200,7 +200,7 @@
 	icon_state = "trinary_vulture_helm_red"
 	item_state = "trinary_vulture_helm_red"
 
-/obj/item/clothing/suit/space/void/coalition/guardian.red
+/obj/item/clothing/suit/space/void/coalition/guardian/red
 	name = "trinary guardian commander vulture voidsuit"
 	desc = "An armored voidsuit purchased scavenged, or otherwise procured by the Trinary Perfection's Order of Guardians. This one is painted red for use by high ranking Guardians."
 	icon = 'icons/obj/clothing/voidsuit/trinary.dmi'
