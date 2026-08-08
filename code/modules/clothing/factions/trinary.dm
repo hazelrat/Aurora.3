@@ -23,6 +23,19 @@
 	item_state = "trinary_coif"
 	contained_sprite = TRUE
 
+//Guardian Gear
+
+/obj/item/clothing/head/trinary
+	name = "trinary coif"
+	desc = "A coif worn primarily by members of the monastic Sodality of Our Lady Corkfell, a religious order within the Trinary Perfection focused on the medical needs of its human practicioners. It seems to be made out of a light \
+	and breathable material in order to cope with Axiom's hot summers."
+	icon = 'icons/obj/item/clothing/head/ipc/trinary_coif.dmi'
+	icon_state = "trinary_coif"
+	item_state = "trinary_coif"
+	contained_sprite = TRUE
+
+
+
 //Exclusionist Gear
 /obj/item/clothing/suit/storage/hooded/exclusionist_robe
 	name = "exclusionist robes"

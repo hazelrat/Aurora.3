@@ -181,6 +181,13 @@
 		BOMB = ARMOR_BOMB_PADDED
 	)
 
+/obj/item/clothing/suit/armor/carrier/guardian
+	starting_accessories = list(
+		/obj/item/clothing/accessory/armor_plate/guardian,
+		/obj/item/clothing/accessory/leg_guard/guardian,
+		/obj/item/clothing/accessory/arm_guard/guardian,
+		/obj/item/clothing/accessory/storage/chestpouch
+
 /obj/item/clothing/accessory/armor_plate/mechanics_hints(mob/user, distance, is_adjacent)
 	. += ..()
 	. += "These must be attached to plate carriers for them to work."
@@ -302,6 +309,13 @@
 	icon = 'icons/obj/item/clothing/suit/armor/modular_armor/modular_armor.dmi'
 	icon_state = "hoplan_breastplate"
 	item_state = "hoplan_breastplate"
+	contained_sprite = TRUE
+
+/obj/item/clothing/accessory/armor_plate/heavy/guardian
+	name = "guardian cuirass"
+	desc = "An ornate cuirass worn by the Trinarist Order of Guardians for combat and ceremonial duties. A closer inspection reveals that the cuirass's seemingly thin steel has ablative plating and ballistic padding underneath."
+	icon_state = "guardian_plate"
+	item_state = "guardian_plate"
 	contained_sprite = TRUE
 
 /obj/item/clothing/accessory/armor_plate/tcaf
@@ -549,6 +563,27 @@
 		ENERGY = ARMOR_ENERGY_SMALL,
 		BOMB = ARMOR_BOMB_PADDED,
 	)
+
+/obj/item/clothing/head/helmet/guardian
+	name = "trinarist guardian helmet"
+	desc = "A helmet made from modern materials but in an archaic and ornate shape for the Trinarist Order of Guardians. This one is gold with a red crest and is intended for Guardian officers and NCOs, or when the Guardians need to dress to impress."
+	icon = 'icons/obj/item/clothing/head/modular_armor_helmets.dmi'
+	contained_sprite = TRUE
+	icon_state = "helm_guardian"
+	item_state = "helm_guardian"
+	armor = list(
+		MELEE = ARMOR_MELEE_MAJOR,
+		BULLET = ARMOR_BALLISTIC_MAJOR,
+		LASER = ARMOR_LASER_MEDIUM,
+		ENERGY = ARMOR_ENERGY_SMALL,
+		BOMB = ARMOR_BOMB_PADDED,
+	)
+
+/obj/item/clothing/head/helmet/guardian/blue
+	name = "trinarist guardian regular helmet"
+	desc = "A helmet made from modern materials but in an archaic and ornate shape for the Trinarist Order of Guardians. This one is blue with a black crest and is intended for rank-and-file Guardians on everyday duties; a common sight on the streets of Providence."
+	icon_state = "helm_guardian_blue"
+	item_state = "helm_guardian_blue"
 
 //Cosmetic Accessories
 
