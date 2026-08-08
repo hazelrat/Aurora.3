@@ -169,6 +169,43 @@
 	species_restricted = list(BODYTYPE_HUMAN)
 	refittable = FALSE
 
+/obj/item/clothing/head/helmet/space/void/coalition/guardian
+	name = "trinary vulture voidsuit helmet"
+	desc = "An armored voidsuit helmet resembling an avian, purchased, scavenged, or otherwise procured by the Trinary Perfection's Order of Guardians. This one is painted blue-and-black for use by rank-and-file Guardians."
+	desc_extended = "The dNAXS-02 Vulture suit was designed by de Namur Defense Systems on Xanu in 2291 and modernized copies of the 200 year-old design are still produced and exported to this day. Although the Guardians have procured a wide range of \
+	voidsuit models through its network of followers, the Vulture has proven to be the most popular due to its ease of adaptation to IPC usage with the organization repeatedly attempting (and admittedly failing) to standardize on the model."
+	icon = 'icons/obj/clothing/voidsuit/trinary.dmi'
+	icon_state = "trinary_vulture_helm"
+	item_state = "trinary_vulture_helm"
+	species_restricted = list(BODYTYPE_HUMAN, BODYTYPE_IPC)
+	icon_supported_species_tags = list("ipc")
+	refittable_species = list(BODYTYPE_HUMAN, BODYTYPE_IPC)
+
+/obj/item/clothing/suit/space/void/coalition/guardian
+	name = "trinary vulture voidsuit"
+	desc = "An armored voidsuit purchased scavenged, or otherwise procured by the Trinary Perfection's Order of Guardians. This one is painted blue-and-red for use by rank-and-file Guardians."
+	desc_extended = "The dNAXS-02 Vulture suit was designed by de Namur Defense Systems on Xanu in 2291 and modernized copies of the 200 year-old design are still produced and exported to this day. Although the Guardians have procured a wide range of \
+	voidsuit models through its network of followers, the Vulture has proven to be the most popular due to its ease of adaptation to IPC usage with the organization repeatedly attempting (and admittedly failing) to standardize on the model."
+	icon = 'icons/obj/clothing/voidsuit/trinary.dmi'
+	icon_state = "trinary_vulture"
+	item_state = "trinary_vulture"
+	species_restricted = list(BODYTYPE_HUMAN, BODYTYPE_IPC)
+	icon_supported_species_tags = list("ipc")
+	refittable_species = list(BODYTYPE_HUMAN, BODYTYPE_IPC)
+
+/obj/item/clothing/head/helmet/space/void/coalition/guardian/red
+	name = "trinary guardian commander vulture helmet"
+	desc = "An armored voidsuit helmet resembling an avian, purchased, scavenged, or otherwise procured by the Trinary Perfection's Order of Guardians. This one is painted red for use by high ranking Guardians."
+	icon = 'icons/obj/clothing/voidsuit/trinary.dmi'
+	icon_state = "trinary_vulture_helm_red"
+	item_state = "trinary_vulture_helm_red"
+
+/obj/item/clothing/suit/space/void/coalition/guardian.red
+	name = "trinary guardian commander vulture voidsuit"
+	desc = "An armored voidsuit purchased scavenged, or otherwise procured by the Trinary Perfection's Order of Guardians. This one is painted red for use by high ranking Guardians."
+	icon = 'icons/obj/clothing/voidsuit/trinary.dmi'
+	icon_state = "trinary_vulture_red"
+	item_state = "trinary_vulture_red"
 
 /obj/item/clothing/head/helmet/space/void/cruiser
 	name = "cruiser voidsuit helmet"

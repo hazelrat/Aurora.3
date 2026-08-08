@@ -162,6 +162,13 @@
 		/obj/item/clothing/accessory/armor_plate/press
 	)
 
+/obj/item/clothing/suit/armor/carrier/guardian
+	starting_accessories = list(
+		/obj/item/clothing/accessory/armor_plate/guardian,
+		/obj/item/clothing/accessory/leg_guard/guardian,
+		/obj/item/clothing/accessory/arm_guard/guardian,
+		/obj/item/clothing/accessory/storage/chestpouch
+
 /obj/item/clothing/accessory/armor_plate
 	name = "corporate armor plate"
 	desc = "A particularly light-weight armor plate in stylish corporate black. Unfortunately, not very good if you hold it with your hands."
@@ -180,13 +187,6 @@
 		ENERGY = ARMOR_ENERGY_SMALL,
 		BOMB = ARMOR_BOMB_PADDED
 	)
-
-/obj/item/clothing/suit/armor/carrier/guardian
-	starting_accessories = list(
-		/obj/item/clothing/accessory/armor_plate/guardian,
-		/obj/item/clothing/accessory/leg_guard/guardian,
-		/obj/item/clothing/accessory/arm_guard/guardian,
-		/obj/item/clothing/accessory/storage/chestpouch
 
 /obj/item/clothing/accessory/armor_plate/mechanics_hints(mob/user, distance, is_adjacent)
 	. += ..()
