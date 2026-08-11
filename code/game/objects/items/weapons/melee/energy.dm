@@ -376,15 +376,23 @@
 	..()
 	icon_state = "edagger1"
 
+/obj/item/melee/energy/sword/knife/axiom
+	name = "energy stiletto"
+	desc = "A relatively ornate energy stiletto, bearing a narrow blade and \
+		Encoded Axiom Liturgical inscriptions along its hilt; they bid the \
+		wielder strike true in the pursuit of the coming Ascension. A \
+		common weapon in the Order of Guardians, able to puncture through \
+		even the thickest of armour with a concerted strike."
+	icon_state = "edagger0"
+
+/obj/item/melee/energy/sword/knife/axiom/activate(mob/living/user)
+	..()
+	icon_state = "edagger1"
+
 /obj/item/melee/energy/sword/knife/sol
 	name = "solarian energy dagger"
 	desc = "A relatively inexpensive energy blade, this is the standard-issue combat knife given to the Solarian military."
 	icon_state = "sol_edagger0"
-	base_reflectchance = 10
-	base_block_chance = 10
-	active_force = 25
-	force = 15
-	origin_tech = list(TECH_MAGNET = 3)
 
 /obj/item/melee/energy/sword/knife/sol/activate(mob/living/user)
 	..()

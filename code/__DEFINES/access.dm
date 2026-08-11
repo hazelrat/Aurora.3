@@ -927,3 +927,7 @@
 /datum/access/abandoned_casino
 	id = ACCESS_ABANDONED_CASINO_STAFF
 
+#define ACCESS_ECCLESIASICAL 258
+/datum/access/ecclesiastical_access
+	id = ACCESS_ECCLESIASICAL
+	desc = "Broad Ecclesiastical Access"
