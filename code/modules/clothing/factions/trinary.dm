@@ -158,6 +158,32 @@
 	icon_state = "trinary_coif_ecclesiastical"
 	item_state = "trinary_coif_ecclesiastical"
 
+//Guardian Gear
+/obj/item/clothing/under/dressshirt/guardian
+	name = "guardian regular shirt"
+	desc = "A white-and-blue shirt worn by rank-and-file members of the Trinarist Order of Guardians. Produced locally in Providence and occasionally commissioned from Salamasian tailors, they have become a common site in most Trinarist settlements \
+	and a symbol of the organization."
+	icon = 'icons/obj/item/clothing/under/synthetic/trinary.dmi'
+	icon_state = "guardian_shirt"
+	item_state = "guardian_shirt"
+	contained_sprite = TRUE
+
+/obj/item/clothing/under/dressshirt/guardian/red
+	name = "guardian dress shirt"
+	desc = "A red-and-black shirt worn by officers of the Trinarist Order of Guardians as well as those on ceremonial duties. Produced locally in Providence and occasionally commissioned from Salamasian tailors, \
+	they have become a common site in most Trinarist settlements and a symbol of the organization."
+	icon = 'icons/obj/item/clothing/under/synthetic/trinary.dmi'
+	icon_state = "guardian_shirt_red"
+	item_state = "guardian_shirt_red"
+	contained_sprite = TRUE
+
+/obj/item/clothing/pants/guardian
+	name = "guardian trousers"
+	desc = "A pair of black trousers with large pockets worn by members of the Trinarist Order of Guardians. In practice, wearing of these trousers is not strictly enforced except during ceremonial duties, as their heavy natures render them \
+	unpopular among members of the organization for policing the hot Axiomite climate."
+	icon_state = "guardianpants"
+	item_state = "guardianpants"
+
 //Exclusionist Gear
 /obj/item/clothing/suit/storage/hooded/exclusionist_robe
 	name = "exclusionist robes"
