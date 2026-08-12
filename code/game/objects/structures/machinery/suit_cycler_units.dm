@@ -381,6 +381,19 @@
 	suit = /obj/item/clothing/suit/space/void/golden_deep
 	helmet = /obj/item/clothing/head/helmet/space/void/golden_deep
 
+// Axiomite suits.
+/obj/structure/machinery/suit_cycler/offship/axiom
+	model_text = "Ecclesiastical Authority"
+	req_one_access = list(ACCESS_ECCLESIASTICAL)
+	departments = list("Ecclesiastical Authority")
+	species = list(BODYTYPE_HUMAN, BODYTYPE_IPC)
+	suit = /obj/item/clothing/suit/space/void/coalition/guardian
+	helmet = /obj/item/clothing/head/helmet/space/void/coalition/guardian
+
+/obj/structure/machinery/suit_cycler/offship/axiom/red
+	suit = /obj/item/clothing/suit/space/void/coalition/guardian/red
+	helmet = /obj/item/clothing/head/helmet/space/void/coalition/guardian/red
+
 /obj/structure/machinery/suit_cycler/offship/hiskyn
 	model_text = "Hiskyn's Revanchists"
 	req_access = list(ACCESS_UNATHI_PIRATE)

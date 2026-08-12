@@ -372,6 +372,15 @@
 		/obj/item/gun/energy/taser = 1,
 	)
 
+/obj/item/storage/belt/security/full/alt/revolver
+	starts_with = list(
+		/obj/item/melee/baton/loaded = 1,
+		/obj/item/reagent_containers/spray/pepper = 1,
+		/obj/item/handcuffs = 2,
+		/obj/item/flash = 1,
+		/obj/item/gun/energy/stunrevolver = 1,
+	)
+
 /obj/item/storage/belt/security/full/pistol45
 	starts_with = list(
 		/obj/item/melee/baton/loaded = 1,

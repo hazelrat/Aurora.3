@@ -1,8 +1,8 @@
-/datum/map_template/ruin/away_site/tcaf_corvette
-	name = "Republic Astroforce Patrol Vessel"
+/datum/map_template/ruin/away_site/ecclesiastical_corvette
+	name = "Ecclesiastical Corvette"
 	description = "A patrol vessel of the Republic of Biesel's Republic Astroforce."
 
-	prefix = "ships/ecclesiastical"
+	prefix = "ships/ecclesiastical/"
 	suffix = "ecclesiastical_corvette.dmm"
 
 	// Tentatively very limited, must check with other lore teams for any increased scope.
