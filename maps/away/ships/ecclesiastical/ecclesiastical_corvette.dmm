@@ -6,14 +6,14 @@
 	weapon_id = "TCAF Grauwolf Flak Battery"
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "ad" = (
 /obj/structure/bed/stool/chair/office/bridge/pilot{
 	dir = 1
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "aj" = (
 /obj/structure/machinery/door/firedoor/noid{
 	dir = 4
@@ -24,8 +24,17 @@
 	name = "Organic Crew Bunks";
 	req_access = list(258)
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/crew_quarters)
 "ak" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -41,7 +50,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "as" = (
 /obj/structure/machinery/computer/ship/helm/terminal,
 /obj/effect/floor_decal/industrial/outline/security,
@@ -49,21 +58,24 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "aw" = (
 /obj/structure/sign/urban/restroom{
 	pixel_x = -7;
 	pixel_y = 12
 	},
 /turf/simulated/wall/shuttle/dark/cardinal/red,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "ax" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "az" = (
 /turf/simulated/floor/reinforced/airless,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "aC" = (
 /obj/effect/floor_decal/spline/plain/blue,
 /obj/structure/disposalpipe/segment{
@@ -72,40 +84,63 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "aH" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "aN" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped{
 	dir = 1
 	},
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "aP" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 6
 	},
-/turf/simulated/floor/carpet/rubber,
-/area/space)
-"aQ" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/structure/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plating,
-/area/space)
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/ecclesiastical_corvette/propulsion)
+"aQ" = (
+/obj/structure/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/machinery/alarm/east{
+	req_one_access = list(258)
+	},
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ecclesiastical_corvette/infirmary)
 "aR" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -135,14 +170,20 @@
 /obj/item/melee/energy/sword/knife/axiom,
 /obj/item/melee/energy/sword/knife/axiom,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "aW" = (
 /obj/effect/floor_decal/spline/plain/red,
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "bc" = (
 /obj/structure/table/reinforced/steel,
 /obj/item/paper_bin{
@@ -158,7 +199,16 @@
 	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
+"bl" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/power)
 "bq" = (
 /obj/structure/machinery/computer/ship/targeting/terminal{
 	dir = 1;
@@ -166,7 +216,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/operations,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "bt" = (
 /obj/effect/floor_decal/industrial/hatch_door/red{
 	dir = 1
@@ -176,7 +226,7 @@
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "bv" = (
 /obj/effect/floor_decal/industrial/outline/operations,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -185,20 +235,23 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "bx" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 1
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "bD" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain/red,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "bG" = (
 /obj/structure/machinery/door/firedoor/noid{
 	dir = 8
@@ -209,8 +262,17 @@
 	name = "Guardian-Captain's Office";
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/captain_office)
 "bK" = (
 /turf/template_noop,
 /area/space)
@@ -222,15 +284,18 @@
 	dir = 4;
 	start_pressure = 6000
 	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "bT" = (
 /obj/structure/closet/secure_closet/engineering_electrical{
 	req_access = list(258)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "bU" = (
 /obj/structure/table/wood,
 /obj/effect/floor_decal/corner/yellow{
@@ -240,8 +305,11 @@
 /obj/structure/machinery/alarm/north{
 	req_one_access = list(258)
 	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/captain_office)
 "bY" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
@@ -250,20 +318,65 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain/corner/blue,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "cl" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/ecclesiastical_corvette/washroom)
+"co" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/atmospherics)
 "cq" = (
 /obj/structure/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/industrial/outline/operations,
 /obj/structure/sign/vacuum{
 	pixel_x = 32
 	},
+/obj/structure/machinery/atmospherics/portables_connector/aux,
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"cr" = (
+/obj/structure/machinery/portable_atmospherics/canister/air/airlock,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/machinery/atmospherics/portables_connector/aux{
+	dir = 1
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/atmospherics)
 "cD" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -275,26 +388,61 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/shuttle/ecclesiastical)
 "cF" = (
 /obj/structure/closet/cabinet{
 	name = "Personal Wear"
 	},
+/obj/structure/machinery/power/apc/north{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/carpet/lightblue,
-/area/space)
+/area/ecclesiastical_corvette/captain_quarters)
+"cK" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/ecclesiastical_corvette/propulsion)
 "cL" = (
 /obj/effect/floor_decal/corner/yellow/full,
 /obj/structure/machinery/recharge_station,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "cP" = (
 /obj/structure/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/turf/simulated/floor/plating,
-/area/space)
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ecclesiastical_corvette/hydro)
 "cU" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -304,19 +452,7 @@
 	start_pressure = 6000
 	},
 /turf/simulated/floor,
-/area/space)
-"db" = (
-/obj/structure/lattice/catwalk/indoor,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "df" = (
 /obj/structure/table/reinforced/steel,
 /obj/item/ipc_overloader/jitterbug{
@@ -336,7 +472,7 @@
 	pixel_y = 2
 	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "dg" = (
 /obj/structure/machinery/door/firedoor/noid{
 	dir = 4
@@ -350,8 +486,17 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "dk" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped{
@@ -361,7 +506,16 @@
 	dir = 8
 	},
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
+"dE" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/equipment)
 "dR" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped{
@@ -371,7 +525,7 @@
 	dir = 4
 	},
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "dT" = (
 /obj/structure/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -380,7 +534,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "dW" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -393,14 +547,24 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"dY" = (
+/obj/effect/floor_decal/spline/plain/red,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/marble,
+/area/ecclesiastical_corvette/infirmary)
 "dZ" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "ee" = (
 /obj/structure/machinery/door/firedoor/noid,
 /obj/effect/floor_decal/industrial/hatch_door/engineering{
@@ -411,8 +575,13 @@
 	name = "Equipment Room"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "eg" = (
 /obj/structure/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/machinery/meter,
@@ -420,7 +589,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "en" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -435,13 +604,34 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/shuttle/ecclesiastical)
+"eq" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/aft)
+"er" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/kitchen)
 "ev" = (
 /obj/structure/machinery/atmospherics/pipe/manifold/hidden/aux{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "eH" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -451,37 +641,66 @@
 	},
 /obj/effect/floor_decal/spline/plain/cee/blue,
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "eI" = (
 /obj/structure/machinery/optable,
-/obj/effect/floor_decal/industrial/outline/medical,
-/obj/structure/sign/flag/trinaryperfection{
-	pixel_y = 32
+/obj/structure/machinery/power/apc/north{
+	req_access = list(258)
 	},
-/turf/simulated/floor/tiled/dark/full,
-/area/space)
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/lattice/catwalk/indoor,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/infirmary)
+"eK" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/equipment)
 "eN" = (
 /obj/structure/machinery/power/breakerbox,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "eP" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/bed/handrail{
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/shuttle/ecclesiastical)
 "eS" = (
 /obj/structure/undies_wardrobe,
 /obj/effect/floor_decal/industrial/outline/medical,
 /obj/structure/machinery/alarm/north{
 	req_one_access = list(258)
 	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/crew_quarters)
+"eV" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/power)
+"eZ" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/ecclesiastical_corvette/bridge)
 "fa" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -517,7 +736,7 @@
 /obj/item/ammo_magazine/trodpack,
 /obj/item/ammo_magazine/trodpack,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "ff" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
@@ -529,17 +748,29 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "fl" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "fo" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/lino/diamond,
-/area/space)
+/area/ecclesiastical_corvette/captain_office)
 "fp" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#6176a1";
@@ -551,7 +782,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "fv" = (
 /obj/structure/table/wood,
 /obj/effect/floor_decal/spline/plain/blue{
@@ -567,12 +798,32 @@
 	pixel_y = 4;
 	pixel_x = 5
 	},
-/obj/item/pen/fountain/silver{
+/obj/item/pen/fountain/captain{
 	pixel_x = 4;
-	pixel_y = 5
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/captain_quarters)
+"fw" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/iff_beacon/name_change,
+/turf/simulated/floor/airless,
+/area/ecclesiastical_corvette/exterior)
+"fB" = (
+/obj/structure/machinery/power/solar{
+	id = "starboardsadarsolar";
+	name = "Starboard Solar Array"
+	},
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/landmark/entry_point/starboard{
+	name = "starboard, solars"
+	},
+/turf/simulated/floor/airless,
+/area/ecclesiastical_corvette/exterior)
 "fM" = (
 /obj/structure/machinery/door/firedoor/noid,
 /obj/effect/floor_decal/industrial/hatch_door/engineering{
@@ -582,8 +833,11 @@
 	req_access = list(258);
 	name = "Power Generation"
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "fT" = (
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 1
@@ -594,8 +848,11 @@
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 5
 	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "fW" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -613,7 +870,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/shuttle/ecclesiastical)
 "fY" = (
 /obj/effect/floor_decal/industrial/loading/yellow{
 	dir = 8
@@ -622,7 +879,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "gl" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/segment,
@@ -630,12 +887,12 @@
 	dir = 8
 	},
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "go" = (
 /obj/effect/floor_decal/industrial/outline/operations,
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "gs" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -645,7 +902,7 @@
 	},
 /obj/structure/machinery/meter,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "gz" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/trunk,
@@ -656,38 +913,72 @@
 	dir = 8
 	},
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "gD" = (
 /obj/structure/toilet{
 	pixel_y = 16
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/ecclesiastical_corvette/washroom)
 "gF" = (
 /obj/structure/machinery/power/portgen/basic/super,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "gG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/tiled/dark/full,
-/area/space)
+/obj/structure/machinery/power/apc/east{
+	req_access = list(258)
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/gunnery)
+"gJ" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/power)
 "gM" = (
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "gN" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
 	},
 /obj/effect/floor_decal/spline/plain/cee/blue,
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
+"gO" = (
+/obj/effect/floor_decal/industrial/outline/operations,
+/obj/structure/closet/crate/loot,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/ecclesiastical_corvette/cargo)
+"gP" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 10
+	},
+/obj/effect/floor_decal/spline/plain/corner/red{
+	dir = 1
+	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/ecclesiastical_corvette/equipment)
 "gU" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -700,32 +991,28 @@
 	},
 /obj/effect/floor_decal/spline/plain/corner/red,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/shuttle/ecclesiastical)
 "gX" = (
 /obj/structure/grille,
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "gZ" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
 /turf/simulated/floor/lino/diamond,
-/area/space)
+/area/ecclesiastical_corvette/crew_quarters)
 "hb" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/railing/mapped,
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "he" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/segment{
@@ -735,8 +1022,23 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
 	},
+/obj/structure/machinery/power/apc/east{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "hi" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped,
@@ -744,7 +1046,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "ho" = (
 /obj/effect/floor_decal/industrial/outline/medical,
 /obj/structure/machinery/iv_drip,
@@ -752,7 +1054,7 @@
 	req_one_access = list(258)
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "hp" = (
 /obj/structure/table/wood/walnut,
 /obj/item/clothing/ears/antenna/trinary_halo{
@@ -768,7 +1070,7 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "hs" = (
 /obj/structure/closet/secure_closet/refrigerator,
 /obj/item/storage/box/large/produce,
@@ -782,21 +1084,28 @@
 /obj/item/reagent_containers/food/drinks/carton/soymilk,
 /obj/item/reagent_containers/food/condiment/flour,
 /obj/item/reagent_containers/food/condiment/sugar,
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/outline/security,
 /obj/item/reagent_containers/food/snacks/meat/chicken,
 /obj/item/reagent_containers/food/snacks/meat/chicken,
 /obj/item/reagent_containers/food/snacks/meat/chicken,
 /obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/structure/machinery/light/small,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "hu" = (
 /obj/structure/machinery/shieldwallgen,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
+"hx" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/crew_quarters)
 "hy" = (
 /obj/item/stack/material/tritium/full,
 /obj/structure/closet/crate/rad,
@@ -804,12 +1113,29 @@
 	dir = 9
 	},
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/ecclesiastical_corvette/power)
+"hB" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/power)
 "hC" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
+"hK" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/aft)
 "hO" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 4
@@ -818,22 +1144,25 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "hX" = (
 /obj/structure/machinery/vending/engineering{
 	req_access = list(258);
 	pixel_x = -1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "hZ" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "ia" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -843,14 +1172,26 @@
 	},
 /obj/structure/machinery/washing_machine,
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
+"if" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/industrial/outline/service,
+/obj/structure/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/structure/machinery/light/small,
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/hydro)
 "is" = (
 /obj/effect/floor_decal/industrial/outline/operations,
 /obj/effect/floor_decal/industrial/arrow/operations{
 	dir = 4
 	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 5
+	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "iy" = (
 /obj/structure/bed/stool/bar/padded/red{
 	dir = 4
@@ -858,7 +1199,7 @@
 /obj/structure/machinery/disposal/small/south,
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "iA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -867,13 +1208,19 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
+"iB" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/atmospherics)
 "iE" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/lino/diamond,
-/area/space)
+/area/ecclesiastical_corvette/captain_office)
 "iI" = (
 /obj/structure/closet/cabinet,
 /obj/effect/floor_decal/industrial/outline/medical,
@@ -883,28 +1230,46 @@
 /obj/item/sleeping_bag/mining,
 /obj/item/sleeping_bag/mining,
 /obj/item/sleeping_bag/mining,
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/crew_quarters)
 "iR" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 10
 	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "iU" = (
 /obj/structure/machinery/atmospherics/pipe/manifold/hidden/aux{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "ja" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8;
 	icon_state = "pipe-j2"
 	},
 /obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "jc" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -920,7 +1285,16 @@
 	dir = 8
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
+"jp" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/lino/diamond,
+/area/ecclesiastical_corvette/crew_quarters)
 "jr" = (
 /obj/structure/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -928,12 +1302,12 @@
 /obj/structure/machinery/portable_atmospherics/canister/air,
 /obj/effect/floor_decal/industrial/outline/operations,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "js" = (
 /obj/structure/machinery/vending/dinnerware,
 /obj/effect/floor_decal/industrial/outline/security,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "jx" = (
 /obj/structure/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -941,19 +1315,31 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "jC" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "jE" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
-/turf/simulated/floor/plating,
-/area/space)
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ecclesiastical_corvette/hydro)
 "jM" = (
 /obj/structure/table/steel,
 /obj/item/reagent_containers/toothpaste{
@@ -969,22 +1355,32 @@
 /obj/item/reagent_containers/toothbrush{
 	pixel_y = -3
 	},
+/obj/structure/machinery/power/apc/north{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/ecclesiastical_corvette/washroom)
 "jP" = (
 /obj/structure/viewport/zavod,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "jQ" = (
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/structure/bed/stool/chair/office/bridge/pilot,
+/obj/structure/machinery/light/floor,
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "jU" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped,
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "kg" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -996,7 +1392,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "ko" = (
 /obj/structure/railing/mapped,
 /obj/structure/railing/mapped{
@@ -1004,7 +1400,10 @@
 	},
 /obj/structure/lattice/catwalk/indoor,
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
+"kq" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/atmospherics)
 "kF" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
@@ -1014,18 +1413,27 @@
 	},
 /obj/structure/flora/pottedplant/whitetulip,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "kJ" = (
 /obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/machinery/power/apc/north{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "kO" = (
 /obj/structure/machinery/computer/shuttle_control/explore/terminal/scarab_shuttle{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/security,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "kQ" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/machinery/computer/ship/engines/terminal{
@@ -1034,43 +1442,121 @@
 /obj/structure/sign/flag/ecclesiastical_axiom{
 	pixel_y = 32
 	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "kU" = (
 /obj/structure/machinery/appliance/cooker/stove,
+/obj/structure/machinery/alarm/west{
+	req_one_access = list(258)
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
+"kX" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment,
+/obj/structure/machinery/power/apc/west{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/power)
+"kY" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/atmospherics)
 "ld" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/machinery/iff_beacon/name_change,
 /turf/simulated/floor/airless,
-/area/space)
+/area/shuttle/ecclesiastical)
+"lq" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/power)
+"lr" = (
+/obj/structure/machinery/power/smes/buildable/autosolars,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ecclesiastical_corvette/atmospherics)
+"lD" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/gunnery)
 "lF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "lK" = (
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
+"lO" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/kitchen)
+"lV" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/power)
 "mb" = (
 /obj/structure/bed/stool/chair/office/bridge/pilot,
 /obj/structure/sign/flag/ecclesiastical_axiom{
 	pixel_y = 32
 	},
-/turf/simulated/floor/tiled/dark/full,
-/area/space)
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/gunnery)
 "mc" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "md" = (
 /obj/structure/machinery/power/tracker,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/dark/full/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "me" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -1083,7 +1569,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "mh" = (
 /obj/structure/machinery/computer/rdconsole/robotics/terminal{
 	dir = 8;
@@ -1091,7 +1577,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/medical,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "mi" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped{
@@ -1099,11 +1585,11 @@
 	},
 /obj/structure/railing/mapped,
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "mn" = (
 /obj/structure/machinery/ammunition_loader/nephilim,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "mq" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -1116,7 +1602,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "my" = (
 /obj/structure/machinery/door/firedoor/noid,
 /obj/effect/floor_decal/industrial/hatch_door/engineering{
@@ -1127,8 +1613,13 @@
 	name = "Aft Tunnel"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "mC" = (
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 9
@@ -1139,21 +1630,20 @@
 	},
 /obj/effect/floor_decal/spline/plain/red,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
-"mG" = (
+/area/shuttle/ecclesiastical)
+"mQ" = (
 /obj/structure/lattice/catwalk/indoor,
-/obj/structure/cable/green{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/airless,
-/area/space)
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/power)
 "mS" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -1178,8 +1668,29 @@
 /obj/item/ship_ammunition/grauwolf_bundle{
 	pixel_y = 3
 	},
+/obj/item/ship_ammunition/grauwolf_bundle{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/grauwolf_bundle{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/grauwolf_bundle{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/grauwolf_bundle{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/grauwolf_bundle{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/grauwolf_bundle{
+	pixel_y = 3
+	},
+/obj/structure/sign/flag/ecclesiastical_axiom{
+	pixel_y = 32
+	},
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "mU" = (
 /obj/structure/machinery/door/firedoor/noid,
 /obj/effect/floor_decal/industrial/hatch_door/engineering{
@@ -1189,19 +1700,49 @@
 	req_access = list(258);
 	name = "Ship Propulsion"
 	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "mY" = (
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 4
 	},
 /obj/structure/machinery/seed_extractor,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
+"nd" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 1
+	},
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ecclesiastical_corvette/infirmary)
+"nf" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/washroom)
 "nl" = (
 /obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/aux,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "nm" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -1210,16 +1751,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "nn" = (
 /obj/structure/sign/flag/ecclesiastical_axiom{
 	pixel_y = 32
 	},
-/obj/structure/machinery/vending/medical{
-	req_access = list(258)
-	},
+/obj/structure/machinery/vending/medical/low_supply,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "nr" = (
 /obj/structure/machinery/r_n_d/fabricator/mecha_part_fabricator{
 	dir = 8;
@@ -1227,21 +1766,26 @@
 	},
 /obj/effect/floor_decal/industrial/outline/medical,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "nv" = (
 /obj/structure/machinery/computer/ship/navigation/terminal{
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/operations,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "ny" = (
-/obj/effect/floor_decal/industrial/warning/cee{
-	dir = 1
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
 	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/carpet/rubber,
-/area/space)
+/obj/effect/landmark/entry_point/starboard{
+	name = "starboard, gunnery"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/gunnery)
 "nA" = (
 /obj/structure/machinery/computer/ship/targeting/terminal{
 	req_access = list(209);
@@ -1249,14 +1793,29 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "nM" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-c"
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"nN" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/propulsion)
 "nP" = (
 /obj/structure/machinery/door/firedoor/noid{
 	dir = 4
@@ -1267,8 +1826,17 @@
 	name = "Hydroponics Bay";
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
 "nQ" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
@@ -1277,13 +1845,13 @@
 	spawn_grille = 1
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "nU" = (
 /obj/structure/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "oj" = (
 /obj/structure/table/wood,
 /obj/item/versebook/trinary{
@@ -1295,36 +1863,54 @@
 /obj/structure/sign/flag/trinaryperfection{
 	pixel_y = 32
 	},
+/obj/structure/machinery/power/apc/west{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/crew_quarters)
 "ol" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/railing/mapped,
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "oq" = (
 /obj/structure/machinery/computer/terminal/loreconsole/ecclesiastical_motivation{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/medical,
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
+"ou" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/light/small,
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/aft)
 "ow" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 5
 	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "ox" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -1336,7 +1922,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "oD" = (
 /obj/structure/closet/crate/drop,
 /obj/effect/floor_decal/industrial/outline/operations,
@@ -1370,7 +1956,7 @@
 /obj/item/flag/trinaryperfection/l,
 /obj/item/flag/trinaryperfection/l,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "oR" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped,
@@ -1378,14 +1964,29 @@
 	dir = 8
 	},
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
+"oS" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/effect/floor_decal/spline/plain/red,
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/cargo)
 "oY" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
 	},
-/obj/structure/machinery/hologram/holopad,
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "pd" = (
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 8
@@ -1396,16 +1997,34 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 9
 	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "pj" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "pk" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -1415,7 +2034,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "pn" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -1423,11 +2042,11 @@
 /obj/structure/table/reinforced/steel,
 /obj/item/storage/box/shells/buckshot{
 	pixel_x = -2;
-	pixel_y = 13
+	pixel_y = 12
 	},
 /obj/item/storage/box/shells/buckshot{
 	pixel_x = -2;
-	pixel_y = 6
+	pixel_y = 5
 	},
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = -3;
@@ -1441,12 +2060,21 @@
 	pixel_y = -13
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "pp" = (
 /obj/effect/floor_decal/industrial/outline/service,
 /obj/structure/machinery/vending/hydronutrients/hydroponics,
+/obj/structure/machinery/power/apc/north{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
 "pL" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -1458,11 +2086,17 @@
 	dir = 4
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
+"pQ" = (
+/obj/effect/landmark/entry_point/port{
+	name = "port, propulsion"
+	},
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/propulsion)
 "pR" = (
 /obj/structure/machinery/vending/ramen,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "pW" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -1471,7 +2105,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/captain_quarters)
 "qc" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -1490,7 +2124,7 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "qf" = (
 /obj/structure/bed/stool/chair/office/bridge/pilot{
 	dir = 8
@@ -1498,8 +2132,31 @@
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 4
 	},
+/obj/structure/machinery/light/floor{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
+"qm" = (
+/obj/structure/machinery/atmospherics/unary/freezer{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/infirmary)
+"qp" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/ecclesiastical_corvette/bridge)
 "qt" = (
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 1
@@ -1508,8 +2165,11 @@
 	dir = 10
 	},
 /obj/structure/machinery/recharge_station,
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/captain_quarters)
 "qw" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/segment{
@@ -1519,8 +2179,19 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 9
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "qx" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -1530,20 +2201,20 @@
 	},
 /obj/structure/bed/handrail,
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "qG" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
 	},
 /obj/structure/machinery/biogenerator,
-/obj/structure/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/structure/sign/emergency/evacuation{
 	pixel_x = -32;
 	pixel_y = -1;
 	dir = 8
 	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
 "qH" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -1555,7 +2226,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "qJ" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 6
@@ -1563,8 +2234,14 @@
 /obj/effect/floor_decal/spline/plain/corner/red{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "qN" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
@@ -1572,7 +2249,7 @@
 	},
 /obj/structure/railing/mapped,
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "qO" = (
 /obj/structure/table/reinforced/steel,
 /obj/item/storage/belt/medical/paramedic/combat{
@@ -1586,42 +2263,59 @@
 /obj/structure/roller_rack{
 	pixel_y = 15
 	},
+/obj/structure/sign/flag/trinaryperfection{
+	pixel_y = 32
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
+"ra" = (
+/obj/effect/landmark/entry_point/port{
+	name = "port, ammunition storage"
+	},
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/power)
 "rb" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "rh" = (
 /obj/effect/floor_decal/industrial/outline/service,
 /obj/structure/machinery/atmospherics/unary/heater{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark/full,
-/area/space)
-"rq" = (
-/obj/effect/floor_decal/industrial/warning/corner,
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
+/obj/structure/machinery/light/small{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/hydro)
+"rq" = (
 /obj/structure/machinery/hologram/holopad,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/carpet/rubber,
-/area/space)
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/structure/lattice/catwalk/indoor,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/infirmary)
 "rs" = (
 /obj/structure/machinery/atmospherics/unary/freezer{
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "rt" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -1631,12 +2325,20 @@
 	},
 /obj/structure/bed/handrail,
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "rv" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "rw" = (
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 4
@@ -1650,23 +2352,64 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "rB" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/shuttle/ecclesiastical)
+"rD" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/lattice/catwalk/indoor,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/infirmary)
+"rF" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/cargo)
+"rG" = (
+/obj/structure/machinery/power/solar{
+	id = "starboardsadarsolar";
+	name = "Starboard Solar Array"
+	},
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/landmark/entry_point/port{
+	name = "port, solars"
+	},
+/turf/simulated/floor/airless,
+/area/ecclesiastical_corvette/exterior)
 "rJ" = (
 /obj/structure/machinery/computer/ship/engines/terminal{
 	req_access = list(209);
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "rN" = (
 /obj/structure/table/reinforced/steel,
 /obj/structure/machinery/reagentgrinder{
@@ -1677,20 +2420,32 @@
 	pixel_x = 13;
 	pixel_y = 13
 	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "rV" = (
 /obj/structure/machinery/alarm/south{
 	req_one_access = list(258)
 	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"sb" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/cargo)
 "sd" = (
 /obj/structure/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/outline/operations,
 /mob/living/heavy_vehicle/premade/ripley/loader,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "sh" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -1698,43 +2453,58 @@
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+	pixel_y = 11
+	},
+/obj/structure/sign/flag/ecclesiastical_axiom{
+	pixel_y = 32
 	},
 /obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+	pixel_y = 11
 	},
 /obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+	pixel_y = 11
 	},
 /obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+	pixel_y = 11
 	},
 /obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+	pixel_y = 11
 	},
 /obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+	pixel_y = 11
 	},
 /obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+	pixel_y = 11
 	},
 /obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+	pixel_y = 12
 	},
-/obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+/obj/item/ship_ammunition/nephilim/ap{
+	pixel_y = 3
 	},
-/obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+/obj/item/ship_ammunition/nephilim/ap{
+	pixel_y = 3
 	},
-/obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+/obj/item/ship_ammunition/nephilim/ap{
+	pixel_y = 3
 	},
-/obj/item/ship_ammunition/nephilim{
-	pixel_y = 4
+/obj/item/ship_ammunition/nephilim/ap{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/nephilim/ap{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/nephilim/ap{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/nephilim/ap{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/nephilim/ap{
+	pixel_y = 3
 	},
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "sk" = (
 /obj/effect/floor_decal/industrial/outline/service,
 /obj/structure/machinery/seed_storage/garden/hydroponics,
@@ -1742,12 +2512,24 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
+"ss" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/aft)
 "st" = (
 /obj/structure/machinery/pipedispenser,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "sF" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -1762,7 +2544,7 @@
 	pixel_y = 2
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "sK" = (
 /obj/structure/machinery/power/solar{
 	id = "starboardsadarsolar";
@@ -1774,21 +2556,30 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "sL" = (
 /obj/structure/machinery/computer/ship/navigation/terminal{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/medical,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "sM" = (
 /obj/effect/floor_decal/spline/plain/blue,
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "sW" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -1803,7 +2594,10 @@
 	name = "Gauss & Shotguns"
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
+"ta" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/captain_office)
 "ti" = (
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 4
@@ -1812,13 +2606,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "tn" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 9
 	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "tw" = (
 /obj/structure/machinery/door/firedoor/noid,
 /obj/effect/floor_decal/industrial/hatch_door/engineering{
@@ -1828,13 +2622,20 @@
 	req_access = list(258);
 	name = "Aft Tunnel"
 	},
-/turf/simulated/floor/tiled/dark/full,
-/area/space)
-"tL" = (
-/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/power)
+"tA" = (
+/obj/effect/landmark/entry_point/aft{
+	name = "aft, thrusters"
+	},
+/turf/simulated/floor/airless,
+/area/ecclesiastical_corvette/exterior)
+"tL" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/lattice/catwalk/indoor,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "tM" = (
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 10
@@ -1842,8 +2643,11 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "ua" = (
 /obj/structure/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/industrial/outline/operations,
@@ -1853,8 +2657,11 @@
 /obj/structure/machinery/atmospherics/portables_connector/aux{
 	dir = 8
 	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "uf" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
@@ -1864,7 +2671,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "um" = (
 /obj/structure/machinery/papershredder{
 	pixel_x = 6
@@ -1879,15 +2686,19 @@
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 8
 	},
+/obj/structure/machinery/light/small,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/captain_office)
 "uB" = (
 /obj/structure/lattice/catwalk/indoor,
-/obj/structure/machinery/alarm/north{
-	req_one_access = list(258)
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "uC" = (
 /obj/structure/machinery/door/airlock/service{
 	dir = 1;
@@ -1898,8 +2709,13 @@
 /obj/effect/floor_decal/industrial/hatch_door/engineering{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/captain_quarters)
 "uG" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -1908,8 +2724,14 @@
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "uK" = (
 /obj/structure/bed/stool/bar/padded/red{
 	dir = 8
@@ -1918,11 +2740,36 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "uM" = (
 /obj/structure/machinery/power/smes/buildable/autosolars,
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/power)
+"uP" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/bridge)
+"vb" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/aft)
 "vc" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -1930,13 +2777,19 @@
 /obj/structure/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "vj" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "vm" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -1945,8 +2798,16 @@
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 1
 	},
+/obj/item/reagent_containers/food/drinks/waterbottle{
+	pixel_x = 5;
+	pixel_y = 14
+	},
+/obj/item/reagent_containers/food/drinks/waterbottle{
+	pixel_x = 1;
+	pixel_y = 6
+	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "vr" = (
 /obj/structure/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/industrial/outline/security,
@@ -1958,13 +2819,16 @@
 /obj/structure/machinery/atmospherics/portables_connector/aux{
 	dir = 8
 	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "vv" = (
 /obj/structure/railing/mapped,
 /obj/structure/lattice/catwalk/indoor,
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "vz" = (
 /obj/structure/table/wood,
 /obj/item/versebook/templeist{
@@ -1983,14 +2847,17 @@
 	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/crew_quarters)
 "vC" = (
 /obj/structure/machinery/appliance/cooker/oven,
 /obj/structure/sign/vacuum{
 	pixel_y = 32
 	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "vD" = (
 /obj/structure/machinery/door/firedoor/noid,
 /obj/effect/floor_decal/industrial/hatch_door/engineering{
@@ -2001,8 +2868,13 @@
 	name = "Shuttle Foyer"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "vG" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 10
@@ -2010,40 +2882,75 @@
 /obj/effect/floor_decal/spline/plain/corner/red{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
+"vJ" = (
+/obj/structure/table/reinforced/steel,
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/bridge)
+"vN" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/hydro)
 "vQ" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "vR" = (
 /obj/structure/machinery/ammunition_loader,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "vT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "we" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/machinery/alarm/north{
 	req_one_access = list(258)
 	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-c"
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "wk" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
@@ -2051,8 +2958,12 @@
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 6
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/machinery/disposal/small/west,
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "wo" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -2061,15 +2972,18 @@
 	dir = 5
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "wq" = (
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
 	},
 /obj/structure/machinery/recharge_station,
 /obj/effect/floor_decal/industrial/outline/operations,
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "wu" = (
 /obj/structure/machinery/ship_weapon/nephilim,
 /turf/template_noop,
@@ -2083,20 +2997,55 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
+"wy" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 5
+	},
+/obj/effect/floor_decal/spline/plain/corner/red{
+	dir = 8
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/ecclesiastical_corvette/equipment)
 "wz" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
 "wK" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/machinery/pipedispenser/disposal,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
+"wR" = (
+/obj/effect/floor_decal/industrial/outline/operations,
+/obj/structure/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/equipment)
+"wU" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/infirmary)
 "xc" = (
 /obj/structure/table/reinforced/steel,
 /obj/item/binoculars/high_power{
@@ -2104,14 +3053,17 @@
 	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "xq" = (
 /obj/structure/sign/flag/ecclesiastical_axiom{
 	pixel_y = 32
 	},
 /obj/structure/machinery/photocopier,
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "xs" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -2123,7 +3075,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "xE" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -2133,7 +3085,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "xJ" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -2141,14 +3093,14 @@
 /obj/structure/table/reinforced/steel,
 /obj/item/paper_bin{
 	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = 1
 	},
-/obj/item/pen/fountain/silver{
-	pixel_x = -8;
-	pixel_y = 4
+/obj/item/pen/fountain/black{
+	pixel_x = 1;
+	pixel_y = 5
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "xO" = (
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 1
@@ -2158,7 +3110,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "xU" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -2166,26 +3118,68 @@
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 8
 	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/crew_quarters)
+"ya" = (
+/obj/effect/floor_decal/industrial/hatch_door/red,
+/obj/structure/machinery/door/airlock/external{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/atmospherics)
+"yh" = (
+/obj/structure/table/reinforced/steel,
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/gunnery)
 "yl" = (
+/obj/effect/landmark/entry_point/starboard{
+	name = "starboard, life support"
+	},
 /turf/simulated/wall/shuttle/dark/cardinal/red,
 /turf/simulated/wall/shuttle/dark/cardinal/red,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "yI" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "yK" = (
 /obj/structure/table/reinforced/steel,
 /obj/item/material/hatchet/butch{
-	pixel_x = -2;
+	pixel_x = -3;
 	pixel_y = 5
 	},
+/obj/item/reagent_containers/food/condiment/shaker/spacespice{
+	pixel_x = 7;
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
+"yV" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/obj/effect/landmark/entry_point/fore{
+	name = "fore, bridge"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/bridge)
 "zd" = (
 /obj/effect/floor_decal/industrial/outline/operations,
 /obj/structure/table/rack,
@@ -2214,19 +3208,19 @@
 	pixel_y = 7
 	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "zf" = (
 /obj/structure/machinery/door/blast/regular{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "zg" = (
 /obj/structure/sign/waste_station{
 	pixel_y = -7
 	},
 /turf/simulated/wall/shuttle/dark/cardinal/red,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "zt" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 5
@@ -2234,13 +3228,16 @@
 /obj/effect/floor_decal/spline/plain/corner/red{
 	dir = 8
 	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "zv" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/machinery/shipsensors/weak,
 /turf/simulated/floor/airless,
-/area/space)
+/area/shuttle/ecclesiastical)
 "zy" = (
 /obj/effect/floor_decal/industrial/hatch_door/red,
 /obj/structure/machinery/door/airlock/external{
@@ -2249,12 +3246,26 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "zB" = (
 /obj/structure/bed/stool/chair/office/bridge/generic,
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
+"zC" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux,
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/atmospherics)
+"zE" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/gunnery)
 "zF" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -2265,8 +3276,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "zN" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/segment{
@@ -2275,8 +3289,27 @@
 /obj/structure/machinery/atmospherics/pipe/manifold/hidden/aux{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
+"zO" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/cargo)
 "zV" = (
 /obj/structure/machinery/door/firedoor/noid,
 /obj/effect/floor_decal/industrial/hatch_door/engineering{
@@ -2287,8 +3320,13 @@
 	name = "Kitchen"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "zZ" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -2301,7 +3339,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/shuttle/ecclesiastical)
 "Ad" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -2316,15 +3354,38 @@
 	dir = 4
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "Ae" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/machinery/alarm/south{
-	req_one_access = list(258)
+/obj/structure/machinery/power/apc/south{
+	req_access = list(258)
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/bridge)
+"Ah" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/structure/machinery/suit_cycler/freelancer/prepared,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/equipment)
+"Ai" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/obj/effect/landmark/entry_point/port{
+	name = "port, captain's quarters"
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/captain_office)
 "Aj" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -2339,36 +3400,39 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/shuttle/ecclesiastical)
 "As" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "At" = (
 /obj/structure/bed/stool/bar/padded/red{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "Ay" = (
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/wall/shuttle/dark/cardinal/blue,
-/area/space)
+/area/shuttle/ecclesiastical)
 "AC" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "AG" = (
 /obj/structure/machinery/atmospherics/pipe/simple/hidden{
 	dir = 8
 	},
 /turf/simulated/wall/shuttle/dark/cardinal/blue,
-/area/space)
+/area/shuttle/ecclesiastical)
 "AH" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped{
@@ -2378,38 +3442,64 @@
 	dir = 8
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "AJ" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
 	},
 /obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "AM" = (
 /obj/structure/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/outline/operations,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
+"AP" = (
+/obj/effect/floor_decal/industrial/hatch_door/red{
+	dir = 1
+	},
+/obj/structure/machinery/door/airlock/external{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/cargo)
 "Bc" = (
 /obj/structure/machinery/atmospherics/unary/engine/scc_ship_engine,
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
+"Bd" = (
+/obj/effect/landmark/entry_point/starboard{
+	name = "starboard, kitchen"
+	},
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/kitchen)
 "Be" = (
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "Bh" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "Bi" = (
-/obj/effect/floor_decal/industrial/warning/cee,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/carpet/rubber,
-/area/space)
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline_straight/yellow,
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/dark,
+/area/ecclesiastical_corvette/power)
 "Bm" = (
 /obj/structure/bed/stool/chair/shuttle{
 	dir = 4
@@ -2418,8 +3508,24 @@
 /obj/structure/sign/flag/trinaryperfection{
 	pixel_y = 32
 	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
+"Bu" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/effect/floor_decal/spline/plain/red,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/cargo)
 "By" = (
 /obj/structure/table/reinforced/steel,
 /obj/item/toy/plushie/domadice{
@@ -2430,7 +3536,7 @@
 	pixel_y = -7
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "BY" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -2441,7 +3547,16 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/machinery/portable_atmospherics/canister/empty/air,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
+"Cc" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/atmospherics)
 "Cd" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -2459,23 +3574,31 @@
 	dir = 4
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
+"Ch" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/ecclesiastical_corvette/propulsion)
 "Cj" = (
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 4
 	},
 /obj/structure/bed/stool/chair/office/bridge/generic,
-/obj/structure/noticeboard{
-	pixel_y = 32
+/obj/structure/machinery/alarm/north{
+	req_one_access = list(258)
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "Cm" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "Cn" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/black,
@@ -2486,11 +3609,17 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/captain_quarters)
 "Cr" = (
 /obj/effect/floor_decal/spline/plain/red,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "Ct" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -2503,14 +3632,30 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"Cu" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet/rubber,
+/area/ecclesiastical_corvette/bridge)
 "Cw" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped{
 	dir = 8
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "CB" = (
 /obj/effect/floor_decal/industrial/hatch_door/red{
 	dir = 1
@@ -2520,7 +3665,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "CC" = (
 /obj/effect/floor_decal/industrial/hatch_tiny/yellow,
 /obj/structure/machinery/atmospherics/binary/pump/high_power/on{
@@ -2529,14 +3674,26 @@
 	name = "Scrubbers to Waste"
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "CD" = (
-/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /obj/structure/machinery/alarm/north{
 	req_one_access = list(258)
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "CI" = (
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 8
@@ -2549,22 +3706,38 @@
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "CK" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
 	},
 /obj/structure/machinery/suit_cycler/freelancer/prepared,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "CM" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/sign/emergency/evacuation{
 	pixel_x = 32
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
+"CO" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux,
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/power)
 "CU" = (
 /obj/structure/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -2574,7 +3747,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "CV" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
@@ -2583,14 +3756,57 @@
 /obj/structure/bed/handrail{
 	dir = 4
 	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/shuttle/ecclesiastical)
 "CW" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/structure/machinery/meter,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/lattice/catwalk/indoor,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
+"CX" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/aft)
+"Dk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/power/apc/north{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/aft)
 "Dt" = (
 /obj/structure/bed/padded,
 /obj/structure/bed/padded/bunk,
@@ -2599,7 +3815,7 @@
 	pixel_y = 16
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/crew_quarters)
 "Dw" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
@@ -2608,25 +3824,45 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
+"DA" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 9
+	},
+/obj/effect/floor_decal/spline/plain/corner/red,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/ecclesiastical_corvette/equipment)
 "DL" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
 	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
+"DR" = (
+/obj/effect/floor_decal/industrial/hatch_door/red,
+/obj/structure/machinery/door/airlock/external{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/cargo)
 "DT" = (
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain/corner/red,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "DU" = (
 /obj/structure/lattice/catwalk/indoor,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "Ei" = (
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 6
@@ -2637,25 +3873,31 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/shuttle/ecclesiastical)
 "El" = (
 /obj/effect/floor_decal/industrial/outline/service,
 /obj/structure/machinery/media/jukebox{
 	anchored = 1
 	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "Eq" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 9
 	},
 /obj/effect/floor_decal/spline/plain/corner/red,
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "Er" = (
 /obj/structure/table/reinforced/steel,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "Et" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -2669,8 +3911,11 @@
 	pixel_x = 36;
 	pixel_y = -8
 	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "Eu" = (
 /obj/effect/floor_decal/industrial/outline/medical,
 /obj/structure/machinery/iv_drip,
@@ -2678,28 +3923,47 @@
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "Ev" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
 	},
 /obj/structure/table/reinforced/steel,
+/obj/item/radio/intercom/expedition/hailing/north{
+	pixel_x = 6;
+	pixel_y = -7
+	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "Ex" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
+"EA" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/cargo)
 "EC" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/machinery/atmospherics/pipe/manifold/hidden/blue,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "ED" = (
 /obj/structure/machinery/atmospherics/pipe/simple/hidden{
 	dir = 8
@@ -2714,24 +3978,62 @@
 	name = "Cryogenics Systems"
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "EE" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "ET" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped{
 	dir = 8
 	},
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "EX" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/structure/machinery/atmospherics/pipe/manifold4w/hidden,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
+"Ff" = (
+/obj/effect/floor_decal/industrial/outline/medical,
+/obj/structure/bed/roller,
+/obj/structure/machinery/computer/guestpass{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/infirmary)
+"Fh" = (
+/obj/effect/landmark/entry_point/starboard{
+	name = "starboard, propellant tank"
+	},
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/propulsion)
+"Ft" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/cargo)
+"Fv" = (
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/lightblue,
+/area/ecclesiastical_corvette/captain_quarters)
 "Fz" = (
 /obj/effect/floor_decal/industrial/outline/service,
 /obj/structure/table/rack,
@@ -2747,11 +4049,11 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
 "FE" = (
 /obj/structure/lattice/catwalk/indoor,
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "FJ" = (
 /obj/effect/floor_decal/industrial/hatch_door/red{
 	dir = 1
@@ -2760,16 +4062,22 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
+"FS" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/aft)
+"FT" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/captain_quarters)
 "Ga" = (
 /obj/structure/machinery/door/blast/regular,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "Gf" = (
 /obj/structure/machinery/r_n_d/material_silo,
 /obj/effect/floor_decal/industrial/outline/medical,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "Gh" = (
 /obj/structure/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -2779,8 +4087,11 @@
 /obj/structure/machinery/atmospherics/portables_connector/aux{
 	dir = 4
 	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "Gi" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
@@ -2794,8 +4105,17 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "Gk" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -2805,17 +4125,26 @@
 	},
 /obj/structure/machinery/meter,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "Gs" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/sign/emergency/evacuation{
 	pixel_x = 32;
 	pixel_y = -1;
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "Gt" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -2840,8 +4169,29 @@
 /obj/item/ship_ammunition/grauwolf_bundle/ap{
 	pixel_y = 3
 	},
+/obj/item/ship_ammunition/grauwolf_bundle/ap{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/grauwolf_bundle/ap{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/grauwolf_bundle/ap{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/grauwolf_bundle/ap{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/grauwolf_bundle/ap{
+	pixel_y = 3
+	},
+/obj/item/ship_ammunition/grauwolf_bundle/ap{
+	pixel_y = 3
+	},
+/obj/structure/machinery/alarm/north{
+	req_one_access = list(258)
+	},
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "Gy" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/segment{
@@ -2851,22 +4201,27 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "GB" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "GH" = (
 /obj/structure/machinery/vending/tool{
 	random_itemcount = 0;
@@ -2877,7 +4232,13 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/power)
+"GJ" = (
+/obj/effect/landmark/entry_point/port{
+	name = "port, washroom"
+	},
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/washroom)
 "GK" = (
 /obj/structure/machinery/door/firedoor/noid,
 /obj/effect/floor_decal/industrial/hatch_door/red{
@@ -2888,7 +4249,7 @@
 	req_access = list(258)
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "GY" = (
 /obj/effect/floor_decal/industrial/hatch_door/red{
 	dir = 1
@@ -2899,7 +4260,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "Hd" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -2926,19 +4287,31 @@
 	pixel_x = 1;
 	pixel_y = 24
 	},
+/obj/structure/machinery/light/floor{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "Hh" = (
 /turf/simulated/wall/shuttle/dark/cardinal/blue,
-/area/space)
+/area/shuttle/ecclesiastical)
 "Hp" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/junction{
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "Hs" = (
 /obj/structure/machinery/door/firedoor/noid,
 /obj/effect/floor_decal/industrial/hatch_door/engineering{
@@ -2948,26 +4321,31 @@
 	req_access = list(258);
 	name = "Control Room"
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "Hu" = (
 /obj/structure/machinery/computer/ship/navigation/terminal,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "Hy" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
 	},
 /obj/structure/machinery/suit_cycler/freelancer/prepared,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "Hz" = (
 /obj/structure/table/reinforced/steel,
 /obj/item/trash/waffles{
 	pixel_y = 9
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "HA" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -2988,13 +4366,18 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/shuttle/ecclesiastical)
 "HC" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "HJ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -3003,14 +4386,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "HN" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "HP" = (
 /obj/structure/bed/stool/chair/shuttle{
 	dir = 4
@@ -3020,27 +4403,81 @@
 	req_one_access = list(258)
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
+"HT" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/obj/effect/landmark/entry_point/port{
+	name = "port, infirmary"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/infirmary)
 "Ic" = (
 /obj/structure/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/turf/simulated/floor/plating,
-/area/space)
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ecclesiastical_corvette/hydro)
 "Ie" = (
 /obj/structure/morgue{
 	dir = 2
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"Im" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/equipment)
+"In" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/aft)
 "Io" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 8
 	},
 /obj/structure/bed/stool/chair/office/bridge/pilot,
+/obj/structure/machinery/light/floor{
+	dir = 8
+	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "Iq" = (
 /obj/structure/sign/flag/ecclesiastical_axiom{
 	pixel_y = 32
@@ -3051,7 +4488,18 @@
 	},
 /obj/effect/floor_decal/spline/plain/red,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/captain_office)
+"Iv" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/structure/machinery/disposal,
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/propulsion)
 "Iz" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -3066,13 +4514,20 @@
 	req_one_access = list(258);
 	name = "Sidearms"
 	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
+"II" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/ecclesiastical_corvette/cargo)
 "IO" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
@@ -3082,20 +4537,23 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "IQ" = (
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "Jc" = (
-/obj/structure/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
+/obj/structure/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
 	},
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "Jh" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -3110,17 +4568,7 @@
 	pixel_x = 6
 	},
 /turf/simulated/floor/marble,
-/area/space)
-"Jn" = (
-/obj/structure/lattice/catwalk/indoor,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/railing/mapped,
-/turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "Js" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped,
@@ -3128,7 +4576,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "Jv" = (
 /obj/structure/sign/flag/trinaryperfection{
 	pixel_y = 32
@@ -3146,15 +4594,18 @@
 	pixel_x = 6;
 	pixel_y = 4
 	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "Jw" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
 	},
 /obj/effect/floor_decal/spline/plain/red,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "JD" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -3166,7 +4617,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "JH" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -3175,14 +4626,25 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
+"JS" = (
+/obj/structure/machinery/power/solar_control/autostart,
+/obj/structure/cable/green,
+/obj/structure/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ecclesiastical_corvette/atmospherics)
 "JV" = (
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 8
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "JW" = (
 /obj/effect/floor_decal/industrial/outline/service,
 /obj/structure/machinery/atmospherics/unary/freezer{
@@ -3190,20 +4652,36 @@
 	icon_state = "freezer"
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
 "JY" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
 	},
+/obj/structure/machinery/hologram/holopad,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "Kh" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"Ki" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/bridge)
 "Km" = (
 /obj/structure/machinery/computer/ship/engines/terminal{
 	req_access = list(209)
@@ -3213,7 +4691,14 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
+"Kn" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/effect/landmark/entry_point/fore{
+	name = "fore, gunnery"
+	},
+/turf/space,
+/area/ecclesiastical_corvette/exterior)
 "Kr" = (
 /obj/structure/bed/stool/chair/shuttle{
 	dir = 8
@@ -3224,27 +4709,36 @@
 	req_access = list(258);
 	pixel_x = -5
 	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
+"Kv" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/power)
 "KE" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "KT" = (
 /obj/effect/floor_decal/industrial/outline/operations,
 /obj/structure/closet/crate/loot,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "KV" = (
 /obj/structure/machinery/atmospherics/binary/passive_gate/on{
 	dir = 4;
@@ -3253,7 +4747,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch_tiny/yellow,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "KZ" = (
 /obj/structure/bed/stool/chair/office/dark{
 	dir = 4
@@ -3261,15 +4755,28 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/lino/diamond,
-/area/space)
+/area/ecclesiastical_corvette/captain_office)
 "La" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped{
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
+"Ll" = (
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/lightblue,
+/area/ecclesiastical_corvette/captain_quarters)
 "Ln" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
@@ -3278,25 +4785,28 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "Lv" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 6
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "LI" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/railing/mapped,
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "LO" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -3314,8 +4824,14 @@
 /obj/item/suit_cooling_unit,
 /obj/item/suit_cooling_unit,
 /obj/item/suit_cooling_unit,
+/obj/structure/machinery/power/apc/south{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "LP" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -3324,20 +4840,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline_straight/yellow,
+/obj/structure/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark,
-/area/space)
-"LS" = (
-/obj/structure/lattice/catwalk/indoor,
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/railing/mapped{
-	dir = 1
-	},
-/turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "LT" = (
 /obj/structure/machinery/door/firedoor/noid{
 	dir = 8
@@ -3348,7 +4853,22 @@
 	name = "Washroom & Chargeroom";
 	req_access = list(258)
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/kitchen)
+"LW" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
+/turf/template_noop,
 /area/space)
 "LY" = (
 /obj/effect/floor_decal/corner/yellow{
@@ -3362,22 +4882,20 @@
 	pixel_y = 4;
 	pixel_x = 5
 	},
-/obj/item/pen/fountain/silver{
-	pixel_x = 6;
-	pixel_y = 4
+/obj/item/pen/fountain/black{
+	pixel_x = 4;
+	pixel_y = 5
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "Mc" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "Md" = (
-/obj/structure/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
-	},
 /obj/structure/machinery/meter,
 /obj/structure/sink/kitchen{
 	dir = 4;
@@ -3387,8 +4905,14 @@
 /obj/structure/machinery/alarm/west{
 	req_one_access = list(258)
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
 "Mq" = (
 /obj/structure/morgue/crematorium{
 	_wifi_id = "ecclesiastical_crema"
@@ -3403,33 +4927,27 @@
 /obj/structure/sign/flag/trinaryperfection{
 	pixel_y = 32
 	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "MA" = (
 /obj/structure/table/rack,
 /obj/item/clothing/gloves/janitor,
 /obj/effect/floor_decal/industrial/outline/custodial,
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "MB" = (
 /obj/structure/bed/stool/chair/shuttle{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/operations,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
-"MD" = (
-/obj/structure/lattice/catwalk/indoor,
-/obj/structure/cable/green{
-	icon_state = "2-8";
-	d1 = 2;
-	d2 = 8
-	},
-/obj/structure/railing/mapped{
-	dir = 1
-	},
-/turf/simulated/floor/airless,
-/area/space)
+/area/shuttle/ecclesiastical)
 "ME" = (
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 4
@@ -3442,14 +4960,23 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "ML" = (
 /obj/structure/curtain/open/shower,
 /obj/structure/machinery/shower{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/ecclesiastical_corvette/washroom)
+"MS" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/captain_quarters)
 "Na" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
@@ -3459,7 +4986,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "Nc" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -3470,7 +4997,24 @@
 	},
 /obj/effect/floor_decal/industrial/hatch_tiny/yellow,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
+"Nd" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/atmospherics)
+"Ne" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/alarm/north{
+	req_one_access = list(258)
+	},
+/turf/simulated/floor,
+/area/ecclesiastical_corvette/propulsion)
 "Ni" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -3488,42 +5032,45 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/shuttle/ecclesiastical)
 "Nk" = (
 /obj/structure/table/wood/walnut,
 /obj/item/nullrod/clockworkstave{
 	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "Nl" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/operations,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "Nm" = (
 /obj/structure/machinery/atmospherics/unary/cryo_cell,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/machinery/atmospherics/portables_connector,
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
-"Nq" = (
+/area/ecclesiastical_corvette/infirmary)
+"Nn" = (
 /obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/airless,
-/area/space)
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/atmospherics)
 "NQ" = (
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "NV" = (
 /obj/structure/table/reinforced/steel,
-/obj/structure/machinery/alarm/west{
-	req_one_access = list(258)
-	},
 /obj/item/storage/box/kitchen{
 	pixel_x = 3;
 	pixel_y = 13
@@ -3536,8 +5083,14 @@
 	pixel_x = 7;
 	pixel_y = -2
 	},
+/obj/structure/machinery/power/apc/west{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "NW" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -3551,10 +5104,15 @@
 /obj/item/clothing/accessory/storage/pouches/black,
 /obj/item/clothing/accessory/storage/pouches/black,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "Ob" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet/lightblue,
-/area/space)
+/area/ecclesiastical_corvette/captain_quarters)
 "Oh" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/industrial/outline/service,
@@ -3562,14 +5120,26 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
+"Oi" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/obj/effect/landmark/entry_point/port{
+	name = "port, hydroponics"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/hydro)
 "OB" = (
 /obj/structure/sign/fire{
 	desc = "A danger sign which reads 'DANGER: EXPLOSIVE ORDINANCE' and 'THIS ROOM CONTAINS ORDINANCE THAT WILL KILL YOU INSTANTLY'.";
 	name = "\improper DANGER: EXPLOSIVE ORDINANCE sign"
 	},
 /turf/simulated/wall/shuttle/dark/cardinal/red,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "OE" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped,
@@ -3577,26 +5147,77 @@
 	dir = 4
 	},
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
+"OP" = (
+/obj/effect/floor_decal/industrial/hatch_door/red,
+/obj/structure/machinery/door/airlock/external{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/cargo)
 "OU" = (
 /obj/effect/floor_decal/corner/yellow/full,
 /obj/effect/floor_decal/spline/plain/corner/blue{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"OX" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 6
+	},
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/crew_quarters)
+"Pa" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/light/small,
+/obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/lino/diamond,
+/area/ecclesiastical_corvette/captain_office)
+"Pc" = (
+/turf/simulated/floor,
+/area/ecclesiastical_corvette/cargo)
+"Pd" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/power)
 "Pg" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	icon_state = "2-8";
-	d1 = 2;
-	d2 = 8
+	icon_state = "2-8"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "Pj" = (
 /obj/structure/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -3604,19 +5225,19 @@
 /obj/effect/floor_decal/industrial/outline/operations,
 /obj/structure/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "Pk" = (
 /obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/blue,
 /obj/structure/machinery/meter,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "Pm" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "Pn" = (
 /obj/structure/machinery/bodyscanner{
 	dir = 8
@@ -3640,15 +5261,18 @@
 	pixel_y = 11;
 	dir = 1
 	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "Py" = (
 /obj/structure/sign/emergency/evacuation{
 	pixel_y = -3;
 	dir = 1
 	},
 /turf/simulated/wall/shuttle/dark/cardinal/red,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "Pz" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/machinery/atmospherics/binary/pump/high_power{
@@ -3657,26 +5281,26 @@
 	},
 /obj/effect/floor_decal/industrial/hatch_tiny/yellow,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "PL" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
 /obj/structure/disposalpipe/junction{
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
-/turf/simulated/floor/carpet/rubber,
-/area/space)
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/lattice/catwalk/indoor,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/infirmary)
 "PM" = (
 /obj/structure/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/machinery/meter,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "PS" = (
 /obj/structure/machinery/computer/ship/sensors/terminal{
 	dir = 4;
@@ -3684,19 +5308,33 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
+"Qb" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/cargo)
 "Qg" = (
 /obj/effect/floor_decal/industrial/outline/operations,
 /obj/structure/cargo_receptacle{
 	desc = "An Orion Express automated cargo acceptance device. This one appears to be configured to receive cargo packages intended for the ship it's on.";
 	name = "ship cargo delivery point"
 	},
+/obj/structure/machinery/light,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "Qi" = (
 /obj/effect/map_effect/window_spawner/full/borosilicate/reinforced,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "Qn" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -3710,7 +5348,41 @@
 	req_one_access = list(258)
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
+"Qr" = (
+/obj/structure/machinery/portable_atmospherics/canister/air/airlock,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/machinery/atmospherics/portables_connector/aux{
+	dir = 1
+	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/power)
+"Qu" = (
+/obj/structure/machinery/cryopod{
+	dir = 2
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/infirmary)
+"Qv" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/atmospherics)
 "Qx" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/machinery/alarm/west{
@@ -3720,7 +5392,17 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/power)
+"Qz" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/equipment)
 "QC" = (
 /obj/effect/floor_decal/corner/yellow/full,
 /obj/effect/floor_decal/spline/plain/corner/red{
@@ -3729,28 +5411,33 @@
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 10
 	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "QL" = (
 /obj/structure/lattice,
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "QS" = (
 /obj/structure/machinery/fabricator/autolathe,
 /obj/effect/floor_decal/industrial/outline/medical,
-/turf/simulated/floor/tiled/dark/full,
-/area/space)
-"QU" = (
-/obj/structure/machinery/portable_atmospherics/hydroponics,
-/obj/effect/floor_decal/industrial/outline/service,
-/obj/structure/machinery/atmospherics/portables_connector{
-	dir = 8
+/obj/structure/machinery/light{
+	dir = 4
 	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/infirmary)
+"QU" = (
 /obj/structure/sign/flag/ecclesiastical_axiom{
 	pixel_y = 32
 	},
-/turf/simulated/floor/tiled/dark/full,
-/area/space)
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ecclesiastical_corvette/hydro)
 "QV" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/sink{
@@ -3760,19 +5447,43 @@
 /obj/structure/machinery/alarm/east{
 	req_one_access = list(258)
 	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/ecclesiastical_corvette/washroom)
+"Rl" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/obj/effect/landmark/entry_point/starboard{
+	name = "starboard, armoury"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/equipment)
 "Rp" = (
 /obj/structure/machinery/atmospherics/unary/engine{
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/shuttle/ecclesiastical)
 "Rq" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/machinery/disposal/small/west,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "Rw" = (
 /obj/structure/sign/flag/trinaryperfection{
 	pixel_y = 32
@@ -3789,8 +5500,14 @@
 /obj/effect/floor_decal/spline/plain/corner/red{
 	dir = 8
 	},
+/obj/structure/machinery/power/apc/east{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/captain_office)
 "RE" = (
 /obj/structure/table/wood,
 /obj/effect/floor_decal/corner/yellow{
@@ -3803,25 +5520,32 @@
 	pixel_y = 10;
 	pixel_x = 3
 	},
-/obj/item/pen/fountain/silver{
-	pixel_x = 2;
+/obj/item/pen/fountain/captain{
+	pixel_x = 3;
 	pixel_y = 10
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/captain_office)
 "RF" = (
-/obj/effect/floor_decal/industrial/warning/cee{
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/rubber,
-/area/space)
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/lattice/catwalk/indoor,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/infirmary)
 "RK" = (
 /obj/effect/floor_decal/industrial/hatch_door/red,
 /obj/structure/machinery/door/airlock/external{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "RQ" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -3830,7 +5554,19 @@
 	dir = 9
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
+"RW" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 6
+	},
+/obj/effect/floor_decal/spline/plain/corner/red{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/ecclesiastical_corvette/equipment)
 "Se" = (
 /obj/structure/machinery/door/firedoor/noid,
 /obj/effect/floor_decal/industrial/hatch_door/engineering{
@@ -3841,13 +5577,24 @@
 	name = "Atmospherics"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "Sk" = (
-/obj/structure/lattice/catwalk/indoor,
-/obj/structure/distillery,
-/turf/simulated/floor,
-/area/space)
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/propulsion)
+"So" = (
+/obj/effect/map_effect/window_spawner/full/borosilicate/reinforced,
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/atmospherics)
 "SM" = (
 /obj/item/storage/box/bodybags{
 	pixel_y = 12;
@@ -3859,7 +5606,7 @@
 	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "SU" = (
 /obj/structure/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8
@@ -3869,7 +5616,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/shuttle/ecclesiastical)
 "Tc" = (
 /obj/structure/table/reinforced/steel,
 /obj/item/storage/firstaid/surgery{
@@ -3887,7 +5634,7 @@
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "Tf" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -3900,32 +5647,81 @@
 	dir = 4
 	},
 /obj/structure/machinery/hologram/holopad/long_range,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
+"Tj" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/machinery/light/small,
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/aft)
 "Tm" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "Ts" = (
 /obj/structure/table/reinforced/steel,
 /obj/item/lore_radio{
 	pixel_y = 9
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
+"Tu" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/aft)
+"TC" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/cargo)
 "TD" = (
 /obj/structure/machinery/sleeper{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "TM" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/machinery/recharge_station,
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
-/area/space)
+/area/ecclesiastical_corvette/washroom)
 "TN" = (
 /obj/structure/table/reinforced/steel,
 /obj/item/reagent_containers/food/drinks/bottle/gin{
@@ -3944,18 +5740,44 @@
 	pixel_x = -3;
 	pixel_y = -7
 	},
+/obj/item/reagent_containers/food/condiment/shaker/peppermill{
+	pixel_x = 10;
+	pixel_y = -5
+	},
+/obj/item/reagent_containers/food/condiment/shaker/salt{
+	pixel_x = 10;
+	pixel_y = -9
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/kitchen)
 "TW" = (
-/obj/structure/lattice/catwalk/indoor/grate/gridded,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "Uc" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux,
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "Ud" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
@@ -3967,7 +5789,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "Uf" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -3987,7 +5809,23 @@
 	pixel_x = -1
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"Uo" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/atmospherics)
+"Up" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/captain_office)
 "Us" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/sign/directions/prop{
@@ -4003,11 +5841,27 @@
 	pixel_x = 1;
 	pixel_y = 24
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/power)
+"Uu" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/hydro)
 "UA" = (
 /turf/simulated/wall/shuttle/dark/cardinal/red,
 /area/space)
+"UE" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/lattice/catwalk/indoor,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/infirmary)
 "UH" = (
 /obj/structure/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -4017,7 +5871,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/shuttle/ecclesiastical)
 "UK" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -4062,7 +5916,7 @@
 	},
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "UM" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -4070,18 +5924,30 @@
 /obj/structure/bed/stool/bar/padded/red{
 	dir = 8
 	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "UO" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/sign/flag/ecclesiastical_axiom{
 	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
 "UQ" = (
 /obj/structure/machinery/computer/ship/helm/terminal{
 	dir = 1;
@@ -4089,7 +5955,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "UR" = (
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/effect/floor_decal/industrial/hatch_door/red{
@@ -4099,55 +5965,63 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
+"UY" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/atmospherics)
 "Vc" = (
-/obj/effect/floor_decal/industrial/warning{
+/obj/structure/disposalpipe/segment,
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/machinery/light/small{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/warning{
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/aft)
+"Vf" = (
+/obj/effect/map_effect/map_helper/ruler_tiles_3{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/carpet/rubber,
+/turf/template_noop,
 /area/space)
-"Vf" = (
-/obj/effect/floor_decal/industrial/warning/cee{
-	dir = 8
-	},
-/turf/simulated/floor/carpet/rubber,
-/area/space)
+"Vi" = (
+/obj/structure/lattice/catwalk/indoor,
+/turf/simulated/floor/airless,
+/area/shuttle/ecclesiastical)
 "Vk" = (
 /obj/structure/lattice/catwalk/indoor,
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "Vt" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "Vz" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped{
 	dir = 4
 	},
 /turf/space,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "VC" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/machinery/power/emitter{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/aft)
 "VL" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -4158,8 +6032,11 @@
 	name = "Distro to Trays"
 	},
 /obj/effect/floor_decal/industrial/hatch_tiny/yellow,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/hydro)
 "VN" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -4191,12 +6068,22 @@
 /obj/item/storage/belt/security/full/alt,
 /obj/item/storage/belt/security/full/alt,
 /obj/item/storage/belt/security/full/alt,
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "VO" = (
 /obj/structure/machinery/power/solar_control/autostart,
+/obj/structure/cable/green,
+/obj/structure/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "VQ" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#6176a1";
@@ -4205,7 +6092,7 @@
 	spawn_grille = 1
 	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "VS" = (
 /obj/structure/sign/flag/ecclesiastical_axiom{
 	pixel_y = 32
@@ -4217,20 +6104,23 @@
 /obj/structure/closet/crate/medical,
 /obj/effect/floor_decal/industrial/outline/medical,
 /obj/item/portable_whiteboard,
+/obj/item/storage/firstaid/large/adv,
+/obj/item/storage/firstaid/combat,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "Wc" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/lino/diamond,
-/area/space)
+/area/ecclesiastical_corvette/crew_quarters)
 "Wd" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/cable/green{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -4239,21 +6129,43 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "Wh" = (
 /obj/structure/disposalpipe/junction{
 	dir = 1
 	},
-/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/gunnery)
+"Wi" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/cargo)
 "Wp" = (
 /obj/effect/floor_decal/industrial/hatch_door/red,
 /obj/structure/machinery/door/airlock/external{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "Wq" = (
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 8
@@ -4262,8 +6174,39 @@
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 9
 	},
+/obj/structure/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
+"Wx" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/kitchen)
+"WN" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/lino/diamond,
+/area/ecclesiastical_corvette/crew_quarters)
+"WS" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 10
+	},
+/obj/effect/floor_decal/spline/plain/blue{
+	dir = 1
+	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/gridded,
+/area/ecclesiastical_corvette/cargo)
 "WT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -4273,7 +6216,10 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
+"Xb" = (
+/turf/simulated/floor/airless,
+/area/ecclesiastical_corvette/exterior)
 "Xg" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/railing/mapped{
@@ -4283,7 +6229,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
 "Xi" = (
 /obj/structure/machinery/atmospherics/binary/pump/high_power{
 	dir = 4;
@@ -4291,21 +6237,89 @@
 	},
 /obj/effect/floor_decal/industrial/hatch_tiny/yellow,
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/atmospherics)
 "Xj" = (
 /obj/structure/machinery/shipsensors/strong/relay,
 /turf/simulated/floor/airless,
-/area/space)
+/area/ecclesiastical_corvette/exterior)
+"Xk" = (
+/obj/effect/floor_decal/spline/plain/red,
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 1
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/ecclesiastical_corvette/equipment)
+"Xl" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/obj/effect/landmark/entry_point/port{
+	name = "port, armoury"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/equipment)
 "Xm" = (
 /obj/structure/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/bridge)
 "Xo" = (
 /obj/effect/floor_decal/industrial/outline/medical,
 /obj/structure/bed/roller,
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
+"Xt" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/marble,
+/area/ecclesiastical_corvette/infirmary)
+"Xv" = (
+/obj/structure/machinery/shieldwallgen,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/aft)
+"Xz" = (
+/obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/aux,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/power)
+"XF" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/rubber,
+/area/ecclesiastical_corvette/bridge)
+"XN" = (
+/obj/effect/floor_decal/spline/plain/red,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/marble,
+/area/ecclesiastical_corvette/infirmary)
 "XP" = (
 /obj/structure/table/wood,
 /obj/effect/floor_decal/spline/plain/corner/blue{
@@ -4315,7 +6329,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/ecclesiastical_corvette/captain_quarters)
 "Ye" = (
 /obj/effect/floor_decal/industrial/outline/operations,
 /obj/structure/table/rack,
@@ -4329,31 +6343,48 @@
 /obj/item/ladder_mobile{
 	pixel_y = 12
 	},
+/obj/structure/machinery/light,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"Yg" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline_straight/yellow,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ecclesiastical_corvette/power)
+"Yj" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/equipment)
 "Yo" = (
 /obj/structure/lattice/catwalk/indoor,
 /obj/structure/sign/emergency/evacuation{
 	pixel_x = -32
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "Yu" = (
 /obj/structure/machinery/vending/engivend{
 	req_access = list(258)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "YC" = (
-/obj/effect/map_effect/window_spawner/full/shuttle{
-	color = "#c24f4f";
-	frame_color = "#6d6133";
-	spawn_firedoor = 1;
-	spawn_grille = 1
-	},
-/obj/structure/machinery/iff_beacon/name_change,
-/turf/simulated/floor/tiled/dark/full,
+/obj/effect/map_effect/map_helper/ruler_tiles_3,
+/turf/template_noop,
 /area/space)
 "YD" = (
 /obj/effect/floor_decal/corner/blue{
@@ -4368,14 +6399,14 @@
 	pixel_x = 20
 	},
 /turf/simulated/floor/marble,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 "YI" = (
 /obj/structure/machinery/power/smes/buildable/horizon_shuttle{
 	RCon_tag = null
 	},
 /obj/effect/floor_decal/industrial/outline/operations,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "YK" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -4385,13 +6416,31 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
+"YP" = (
+/turf/simulated/wall/shuttle/dark/cardinal/red,
+/area/ecclesiastical_corvette/crew_quarters)
+"YT" = (
+/obj/effect/map_effect/window_spawner/full/shuttle{
+	color = "#c24f4f";
+	frame_color = "#6d6133";
+	spawn_firedoor = 1;
+	spawn_grille = 1
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/gunnery)
 "YV" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/reinforced,
-/area/space)
+/area/ecclesiastical_corvette/power)
 "YW" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 8
@@ -4400,7 +6449,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/rubber,
-/area/space)
+/area/ecclesiastical_corvette/equipment)
 "Zi" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -4409,20 +6458,30 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
 "Zq" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/carpet/rubber,
-/area/space)
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/lattice/catwalk/indoor,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/infirmary)
 "Zt" = (
+/obj/structure/machinery/power/apc/south{
+	req_access = list(258)
+	},
+/obj/structure/cable/green,
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/cargo)
 "Zy" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4431,21 +6490,31 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/space)
+/area/ecclesiastical_corvette/propulsion)
+"ZJ" = (
+/obj/effect/floor_decal/industrial/hatch_door/red,
+/obj/structure/machinery/door/airlock/external{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark/full,
+/area/ecclesiastical_corvette/power)
 "ZN" = (
 /obj/structure/machinery/computer/ship/sensors/terminal{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/security,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/shuttle/ecclesiastical)
 "ZX" = (
 /obj/structure/cart/storage/janitorialcart{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/custodial,
 /turf/simulated/floor/tiled/dark/full,
-/area/space)
+/area/ecclesiastical_corvette/infirmary)
 
 (1,1,1) = {"
 bK
@@ -20482,6 +22551,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -20502,8 +22572,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -21253,6 +23322,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -21273,8 +23343,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -22024,6 +24093,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -22044,8 +24114,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -22795,6 +24864,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -22815,8 +24885,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -23566,6 +25635,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -23586,8 +25656,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -24337,6 +26406,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -24357,8 +26427,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -25108,6 +27177,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -25128,8 +27198,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -25879,6 +27948,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -25899,8 +27969,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -26650,6 +28719,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -26670,6 +28740,13 @@ bK
 bK
 bK
 bK
+YC
+bK
+bK
+bK
+bK
+bK
+LW
 bK
 bK
 bK
@@ -26690,15 +28767,7 @@ bK
 bK
 bK
 bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
+LW
 bK
 bK
 bK
@@ -26902,7 +28971,7 @@ bK
 bK
 bK
 bK
-bK
+LW
 bK
 bK
 bK
@@ -27421,6 +29490,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -27441,8 +29511,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -27937,24 +30006,24 @@ bK
 bK
 bK
 bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
 bK
 bK
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
+Vf
 bK
 bK
 bK
@@ -28169,73 +30238,73 @@ bK
 bK
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
 bK
 bK
+gX
+FE
+FE
+gX
 bK
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
+Vf
 bK
 bK
 bK
@@ -28349,520 +30418,6 @@ bK
 bK
 "}
 (94,1,1) = {"
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-"}
-(95,1,1) = {"
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-gX
-FE
-FE
-gX
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-"}
-(96,1,1) = {"
 bK
 bK
 bK
@@ -29119,6 +30674,520 @@ bK
 bK
 bK
 "}
+(95,1,1) = {"
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+YC
+bK
+Na
+sK
+fB
+sK
+LI
+bK
+YC
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+"}
+(96,1,1) = {"
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+IO
+sK
+sK
+sK
+ol
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+"}
 (97,1,1) = {"
 bK
 bK
@@ -29228,11 +31297,11 @@ bK
 bK
 bK
 bK
-Na
+IO
 sK
 sK
 sK
-LI
+ol
 bK
 bK
 bK
@@ -29483,7 +31552,7 @@ bK
 bK
 bK
 bK
-bK
+YC
 bK
 IO
 sK
@@ -29491,7 +31560,7 @@ sK
 sK
 ol
 bK
-bK
+YC
 bK
 bK
 bK
@@ -30254,7 +32323,7 @@ bK
 bK
 bK
 bK
-bK
+YC
 bK
 IO
 sK
@@ -30262,7 +32331,7 @@ sK
 sK
 ol
 bK
-bK
+YC
 bK
 bK
 bK
@@ -30512,13 +32581,13 @@ bK
 bK
 bK
 bK
-bK
+gX
 IO
 sK
 sK
 sK
 ol
-bK
+gX
 bK
 bK
 bK
@@ -30769,13 +32838,13 @@ bK
 bK
 bK
 bK
-bK
-IO
+FE
+aH
 sK
 sK
 sK
-ol
-bK
+Vt
+FE
 bK
 bK
 bK
@@ -31026,13 +33095,13 @@ bK
 bK
 bK
 bK
-gX
-IO
+FE
+aH
 sK
 sK
 sK
-ol
-gX
+Vt
+FE
 bK
 bK
 bK
@@ -31283,13 +33352,13 @@ bK
 bK
 bK
 bK
-FE
-db
+gX
+IO
 sK
 sK
 sK
-Vt
-FE
+ol
+gX
 bK
 bK
 bK
@@ -31539,15 +33608,15 @@ bK
 bK
 bK
 bK
+YC
 bK
-FE
-db
+IO
 sK
 sK
 sK
-Vt
-FE
+ol
 bK
+YC
 bK
 bK
 bK
@@ -31797,13 +33866,13 @@ bK
 bK
 bK
 bK
-gX
+bK
 IO
 sK
 sK
 sK
 ol
-gX
+bK
 bK
 bK
 bK
@@ -32310,15 +34379,15 @@ bK
 bK
 bK
 bK
+YC
 bK
-bK
-MD
+uf
 hZ
 GB
-Nq
+hZ
 qN
 bK
-bK
+YC
 bK
 bK
 bK
@@ -33081,7 +35150,7 @@ bK
 bK
 bK
 bK
-bK
+YC
 bK
 aN
 gX
@@ -33089,7 +35158,7 @@ Ex
 gX
 Vk
 OE
-bK
+YC
 bK
 bK
 bK
@@ -33340,11 +35409,11 @@ bK
 bK
 bK
 bK
-UA
-UA
+kq
+kq
 Wp
-UA
-UA
+kq
+kq
 bK
 bK
 bK
@@ -33566,73 +35635,73 @@ bK
 bK
 bK
 bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
 bK
 bK
 bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-UA
-jC
+kq
+zC
 iU
-dZ
-UA
+Uo
+kq
 bK
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
+Vf
 bK
 bK
 bK
@@ -33854,11 +35923,11 @@ bK
 bK
 bK
 bK
-UA
-jC
+kq
+iB
 nl
-dZ
-UA
+Uo
+kq
 Vk
 Vk
 Vk
@@ -34106,24 +36175,24 @@ bK
 bK
 bK
 bK
-UA
+kq
 Ga
 Ga
 yl
-UA
-UA
-UA
-zy
-UA
-UA
-UA
-nQ
+kq
+kq
+kq
+ya
+kq
+kq
+zE
+YT
 mn
-nQ
-UA
-UA
-UA
-UA
+ny
+zE
+zE
+Vk
+Vk
 bK
 bK
 bK
@@ -34348,6 +36417,7 @@ bK
 bK
 bK
 bK
+LW
 bK
 bK
 bK
@@ -34362,25 +36432,24 @@ bK
 bK
 bK
 bK
-bK
-UA
+kq
 az
 az
-UA
+kq
 bR
 cU
 mq
-As
-VO
-UA
+Nd
+JS
+kq
 By
-Er
+yh
 fY
 Nl
 gM
 gM
+Kn
 Vk
-Vk
 bK
 bK
 bK
@@ -34418,7 +36487,7 @@ bK
 bK
 bK
 bK
-bK
+LW
 bK
 bK
 bK
@@ -34620,19 +36689,19 @@ bK
 bK
 bK
 bK
-UA
-Qi
-Qi
+kq
+So
+So
 zg
 iA
 Pk
 EC
-As
-uM
-UA
+kY
+lr
+kq
 mb
 bq
-JY
+lD
 aa
 gM
 gM
@@ -34872,12 +36941,12 @@ bK
 bK
 bK
 bK
-UA
-UA
-nQ
-nQ
-nQ
-UA
+FS
+FS
+eq
+eq
+eq
+kq
 Xi
 CC
 CU
@@ -35127,14 +37196,14 @@ bK
 bK
 bK
 bK
-UA
-UA
-UA
+FS
+FS
+FS
 Gh
 VC
 wK
 st
-UA
+kq
 Qn
 Gk
 zF
@@ -35143,9 +37212,9 @@ gs
 WT
 zN
 jx
-UA
+kq
 UO
-AM
+sd
 oY
 vR
 bv
@@ -35162,12 +37231,12 @@ bK
 bK
 bK
 bK
-UA
-UA
-nQ
-nQ
-UA
-UA
+YP
+YP
+hx
+hx
+YP
+YP
 ET
 ET
 ET
@@ -35388,25 +37457,25 @@ CB
 Uc
 GY
 pd
-tL
-tL
+hK
+Tu
 Bh
 my
-rv
-rv
+Qv
+co
 Hp
 CM
-rv
-rv
+Nn
+UY
 he
-jx
-UA
+cr
+kq
 we
 EE
 Gs
 Wh
 gG
-nQ
+YT
 Vk
 Vk
 bK
@@ -35414,24 +37483,24 @@ bK
 bK
 bK
 bK
-UA
-UA
-UA
-UA
-UA
-UA
+wU
+wU
+wU
+wU
+wU
+YP
 oj
-iE
+jp
 Wc
 Dt
-UA
+YP
 RK
-UA
-UA
-UA
-UA
-UA
-UA
+lO
+lO
+Bd
+lO
+lO
+lO
 FE
 Xj
 vv
@@ -35639,56 +37708,56 @@ bK
 aN
 QL
 Vk
-UA
-UA
-UA
-UA
-UA
-JY
+nN
+Fh
+nN
+nN
+FS
+CX
 SM
-UA
-UA
-UA
-UA
-nQ
-nQ
-UA
-nQ
-nQ
-UA
-UA
-UA
-UA
-UA
-UA
+FS
+FS
+kq
+kq
+Cc
+Cc
+kq
+Cc
+Cc
+kq
+kq
+kq
+Ft
+Ft
+Ft
 dg
-UA
-UA
-UA
-UA
-UA
-nQ
-nQ
-nQ
-UA
-UA
-nU
-wz
+Ft
+Ft
+Ft
+Yj
+Yj
+dE
+Rl
+dE
+Yj
+wU
+Qu
+nd
 Jc
-rs
-UA
+qm
+YP
 vz
 gZ
-fo
+WN
 Dt
-UA
+YP
 HN
-UA
+lO
 vC
 kU
 NV
 rN
-UA
+lO
 FE
 FE
 FE
@@ -35899,11 +37968,11 @@ Vk
 zf
 NQ
 NQ
-UA
+nN
 Hu
-JY
-UA
-UA
+Tj
+FS
+FS
 QL
 QL
 QL
@@ -35915,42 +37984,42 @@ QL
 QL
 QL
 QL
-UA
+Ft
 Mq
 qH
 Kh
 YK
+gO
 KT
-KT
-UA
-UA
+Yj
+Yj
 pn
 sF
 NW
-UA
-UA
+Yj
+wU
 nU
 aQ
 PM
 rs
-UA
+YP
 eS
 xU
-xU
+OX
 iI
-UA
+YP
 DL
 bt
 CI
 JV
 tM
 yK
-UA
-nQ
-nQ
-nQ
-nQ
-nQ
+lO
+Ki
+uP
+uP
+Ki
+Ki
 QL
 jU
 bK
@@ -36150,16 +38219,16 @@ bK
 bK
 bK
 Vk
-UA
-UA
-UA
-UA
+nN
+nN
+nN
+nN
 NQ
 NQ
-UA
+nN
 go
-JY
-nQ
+CX
+eq
 QL
 QL
 UH
@@ -36172,43 +38241,43 @@ Hh
 Hh
 QL
 QL
-nQ
+sb
 Ie
-Ln
-Kh
-Jw
+WS
+EA
+Bu
+II
 Zt
-Zt
-UA
+Yj
 Iz
 Eq
 YW
-vG
+gP
 VN
-UA
-UA
-UA
+wU
+wU
+wU
 ED
-UA
-UA
-UA
-UA
+wU
+YP
+YP
+YP
 aj
-UA
-UA
-UA
-UA
+YP
+YP
+lO
+lO
 iy
 At
 wv
 hs
-UA
+lO
 xq
 Ev
 PS
 Er
-YC
-ld
+Ki
+fw
 Vk
 mi
 bK
@@ -36406,17 +38475,17 @@ bK
 bK
 bK
 bK
+Xb
 Be
 Be
-Be
-UA
-UA
+nN
+nN
 Qi
 Qi
-UA
-UA
+nN
+FS
 CD
-nQ
+eq
 QL
 zv
 fp
@@ -36429,28 +38498,28 @@ Ay
 Rp
 rB
 QL
-nQ
+sb
 Ie
 Ln
 Kh
 Jw
 zd
 Qg
-UA
+Yj
 sW
 bD
-AM
-aW
+wR
+Xk
 aR
-UA
+wU
 Nm
 eg
 dT
 Xo
 ho
-Xo
+Ff
 Cd
-Vf
+RF
 JD
 oq
 sL
@@ -36459,14 +38528,14 @@ TN
 Hz
 aC
 js
-nQ
+Wx
 zB
 xJ
 Io
 Er
-nQ
-nQ
-nQ
+Ki
+uP
+uP
 Vk
 mi
 bK
@@ -36663,17 +38732,17 @@ bK
 bK
 bK
 bK
+Xb
 Be
 Be
-Be
-UA
-kJ
+nN
+Iv
 tn
 Cm
 iR
-UA
+FS
 TW
-UA
+FS
 QL
 VQ
 fp
@@ -36686,20 +38755,20 @@ Hh
 Hh
 AG
 Hh
-UA
+Ft
 Uf
 ti
 ja
 xO
 pk
 dW
-UA
+Yj
 ak
-zt
+wy
 hO
-qJ
+RW
 fa
-UA
+wU
 VS
 wo
 pL
@@ -36707,7 +38776,7 @@ xs
 xs
 xs
 rw
-Pm
+rD
 fT
 Ad
 eH
@@ -36716,15 +38785,15 @@ uK
 uK
 Gi
 kF
-nQ
+Wx
 rt
 ME
 Pm
 Ts
 bc
 PS
-nQ
-nQ
+uP
+uP
 jU
 bK
 bK
@@ -36920,17 +38989,17 @@ bK
 bK
 bK
 bK
-Be
+tA
 Be
 Bc
-UA
+nN
 kJ
 ow
 Tm
 aP
 mU
-TW
-UA
+vb
+FS
 QL
 VQ
 as
@@ -36943,45 +39012,45 @@ UR
 CV
 SU
 FJ
-FJ
+AP
 DU
 DU
 nM
-rv
-rv
-rv
+TC
+zO
+TC
 vD
-rv
-rv
-rv
-rv
-rv
+eK
+Qz
+eK
+Im
+eK
 ee
-ny
+UE
+UE
 Zq
-Zq
-Zq
-Zq
-Zq
+UE
+UE
+UE
 PL
 rq
-Vc
-Vc
-Bi
+UE
+UE
+UE
 zV
 Lv
 yI
 qw
-DU
+er
 Hs
 HC
-HJ
+Cu
 Tf
-HJ
+XF
 HJ
 jQ
 UQ
-nQ
+yV
 jU
 bK
 bK
@@ -37177,17 +39246,17 @@ bK
 bK
 bK
 bK
+Xb
 Be
 Be
-Be
-UA
+nN
 uB
-kJ
-kJ
-kJ
-UA
+Ch
+Ch
+cK
+FS
 TW
-UA
+FS
 QL
 VQ
 VQ
@@ -37200,20 +39269,20 @@ Hh
 Hh
 Hh
 Hh
-UA
+Ft
 Hd
 OU
-DU
+Qb
 DT
 nm
 nm
-UA
+Yj
 xE
-Eq
+DA
 YW
 vG
 UK
-UA
+wU
 nn
 RQ
 uG
@@ -37221,7 +39290,7 @@ Ud
 jc
 Ud
 QC
-Pm
+rD
 Wq
 ox
 gN
@@ -37230,15 +39299,15 @@ ff
 Dw
 bY
 Dw
-nQ
+Wx
 qx
 cL
-Pm
+eZ
 Xm
 rJ
 nA
-nQ
-nQ
+uP
+uP
 jU
 bK
 bK
@@ -37434,17 +39503,17 @@ bK
 bK
 bK
 bK
+Xb
 Be
 Be
-Be
-UA
-kJ
+nN
+Ne
 JH
 Zy
 vj
-UA
-TW
-nQ
+FS
+Dk
+eq
 QL
 ld
 VQ
@@ -37455,25 +39524,25 @@ jr
 ua
 Ay
 Rp
-FE
+Vi
 QL
-nQ
+sb
 hp
 Ln
-DU
+Qb
 Jw
 oD
 Ye
 Py
 Hy
 bD
-sd
+AM
 aW
 CK
-UA
+wU
 Eu
 bx
-Cr
+dY
 mh
 Pn
 TD
@@ -37487,14 +39556,14 @@ vr
 pR
 sM
 El
-nQ
+Wx
 lK
 Jh
-Pm
+qp
 Ae
-UA
-nQ
-nQ
+Ki
+uP
+uP
 Vk
 OE
 bK
@@ -37692,16 +39761,16 @@ bK
 bK
 bK
 Vk
-UA
-UA
-UA
+nN
+nN
+nN
 Sk
 qc
 df
 ax
-UA
-JY
-nQ
+FS
+In
+eq
 QL
 QL
 eP
@@ -37714,42 +39783,42 @@ Hh
 Hh
 QL
 QL
-nQ
+sb
 Nk
-Ln
-DU
-Jw
-Zt
+WS
+rF
+oS
+Pc
 rV
-UA
+Yj
 Et
 zt
 hO
 qJ
-CK
-UA
+Ah
+wU
 eI
-bx
+Xt
 Cr
 nr
-UA
-nQ
-nQ
+ta
+Up
+Up
 bG
-UA
-UA
-UA
-UA
-UA
-UA
+FT
+FT
+FT
+FT
+FT
+lO
 LT
 aw
-UA
+lO
 Cj
 LY
 qf
 xc
-UA
+Ki
 Vz
 Vz
 OE
@@ -37951,15 +40020,15 @@ bK
 dR
 Vz
 Vz
-UA
-UA
+nN
+nN
 UM
 Zi
 vT
-UA
-JY
-UA
-UA
+FS
+ou
+FS
+FS
 QL
 QL
 QL
@@ -37971,42 +40040,42 @@ QL
 QL
 QL
 QL
-UA
+Ft
 Jv
 kg
-DU
+Qb
 Ct
 cq
 is
-UA
-UA
+Yj
+Yj
 AJ
-LO
 vc
-UA
-UA
+LO
+Yj
+wU
 Tc
 bx
-Cr
+XN
 Gf
-UA
+ta
 Iq
 iE
-Wc
-UA
+Pa
+FT
 cF
-Ob
+Fv
 qt
-UA
+FT
 gD
 cl
 ML
-UA
+nf
 kQ
 vm
 nA
-Er
-UA
+vJ
+Ki
 bK
 bK
 bK
@@ -38209,61 +40278,61 @@ bK
 bK
 bK
 bK
-UA
-UA
-UA
-UA
-UA
-JY
+nN
+pQ
+nN
+nN
+FS
+ss
 AC
-UA
-UA
-UA
-UA
-nQ
-nQ
-UA
-nQ
-nQ
-UA
-UA
-UA
-UA
-UA
-UA
+FS
+FS
+eV
+eV
+bl
+bl
+eV
+bl
+bl
+eV
+eV
+eV
+Uu
+Uu
+Uu
 nP
-UA
-UA
-Wp
-UA
-UA
-nQ
-nQ
-nQ
-UA
-UA
+Uu
+Uu
+OP
+Yj
+Yj
+dE
+Xl
+dE
+Yj
+wU
 qO
 YD
 wk
 QS
-UA
+ta
 bU
 KZ
 fo
 uC
 Ob
-Ob
+Ll
 fv
-UA
+FT
 jM
 QV
 TM
-UA
-UA
-UA
-UA
-UA
-UA
+nf
+Ki
+Ki
+Ki
+Ki
+Ki
 bK
 bK
 bK
@@ -38470,52 +40539,52 @@ bK
 bK
 bK
 bK
-UA
+FS
 IQ
-TW
-TW
+tL
+Vc
 Mc
 tw
-DU
-DU
+kX
+Pd
 Rq
 Yo
 hy
-LP
+Bi
 Qx
-jx
-UA
+Qr
+eV
 pp
 Md
 qG
 cP
 rh
+Uu
+Wi
 UA
-mc
-UA
-Vk
+jU
 bK
 bK
 bK
 bK
-UA
-UA
+wU
+wU
+HT
 nQ
-nQ
-UA
-UA
+wU
+ta
 Rw
 RE
 um
-UA
+FT
 Cn
 pW
 XP
-UA
-UA
-UA
-UA
-UA
+FT
+nf
+GJ
+nf
+nf
 bK
 bK
 bK
@@ -38727,30 +40796,30 @@ bK
 bK
 bK
 bK
-UA
-hu
+FS
+Xv
 hu
 hC
 rb
-UA
-UA
-UA
-UA
+eV
+eV
+eV
+eV
 Us
 gF
-LP
+Yg
 As
 bT
-UA
+eV
 sk
 VL
 mY
 Ic
 JW
-UA
+Uu
 mc
 UA
-Vk
+jU
 bK
 bK
 bK
@@ -38760,15 +40829,15 @@ bK
 bK
 bK
 bK
-UA
-UA
-nQ
-nQ
-UA
-nQ
-nQ
-nQ
-UA
+ta
+ta
+Ai
+Up
+FT
+MS
+MS
+MS
+FT
 bK
 bK
 bK
@@ -38984,30 +41053,30 @@ bK
 bK
 bK
 bK
-UA
-UA
-nQ
-nQ
-nQ
-UA
+FS
+FS
+eq
+eq
+eq
+eV
 mS
 YV
 OB
-DU
+hB
 eN
 LP
-As
-DU
+mQ
+gJ
 fM
 jE
 EX
 wz
 CW
 Fz
+Uu
+DR
 UA
-Wp
-UA
-Vk
+jU
 bK
 bK
 bK
@@ -39044,7 +41113,7 @@ bK
 bK
 bK
 bK
-bK
+LW
 bK
 bK
 bK
@@ -39246,25 +41315,25 @@ bK
 bK
 bK
 bK
-UA
+eV
 Gt
 fl
 GK
-DU
-DU
-DU
-As
+lV
+gJ
+gJ
+lq
 uM
-UA
+eV
 QU
 Oh
 Oh
 Oh
-Oh
-UA
+if
+Uu
 Vk
-Vk
-Vk
+Vz
+OE
 bK
 bK
 bK
@@ -39503,22 +41572,22 @@ bK
 bK
 bK
 bK
-UA
+eV
 sh
 lF
 OB
 hX
 Yu
 GH
-As
+Kv
 VO
-UA
-nQ
-nQ
-nQ
-nQ
-nQ
-UA
+eV
+vN
+vN
+Oi
+vN
+vN
+Uu
 Vk
 bK
 bK
@@ -39746,6 +41815,7 @@ bK
 bK
 bK
 bK
+LW
 bK
 bK
 bK
@@ -39759,24 +41829,23 @@ bK
 bK
 bK
 bK
-bK
-UA
-UA
-UA
-UA
-UA
-UA
-UA
+eV
+ra
+eV
+eV
+eV
+eV
+eV
 zy
-UA
-UA
-Vk
-Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+eV
+eV
+Vz
+Vz
+Vz
+Vz
+Vz
+Vz
+OE
 bK
 bK
 bK
@@ -40022,11 +42091,11 @@ bK
 bK
 bK
 bK
-UA
+eV
 jC
-nl
+Xz
 dZ
-UA
+eV
 bK
 bK
 bK
@@ -40248,73 +42317,73 @@ bK
 bK
 bK
 bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
 bK
 bK
 bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-UA
-jC
+eV
+CO
 ev
 dZ
-UA
+eV
 bK
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
+Vf
 bK
 bK
 bK
@@ -40536,11 +42605,11 @@ bK
 bK
 bK
 bK
-UA
-UA
-Wp
-UA
-UA
+eV
+eV
+ZJ
+eV
+eV
 bK
 bK
 bK
@@ -40791,7 +42860,7 @@ bK
 bK
 bK
 bK
-bK
+YC
 bK
 aN
 gX
@@ -40799,7 +42868,7 @@ Ex
 gX
 Vk
 oR
-bK
+YC
 bK
 bK
 bK
@@ -41052,7 +43121,7 @@ bK
 bK
 aN
 gX
-mG
+vQ
 hZ
 md
 jU
@@ -41562,15 +43631,15 @@ bK
 bK
 bK
 bK
+YC
 bK
-bK
-LS
-Nq
+Na
+hZ
 Pg
-Nq
+hZ
 LI
 bK
-bK
+YC
 bK
 bK
 bK
@@ -42077,13 +44146,13 @@ bK
 bK
 bK
 bK
-gX
+bK
 Wd
 sK
 sK
 sK
 hb
-gX
+bK
 bK
 bK
 bK
@@ -42333,15 +44402,15 @@ bK
 bK
 bK
 bK
+YC
 bK
-FE
-vQ
+Wd
 sK
 sK
 sK
-KE
-FE
+hb
 bK
+YC
 bK
 bK
 bK
@@ -42591,13 +44660,13 @@ bK
 bK
 bK
 bK
-FE
-vQ
+gX
+Wd
 sK
 sK
 sK
-KE
-FE
+hb
+gX
 bK
 bK
 bK
@@ -42848,13 +44917,13 @@ bK
 bK
 bK
 bK
-gX
-Wd
+FE
+vQ
 sK
 sK
 sK
-hb
-gX
+KE
+FE
 bK
 bK
 bK
@@ -43105,13 +45174,13 @@ bK
 bK
 bK
 bK
-bK
-Wd
+FE
+vQ
 sK
 sK
 sK
-hb
-bK
+KE
+FE
 bK
 bK
 bK
@@ -43362,13 +45431,13 @@ bK
 bK
 bK
 bK
-bK
+gX
 Wd
 sK
 sK
 sK
 hb
-bK
+gX
 bK
 bK
 bK
@@ -43618,7 +45687,7 @@ bK
 bK
 bK
 bK
-bK
+YC
 bK
 Wd
 sK
@@ -43626,7 +45695,7 @@ sK
 sK
 hb
 bK
-bK
+YC
 bK
 bK
 bK
@@ -44389,7 +46458,7 @@ bK
 bK
 bK
 bK
-bK
+YC
 bK
 Wd
 sK
@@ -44397,7 +46466,7 @@ sK
 sK
 hb
 bK
-bK
+YC
 bK
 bK
 bK
@@ -44648,11 +46717,11 @@ bK
 bK
 bK
 bK
-uf
+Wd
 sK
 sK
 sK
-Jn
+hb
 bK
 bK
 bK
@@ -44797,6 +46866,520 @@ bK
 bK
 "}
 (158,1,1) = {"
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+Wd
+sK
+sK
+sK
+hb
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+"}
+(159,1,1) = {"
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+YC
+bK
+uf
+sK
+rG
+sK
+qN
+bK
+YC
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+bK
+"}
+(160,1,1) = {"
 bK
 bK
 bK
@@ -45053,520 +47636,6 @@ bK
 bK
 bK
 "}
-(159,1,1) = {"
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-gX
-FE
-FE
-gX
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-"}
-(160,1,1) = {"
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-"}
 (161,1,1) = {"
 bK
 bK
@@ -45645,73 +47714,73 @@ bK
 bK
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
 bK
 bK
+gX
+FE
+FE
+gX
 bK
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
+Vf
 bK
 bK
 bK
@@ -45927,24 +47996,24 @@ bK
 bK
 bK
 bK
+Vf
+bK
+bK
+Vf
+bK
+bK
+Vf
 bK
 bK
 bK
 bK
+Vf
 bK
 bK
+Vf
 bK
 bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
-bK
+Vf
 bK
 bK
 bK
@@ -46439,6 +48508,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -46459,8 +48529,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -46947,7 +49016,7 @@ bK
 bK
 bK
 bK
-bK
+LW
 bK
 bK
 bK
@@ -47210,6 +49279,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -47230,8 +49300,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -47493,6 +49562,7 @@ bK
 bK
 bK
 bK
+LW
 bK
 bK
 bK
@@ -47514,8 +49584,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+LW
 bK
 bK
 bK
@@ -47981,6 +50050,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -48001,8 +50071,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -48752,6 +50821,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -48772,8 +50842,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -49523,6 +51592,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -49543,8 +51613,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -50294,6 +52363,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -50314,8 +52384,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -51065,6 +53134,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -51085,8 +53155,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -51836,6 +53905,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -51856,8 +53926,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -52607,6 +54676,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -52627,8 +54697,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
@@ -53378,6 +55447,7 @@ bK
 bK
 bK
 bK
+YC
 bK
 bK
 bK
@@ -53398,8 +55468,7 @@ bK
 bK
 bK
 bK
-bK
-bK
+YC
 bK
 bK
 bK
