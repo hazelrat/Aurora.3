@@ -230,6 +230,20 @@
 	else
 		to_chat(usr, SPAN_WARNING("You can't look through the scope without stabilizing the rifle!"))
 
+// Generic version of the above. Inherits all stats, but doesn't look the same!
+/obj/item/gun/projectile/dragunov/generic
+	name = "\improper PVR-3 marksman rifle"
+	desc = "The PVR-3, the third Petrova Version Rifle, is a marksman rifle manufactured by a number \
+		of frontier interests. A favourite of collectors; valuable enough to impress, but not so \
+		valuable as to bankrupt the collector."
+	icon = 'icons/obj/guns/faction/frontier/petrova.dmi'
+	icon_state = "petrova"
+	item_state = "petrova"
+
+	desc_extended = "The Petrova Version Rifles are famously eclectic in calibre, each using an \
+		increasingly more eccentric cartridge than the last. This one uses Adhomian cartridges, \
+		which have been praised for their reliability by the line's eponymous creator."
+
 /obj/item/gun/projectile/automatic/rifle/w556
 	name = "\improper Greyhound marksman rifle"
 	desc = "The Greyhound, the designated marksman rifle variant of Zavodskoi's Bulldog carbine. Features a longer, heavier barrel \
