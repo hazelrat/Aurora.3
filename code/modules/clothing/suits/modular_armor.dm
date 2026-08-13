@@ -103,6 +103,14 @@
 
 	movement_sounds = SFX_HEAVY_ARMOUR_FOOTSTEPS
 
+/obj/item/clothing/suit/armor/carrier/heavy/chestpouch
+	starting_accessories = list(
+		/obj/item/clothing/accessory/armor_plate/heavy,
+		/obj/item/clothing/accessory/leg_guard/heavy,
+		/obj/item/clothing/accessory/arm_guard/heavy,
+		/obj/item/clothing/accessory/storage/chestpouch
+	)
+
 /obj/item/clothing/suit/armor/carrier/heavy/scc
 	starting_accessories = list(
 		/obj/item/clothing/accessory/armor_plate/heavy/scc,

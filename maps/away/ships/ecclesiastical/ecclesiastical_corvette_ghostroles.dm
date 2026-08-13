@@ -3,7 +3,7 @@
 	short_name = "guardian_regular"
 	desc = ""
 	tags = list("External")
-	mob_name_prefix = "G-O. "
+	mob_name_prefix = "G-R. "
 
 	spawnpoints = list("guardian_regular")
 	max_count = 3
@@ -27,7 +27,7 @@
 	id = /obj/item/card/id/generic
 	accessory = /obj/item/clothing/accessory/holster/hip
 	l_ear = /obj/item/radio/headset/ship
-	backpack_contents = list(/obj/item/storage/box/survival = 1)
+	backpack_contents = list(/obj/item/storage/box/survival = 1, /obj/item/melee/energy/sword/knife/axiom)
 
 /obj/outfit/admin/guardian_regular/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()

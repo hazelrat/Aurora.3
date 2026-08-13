@@ -25,7 +25,7 @@
 	name = "damaged solarian powerloader"
 	h_l_hand = null
 
-/mob/living/heavy_vehicle/premade/ripley/loader/sol
+/mob/living/heavy_vehicle/premade/ripley/loader/ecclesiastical
 	name = "ecclesiastical powerloader"
 	e_color = COLOR_RED_LIGHT
 

@@ -3,8 +3,9 @@
 /obj/structure/machinery/ship_weapon/grauwolf{
 	pixel_x = -32;
 	pixel_y = -192;
-	weapon_id = "TCAF Grauwolf Flak Battery"
+	weapon_id = "Ecclesiastical Grauwolf Flak Battery"
 	},
+/obj/structure/ship_weapon_dummy,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/gunnery)
 "ad" = (
@@ -54,12 +55,14 @@
 	},
 /obj/structure/weapons_rack{
 	req_one_access = list(258);
-	name = "Beacon-Destroying Weapons"
+	name = "Rifles & Shotguns"
 	},
 /obj/structure/sign/flag/ecclesiastical_axiom{
 	pixel_y = 32
 	},
-/obj/item/gun/projectile/automatic/rifle/l6_saw,
+/obj/item/gun/projectile/dragunov/generic,
+/obj/item/gun/energy/rifle/laser/noctiluca,
+/obj/item/gun/projectile/shotgun/pump,
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/equipment)
 "ao" = (
@@ -111,6 +114,7 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/machinery/light/small/floor,
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/kitchen)
 "aH" = (
@@ -167,17 +171,11 @@
 	dir = 5
 	},
 /obj/structure/closet/secure_closet/guncabinet{
-	name = "Daggers & Sidearm Ammunition";
+	name = "Sidearm Ammunition";
 	req_access = list(258)
 	},
 /obj/item/grenade/smokebomb,
 /obj/item/grenade/smokebomb,
-/obj/item/melee/energy/sword/knife/axiom,
-/obj/item/melee/energy/sword/knife/axiom,
-/obj/item/melee/energy/sword/knife/axiom,
-/obj/item/melee/energy/sword/knife/axiom,
-/obj/item/melee/energy/sword/knife/axiom,
-/obj/item/melee/energy/sword/knife/axiom,
 /obj/item/ammo_magazine/a357,
 /obj/item/ammo_magazine/a357,
 /obj/item/ammo_magazine/a357,
@@ -234,7 +232,7 @@
 "bl" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -388,9 +386,6 @@
 	pixel_x = 32
 	},
 /obj/structure/machinery/atmospherics/portables_connector/aux,
-/obj/structure/machinery/light{
-	dir = 4
-	},
 /turf/simulated/floor,
 /area/ecclesiastical_corvette/cargo)
 "cD" = (
@@ -449,7 +444,7 @@
 /obj/structure/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
-/obj/structure/machinery/light/small,
+/obj/structure/machinery/light,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/hydro)
 "cP" = (
@@ -465,6 +460,9 @@
 /obj/structure/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/machinery/light/floor{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ecclesiastical_corvette/hydro)
@@ -539,13 +537,13 @@
 /turf/space,
 /area/ecclesiastical_corvette/exterior)
 "dq" = (
-/obj/effect/floor_decal/industrial/outline/operations,
-/obj/structure/closet/crate/loot,
-/obj/structure/machinery/light{
-	dir = 8
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 1
 	},
-/turf/simulated/floor,
-/area/ecclesiastical_corvette/cargo)
+/obj/structure/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/power)
 "dt" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -559,7 +557,7 @@
 "dE" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -647,7 +645,7 @@
 "eq" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -699,7 +697,7 @@
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/lattice/catwalk/indoor/grate/gridded,
+/obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/equipment)
 "eN" = (
@@ -764,8 +762,10 @@
 /obj/item/ammo_magazine/gauss,
 /obj/item/ammo_magazine/gauss,
 /obj/item/ammo_magazine/gauss,
-/obj/item/ammo_magazine/a762,
-/obj/item/ammo_magazine/a762,
+/obj/item/ammo_magazine/a68/hotaki,
+/obj/item/ammo_magazine/a68/hotaki,
+/obj/item/ammo_magazine/a68/hotaki,
+/obj/item/ammo_magazine/a68/hotaki,
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/equipment)
 "ff" = (
@@ -940,7 +940,7 @@
 "gC" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -985,6 +985,7 @@
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/power)
 "gM" = (
+/obj/structure/ship_weapon_dummy,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/gunnery)
 "gN" = (
@@ -1093,7 +1094,6 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/infirmary)
 "hp" = (
-/obj/structure/table/wood/walnut,
 /obj/item/clothing/ears/antenna/trinary_halo{
 	pixel_x = 8;
 	pixel_y = 6
@@ -1109,6 +1109,7 @@
 /obj/structure/sign/flag/trinaryperfection{
 	pixel_y = 32
 	},
+/obj/structure/table/wood,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/cargo)
 "hs" = (
@@ -1140,7 +1141,7 @@
 "hx" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -1661,7 +1662,9 @@
 /turf/space,
 /area/ecclesiastical_corvette/exterior)
 "mn" = (
-/obj/structure/machinery/ammunition_loader/nephilim,
+/obj/structure/machinery/ammunition_loader/nephilim{
+	weapon_id = "Ecclesiastical Blaster"
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/gunnery)
 "mq" = (
@@ -1830,7 +1833,9 @@
 /obj/structure/sign/flag/ecclesiastical_axiom{
 	pixel_y = 32
 	},
-/obj/structure/machinery/vending/medical/low_supply,
+/obj/structure/machinery/vending/medical/low_supply{
+	req_access = list(258)
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/infirmary)
 "nr" = (
@@ -1879,6 +1884,9 @@
 /obj/structure/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/cargo)
 "nN" = (
@@ -1908,7 +1916,7 @@
 "nQ" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -1990,6 +1998,16 @@
 	},
 /turf/simulated/floor/marble,
 /area/ecclesiastical_corvette/infirmary)
+"oB" = (
+/obj/structure/bed/handrail{
+	dir = 8
+	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 8
+	},
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/turf/simulated/floor/plating,
+/area/shuttle/ecclesiastical)
 "oD" = (
 /obj/structure/closet/crate/drop,
 /obj/effect/floor_decal/industrial/outline/operations,
@@ -2127,7 +2145,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/structure/machinery/light/small{
+/obj/structure/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
@@ -2135,7 +2153,7 @@
 "pw" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -2258,9 +2276,6 @@
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
 	},
-/obj/structure/sign/flag/trinaryperfection{
-	pixel_y = 32
-	},
 /obj/structure/bed/handrail,
 /turf/simulated/floor/marble,
 /area/ecclesiastical_corvette/bridge)
@@ -2275,6 +2290,9 @@
 	dir = 8
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/hydro)
 "qH" = (
@@ -2305,12 +2323,12 @@
 /turf/simulated/floor/carpet/rubber,
 /area/ecclesiastical_corvette/equipment)
 "qL" = (
-/obj/structure/machinery/atmospherics/unary/freezer{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/machinery/light/small{
 	dir = 8
+	},
+/obj/structure/machinery/atmospherics/unary/heater{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/infirmary)
@@ -2332,14 +2350,14 @@
 	pixel_x = -7;
 	pixel_y = 6
 	},
-/obj/structure/roller_rack{
-	pixel_y = 15
-	},
 /obj/structure/sign/flag/trinaryperfection{
 	pixel_y = 32
 	},
 /obj/structure/machinery/light{
 	dir = 4
+	},
+/obj/structure/roller_rack/two{
+	pixel_y = 16
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/infirmary)
@@ -2353,7 +2371,7 @@
 /obj/structure/machinery/atmospherics/unary/heater{
 	dir = 1
 	},
-/obj/structure/machinery/light/small{
+/obj/structure/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
@@ -2385,9 +2403,6 @@
 "rt" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
-	},
-/obj/structure/sign/flag/trinaryperfection{
-	pixel_y = 32
 	},
 /obj/structure/bed/handrail,
 /turf/simulated/floor/marble,
@@ -2471,7 +2486,7 @@
 "sb" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -2480,7 +2495,6 @@
 "sd" = (
 /obj/structure/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/outline/operations,
-/mob/living/heavy_vehicle/premade/ripley/loader,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/gunnery)
 "sh" = (
@@ -2627,9 +2641,8 @@
 /obj/item/gun/projectile/shotgun/pump,
 /obj/structure/weapons_rack{
 	req_one_access = list(258);
-	name = "Rifles & Shotguns"
+	name = "Gauss Weapons"
 	},
-/obj/item/gun/energy/rifle/laser/noctiluca,
 /obj/item/gun/projectile/gauss,
 /obj/item/gun/projectile/gauss,
 /obj/item/gun/projectile/gauss,
@@ -2739,6 +2752,9 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/ecclesiastical_corvette/propulsion)
 "uC" = (
@@ -2791,7 +2807,7 @@
 "uP" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -2994,7 +3010,7 @@
 "vN" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -3011,7 +3027,9 @@
 /turf/simulated/floor/airless,
 /area/ecclesiastical_corvette/exterior)
 "vR" = (
-/obj/structure/machinery/ammunition_loader,
+/obj/structure/machinery/ammunition_loader{
+	weapon_id = "Ecclesiastical Grauwolf Flak Battery"
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/gunnery)
 "vT" = (
@@ -3046,10 +3064,16 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/aft)
 "vX" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/bed/handrail{
 	dir = 8
 	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 8
+	},
+/obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor/plating,
 /area/shuttle/ecclesiastical)
 "we" = (
@@ -3069,8 +3093,19 @@
 	dir = 10
 	},
 /obj/structure/lattice/catwalk/indoor/grate/gridded,
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/gunnery)
+"wh" = (
+/obj/structure/lattice/catwalk/indoor/grate/dark,
+/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 1
+	},
+/obj/structure/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/ecclesiastical_corvette/atmospherics)
 "wk" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
@@ -3105,7 +3140,9 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/shuttle/ecclesiastical)
 "wu" = (
-/obj/structure/machinery/ship_weapon/nephilim,
+/obj/structure/machinery/ship_weapon/nephilim{
+	weapon_id = "Ecclesiastical Blaster"
+	},
 /turf/template_noop,
 /area/space)
 "wv" = (
@@ -3132,13 +3169,13 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/lattice/catwalk/indoor,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/hydro)
 "wK" = (
@@ -3165,7 +3202,7 @@
 "xe" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -3461,6 +3498,9 @@
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/gridded,
 /area/shuttle/ecclesiastical)
 "Ad" = (
@@ -3563,6 +3603,9 @@
 /obj/structure/machinery/door/airlock/external{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/cargo)
 "Bc" = (
@@ -3629,6 +3672,9 @@
 	pixel_x = 1;
 	pixel_y = -7
 	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/gunnery)
 "BY" = (
@@ -3645,7 +3691,7 @@
 "Cc" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -3701,6 +3747,9 @@
 	},
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ecclesiastical_corvette/captain_quarters)
@@ -3835,14 +3884,14 @@
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/atmospherics)
 "CV" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/aux,
+/obj/effect/floor_decal/spline/plain/cee/red{
 	dir = 1
 	},
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/carpet/rubber,
 /area/shuttle/ecclesiastical)
 "CW" = (
 /obj/structure/machinery/atmospherics/pipe/manifold4w/hidden,
@@ -3850,7 +3899,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/obj/structure/lattice/catwalk/indoor,
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/hydro)
 "Dk" = (
@@ -3916,12 +3965,15 @@
 /area/ecclesiastical_corvette/cargo)
 "DU" = (
 /obj/structure/lattice/catwalk/indoor,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/cargo)
 "Eb" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -3944,6 +3996,9 @@
 /obj/effect/floor_decal/spline/plain/red,
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/gridded,
 /area/shuttle/ecclesiastical)
@@ -4076,12 +4131,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/obj/structure/lattice/catwalk/indoor,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/lattice/catwalk/indoor/grate/gridded,
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/hydro)
 "Ft" = (
@@ -4129,6 +4184,9 @@
 	},
 /obj/structure/machinery/door/airlock/external{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/shuttle/ecclesiastical)
@@ -4487,6 +4545,9 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/machinery/light/floor{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ecclesiastical_corvette/hydro)
 "Ie" = (
@@ -4505,7 +4566,7 @@
 	},
 /obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/lattice/catwalk/indoor/grate/gridded,
+/obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/equipment)
 "Io" = (
@@ -4536,7 +4597,7 @@
 	},
 /obj/structure/machinery/disposal,
 /obj/structure/machinery/light/small{
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/propulsion)
@@ -4555,8 +4616,6 @@
 /obj/item/gun/projectile/revolver,
 /obj/item/gun/projectile/revolver,
 /obj/item/gun/projectile/revolver,
-/obj/item/gun/projectile/pistol,
-/obj/item/gun/projectile/pistol,
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/equipment)
 "II" = (
@@ -4629,10 +4688,6 @@
 /turf/simulated/floor/airless,
 /area/ecclesiastical_corvette/exterior)
 "Jv" = (
-/obj/structure/sign/flag/trinaryperfection{
-	pixel_y = 32
-	},
-/obj/structure/table/wood/walnut,
 /obj/item/clothing/ears/antenna/trinary_halo{
 	pixel_x = -10;
 	pixel_y = 1
@@ -4648,6 +4703,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/table/wood,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/cargo)
 "Jw" = (
@@ -4749,6 +4805,12 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
 	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/shuttle/ecclesiastical)
 "Kr" = (
@@ -4789,7 +4851,7 @@
 "KF" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -4982,11 +5044,8 @@
 	_wifi_id = "ecclesiastical_crema";
 	dir = 8;
 	pixel_x = -22;
-	pixel_y = -6;
+	pixel_y = -20;
 	req_access = null
-	},
-/obj/structure/sign/flag/trinaryperfection{
-	pixel_y = 32
 	},
 /obj/structure/machinery/light{
 	dir = 8
@@ -5007,6 +5066,12 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/operations,
+/obj/structure/machinery/power/apc/east{
+	req_access = list(258)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/shuttle/ecclesiastical)
 "ME" = (
@@ -5032,7 +5097,7 @@
 "MS" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -5104,10 +5169,7 @@
 /turf/simulated/floor/tiled/gridded,
 /area/shuttle/ecclesiastical)
 "Nk" = (
-/obj/structure/table/wood/walnut,
-/obj/item/nullrod/clockworkstave{
-	pixel_y = 3
-	},
+/obj/structure/table/wood,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/cargo)
 "Nl" = (
@@ -5124,6 +5186,11 @@
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/infirmary)
+"Nq" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/ship_weapon_dummy,
+/turf/space,
+/area/ecclesiastical_corvette/exterior)
 "NQ" = (
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/ecclesiastical_corvette/propulsion)
@@ -5163,18 +5230,22 @@
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
 	},
-/obj/structure/closet/secure_closet/guncabinet{
-	name = "Armour of the Faithful";
-	req_access = list(258)
+/obj/item/clothing/accessory/storage/pouches/black,
+/obj/item/clothing/accessory/storage/pouches/black,
+/obj/item/clothing/accessory/storage/pouches/black,
+/obj/item/clothing/accessory/storage/pouches/black,
+/obj/item/clothing/head/helmet/guardian/blue,
+/obj/item/clothing/head/helmet/guardian/blue,
+/obj/item/clothing/head/helmet/guardian/blue,
+/obj/item/clothing/head/helmet/guardian/blue,
+/obj/structure/closet/crate/secure/weapon/alt{
+	req_access = list(258);
+	name = "Armour of the Faithful"
 	},
-/obj/item/clothing/accessory/storage/pouches/black,
-/obj/item/clothing/accessory/storage/pouches/black,
-/obj/item/clothing/accessory/storage/pouches/black,
-/obj/item/clothing/accessory/storage/pouches/black,
-/obj/item/clothing/head/helmet/guardian/blue,
-/obj/item/clothing/head/helmet/guardian/blue,
-/obj/item/clothing/head/helmet/guardian/blue,
-/obj/item/clothing/head/helmet/guardian/blue,
+/obj/item/clothing/suit/armor/carrier/heavy/chestpouch,
+/obj/item/clothing/suit/armor/carrier/heavy/chestpouch,
+/obj/item/clothing/suit/armor/carrier/heavy/chestpouch,
+/obj/item/clothing/suit/armor/carrier/heavy/chestpouch,
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/equipment)
 "Ob" = (
@@ -5321,7 +5392,7 @@
 	pixel_y = 11;
 	dir = 1
 	},
-/obj/structure/machinery/light{
+/obj/structure/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/full,
@@ -5370,10 +5441,16 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/bridge)
 "PZ" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
 /obj/structure/bed/handrail{
 	dir = 4
 	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/machinery/atmospherics/unary/vent_pump/high_volume/aux{
+	dir = 4
+	},
+/obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor/plating,
 /area/shuttle/ecclesiastical)
 "Qb" = (
@@ -5416,6 +5493,11 @@
 	},
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/atmospherics)
+"Qo" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/ship_weapon_dummy/barrel,
+/turf/space,
+/area/ecclesiastical_corvette/exterior)
 "Qr" = (
 /obj/structure/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -5482,6 +5564,9 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ecclesiastical_corvette/hydro)
 "QV" = (
@@ -5545,7 +5630,7 @@
 "Rx" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -5633,7 +5718,7 @@
 "Sk" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/machinery/light/small{
-	dir = 1
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/propulsion)
@@ -5654,8 +5739,14 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/aft)
 "SU" = (
-/obj/structure/lattice/catwalk/indoor/grate/dark,
-/turf/simulated/floor/plating,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 5
+	},
+/obj/effect/floor_decal/spline/plain/cee/red,
+/turf/simulated/floor/carpet/rubber,
 /area/shuttle/ecclesiastical)
 "Tc" = (
 /obj/structure/table/reinforced/steel,
@@ -5691,6 +5782,7 @@
 	icon_state = "1-4"
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/overmap/visitable/ship/ecclesiastical_corvette,
 /turf/simulated/floor/carpet/rubber,
 /area/ecclesiastical_corvette/bridge)
 "Tk" = (
@@ -5855,7 +5947,7 @@
 "Up" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -5885,8 +5977,8 @@
 /turf/simulated/wall/shuttle/dark/cardinal/red,
 /area/ecclesiastical_corvette/hydro)
 "UA" = (
-/turf/simulated/wall/shuttle/dark/cardinal/red,
-/area/space)
+/turf/space,
+/area/ecclesiastical_corvette/exterior)
 "UE" = (
 /obj/effect/floor_decal/spline/plain/red,
 /obj/structure/disposalpipe/segment{
@@ -5996,6 +6088,9 @@
 /obj/structure/machinery/door/airlock/external{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/shuttle/ecclesiastical)
 "Vb" = (
@@ -6018,7 +6113,7 @@
 	},
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/structure/lattice/catwalk/indoor/grate/gridded,
+/obj/structure/lattice/catwalk/indoor/grate/dark,
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/equipment)
 "Vf" = (
@@ -6090,7 +6185,7 @@
 /obj/item/melee/telebaton,
 /obj/item/melee/telebaton,
 /obj/structure/closet/secure_closet/guncabinet{
-	name = "Tools & Accessories";
+	name = "Tools and Accessories";
 	req_access = list(258)
 	},
 /obj/item/grenade/stinger,
@@ -6159,7 +6254,7 @@
 	},
 /obj/effect/ghostspawpoint{
 	name = "igs - guardian_regular";
-	identifier = "tcaf_crewman"
+	identifier = "guardian_regular"
 	},
 /turf/simulated/floor/lino/diamond,
 /area/ecclesiastical_corvette/crew_quarters)
@@ -6221,7 +6316,7 @@
 "Wt" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -6233,7 +6328,7 @@
 "Wx" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -6254,7 +6349,7 @@
 	},
 /obj/effect/ghostspawpoint{
 	name = "igs - guardian_regular";
-	identifier = "tcaf_crewman"
+	identifier = "guardian_regular"
 	},
 /turf/simulated/floor/lino/diamond,
 /area/ecclesiastical_corvette/crew_quarters)
@@ -6352,6 +6447,10 @@
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 4
 	},
+/obj/item/nullrod/clockworkstave{
+	pixel_y = 3;
+	pixel_x = -2
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ecclesiastical_corvette/captain_quarters)
 "Ye" = (
@@ -6447,6 +6546,9 @@
 	RCon_tag = null
 	},
 /obj/effect/floor_decal/industrial/outline/operations,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/shuttle/ecclesiastical)
 "YK" = (
@@ -6465,7 +6567,7 @@
 "YT" = (
 /obj/effect/map_effect/window_spawner/full/shuttle{
 	color = "#c24f4f";
-	frame_color = "#6d6133";
+	frame_color = "#c24f4f";
 	spawn_firedoor = 1;
 	spawn_grille = 1
 	},
@@ -35711,7 +35813,7 @@ bK
 kq
 JN
 iU
-Uo
+wh
 kq
 bK
 bK
@@ -35972,8 +36074,8 @@ Uo
 kq
 Vk
 Vk
-Vk
-Vk
+Nq
+Qo
 wu
 bK
 bK
@@ -36233,7 +36335,7 @@ mn
 Eb
 zE
 zE
-Vk
+tQ
 Vk
 bK
 bK
@@ -36490,8 +36592,8 @@ fY
 Nl
 gM
 gM
-tQ
-Vk
+Nq
+Qo
 bK
 bK
 bK
@@ -36747,8 +36849,8 @@ py
 aa
 gM
 gM
-Vk
-Vk
+Nq
+Qo
 bK
 bK
 bK
@@ -37004,8 +37106,8 @@ JY
 gM
 gM
 gM
-Vk
-Vk
+Nq
+Qo
 bK
 bK
 bK
@@ -38015,23 +38117,23 @@ Hu
 uQ
 FS
 FS
-QL
-QL
-QL
-QL
-QL
-QL
-QL
-QL
-QL
-QL
-QL
+UA
+UA
+UA
+UA
+UA
+UA
+UA
+UA
+UA
+UA
+UA
 sb
 Mq
 qH
 Kh
 YK
-dq
+KT
 KT
 Yj
 Yj
@@ -38271,8 +38373,8 @@ nN
 go
 Yk
 eq
-QL
-QL
+UA
+UA
 UH
 Hh
 Hh
@@ -38282,7 +38384,7 @@ Hh
 Hh
 Rp
 rB
-QL
+UA
 sb
 Ie
 hQ
@@ -38528,7 +38630,7 @@ nN
 FS
 CD
 eq
-QL
+UA
 zv
 fp
 Hh
@@ -38785,7 +38887,7 @@ iR
 FS
 TW
 FS
-QL
+UA
 VQ
 fp
 kO
@@ -39042,7 +39144,7 @@ aP
 mU
 vb
 FS
-QL
+UA
 VQ
 as
 ad
@@ -39299,7 +39401,7 @@ cK
 FS
 TW
 FS
-QL
+UA
 VQ
 VQ
 ZN
@@ -39309,7 +39411,7 @@ en
 HA
 Hh
 vX
-vX
+oB
 Hh
 Ft
 Hd
@@ -39556,7 +39658,7 @@ vj
 FS
 Dk
 eq
-QL
+UA
 ld
 VQ
 Hh
@@ -39813,8 +39915,8 @@ ax
 FS
 ss
 eq
-QL
-QL
+UA
+UA
 eP
 Hh
 Hh
@@ -39824,7 +39926,7 @@ Hh
 Hh
 Rp
 Vi
-QL
+UA
 sb
 Nk
 hQ
@@ -40071,17 +40173,17 @@ FS
 il
 FS
 FS
-QL
-QL
-QL
-QL
-QL
-QL
-QL
-QL
-QL
-QL
-QL
+UA
+UA
+UA
+UA
+UA
+UA
+UA
+UA
+UA
+UA
+UA
 sb
 Jv
 kg
@@ -40603,7 +40705,7 @@ cP
 rh
 Uu
 TO
-UA
+Ft
 jU
 bK
 bK
@@ -40860,7 +40962,7 @@ Ic
 JW
 Uu
 mc
-UA
+Ft
 jU
 bK
 bK
@@ -41117,7 +41219,7 @@ CW
 Fz
 Uu
 DR
-UA
+Ft
 jU
 bK
 bK
@@ -41624,7 +41726,7 @@ GH
 Kv
 VO
 eV
-vN
+Uu
 vN
 pw
 vN
@@ -42393,7 +42495,7 @@ bK
 eV
 cn
 ev
-dZ
+dq
 eV
 bK
 bK

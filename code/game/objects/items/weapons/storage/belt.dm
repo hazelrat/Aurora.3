@@ -350,7 +350,8 @@
 		/obj/item/camera,
 		/obj/item/clipboard,
 		/obj/item/journal/notepad,
-		/obj/item/breath_analyzer
+		/obj/item/breath_analyzer,
+		/obj/item/gun/energy/stunrevolver
 		)
 	content_overlays = TRUE
 
