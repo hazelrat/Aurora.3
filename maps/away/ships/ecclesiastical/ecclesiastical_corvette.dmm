@@ -695,7 +695,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/dark/full,
+/obj/effect/floor_decal/spline/plain/cee/red{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/rubber,
 /area/ecclesiastical_corvette/power)
 "eH" = (
 /obj/effect/floor_decal/corner/yellow{
@@ -1396,7 +1399,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/dark/full,
+/obj/effect/floor_decal/spline/plain/cee/red{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/rubber,
 /area/ecclesiastical_corvette/atmospherics)
 "ja" = (
 /obj/structure/disposalpipe/junction{
@@ -1916,7 +1922,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/dark/full,
+/obj/effect/floor_decal/spline/plain/cee/red{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/rubber,
 /area/ecclesiastical_corvette/atmospherics)
 "nm" = (
 /obj/effect/floor_decal/corner/yellow{
@@ -6716,7 +6725,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/dark/full,
+/obj/effect/floor_decal/spline/plain/cee/red{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/rubber,
 /area/ecclesiastical_corvette/power)
 "XP" = (
 /obj/structure/table/wood,
