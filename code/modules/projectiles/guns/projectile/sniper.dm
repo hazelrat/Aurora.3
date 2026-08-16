@@ -237,8 +237,8 @@
 		of frontier interests. A favourite of collectors; valuable enough to impress, but not so \
 		valuable as to bankrupt the collector."
 	icon = 'icons/obj/guns/faction/frontier/petrova.dmi'
-	icon_state = "petrova"
-	item_state = "petrova"
+	icon_state = "dragunov"
+	item_state = "dragunov"
 
 	desc_extended = "The Petrova Version Rifles are famously eclectic in calibre, each using an \
 		increasingly more eccentric cartridge than the last. This one uses Adhomian cartridges, \
