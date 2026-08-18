@@ -4270,6 +4270,8 @@
 #include "maps\away\ships\ecclesiastical\ecclesiastical_corvette.dm"
 #include "maps\away\ships\ecclesiastical\ecclesiastical_corvette_areas.dm"
 #include "maps\away\ships\ecclesiastical\ecclesiastical_corvette_ghostroles.dm"
+#include "maps\away\ships\ecclesiastical\ecclesiastical_corvette_landmarks.dm"
+#include "maps\away\ships\ecclesiastical\ecclesiastical_corvette_shuttle.dm"
 #include "maps\away\ships\einstein\ee_spy_ship.dm"
 #include "maps\away\ships\einstein\ee_spy_ship_ghostroles.dm"
 #include "maps\away\ships\elyra\elyra_corvette\elyra_corvette.dm"

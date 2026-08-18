@@ -39,20 +39,20 @@
 	weapons = "Dual ballistic gunnery pods."
 	sizeclass = "Corkfell-class corvette"
 	shiptype = "Military reconnaissance and retrieval of sacred relics"
-	// initial_restricted_waypoints = list(
-	// 	"TCAF Gunship" = list("nav_hangar_tcaf")
-	// )
+	initial_restricted_waypoints = list(
+		"TCAF Gunship" = list("nav_hangar_tcaf")
+	)
 
-	// initial_generic_waypoints = list(
-	// 	"tcaf_corvette_nav1",
-	// 	"tcaf_corvette_nav2",
-	// 	"tcaf_corvette_nav3",
-	// 	"tcaf_corvette_nav4",
-	// 	"tcaf_corvette_starboard_dock",
-	// 	"tcaf_corvette_port_dock",
-	// 	"tcaf_corvette_aft_dock",
-	// 	"tcaf_corvette_fore_dock"
-	// )
+	initial_generic_waypoints = list(
+		"tcaf_corvette_nav1",
+		"tcaf_corvette_nav2",
+		"tcaf_corvette_nav3",
+		"tcaf_corvette_nav4",
+		"tcaf_corvette_starboard_dock",
+		"tcaf_corvette_port_dock",
+		"tcaf_corvette_aft_dock",
+		"tcaf_corvette_fore_dock"
+	)
 
 	invisible_until_ghostrole_spawn = TRUE
 
