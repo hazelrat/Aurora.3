@@ -779,7 +779,6 @@
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/table/wood,
 /obj/structure/machinery/atm{
 	dir = 1;
 	pixel_y = 28
@@ -795,6 +794,8 @@
 	pixel_x = -6;
 	pixel_y = 10
 	},
+/obj/random/dirt_75,
+/obj/structure/table/wood,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/crew_quarters)
 "eV" = (
@@ -1445,6 +1446,7 @@
 /obj/item/storage/backpack/industrial,
 /obj/item/storage/backpack/industrial,
 /obj/item/storage/backpack/industrial,
+/obj/random/dirt_75,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/crew_quarters)
 "iR" = (
@@ -2123,30 +2125,6 @@
 /area/ecclesiastical_corvette/infirmary)
 "ob" = (
 /obj/effect/floor_decal/industrial/outline/operations,
-/obj/structure/closet/crate/drop/grey{
-	name = "Ecclesiastical Garb"
-	},
-/obj/item/clothing/under/dressshirt/axiom_tunic,
-/obj/item/clothing/under/dressshirt/axiom_tunic/black,
-/obj/item/clothing/under/dressshirt/axiom_tunic/blue,
-/obj/item/clothing/under/dressshirt/axiom_tunic/blue_trim,
-/obj/item/clothing/under/dressshirt/axiom_tunic/ecclesiastical,
-/obj/item/clothing/under/dressshirt/axiom_tunic/green,
-/obj/item/clothing/head/trinary,
-/obj/item/clothing/head/trinary/black,
-/obj/item/clothing/head/trinary/blue,
-/obj/item/clothing/head/trinary/blue_trim,
-/obj/item/clothing/head/trinary/ecclesiastical,
-/obj/item/clothing/head/trinary/green,
-/obj/item/clothing/head/trinary/habit,
-/obj/item/clothing/suit/storage/hooded/trinary_robes,
-/obj/item/clothing/suit/storage/hooded/trinary_robes/habit,
-/obj/item/clothing/suit/storage/hooded/trinary_robes/templeist,
-/obj/item/clothing/accessory/badge/trinary,
-/obj/item/clothing/accessory/badge/trinary,
-/obj/item/clothing/accessory/badge/trinary,
-/obj/item/clothing/accessory/badge/trinary,
-/obj/item/clothing/accessory/badge/trinary,
 /obj/random/dirt_75,
 /turf/simulated/floor,
 /area/ecclesiastical_corvette/cargo)
@@ -2162,6 +2140,7 @@
 /obj/structure/machinery/alarm/north{
 	req_one_access = list(258)
 	},
+/obj/random/dirt_75,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/crew_quarters)
 "ol" = (
@@ -3242,6 +3221,7 @@
 /obj/item/clothing/accessory/poncho/trinary/shouldercape/blue,
 /obj/item/clothing/accessory/poncho/trinary/shouldercape/blue,
 /obj/item/clothing/accessory/poncho/trinary/shouldercape/blue,
+/obj/random/dirt_75,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/crew_quarters)
 "vC" = (
@@ -3558,7 +3538,6 @@
 	dir = 8
 	},
 /obj/structure/machinery/atmospherics/unary/vent_pump/on,
-/obj/random/dirt_75,
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/crew_quarters)
 "ya" = (
@@ -4623,10 +4602,10 @@
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
 	},
-/obj/structure/machinery/atmospherics/pipe/simple/hidden/universal{
+/obj/structure/machinery/meter,
+/obj/structure/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 4
 	},
-/obj/structure/machinery/meter,
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/atmospherics)
 "Gs" = (
@@ -5287,7 +5266,30 @@
 /area/ecclesiastical_corvette/infirmary)
 "KT" = (
 /obj/effect/floor_decal/industrial/outline/operations,
-/obj/structure/closet/crate/loot,
+/obj/structure/closet/crate/drop/grey{
+	name = "Ecclesiastical Garb"
+	},
+/obj/item/clothing/under/dressshirt/axiom_tunic,
+/obj/item/clothing/under/dressshirt/axiom_tunic/black,
+/obj/item/clothing/under/dressshirt/axiom_tunic/blue,
+/obj/item/clothing/under/dressshirt/axiom_tunic/blue_trim,
+/obj/item/clothing/under/dressshirt/axiom_tunic/ecclesiastical,
+/obj/item/clothing/under/dressshirt/axiom_tunic/green,
+/obj/item/clothing/head/trinary,
+/obj/item/clothing/head/trinary/black,
+/obj/item/clothing/head/trinary/blue,
+/obj/item/clothing/head/trinary/blue_trim,
+/obj/item/clothing/head/trinary/ecclesiastical,
+/obj/item/clothing/head/trinary/green,
+/obj/item/clothing/head/trinary/habit,
+/obj/item/clothing/suit/storage/hooded/trinary_robes,
+/obj/item/clothing/suit/storage/hooded/trinary_robes/habit,
+/obj/item/clothing/suit/storage/hooded/trinary_robes/templeist,
+/obj/item/clothing/accessory/badge/trinary,
+/obj/item/clothing/accessory/badge/trinary,
+/obj/item/clothing/accessory/badge/trinary,
+/obj/item/clothing/accessory/badge/trinary,
+/obj/item/clothing/accessory/badge/trinary,
 /obj/random/dirt_75,
 /obj/structure/machinery/firealarm/south,
 /turf/simulated/floor,
@@ -5768,7 +5770,6 @@
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/random/dirt_75,
 /turf/simulated/floor/tiled/gridded,
 /area/ecclesiastical_corvette/crew_quarters)
 "Pa" = (

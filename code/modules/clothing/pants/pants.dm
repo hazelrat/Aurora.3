@@ -11,7 +11,7 @@ ABSTRACT_TYPE(/obj/item/clothing/pants)
 	slot_flags = SLOT_PANTS
 	contained_sprite = TRUE
 	body_parts_covered = LOWER_TORSO | LEGS
-	var/mob_wear_layer = ABOVE_UNIFORM_LAYER_PA
+	var/mob_wear_layer = UNDER_UNIFORM_LAYER_PA
 	gender = PLURAL // some pants vs. a skirt
 	valid_accessory_slots = list(ACCESSORY_SLOT_PANTS)
 	center_of_mass = list("x" = 16,"y" = 8)
