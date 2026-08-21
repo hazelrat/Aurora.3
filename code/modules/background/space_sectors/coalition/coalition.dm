@@ -9,6 +9,7 @@
 	starlight_power = 2
 	starlight_range = 4
 	sector_welcome_message = 'sound/AI/welcome_coalition.ogg'
+	sector_hud_menu = 'icons/misc/hudmenu/coalition_hud.dmi'
 	sector_hud_arrow = "menu_arrow"
 
 /datum/space_sector/weeping_stars
@@ -37,6 +38,7 @@
 	starlight_power = 2
 	starlight_range = 4
 	sector_welcome_message = 'sound/AI/welcome_weeping.ogg'
+	sector_hud_menu = 'icons/misc/hudmenu/coalition_hud.dmi'
 	sector_hud_arrow = "menu_arrow"
 
 /datum/space_sector/arusha
@@ -52,10 +54,48 @@
 	name = SECTOR_LIBERTYS_CRADLE
 	description = "The beating heart of the modern Coalition of Colonies, Liberty’s Cradle is home to many of the Coalition’s most developed and influential worlds. In contrast to the Solarian stereotype of the frontier as a decivilized wasteland populated by roving bands of pirates and petty warlords, Liberty’s Cradle is a prosperous and safe region which has a higher standard of living than much of the former Middle and Outer Ring possessed prior to the Solarian Collapse of 2462. Post-Collapse the area has continued to prosper and, now that it dwells far behind the Coalition-controlled Weeping Stars, is more secure than it has ever been before."
 	skybox_icon = "arusha"//placeholder
-//	cargo_price_coef = TBD
+	scheduled_port_visits = null
+	cargo_price_coef = list(
+		"arisi" = 1.2,
+		"bishop" = 0.8,
+		"blam" = 1.2,
+		"eckharts" = 1.2,
+		"einstein" = 0.8,
+		"getmore" = 0.8,
+		"hephaestus" = 1.1,
+		"iac" = 1.2,
+		"idris" = 0.8,
+		"molinaris" = 1.2,
+		"nanotrasen" = 0.8,
+		"orion" = 0.8,
+		"virgo" = 1.2,
+		"vysoka" = 1.2,
+		"xion" = 1.1,
+		"zavodskoi" = 0.8,
+		"zeng_hu" = 0.7,
+		"zharkov" = 1.2,
+		"zora" = 1.2,
+		)
 	starlight_color = "#2d9647"
 	starlight_power = 2
 	starlight_range = 5
+
+
+/datum/space_sector/libertys_cradle/xanu
+	name = SECTOR_XANU
+	description = "Located in the eastern Orion Spur. The Xanu system is home to the Xanu Prime, colonised in 2185, which has grown into the current capital of the Coalition of Colonies, a decentralised government that won its independence from the Solarian Alliance after the Interstellar War."
+	skybox_icon = "arusha" //placeholder
+	possible_exoplanets = list(/obj/effect/overmap/visitable/sector/exoplanet/barren/asteroid, /obj/effect/overmap/visitable/sector/exoplanet/barren/asteroid/ice)
+	guaranteed_exoplanets = list(/obj/effect/overmap/visitable/sector/exoplanet/xanu)
+
+	ports_of_call = list("Pataliputra")
+	scheduled_port_visits = list("Saturday", "Sunday")
+	starlight_range = 2
+
+	lobby_tracks = list(
+		'sound/music/ingame/xanu/xanu_rock_1.ogg',
+		'sound/music/ingame/xanu/xanu_rock_2.ogg'
+	)
 
 /datum/space_sector/burzsia
 	name = SECTOR_BURZSIA
@@ -83,6 +123,7 @@
 	starlight_power = 2
 	starlight_range = 4
 	sector_welcome_message = 'sound/AI/welcome_weeping.ogg'
+	sector_hud_menu = 'icons/misc/hudmenu/coalition_hud.dmi'
 	sector_hud_arrow = "menu_arrow"
 
 /datum/space_sector/haneunim
@@ -110,13 +151,10 @@
 	starlight_color = "#e2719b"
 	starlight_power = 2//placeholder
 	starlight_range = 4//placeholder
-	lobby_icon_image_paths = list(
-								list('icons/misc/titlescreens/tajara/taj1.png', 'icons/misc/titlescreens/tajara/taj2.png', 'icons/misc/titlescreens/tajara/taj3.png', 'icons/misc/titlescreens/tajara/taj4.png', 'icons/misc/titlescreens/tajara/Ghostsofwar.png', 'icons/misc/titlescreens/tajara/crack.png', 'icons/misc/titlescreens/tajara/blind_eye.png', 'icons/misc/titlescreens/tajara/RoyalGrenadier.png', 'icons/misc/titlescreens/tajara/For_the_King.png'),
-								list('icons/misc/titlescreens/synths/baseline.png', 'icons/misc/titlescreens/synths/bishop.png', 'icons/misc/titlescreens/synths/g2.png', 'icons/misc/titlescreens/synths/shell.png', 'icons/misc/titlescreens/synths/zenghu.png'),
-								list('icons/misc/titlescreens/vaurca/cthur.png', 'icons/misc/titlescreens/vaurca/klax.png', 'icons/misc/titlescreens/vaurca/liidra.png', 'icons/misc/titlescreens/vaurca/zora.png'),
-								list('icons/misc/titlescreens/space/odin.png', 'icons/misc/titlescreens/space/starmap.png', 'icons/misc/titlescreens/space/undocking.png', 'icons/misc/titlescreens/space/voyage.png')
-								)
+	sector_lobby_art = list('icons/misc/titlescreens/lore/silicon_nightmares.dmi')
+	sector_lobby_transitions = 0
 	sector_welcome_message = 'sound/AI/welcome_konyang.ogg'
+	sector_hud_menu = 'icons/misc/hudmenu/konyang_hud.dmi'
 	sector_hud_arrow = "menu_arrow"
 
 	lobby_tracks = list(
@@ -134,18 +172,42 @@
 		"78.1 RealFM" = 'texts/lore_radio/konyang/78.1_RealFM.txt'
 	)
 
-/datum/space_sector/xanu
-	name = SECTOR_XANU
-	description = "Located in the eastern Orion Spur. The Xanu system is home to the Xanu Prime, colonised in 2185, which has grown into the current capital of the Coalition of Colonies, a decentralised government that won its independence from the Solarian Alliance after the Interstellar War."
-	skybox_icon = "arusha" //placeholder
-	possible_exoplanets = list(/obj/effect/overmap/visitable/sector/exoplanet/barren/asteroid, /obj/effect/overmap/visitable/sector/exoplanet/barren/asteroid/ice)
-	guaranteed_exoplanets = list(/obj/effect/overmap/visitable/sector/exoplanet/xanu)
+/datum/space_sector/al_maqdisi
+	name = SECTOR_AL_MAQDISI
+	description = "Located in the southeastern reaches of the Spur, Light's Edge was the furthest that explorers from the Alliance's hegemonic colonization era reached. Few attempts were made to colonize it prior to the Interstellar War, and it remains sparsely populated even today. It is home to Assunzione in the Al-Maqdisi sector and the mysterious, inimical Lemurian Sea, about which extraordinarily little is known."
+	skybox_icon = "lights_edge"
+	guaranteed_exoplanets = list(/obj/effect/overmap/visitable/sector/exoplanet/assunzione)
+	cargo_price_coef = list(
+		"nanotrasen" = 1.1,
+		"orion" = 0.7,
+		"hephaestus" = 0.7,
+		"zeng_hu" = 0.6,
+		"eckharts" = 1,
+		"blam" = 0.9,
+		"zharkov" = 1.2,
+		"virgo" = 0.9,
+		"bishop" = 0.5,
+		"xion" = 0.8,
+		"zavodskoi" = 0.8,
+		)
 
-	ports_of_call = list("Pataliputra")
-	scheduled_port_visits = list("Saturday", "Sunday")
+	ports_of_call = list("Port Volturno, Triesto")
+	scheduled_port_visits = list("Sunday", "Wednesday")
+	starlight_color = "#351035"
+	starlight_power = 1
 	starlight_range = 2
+	sector_lobby_transitions = 0
+	sector_welcome_message = 'sound/AI/welcome_assunzione.ogg'
 
 	lobby_tracks = list(
-		'sound/music/regional/xanu/xanu_rock_1.ogg',
-		'sound/music/regional/xanu/xanu_rock_2.ogg'
+		'sound/music/lobby/lights_edge/lights_edge_1.ogg',
+		'sound/music/lobby/lights_edge/lights_edge_2.ogg'
+	)
+
+	lore_radio_stations = list(
+		"78.1 RealFM" = 'texts/lore_radio/lights_edge/85.7_Volturno_Local.txt',
+		"87.4 XNS Interstellar Broadcasting" = 'texts/lore_radio/lights_edge/87.4_XNS_Interstellar.txt',
+		"89.8 DomeChat" = 'texts/lore_radio/lights_edge/89.8_DomeChat.txt',
+		"96.2 Coalition Hits!" = 'texts/lore_radio/lights_edge/96.2_Coalition_Hits.txt',
+		"114.8 RADIO LEMURIAN TRUTH" = 'texts/lore_radio/lights_edge/114.8_Radio_Lemurian_Truth.txt'
 	)

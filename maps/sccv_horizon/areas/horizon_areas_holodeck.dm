@@ -1,11 +1,13 @@
 /// HOLODECK_AREAS
 /area/horizon/holodeck_control
 	name = "Holodeck Alpha"
+	icon_state = "holodeck_control"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_CIVILIAN
 	horizon_deck = 3
 	area_blurb = "One of the SCCV Horizon's very expensive holodecks."
 	department = LOC_CREW
+	lightswitch = FALSE
 
 /area/horizon/holodeck_control/beta
 	name = "Holodeck Beta"
@@ -15,7 +17,6 @@
 	icon_state = "Holodeck"
 	sound_environment = SOUND_AREA_LARGE_ENCLOSED
 	no_light_control = TRUE
-	dynamic_lighting = FALSE
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_NO_GHOST_TELEPORT_ACCESS
 	holomap_color = HOLOMAP_AREACOLOR_CIVILIAN
 	horizon_deck = 3
@@ -24,11 +25,9 @@
 
 /area/horizon/holodeck/alphadeck
 	name = "Holodeck Alpha"
-	dynamic_lighting = TRUE
 
 /area/horizon/holodeck/betadeck
 	name = "Holodeck Beta"
-	dynamic_lighting = TRUE
 
 /area/horizon/holodeck/source_plating
 	name = "Holodeck - Off"
@@ -136,6 +135,9 @@
 
 /area/horizon/holodeck/source_trinary
 	name = "Holodeck - Trinarist Chapel"
+
+/area/horizon/holodeck/source_luceism
+	name = "Holodeck - Luceian Chapel"
 
 /area/horizon/holodeck/source_cafe
 	name = "Holodeck - Animal Cafe"

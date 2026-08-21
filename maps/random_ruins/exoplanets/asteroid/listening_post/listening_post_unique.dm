@@ -20,7 +20,6 @@
 	name = "Listening Post Installation"
 	icon_state = "bluenew"
 	requires_power = TRUE
-	dynamic_lighting = TRUE
 	no_light_control = TRUE
 	is_outside = OUTSIDE_NO
 
@@ -42,7 +41,7 @@
 /area/listening_post/servers
 	name = "Listening Post Installation - Server Room"
 
-/obj/effect/map_effect/marker/airlock/listening_post
+/obj/effect/map_effect/marker/airlock/external/listening_post
 	name = "Entrance"
 	master_tag = "airlock_listening_post_ruin"
 	cycle_to_external_air = TRUE

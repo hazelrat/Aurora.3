@@ -41,7 +41,7 @@
 /singleton/recipe/father_breakfast
 	items = list(
 		/obj/item/reagent_containers/food/snacks/sausage,
-		/obj/item/reagent_containers/food/snacks/omelette,
+		/obj/item/reagent_containers/food/snacks/omelette/fromage,
 		/obj/item/reagent_containers/food/snacks/meatsteak
 	)
 	result = /obj/item/reagent_containers/food/snacks/father_breakfast
@@ -81,7 +81,7 @@
 		/obj/item/reagent_containers/food/snacks/meatball,
 		/obj/item/reagent_containers/food/snacks/meatball,
 		/obj/item/reagent_containers/food/snacks/meatball,
-		/obj/item/reagent_containers/food/snacks/omelette
+		/obj/item/reagent_containers/food/snacks/omelette/fromage
 	)
 	result = /obj/item/reagent_containers/food/snacks/egg_pancake
 
@@ -224,3 +224,13 @@
 		/obj/item/reagent_containers/food/snacks/fish
 	)
 	result = /obj/item/reagent_containers/food/snacks/orszi
+
+/singleton/recipe/sth_fish
+	appliance = SKILLET | SAUCEPAN
+	fruit = list("S'th berry" = 1, "seaweed" = 1)
+	reagents = list(/singleton/reagent/drink/milk/cream = 5, /singleton/reagent/spacespice = 2)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/fish
+	)
+	result = /obj/item/reagent_containers/food/snacks/sth_fish
+	reagent_mix = RECIPE_REAGENT_REPLACE

@@ -1411,16 +1411,16 @@
 	glass_desc = "A tangy substance made of 0.5% natural citrus!"
 
 /singleton/reagent/drink/grapesoda
-	name = "Grape Soda"
-	description = "Grapes made into a fine drank."
+	name = "Drosiá Grape"
+	description = "Only the second best thing made of grapes to come out of Assunzione."
 	color = "#421C52"
 	adj_drowsy = -3
 	taste_description = "grape soda"
 	carbonated = TRUE
 
 	glass_icon_state = "gsodaglass"
-	glass_name = "glass of grape soda"
-	glass_desc = "Looks like a delicious drink!"
+	glass_name = "glass of Drosiá Grape"
+	glass_desc = "Only the second best thing made of grapes to come out of Assunzione."
 
 /singleton/reagent/drink/brownstar
 	name = "Orange Starshine"
@@ -1432,6 +1432,17 @@
 	glass_icon_state = "brownstar"
 	glass_name = "glass of Orange Starshine"
 	glass_desc = "A citrusy orange soda."
+
+/singleton/reagent/drink/orangeade
+	name = "Orangeade"
+	description = "A fizzy citrus-y splash of delight."
+	color = "#e77110"
+	taste_description = "fizzy citrus"
+	carbonated = TRUE
+
+	glass_icon_state = "glass_orange"
+	glass_name = "glass of orangeade"
+	glass_desc = "It tastes like it might be good for you, but it's not! Mmm, citrus!"
 
 //
 // Diet Soda
@@ -1793,6 +1804,32 @@
 	glass_name = "glass of melon liquor"
 	glass_desc = "A relatively sweet and fruity 46 proof liquor."
 	glass_center_of_mass = list("x"=16, "y"=5)
+
+/singleton/reagent/alcohol/limoncello
+	name = "Limoncello"
+	description = "A lemon liquor beloved in Italy and Assunzione alike."
+	color = "#ffef16"
+	strength = 24
+	taste_description = "lemon liquor"
+
+	value = 0.15
+
+	glass_icon_state = "limoncello"
+	glass_name = "glass of Limoncello"
+	glass_desc = "A citrusy sweet and sour liquor originating in southern Italy."
+
+/singleton/reagent/alcohol/bon_bon
+	name = "Bon Bon"
+	description = "A citrusy, sweet and sour blast from the past."
+	color = "#fff891"
+	strength = 32
+	taste_description = "sour candy"
+
+	value = 0.17
+
+	glass_icon_state = "bonbon"
+	glass_name = "glass of Bon Bon"
+	glass_desc = "Candy is dandy but liquor is quicker!"
 
 /singleton/reagent/alcohol/rum
 	name = "Rum"
@@ -3835,3 +3872,31 @@
 	glass_icon_state = "b52glass"
 	glass_name = "glass of B-52"
 	glass_desc = "Kahlua, Irish cream, and congac. You will get bombed."
+
+/singleton/reagent/alcohol/beer/prince_pallav_blonde_ale
+	name = "Prince Pallav Blonde Ale"
+	description = "A golden ale brewed in Foy-Niljen, Prince Pallav has defined Xanan brewing for over two decades. Smooth, lightly sweet, and impeccably balanced, it remains the undisputed favorite of the Republic, edging out Whistling Forest by a wide margin."
+	color = "#b98f19"
+	strength = 5
+	taste_description = "light honeyed maltiness"
+	carbonated = TRUE
+
+	value = 0.18
+
+	glass_icon_state = "prince_pallav"
+	glass_name = "glass of Prince Pallav Blonde Ale"
+	glass_desc = "This beer thinks it's better than you."
+
+/singleton/reagent/alcohol/beer/marienthal_stout
+	name = "Marienthal Stout"
+	description = "A full-bodied stout brewed in the river valleys of Marienthal County, Sankt Frederick. Strong and dark as tilled soil, Marienthal Stout has become one of the Free State’s most recognizable exports, carving out a respectable presence within the rest of Alliance due to its rich, earthy flavor, and affordable price tag."
+	color = "#a7700c"
+	strength = 6
+	taste_description = "a hard day's work"
+	carbonated = TRUE
+
+	value = 0.1
+
+	glass_icon_state = "marienthal"
+	glass_name = "glass of Marienthal Stout"
+	glass_desc = "It doesn't get much more blue collar than a glass of this classic Solarian beer."

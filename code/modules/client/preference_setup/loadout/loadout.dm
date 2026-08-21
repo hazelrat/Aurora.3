@@ -104,6 +104,8 @@ GLOBAL_LIST_INIT(gear_datums, list())
 	var/list/whitelist_cache = list()
 
 	if(preference_mob)
+		if(preference_mob.client)
+			preference_mob.client.load_whitelist_status()
 		for(var/species in GLOB.all_species)
 			var/datum/species/S = GLOB.all_species[species]
 			if(is_alien_whitelisted(preference_mob, S))
@@ -187,7 +189,10 @@ GLOBAL_LIST_INIT(gear_datums, list())
 	. += "<table align = 'center' width = 100%>"
 	if (gear_reset)
 		. += "<tr><td colspan=3><center><i>Your loadout failed to load and will be reset if you save this slot.</i></center></td></tr>"
-	. += "<tr><td colspan=3><center><a href='byond://?src=[REF(src)];prev_slot=1'>\<\<</a><b><font color = '[fcolor]'>\[[pref.gear_slot]\]</font> </b><a href='byond://?src=[REF(src)];next_slot=1'>\>\></a><b><font color = '[fcolor]'>[total_cost]/[GLOB.config.loadout_cost]</font> loadout points spent.</b> \[<a href='byond://?src=[REF(src)];clear_loadout=1'>Clear Loadout</a>\]</center></td></tr>"
+	. += "<tr><td colspan=3><center><a href='byond://?src=[REF(src)];prev_slot=1'>\<\<</a><b><font color = '[fcolor]'>\[[pref.gear_slot]\]</font> </b><a href='byond://?src=[REF(src)];next_slot=1'>\>\></a><b><font color = '[fcolor]'>[total_cost]/[GLOB.config.loadout_cost]</font> loadout points spent.</b> \[<a href='byond://?src=[REF(src)];clear_loadout=1'>Clear Loadout</a>\]"
+	if(GLOB.config.loadout_slots > 1)
+		. += " \[<a href='byond://?src=[REF(src)];duplicate_loadout=1'>Duplicate Loadout</a>\]"
+	. += "</center></td></tr>"
 
 	. += "<tr><td colspan=3><center><b>"
 	var/firstcat = 1
@@ -245,7 +250,8 @@ GLOBAL_LIST_INIT(gear_datums, list())
 			&& (job && G.check_role(job.title)) \
 			&& G.check_culture(text2path(pref.culture)) \
 			&& G.check_origin(text2path(pref.origin)) \
-			&& G.check_religion(pref.religion))
+			&& G.check_religion(pref.religion)) \
+			&& G.check_citizenship(pref.citizenship)
 		var/ticked = (G.display_name in pref.gear)
 		var/style = ""
 
@@ -416,6 +422,36 @@ GLOBAL_LIST_INIT(gear_datums, list())
 		pref.gear.Cut()
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
+	else if(href_list["duplicate_loadout"])
+		if(pref.gear_modified)
+			tgui_alert(user, "Gear has been Modified - Save First or Reload", "Gear Modified", list("OK"))
+			return TOPIC_NOACTION
+
+		var/source_slot = pref.gear_slot
+		var/list/available_slots = list()
+		for(var/slot = 1 to GLOB.config.loadout_slots)
+			if(slot != source_slot)
+				available_slots += "Slot [slot]"
+
+		var/selected_slot = tgui_input_list(user, "Choose the loadout slot to replace with a copy of Slot [source_slot].", "Duplicate Loadout", available_slots)
+		if(!selected_slot || !CanUseTopic(user))
+			return TOPIC_NOACTION
+
+		var/target_slot = text2num(copytext(selected_slot, 6))
+		if(target_slot < 1 || target_slot > GLOB.config.loadout_slots || target_slot == source_slot)
+			return TOPIC_NOACTION
+
+		var/confirmation = tgui_alert(user, "Are you sure you want to replace everything in Slot [target_slot] with a copy of Slot [source_slot]?", "Duplicate Loadout", list("Yes", "No"))
+		if(confirmation != "Yes" || !CanUseTopic(user) || pref.gear_slot != source_slot || pref.gear_modified)
+			return TOPIC_NOACTION
+
+		var/list/duplicated_gear = deep_copy_list(pref.gear)
+		pref.gear_list["[target_slot]"] = duplicated_gear
+		pref.gear_slot = target_slot
+		pref.gear = duplicated_gear
+		pref.gear_modified = TRUE
+		return TOPIC_REFRESH_UPDATE_PREVIEW
+
 	else if(href_list["search_input_refresh"] != null) // empty str is false
 		search_input_value = sanitize(href_list["search_input_refresh"], 100)
 		return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -477,6 +513,13 @@ GLOBAL_LIST_INIT(gear_datums, list())
 	 * If left `null`, any religion can spawn with this item
 	 */
 	var/religion
+
+	/**
+	 * A string of the citizenship that can use this item
+	 *
+	 * If left `null`, any citizenship can spawn with this item
+	 */
+	var/citizenship
 
 	/**
 	 * A `/list` of [/singleton/origin_item/culture] paths that can use this item
@@ -545,11 +588,13 @@ GLOBAL_LIST_INIT(gear_datums, list())
 		return "You cannot spawn with the [initial(spawning_item.name)] with your current species!"
 	if(gd.faction_requirement && (human.employer_faction != "Stellar Corporate Conglomerate" && gd.faction_requirement != human.employer_faction))
 		return "You cannot spawn with the [initial(spawning_item.name)] with your current faction!"
-	var/our_culture = text2path(prefs.culture)
-	if(culture_restriction && !(our_culture in culture_restriction))
+	if(!check_religion(prefs.religion))
+		return "You cannot spawn with the [initial(spawning_item.name)] with your current religion!"
+	if(!check_citizenship(prefs.citizenship))
+		return "You cannot spawn with the [initial(spawning_item.name)] with your current citizenship!"
+	if(!check_culture(text2path(prefs.culture)))
 		return "You cannot spawn with the [initial(spawning_item.name)] with your current culture!"
-	var/our_origin = text2path(prefs.origin)
-	if(origin_restriction && !(our_origin in origin_restriction))
+	if(!check_origin(text2path(prefs.origin)))
 		return "You cannot spawn with the [initial(spawning_item.name)] with your current origin!"
 	return null
 
@@ -583,6 +628,12 @@ GLOBAL_LIST_INIT(gear_datums, list())
 			qdel(replaced_organ)
 
 	var/item = new spawn_path(spawn_location)
+	if(istype(item, /obj/item/organ/internal) && ishuman(H))
+		var/obj/item/organ/internal/I = item
+		var/obj/item/organ/external/E = H.get_organ(I.parent_organ)
+		if(E)
+			I.replaced(H, E)
+
 	for(var/datum/gear_tweak/gt in gear_tweaks)
 		if(metadata["[gt]"])
 			gt.tweak_item(item, metadata["[gt]"], H)
@@ -612,10 +663,24 @@ GLOBAL_LIST_INIT(gear_datums, list())
 	return TRUE
 
 // arg should be a religion name string
-/datum/gear/proc/check_religion(var/religion_)
-	if((religion && religion_) && (religion != religion_))
-		return FALSE
-	return TRUE
+/datum/gear/proc/check_religion(var/user_religion)
+	if(!religion || !user_religion)
+		return TRUE
+	if(religion == user_religion)
+		return TRUE
+	if(islist(religion) && (user_religion in religion))
+		return TRUE
+	return FALSE
+
+// arg should be a citizenship name string
+/datum/gear/proc/check_citizenship(var/user_citizenship)
+	if(!citizenship || !user_citizenship)
+		return TRUE
+	if(citizenship == user_citizenship)
+		return TRUE
+	if(islist(citizenship) && (user_citizenship in citizenship))
+		return TRUE
+	return FALSE
 
 // arg should be a role name string
 /datum/gear/proc/check_role(var/role)

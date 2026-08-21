@@ -203,6 +203,48 @@
 	reagent_data = list(/singleton/reagent/nutriment = list("peas" = 5, "vegetables" = 4))
 	bitesize = 2
 
+/obj/item/reagent_containers/food/snacks/soup/gazpacho
+	name = "gazpacho"
+	desc = "Excuse me, waiter, my tomato soup is cold! Wha- They serve it like this in Spain?! Well... uh... I knew that! I just meant it should be colder! Everyone knows they don't have stoves back in Sol!... Right?"
+	icon = 'icons/obj/item/reagent_containers/food/soup.dmi'
+	icon_state = "gazpacho"
+	filling_color = "#e2520f"
+	bitesize = 2
+	reagents_to_add = list(/singleton/reagent/drink/tomatojuice = 5, /singleton/reagent/nutriment = 5)
+	reagent_data = list(/singleton/reagent/nutriment = list("tomato soup" = 5, "peppers" = 4, "cold zest" = 3))
+
+/obj/item/reagent_containers/food/snacks/soup/gazpacho/update_icon()
+	var/expected_initial_reagent_volume
+	for(var/k in src.reagents_to_add)
+		expected_initial_reagent_volume += reagents_to_add[k]
+	var/percent_gazpacho = round((reagents.total_volume / expected_initial_reagent_volume) * 100)
+	switch(percent_gazpacho)
+		if(0 to 50)
+			icon_state = "gazpacho_half"
+		if(51 to INFINITY)
+			icon_state = "gazpacho"
+
+/obj/item/reagent_containers/food/snacks/soup/pumpkin
+	name = "pumpkin soup"
+	desc = "Creamy pumpkin soup to have on a cold autumn day. Or whenever, really! I'm not your parole officer."
+	icon = 'icons/obj/item/reagent_containers/food/soup.dmi'
+	icon_state = "pumpkinsoup"
+	filling_color = "#f89500"
+	reagents_to_add = list(/singleton/reagent/nutriment = 4, /singleton/reagent/water = 4)
+	reagent_data = list(/singleton/reagent/nutriment = list("creamy pumpkin" = 5))
+	bitesize = 2
+
+/obj/item/reagent_containers/food/snacks/soup/pumpkin/update_icon()
+	var/expected_initial_reagent_volume
+	for(var/k in src.reagents_to_add)
+		expected_initial_reagent_volume += reagents_to_add[k]
+	var/percent_pumpkinsoup = round((reagents.total_volume / expected_initial_reagent_volume) * 100)
+	switch(percent_pumpkinsoup)
+		if(0 to 49)
+			icon_state = "pumpkinsoup_half"
+		if(50 to INFINITY)
+			icon_state = "pumpkinsoup"
+
 // Stew
 
 /obj/item/reagent_containers/food/snacks/stew
@@ -239,6 +281,18 @@
 	trash = /obj/item/trash/snack_bowl
 	filling_color = "#921f10"
 	bitesize = 4
+
+/obj/item/reagent_containers/food/snacks/stew/psiren_surprise
+	name = "psiren surprise"
+	desc = "What's in this thing? Oh, haha, don't worry about it. What? Moving? Don't be silly! That's because it's still bubbling! This is just a nice, hearty stew, and what's important is that there's enough here for multiple people! Or, uh, one person from mining, I guess. (Psst! Hey, quit moving in there! Don't make me use the ladle again!)"
+	icon = 'icons/obj/item/reagent_containers/food/soup.dmi'
+	icon_state = "psiren_surprise"
+	trash = /obj/item/trash/stew
+	filling_color = "#68391a"
+	bitesize = 4
+	is_liquid = TRUE
+	reagents_to_add = list(/singleton/reagent/nutriment = 4)
+	reagent_data = list(/singleton/reagent/nutriment = list("vegetables" = 5, "fishy undertones" = 3))
 
 // Chilli
 

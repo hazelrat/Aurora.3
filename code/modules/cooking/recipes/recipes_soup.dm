@@ -101,6 +101,20 @@
 	reagents = list(/singleton/reagent/water = 10)
 	result = /obj/item/reagent_containers/food/snacks/soup/pea
 
+/singleton/recipe/gazpacho
+	appliance = MIX
+	reagents = list(/singleton/reagent/water = 10, /singleton/reagent/sodiumchloride = 1, /singleton/reagent/blackpepper = 1)
+	fruit = list("tomato" = 1, "bellpepper" = 1, "cucumber" = 1)
+	reagent_mix = RECIPE_REAGENT_REPLACE
+	result = /obj/item/reagent_containers/food/snacks/soup/gazpacho
+
+/singleton/recipe/pumpkin_soup
+	appliance = SAUCEPAN | POT | MICROWAVE
+	fruit = list("pumpkin" = 1)
+	reagents = list(/singleton/reagent/water = 5, /singleton/reagent/drink/milk/cream = 5)
+	reagent_mix = RECIPE_REAGENT_REPLACE
+	result = /obj/item/reagent_containers/food/snacks/soup/pumpkin
+
 // Stews
 /singleton/recipe/stew
 	appliance = POT
@@ -130,6 +144,16 @@
 	reagents = list(/singleton/reagent/nutriment/rice = 5, /singleton/reagent/water = 10)
 	items = list(/obj/item/reagent_containers/food/snacks/fish)
 	result = /obj/item/reagent_containers/food/snacks/black_eyed_gumbo
+
+/singleton/recipe/psiren_surprise
+	appliance = POT
+	fruit = list("onion" = 1, "tomato" = 1, "garlic" = 1)
+	reagents = list(/singleton/reagent/water = 10, /singleton/reagent/spacespice = 2)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/psiren_body_meat,
+		/obj/item/reagent_containers/food/snacks/psiren_tentacle_meat
+	)
+	result = /obj/item/reagent_containers/food/snacks/stew/psiren_surprise
 
 // Chili
 /singleton/recipe/bearchili

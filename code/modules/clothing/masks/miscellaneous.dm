@@ -101,6 +101,10 @@
 /obj/item/clothing/mask/trinary_mask
 	name = "trinary perfection mask"
 	desc = "A simple lace mask worn by IPCs and organics alike while within the churches of the Trinary Perfection."
+	desc_extended = "Thought to help dissolve the divisions between organic and synthetic followers, it has been \
+		traditional for a mask to be worn within a holy space among Trinarists since the earliest days of the religion. \
+		Supposedly, masks were mandated among the early followers of Patricia Corkfell as they developed and maintained \
+		Temple, the artificial intelligence doomed to a young death, hence beginning a tradition that lasts to this day."
 	icon_state = "trinary_mask"
 	item_state = "trinary_mask"
 	w_class = WEIGHT_CLASS_SMALL
@@ -194,6 +198,7 @@
 	item_state = "snood"
 	contained_sprite = TRUE
 	w_class = WEIGHT_CLASS_SMALL
+	flags_inv = HIDEFACE
 	body_parts_covered = FACE
 	item_flags = ITEM_FLAG_FLEXIBLE_MATERIAL
 	gas_transfer_coefficient = 0.90
@@ -211,3 +216,12 @@
 	. = ..()
 	if(icon_auto_adapt)
 		build_and_apply_species_adaption()
+
+/obj/item/clothing/mask/snood/adjust_mask(mob/user, self)
+	. = ..()
+	if(hanging)
+		body_parts_covered &= ~FACE
+		flags_inv &= ~HIDEFACE
+	else
+		body_parts_covered |= FACE
+		flags_inv |= HIDEFACE

@@ -5,20 +5,28 @@
 	smoothing_flags = SMOOTH_TRUE | SMOOTH_BORDER | SMOOTH_NO_CLEAR_ICON
 	smoothing_hints = SMOOTHHINT_CUT_F | SMOOTHHINT_ONLY_MATCH_TURF | SMOOTHHINT_TARGETS_NOT_UNIQUE
 	icon_state = "smooth"
+	has_resources = FALSE
 	var/static/list/forbidden_types = typecacheof(list(
 		/obj/singularity,
 		/obj/structure/lattice,
 		/obj/projectile,
-		/obj/effect
+		/obj/effect,
+		/obj/structure/machinery/light,
+		/obj/structure/railing,
+		/obj/structure/stairs_railing,
+		/obj/structure/platform,
+		/obj/structure/platform_deco,
+		/obj/structure/extinguisher_cabinet,
+		/obj/structure/sign,
+		/obj/structure/machinery/atmospherics/pipe
 		))
-	has_resources = FALSE
 
 /turf/simulated/floor/exoplanet/abyss/Initialize()
 	. = ..()
 	icon_state = "Fill"
 
 /turf/simulated/floor/exoplanet/abyss/Entered(atom/movable/AM, atom/oldloc)
-	if(is_type_in_typecache(forbidden_types))
+	if(is_type_in_typecache(AM, forbidden_types))
 		return TRUE
 
 	else if(istype(AM, /mob/living))
@@ -35,10 +43,12 @@
 			return TRUE
 
 
-	else if(istype(AM, /obj/item))
-		var/obj/item/I = AM
-		I.visible_message(SPAN_DANGER("\The [I] falls into \the [src]."))
-		qdel(I)
+	else if(istype(AM, /obj/item) || istype(AM, /obj/structure))
+		if(locate(/obj/structure/lattice, src))	// Should be safe to be placed upon.
+			return TRUE
+		var/obj/O = AM
+		O.visible_message(SPAN_DANGER("\The [O] falls into \the [src]."))
+		qdel(O)
 
 	else
 		..()

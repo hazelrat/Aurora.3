@@ -9,8 +9,10 @@
 	suffix = "freebooter_ship_.dmm"
 
 	sectors = list(ALL_POSSIBLE_SECTORS)
-	spawn_weight = 0.5 // halved from 1 as this is a variation
-	ship_cost = 0.5
+	sectors_blacklist = list(LEMURIAN_SEA_SECTORS)
+	spawn_weight = 1
+	template_flags = TEMPLATE_FLAG_RUIN_STARTS_DISALLOWED // Disabled for debloating. Feel free to enable again if reworked or relevant.
+	ship_cost = 1
 	id = "freebooter_ship"
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/freebooter_shuttle)
 	ban_ruins = list(/datum/map_template/ruin/away_site/freebooter_salvager)
@@ -97,7 +99,7 @@
 	fore_dir = NORTH
 	vessel_size = SHIP_SIZE_TINY
 
-/obj/machinery/computer/shuttle_control/explore/freebooter_shuttle
+/obj/structure/machinery/computer/shuttle_control/explore/freebooter_shuttle
 	name = "shuttle control console"
 	shuttle_tag = "Freebooter Shuttle"
 

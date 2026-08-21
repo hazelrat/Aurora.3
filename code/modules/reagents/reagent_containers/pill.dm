@@ -5,10 +5,6 @@
 	name = "pill"
 	desc = "a pill."
 	icon = 'icons/obj/chemical.dmi'
-	item_icons = list(
-		slot_l_hand_str = 'icons/mob/items/stacks/lefthand_medical.dmi',
-		slot_r_hand_str = 'icons/mob/items/stacks/righthand_medical.dmi',
-		)
 	icon_state = null
 	item_state = "pill"
 	possible_transfer_amounts = null
@@ -18,6 +14,7 @@
 	drop_sound = 'sound/items/drop/food.ogg'
 	pickup_sound = 'sound/items/pickup/food.ogg'
 	storage_slot_sort_by_name = TRUE
+	contained_sprite = TRUE
 
 /obj/item/reagent_containers/pill/New()
 	..()
@@ -414,3 +411,18 @@
 	desc = "A strong psychotropic derived from certain species of mushroom."
 	icon_state = "pill10"
 	reagents_to_add = list(/singleton/reagent/drugs/psilocybin = 5)
+
+/obj/item/reagent_containers/pill/psi_protect
+	name = "5u Psi-protect Pill"
+	desc = "A pill used to protect against ADPI and treat various psionic disorders"
+	icon_state = "pill10"
+	reagents_to_add = list(/singleton/reagent/drugs/psiblock = 5)
+
+/obj/item/reagent_containers/pill/psi_protect/yomi_genetics
+	reagents_to_add = list(/singleton/reagent/drugs/psiblock/yomi_genetics = 5)
+
+/obj/item/reagent_containers/pill/psi_protect/yomi_genetics/cheap
+	reagents_to_add = list(/singleton/reagent/drugs/psiblock/yomi_genetics/cheap = 5)
+
+/obj/item/reagent_containers/pill/psi_protect/yomi_genetics/expensive
+	reagents_to_add = list(/singleton/reagent/drugs/psiblock/yomi_genetics/expensive = 5)

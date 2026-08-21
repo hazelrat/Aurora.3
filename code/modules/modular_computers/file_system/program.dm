@@ -84,11 +84,7 @@ ABSTRACT_TYPE(/datum/computer_file/program)
 	var/tgui_theme = "scc"
 
 	/// If this TGUI should autoupdate or not.
-	var/ui_auto_update = TRUE
-
-	// TO BE DEPRECATED:
-	var/datum/nano_module/NM								// If the program uses NanoModule, put it here and it will be automagically opened. Otherwise implement ui_interact.
-	var/nanomodule_path										// Path to nanomodule, make sure to set this if implementing new program.
+	var/ui_auto_update = TRUE							// Path to nanomodule, make sure to set this if implementing new program.
 
 /datum/computer_file/program/New(obj/item/modular_computer/comp)
 	..()
@@ -103,12 +99,13 @@ ABSTRACT_TYPE(/datum/computer_file/program)
 		crash_with("Comp was not sent for [src.filename]")
 
 /datum/computer_file/program/Destroy()
-	if(!QDELETED(computer))
+	if(computer)
 		computer.idle_threads -= src
 		computer.enabled_services -= src
-		set_computer(null)
+		UnregisterSignal(computer, COMSIG_QDELETING)
+	computer = null
+
 	. = ..()
-	GC_TEMPORARY_HARDDEL
 
 /datum/computer_file/program/ui_host()
 	if(computer)
@@ -135,7 +132,6 @@ ABSTRACT_TYPE(/datum/computer_file/program)
 	var/datum/computer_file/program/temp = ..(rename, computer)
 	temp.required_access_run = required_access_run
 	temp.required_access_download = required_access_download
-	temp.nanomodule_path = nanomodule_path
 	temp.filedesc = filedesc
 	temp.program_icon_state = program_icon_state
 	temp.requires_ntnet = requires_ntnet
@@ -199,6 +195,14 @@ ABSTRACT_TYPE(/datum/computer_file/program)
 		return computer.get_ntnet_status(specific_action)
 	return FALSE
 
+/// Allows active programs to preserve non-standard user views, such as camera monitors.
+/datum/computer_file/program/proc/check_eye(mob/user)
+	return -1
+
+/// Allows active programs to grant equipment vision while controlling the user's view.
+/datum/computer_file/program/proc/grants_equipment_vision(mob/user)
+	return FALSE
+
 // Called by Process() on device that runs us, once every tick.
 /datum/computer_file/program/proc/process_tick()
 	return TRUE
@@ -233,19 +237,19 @@ ABSTRACT_TYPE(/datum/computer_file/program)
 		if(access_to_check in I.access)
 			return TRUE
 		else if(loud)
-			to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access Denied.\"."))
+			to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access denied.\"."))
 			return FALSE
 	else if(check_type == PROGRAM_ACCESS_LIST_ONE)
 		for(var/check in access_to_check) //Loop through all the accesse's to check
 			if(check in I.access) //Success on first match
 				return TRUE
 		if(loud)
-			to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access Denied.\"."))
+			to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access denied.\"."))
 	else if(check_type == PROGRAM_ACCESS_LIST_ALL)
 		for(var/check in access_to_check) //Loop through all the accesse's to check
 			if(!(check in I.access)) //Fail on first miss
 				if(loud)
-					to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access Denied.\"."))
+					to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access denied.\"."))
 				return FALSE
 	else // Should never happen - So fail silently
 		return FALSE
@@ -288,48 +292,29 @@ ABSTRACT_TYPE(/datum/computer_file/program)
 		if(access_to_check in I.access)
 			return TRUE
 		else if(loud)
-			to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access Denied.\"."))
+			to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access denied.\"."))
 			return FALSE
 	else if(check_type == PROGRAM_ACCESS_LIST_ONE)
 		for(var/check in access_to_check) //Loop through all the accesse's to check
 			if(check in I.access) //Success on first match
 				return TRUE
 		if(loud)
-			to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access Denied.\"."))
+			to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access denied.\"."))
 			return FALSE
 	else if(check_type == PROGRAM_ACCESS_LIST_ALL)
 		for(var/check in access_to_check) //Loop through all the accesse's to check
 			if(!(check in I.access)) //Fail on first miss
 				if(loud)
-					to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access Denied.\"."))
+					to_chat(user, SPAN_WARNING("\The [computer] flashes, \"Access denied.\"."))
 				return FALSE
 	else // Should never happen - So fail silently
 		return FALSE
 
-// This attempts to retrieve header data for NanoUIs. If implementing completely new device of different type than existing ones
+// This attempts to retrieve header data for UIs. If implementing completely new device of different type than existing ones
 // always include the device here in this proc. This proc basically relays the request to whatever is running the program.
 /datum/computer_file/program/proc/get_header_data()
 	if(computer)
 		return computer.get_header_data()
-
-
-/datum/computer_file/program/Topic(href, href_list)
-	if(..())
-		return TRUE
-	if(computer)
-		return computer.Topic(href, href_list)
-
-// Relays the call to nano module, if we have one
-/datum/computer_file/program/proc/check_eye(var/mob/user)
-	if(NM)
-		return NM.check_eye(user)
-	else
-		return -1
-
-/// Relays the call to nano module, if we have one
-/datum/computer_file/program/proc/grants_equipment_vision(var/mob/user)
-	if(NM)
-		return NM.grants_equipment_vision(user)
 
 /datum/computer_file/program/proc/message_dead(var/message)
 	for(var/mob/M in GLOB.player_list)

@@ -28,11 +28,12 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
 
 	var/station_was_nuked = 0                // See nuclearbomb.dm and malfunction.dm.
 	var/explosion_in_progress = 0            // Sit back and relax
-	var/waittime_l = 60 SECONDS                     // Lower bound on time before intercept arrives (in tenths of seconds)
-	var/waittime_h = 180 SECONDS                    // Upper bound on time before intercept arrives (in tenths of seconds)
 
 	var/event_delay_mod_moderate             // Modifies the timing of random events.
 	var/event_delay_mod_major                // As above.
+
+	/// The canon type of this gamemode. THIS SHOULD ALWAYS BE SET.
+	var/canon_type = /singleton/canonicity/limited
 
 /datum/game_mode/New()
 	..()
@@ -40,6 +41,9 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
 	// This will probably break something.
 	name = capitalize(lowertext(name))
 	config_tag = lowertext(config_tag)
+	if(!canon_type)
+		message_admins("Gamemode [name] has no canon_type set! Defaulting to limited canon.")
+		canon_type = /singleton/canonicity/limited
 
 /datum/game_mode/Topic(href, href_list[])
 	if(..())
@@ -275,8 +279,7 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
 
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(display_logout_report)), ROUNDSTART_LOGOUT_REPORT_TIME)
 
-	var/welcome_delay = rand(waittime_l, waittime_h)
-	addtimer(CALLBACK(SSatlas.current_map, TYPE_PROC_REF(/datum/map, send_welcome)), welcome_delay)
+	SSatlas.current_map.post_gamemode_setup()
 
 	addtimer(CALLBACK(SSatlas.current_map, TYPE_PROC_REF(/datum/map, load_holodeck_programs)), 5 MINUTES)
 
@@ -498,6 +501,8 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
  * This proc should always return TRUE on a success and FALSE if something went wrong, so that if the initialization failed, the game can reset to lobby state.
  */
 /datum/game_mode/proc/pre_game_setup()
+	if(!SSticker.round_canon_admin_forced)
+		SSticker.set_round_canon(canon_type, TRUE)
 	return TRUE
 
 //////////////////////////
@@ -553,7 +558,7 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
 			to_chat(C.mob, logout_report)
 
 /client/proc/print_logout_report()
-	set category = "Admin"
+	set category = "Admin.Player Info"
 	set name = "Print Logout Report"
 
 	if(!check_rights(R_ADMIN|R_MOD))
@@ -596,7 +601,7 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
 
 /mob/verb/check_round_info()
 	set name = "Check Round Info"
-	set category = "OOC"
+	set category = "OOC.Round"
 
 	if(!SSticker.mode)
 		to_chat(usr, "Something is terribly wrong; there is no gametype.")
@@ -614,7 +619,7 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
 
 /mob/verb/check_gamemode_probability()
 	set name = "Check Gamemode Probability"
-	set category = "OOC"
+	set category = "OOC.Round"
 
 	if(GLOB.config.show_game_type_odd)
 		to_chat(src, "<b>Secret Mode Odds:</b>")

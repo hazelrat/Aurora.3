@@ -1,7 +1,7 @@
 /datum/design/circuit
 	build_type = IMPRINTER
 	req_tech = list(TECH_DATA = 2)
-	materials = list(MATERIAL_GLASS = 2000)
+	materials = list(MATERIAL_GLASS = 2000, MATERIAL_PHORON = 25)
 	chemicals = list(/singleton/reagent/acid = 20)
 
 /datum/design/circuit/AssembleDesignDesc()
@@ -9,7 +9,7 @@
 		if(ispath(build_path, /obj/item/circuitboard))
 			var/obj/item/circuitboard/CB = build_path
 			var/atom/machine = initial(CB.build_path)
-			desc = "Used in the construction of a: <b>[capitalize_first_letters(initial(machine.name))]</b>, [initial(machine.desc)]"
+			desc = "Used in the construction of a: [capitalize_first_letters(initial(machine.name))], [initial(machine.desc)]"
 		else
 			var/atom/A = build_path
 			desc = initial(A.desc)

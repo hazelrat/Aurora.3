@@ -1,7 +1,3 @@
-/mob/living
-	var/singleton/maneuver/prepared_maneuver
-	var/list/available_maneuvers = list()
-
 /mob/living/begin_falling(var/lastloc, var/below)
 	if(throwing)
 		return
@@ -28,7 +24,7 @@
 /mob/living/verb/prepare_maneuver()
 	set name = "Prepare To Maneuver"
 	set desc = "Select a maneuver to perform."
-	set category = "IC"
+	set category = "IC.Maneuver"
 
 	if(!length(available_maneuvers))
 		to_chat(src, SPAN_WARNING("You are unable to perform any maneuvers."))

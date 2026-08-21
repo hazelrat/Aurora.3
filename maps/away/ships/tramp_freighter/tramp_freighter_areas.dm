@@ -2,10 +2,16 @@
 	name = "Tramp Freighter"
 	icon_state = "bluenew"
 	requires_power = TRUE
-	dynamic_lighting = TRUE
 	no_light_control = FALSE
 	base_turf = /turf/space
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/tramp_freighter/exterior
+	name = "Independent Freighter - Exterior"
+	icon_state = "exterior"
+	needs_starlight = TRUE
+	has_gravity = FALSE
+	requires_power = FALSE
 
 /area/tramp_freighter/bridge
 	name = "Independent Freighter - Bridge"
@@ -111,5 +117,4 @@
 	name = "Freight Shuttle"
 	icon_state = "shuttle2"
 	requires_power = TRUE
-	dynamic_lighting = TRUE
 	no_light_control = FALSE

@@ -10,9 +10,33 @@
 	desc = "General waste material, refuse or litter. Dispose responsibly."
 	drop_sound = 'sound/items/drop/wrapper.ogg'
 	pickup_sound = 'sound/items/pickup/wrapper.ogg'
+	persistency_considered_trash = TRUE
 
 /obj/item/trash/attack(mob/living/target_mob, mob/living/user, target_zone)
 	return
+
+/obj/item/trash/persistent_objects_get_content()
+	var/list/content = list()
+	content["name"] = name
+	content["desc"] = desc
+	content["icon"] = icon
+	content["icon_state"] = icon_state
+	content["item_state"] = item_state
+	content["drop_sound"] = drop_sound
+	content["pickup_sound"] = pickup_sound
+	return content
+
+/obj/item/trash/persistent_objects_apply_content(content, x, y, z)
+	name = content["name"]
+	desc = content["desc"]
+	icon = file(content["icon"])
+	icon_state = content["icon_state"]
+	item_state = content["item_state"]
+	drop_sound = file(content["drop_sound"])
+	pickup_sound = file(content["pickup_sound"])
+	src.x = x
+	src.y = y
+	src.z = z
 
 /obj/item/trash/koisbar
 	name = "\improper k'ois bar wrapper"
@@ -66,7 +90,7 @@
 /obj/item/trash/waffles
 	name = "square tray"
 	icon_state = "waffles"
-	drop_sound = /singleton/sound_category/tray_hit_sound
+	drop_sound = SFX_TRAY_HIT
 
 /obj/item/trash/plate
 	name = "plate"
@@ -98,7 +122,7 @@
 /obj/item/trash/tray
 	name = "tray"
 	icon_state = "tray"
-	drop_sound = /singleton/sound_category/tray_hit_sound
+	drop_sound = SFX_TRAY_HIT
 
 /obj/item/trash/candle
 	name = "candle"
@@ -135,7 +159,7 @@
 /obj/item/trash/brownies
 	name = "square tray"
 	icon_state = "brownies"
-	drop_sound = /singleton/sound_category/tray_hit_sound
+	drop_sound = SFX_TRAY_HIT
 
 /obj/item/trash/snacktray
 	name = "snacktray"
@@ -182,7 +206,7 @@
 /obj/item/trash/grease //used for generic plattered food. example is lasagna.
 	name = "square tray"
 	icon_state = "grease"
-	drop_sound = /singleton/sound_category/tray_hit_sound
+	drop_sound = SFX_TRAY_HIT
 
 /obj/item/trash/cookiesnack
 	name = "\improper Carps Ahoy! miniature cookies"
@@ -308,9 +332,9 @@
 	pickup_sound = 'sound/items/pickup/glass.ogg'
 
 /obj/item/trash/shakshouka
-	name = "empty shakshouka pan"
+	name = "large messy pan"
 	icon_state = "shakshouka"
-	desc = "It looks like the murder scene... Of a delicious Shakshouka. Trash or recycle."
+	desc = "It looks like the murder scene... of a delicious, saucy dish. Trash or recycle."
 	drop_sound = 'sound/items/drop/bottle.ogg'
 	pickup_sound = 'sound/items/pickup/bottle.ogg'
 
@@ -387,6 +411,34 @@
 	name = "cookie wrapper"
 	icon_state = "foysnack_trash"
 
+/obj/item/trash/readies
+	name = "readies wrapper"
+	icon_state = "readies_trash"
+
+/obj/item/trash/getmore
+	name = "getmore chocolate wrapper"
+	icon_state = "getmore_wrapper"
+
+/obj/item/trash/getmore_nuts
+	name = "getmore chocolate wrapper"
+	icon_state = "getmore_wrapper2"
+
+/obj/item/trash/getmore_bubbles
+	name = "getmore chocolate wrapper"
+	icon_state = "getmore_wrapper3"
+
+/obj/item/trash/getmore_kelp
+	name = "getmore chocolate wrapper"
+	icon_state = "getmore_wrapper4"
+
+/obj/item/trash/cetibar
+	name = "tau ceti bar wrapper"
+	icon_state = "cetibar_wrapper"
+
+/obj/item/trash/idrisbar
+	name = "one hundred thousand bar wrapper"
+	icon_state = "idrisbar_wrapper"
+
 /obj/item/trash/papad
 	name = "empty papad box"
 	icon_state = "papad_trash"
@@ -413,3 +465,33 @@
 	icon_state = "bowl_brown"
 	drop_sound = 'sound/items/drop/glass.ogg'
 	pickup_sound = 'sound/items/pickup/glass.ogg'
+
+/obj/item/trash/microwave_package
+	name = "empty microwave food package"
+	icon = 'icons/obj/item/reagent_containers/food/processed.dmi'
+	icon_state = "microwave_trash"
+
+/obj/item/trash/mac_cheeze
+	name = "empty mac and cheeze container"
+	icon_state = "mac_trash"
+
+/obj/item/trash/mac_fiery
+	name = "empty fiery hot mac and cheeze container"
+	icon_state = "mac_trash_fiery"
+
+/obj/item/trash/algaechips
+	name = "empty algae chips bag"
+	desc = "It looks like someone left some strands of algae in it."
+	icon_state = "algaechips"
+
+/obj/item/trash/foilwrapper
+	name = "foil wrapper"
+	//icon is located here instead of in the trash icon file because of how wrapper code works. It's either this or having duplicates of the icon show up in two different files.
+	icon = 'icons/obj/item/reagent_containers/food/processed.dmi'
+	icon_state = "foil_trash"
+	desc = "A foil wrapper, the kind you may find many industrially-packaged products packed in. Now it's just empty trash, though."
+
+/obj/item/trash/popsiclestick
+	name = "popsicle stick"
+	icon_state = "popsicle_trash"
+	desc = "Used by doctors to suppress tongues. Well, at least when it's clean. This one isn't, so you may as well just chuck it in the trash."

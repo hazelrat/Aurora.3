@@ -1,10 +1,16 @@
 /area/ship/tirakqi_smuggler
 	name = "Ti'Rakqi Freighter"
 	requires_power = TRUE
-	dynamic_lighting = TRUE
 	no_light_control = FALSE
 	base_turf = /turf/space
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/ship/tirakqi_smuggler/exterior
+	name = "Ti'Rakqi Freighter - Exterior"
+	icon_state = "exterior"
+	needs_starlight = TRUE
+	has_gravity = FALSE
+	requires_power = FALSE
 
 /area/ship/tirakqi_smuggler/engi
 	name = "Ti'Rakqi Freighter - Engineering"

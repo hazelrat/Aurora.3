@@ -60,17 +60,22 @@
 			is_frenzied = TRUE
 	if(owner.species.has_organ[owner.species.vision_organ])
 		var/obj/item/organ/internal/eyes/eyes = owner.get_eyes()
-		if(eyes && species.eyes && !is_frenzied)
+		if(eyes && species.eyes && (!is_frenzied || eyes.eyes_closed))
 			var/eyecolor
-			if (eyes.eye_colour)
+			if(eyes.eye_colour && !eyes.eyes_closed)
 				eyecolor = rgb(eyes.eye_colour[1], eyes.eye_colour[2], eyes.eye_colour[3])
 
-			var/cache_key = "[species.eyes]_[eyecolor || "nocolor"]"
+			var/cache_key = "[species.eyes]_[eyes.eyes_closed ? "closed" : (eyecolor || "nocolor")]"
 
 			var/icon/eyes_icon = SSicon_cache.human_eye_cache[cache_key]
 			if (!eyes_icon)
 				eyes_icon = new/icon(species.eyes_icons, species.eyes)
-				if(eyecolor)
+				if(eyes.eyes_closed)
+					// A translucent black eye mask darkens the skin beneath it, creating eyelids
+					// which follow both colour-based skin and tone-shaded human complexions.
+					eyes_icon.Blend(rgb(0, 0, 0), ICON_MULTIPLY)
+					eyes_icon.ChangeOpacity(0.2)
+				else if(eyecolor)
 					eyes_icon.Blend(eyecolor, species.eyes_icon_blend)
 				else
 					eyes_icon.Blend(rgb(128,0,0), species.eyes_icon_blend)
@@ -109,6 +114,9 @@
 	var/list/bonus_overlays = list()
 
 	var/obj/item/organ/internal/eyes/eyes = H.get_eyes()
+	if(eyes?.eyes_closed)
+		return mob_overlays
+
 	if(eyes && BP_IS_ROBOTIC(eyes))
 		var/datum/robolimb/robolimb_data = GLOB.all_robolimbs[eyes.model]
 		if(robolimb_data.emissive)
@@ -361,12 +369,13 @@
 GLOBAL_LIST_INIT(flesh_hud_colours, list("#00ff00","#aaff00","#ffff00","#ffaa00","#ff0000","#aa0000","#660000"))
 GLOBAL_LIST_INIT(robot_hud_colours, list("#ffffff","#cccccc","#aaaaaa","#888888","#666666","#444444","#222222","#000000"))
 
-/obj/item/organ/external/proc/get_damage_hud_image()
+/obj/item/organ/external/proc/get_damage_hud_image(force_update = FALSE)
 
 	// Generate the greyscale base icon and cache it for later.
 	// icon_cache_key is set by any get_icon() calls that are made.
 	// This looks convoluted, but it's this way to avoid icon proc calls.
 	var/list/limb_icon_cache = SSicon_cache.limb_icons_cache
+	var/has_created_image = FALSE
 	if(!hud_damage_image)
 		var/cache_key = "dambase-[icon_cache_key]"
 		if(!icon_cache_key || !limb_icon_cache[cache_key])
@@ -380,16 +389,25 @@ GLOBAL_LIST_INIT(robot_hud_colours, list("#ffffff","#cccccc","#aaaaaa","#888888"
 			temp.color = list(r, r, r, g, g, g, b, b, b)
 		hud_damage_image = image(null)
 		hud_damage_image.overlays += temp
+		has_created_image = TRUE
+
+	if(has_created_image || force_update)
+		modify_damage_hud_image_color()
+
+	return hud_damage_image
+
+/// Modify the damage colour index of the limb image, ONLY if strictly necessary.
+/obj/item/organ/external/proc/modify_damage_hud_image_color()
+	SIGNAL_HANDLER
 
 	// Calculate the required color index.
 	var/dam_state = min(1,((brute_dam+burn_dam)/max(1,max_damage)))
-	var/min_dam_state = min(1,(get_pain()/max(1,max_damage)))
+	var/min_dam_state = min(1,(LIMB_GET_PAIN(src)/max(1,max_damage)))
 	if(min_dam_state && dam_state < min_dam_state)
 		dam_state = min_dam_state
 	// Apply colour and return product.
 	var/list/hud_colours = !BP_IS_ROBOTIC(src) ? GLOB.flesh_hud_colours : GLOB.robot_hud_colours
 	hud_damage_image.color = hud_colours[max(1,min(Ceiling(dam_state*hud_colours.len),hud_colours.len))]
-	return hud_damage_image
 
 /// Returns the possible bandage level the external can have right now, see medical.dm for usage
 /obj/item/organ/external/proc/possible_bandage_level()

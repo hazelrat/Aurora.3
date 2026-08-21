@@ -120,6 +120,8 @@
 /obj/item/organ/internal/heart/process(seconds_per_tick)
 	if(!owner)
 		return ..()
+	if(owner.stasis_value > 0) // Decrease the effective tickrate when in stasis.
+		seconds_per_tick /= owner.stasis_value
 	handle_pulse()
 	if(pulse)
 		if(pulse == PULSE_2FAST)
@@ -173,7 +175,7 @@
 		return
 	else //and if it's beating, let's see if it should
 		var/should_stop = prob(80) && circulation < BLOOD_VOLUME_SURVIVE //cardiovascular shock, not enough liquid to pump
-		should_stop = should_stop || prob(max(0, owner.getBrainLoss() - owner.maxHealth * 0.75)) //brain failing to work heart properly
+		should_stop = should_stop || prob(max(0, owner.getBrainLoss() - owner.maxhealth * 0.75)) //brain failing to work heart properly
 		should_stop = should_stop || (prob(fibrillation_stop_risk) && pulse == PULSE_THREADY) //erratic heart patterns, usually caused by oxyloss
 		should_stop = should_stop || owner.chem_effects[CE_NOPULSE]
 		if(should_stop) // The heart has stopped due to going into traumatic or cardiovascular shock.
@@ -245,7 +247,7 @@
 		var/list/do_spray = list()
 		for(var/obj/item/organ/external/temp in owner.bad_external_organs)
 			if((temp.status & ORGAN_BLEEDING) && !BP_IS_ROBOTIC(temp))
-				for(var/datum/wound/W in temp.wounds)
+				for(var/datum/wound/W as anything in temp.wounds)
 					if(W.bleeding())
 						open_wound = TRUE
 						if(temp.applied_pressure)
@@ -289,7 +291,7 @@
 
 		if(world.time >= next_blood_squirt && istype(owner.loc, /turf) && do_spray.len)
 			owner.visible_message(SPAN_DANGER("Blood squirts from \the [owner]'s [pick(do_spray)]!"), \
-								SPAN_DANGER("<font size=3>Blood sprays out of your [pick(do_spray)]!</font>"))
+								SPAN_DANGER("<font size=5>Blood sprays out of your [pick(do_spray)]!</font>"))
 			owner.eye_blurry = 2
 			owner.Stun(1)
 			next_blood_squirt = world.time + time_between_arterial_sprays
@@ -346,9 +348,7 @@
 
 	. = "[pulsesound] pulse"
 
-// Example heart item that has significantly higher statistics.
-// Also to be used for the Galatean Bio-augments PRs.
-// TODO: After refactoring the organ selector, make it so that this is a selectable heart type(For Galateans)
+// Galatean boosted heart
 /obj/item/organ/internal/heart/boosted_heart
 	name = "boosted heart"
 	desc = "Intended for athletes, some workers, and soldiers, this improved heart increases blood flow and circulation." \
@@ -383,3 +383,47 @@
 	thready_pump_modifier = 1.5
 	damage_from_chemicals = 0.7
 	blood_spray_distance = 1
+
+/obj/item/organ/internal/heart/alien_heart
+	name = "anomalous mercurial flesh"
+	desc = "A slab of flesh made seemingly from mercury, yet with a recognizably organic shape. It is soft to the touch, pliable like skin, yet is as tough as steel."
+	icon = 'icons/obj/organs/bioaugs.dmi'
+	icon_state = "alien_heart"
+	max_damage = 200
+	min_bruised_damage = 150
+	min_broken_damage = 175
+
+/obj/item/organ/internal/heart/alien_heart/Initialize()
+	. = ..()
+	// RANDOMIZE EVERYTHING.
+	// DEAR READER, I HOPE YOU HAVE FUN IF YOU MAKE THE MISTAKE OF PUTTING THIS IN A HUMAN.
+	// BECAUSE YOU ARE NOT GUARANTEED IT CAN SUSTAIN LIFE.
+	heart_fibrillation_damage *= rand(0.5, 2)
+	heart_tachycardia_damage *= rand(0.5, 2)
+	fibrillation_stop_risk = rand(1, 99)
+	shock_stage_for_fibrillation *= rand(0.5, 2)
+	shock_risk_from_pain = rand(1, 99)
+	first_shock_stage *= rand(0.75, 1.33)
+	second_shock_stage *= rand(0.75, 1.33)
+	blood_regen_modifier *= rand(0.5, 2)
+	base_arterial_bloodloss_modifier *= rand(0.5, 2)
+	base_cut_bloodloss_modifier *= rand(0.5, 2)
+	nutrition_cost_per_blood_regen *= rand(0.5, 2)
+	hydration_cost_per_blood_regen *= rand(0.5, 2)
+	minimum_temperature_to_pump_blood *= rand(0.75, 1.33)
+	time_between_arterial_sprays *= rand(0.5, 2)
+	bleed_drip_modifier *= rand(0.5, 2)
+	palpitations_threshold *= rand(0.5, 2)
+	slow_bleeding_modifier *= rand(0.75, 1.33)
+	fast_bleeding_modifier *= rand(0.75, 1.33)
+	thready_bleeding_modifier *= rand(0.75, 1.33)
+	base_pump_rate *= rand(0.75, 1.33)
+	none_pump_modifier *= rand(0.75, 1.33)
+	slow_pump_modifier *= rand(0.75, 1.33)
+	fast_pump_modifier *= rand(0.75, 1.33)
+	too_fast_pump_modifier *= rand(0.75, 1.33)
+	thready_pump_modifier *= rand(0.75, 1.33)
+	if(prob(50))
+		fake_pulse = TRUE
+	damage_from_chemicals *= rand(0.75, 1.33)
+	blood_spray_distance = rand(1, 9)

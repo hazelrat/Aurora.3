@@ -24,17 +24,10 @@ ABSTRACT_TYPE(/mob/living/simple_animal/hostile/commanded)
 	if(!short_name)
 		short_name = name
 
-/mob/living/simple_animal/hostile/commanded/hear_say(var/message, var/verb = "says", var/datum/language/language = null, var/alt_name = "", var/italics = 0, var/mob/speaker = null, var/sound/speech_sound, var/sound_vol)
-	if(thinking_enabled && !stat && ((speaker in friends) || speaker == master))
-		command_buffer.Add(speaker)
-		command_buffer.Add(lowertext(html_decode(message)))
-	return 0
-
-/mob/living/simple_animal/hostile/commanded/hear_radio(var/message, var/verb="says", var/datum/language/language=null, var/part_a, var/part_b, var/part_c, var/mob/speaker = null, var/hard_to_hear = 0)
-	if(thinking_enabled && !stat && ((speaker in friends) || speaker == master))
-		command_buffer.Add(speaker)
-		command_buffer.Add(lowertext(html_decode(message)))
-	return 0
+/mob/living/simple_animal/hostile/commanded/react_to_message(datum/say_message/msg)
+	if(thinking_enabled && !stat && ((msg.speaker in friends) || msg.speaker == master))
+		command_buffer.Add(msg.speaker)
+		command_buffer.Add(lowertext(html_decode(msg.to_string())))
 
 /mob/living/simple_animal/hostile/commanded/can_name(var/mob/living/M)
 	if(master && (M != master))
@@ -299,7 +292,7 @@ ABSTRACT_TYPE(/mob/living/simple_animal/hostile/commanded)
 		if(M in friends)
 			friends -= M
 
-/mob/living/simple_animal/hostile/commanded/attack_generic(var/mob/user, var/damage, var/attack_message)
+/mob/living/simple_animal/hostile/commanded/attack_generic(mob/user, damage, attack_message, environment_smash, armor_penetration, attack_flags, damage_type)
 	..()
 
 	// We forgive our master

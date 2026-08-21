@@ -124,8 +124,7 @@
 		addtimer(CALLBACK(src, PROC_REF(clear_screen)), 5)
 
 /obj/item/organ/internal/brain/Destroy()
-	if(brainmob)
-		QDEL_NULL(brainmob)
+	QDEL_NULL(brainmob)
 	return ..()
 
 /obj/item/organ/internal/brain/removed(var/mob/living/user)
@@ -185,6 +184,10 @@
 	if(!owner.should_have_organ(BP_HEART))
 		return ..()
 
+	// Adjust the rate of brain healing and damage over time if the owner is in stasis.
+	if(owner.stasis_value > 0)
+		seconds_per_tick /= owner.stasis_value
+
 	// No heart? You are going to have a very bad time. Not 100% lethal because heart transplants should be a thing.
 	var/blood_volume = owner.get_blood_oxygenation()
 	if(blood_volume < BLOOD_VOLUME_SURVIVE)
@@ -204,9 +207,9 @@
 	switch(blood_volume)
 		if(BLOOD_VOLUME_SAFE to INFINITY)
 			if(can_heal && owner.chem_effects[CE_BRAIN_REGEN])
-				damage = max(damage - brain_regen_amount, 0) * safe_damage_modifier
+				damage -= min(damage, brain_regen_amount * safe_damage_modifier)
 			else if(can_heal)
-				damage = max(damage - brain_damage_amount, 0) * safe_damage_modifier
+				damage -= min(damage, brain_damage_amount * safe_damage_modifier)
 		if(BLOOD_VOLUME_OKAY to BLOOD_VOLUME_SAFE)
 			owner.notify_message(SPAN_WARNING("You feel a bit [pick("lightheaded","dizzy","pale")]..."), rand(20 SECONDS, 40 SECONDS), key = "blood_volume_okay")
 			dammod = owner.chem_effects[CE_STABLE] ? okay_stabilized_mod : okay_unstable_mod
@@ -238,17 +241,17 @@
 /obj/item/organ/internal/brain/proc/handle_severe_brain_damage()
 	set waitfor = FALSE
 	healed_threshold = 0
-	to_chat(owner, "<span class = 'notice'><font size=4><B>Where am I...?</B></font></span>")
+	to_chat(owner, SPAN_NOTICE(FONT_LARGE("<b>Where am I...?</b>")))
 	owner.Paralyse(20)
 	sleep(5 SECONDS)
 	if(!owner)
 		return
-	to_chat(owner, "<span class = 'notice'><font size=4><B>What's going on...?</B></font></span>")
+	to_chat(owner, SPAN_NOTICE(FONT_LARGE("<b>What is going on...?</b>")))
 	sleep(10 SECONDS)
 	if(!owner)
 		return
-	to_chat(owner, "<span class = 'notice'><font size=4><B>What happened...?</B></font></span>")
-	alert(owner.find_mob_consciousness(), "You have taken massive brain damage! You will not be able to remember the events leading up to your injury.", "Brain Damaged")
+	to_chat(owner, SPAN_NOTICE(FONT_LARGE("<b>What happened...?</b>")))
+	to_chat(owner, EXAMINE_BLOCK_RED(SPAN_NOTICE(FONT_LARGE("You have taken massive brain damage. You will not be able to remember the events leading up to your injury."))))
 
 /obj/item/organ/internal/brain/proc/handle_damage_effects()
 	if(owner.stat)

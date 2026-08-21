@@ -16,15 +16,9 @@
 	max_amount = 60
 	recyclable = TRUE
 	icon = 'icons/obj/item/stacks/tiles.dmi'
-	item_icons = list(
-		slot_l_hand_str = 'icons/mob/items/stacks/lefthand_tiles.dmi',
-		slot_r_hand_str = 'icons/mob/items/stacks/righthand_tiles.dmi',
-		)
 	randpixel = 7
 	drop_sound = 'sound/items/drop/axe.ogg'
 	pickup_sound = 'sound/items/pickup/axe.ogg'
-	item_flags = 0
-	obj_flags = 0
 
 /obj/item/stack/tile/Initialize(mapload, amount)
 	. = ..()
@@ -108,8 +102,8 @@
 	throwforce = 1.0
 	throw_speed = 5
 	throw_range = 20
-	drop_sound = 'sound/items/drop/cloth.ogg'
-	pickup_sound = 'sound/items/pickup/cloth.ogg'
+	drop_sound = SFX_CLOTH_DROP
+	pickup_sound = SFX_CLOTH_PICKUP
 
 /obj/item/stack/tile/carpet/cyan
 	name = "cyan carpet"
@@ -176,8 +170,8 @@
 	throwforce = 1.0
 	throw_speed = 5
 	throw_range = 20
-	drop_sound = 'sound/items/drop/cloth.ogg'
-	pickup_sound = 'sound/items/pickup/cloth.ogg'
+	drop_sound = 'sound/items/drop/clothing.ogg'
+	pickup_sound = 'sound/items/pickup/clothing.ogg'
 	matter = list(MATERIAL_PLASTIC = TILE_MATERIAL_AMOUNT)
 
 /obj/item/stack/tile/lino/diamond
@@ -194,7 +188,7 @@
 	desc = "An advanced tile covered in various circuitry and wiring."
 	icon_state = "tile_bcircuit"
 	force = 14
-	matter = list(DEFAULT_WALL_MATERIAL = TILE_MATERIAL_AMOUNT, MATERIAL_GLASS = TILE_MATERIAL_AMOUNT)
+	matter = list(MATERIAL_STEEL = TILE_MATERIAL_AMOUNT, MATERIAL_GLASS = TILE_MATERIAL_AMOUNT)
 	throwforce = 15.0
 	throw_speed = 5
 	throw_range = 20
@@ -206,7 +200,7 @@
 	desc = "An advanced tile covered in various circuitry and wiring."
 	icon_state = "tile_gcircuit"
 	force = 14
-	matter = list(DEFAULT_WALL_MATERIAL = TILE_MATERIAL_AMOUNT, MATERIAL_GLASS = TILE_MATERIAL_AMOUNT)
+	matter = list(MATERIAL_STEEL = TILE_MATERIAL_AMOUNT, MATERIAL_GLASS = TILE_MATERIAL_AMOUNT)
 	throwforce = 15.0
 	throw_speed = 5
 	throw_range = 20
@@ -218,7 +212,7 @@
 	desc = "An advanced tile covered in various circuitry and wiring."
 	icon_state = "tile_rcircuit"
 	force = 14
-	matter = list(DEFAULT_WALL_MATERIAL = TILE_MATERIAL_AMOUNT, MATERIAL_GLASS = TILE_MATERIAL_AMOUNT)
+	matter = list(MATERIAL_STEEL = TILE_MATERIAL_AMOUNT, MATERIAL_GLASS = TILE_MATERIAL_AMOUNT)
 	throwforce = 15.0
 	throw_speed = 5
 	throw_range = 20
@@ -234,7 +228,7 @@
 	desc = "A set of steel floor tiles."
 	icon_state = "tile"
 	force = 14
-	matter = list(DEFAULT_WALL_MATERIAL = TILE_MATERIAL_AMOUNT)
+	matter = list(MATERIAL_STEEL = TILE_MATERIAL_AMOUNT)
 	throwforce = 6
 	throw_speed = 5
 	throw_range = 10
@@ -314,7 +308,7 @@
 /obj/item/stack/tile/phoron
 	name = "phoron floor tile"
 	singular_name = "phoron floor tile"
-	icon_state = "tile_plasma"
+	icon_state = "tile_phoron"
 	matter = list(MATERIAL_PHORON = TILE_MATERIAL_AMOUNT)
 
 /obj/item/stack/tile/diamond

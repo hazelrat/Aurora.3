@@ -4,7 +4,7 @@
 	icon = 'icons/misc/beach.dmi'
 	icon_state = "seadeep"
 	desc = "It is wet."
-	footstep_sound = /singleton/sound_category/water_footstep
+	footstep_sound = SFX_FOOTSTEP_WATER
 	movement_cost = 4
 	has_resources = FALSE
 	///How many objects are currently on this turf? Used to stop empty water turfs from processing.
@@ -117,7 +117,7 @@
 	desc = "Some water shallow enough to wade through."
 	icon = 'icons/misc/beach.dmi'
 	icon_state = "seashallow"
-	footstep_sound = /singleton/sound_category/water_footstep
+	footstep_sound = SFX_FOOTSTEP_WATER
 	deep = FALSE
 	var/reagent_type = /singleton/reagent/water
 
@@ -144,7 +144,11 @@
 /turf/simulated/floor/exoplanet/water/shallow/konyang/beach
 	icon = 'icons/turf/flooring/exoplanet/konyang/konyang_beach.dmi'
 	smoothing_flags = SMOOTH_MORE | SMOOTH_BORDER | SMOOTH_NO_CLEAR_ICON
-	canSmoothWith = list(/turf/simulated/floor/exoplanet/water/shallow/konyang, /turf/simulated/floor/exoplanet/water/konyang, /turf/simulated/floor/exoplanet/water/shallow/konyang/beach)
+	canSmoothWith = list(
+		/turf/simulated/floor/exoplanet/water/shallow/konyang,
+		/turf/simulated/floor/exoplanet/water/konyang,
+		/turf/simulated/floor/exoplanet/water/shallow/konyang/beach
+	)
 
 /turf/simulated/floor/exoplanet/water/shallow/sewage//What horror.
 	name = "putrid sewage"
@@ -165,11 +169,10 @@
 			var/obj/item/organ/external/E = A
 			if(BP_IS_ROBOTIC(E))
 				continue
-			if (E.wounds.len)
-				for(var/datum/wound/W in E.wounds)
-					if(W.germ_level < INFECTION_LEVEL_ONE)
-						W.germ_level = INFECTION_LEVEL_ONE
-					W.germ_level += rand(10, 50)
+			for(var/datum/wound/W as anything in E.wounds)
+				if(W.germ_level < INFECTION_LEVEL_ONE)
+					W.germ_level = INFECTION_LEVEL_ONE
+				W.germ_level += rand(10, 50)
 
 /turf/simulated/floor/exoplanet/water/shallow/moghes
 	icon = 'icons/turf/flooring/exoplanet/moghes.dmi'

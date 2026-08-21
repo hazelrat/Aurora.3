@@ -209,6 +209,24 @@
 	reagent_mix = RECIPE_REAGENT_REPLACE
 	result = /obj/item/reagent_containers/food/snacks/bowl/mozzarella_sticks
 
+/singleton/recipe/jambalaya
+	appliance = SKILLET
+	fruit = list("tomato" = 1)
+	reagents = list(/singleton/reagent/spacespice = 3, /singleton/reagent/nutriment/rice = 5)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/meat/chicken,
+		/obj/item/reagent_containers/food/snacks/fish/raw_shrimp,
+		/obj/item/reagent_containers/food/snacks/sausage
+	)
+	result = /obj/item/reagent_containers/food/snacks/jambalaya
+	reagent_mix = RECIPE_REAGENT_REPLACE //Simplify end product
+
+/singleton/recipe/churros
+	appliance = FRYER
+	reagents = list(/singleton/reagent/nutriment/coating/batter = 5, /singleton/reagent/sugar = 5)
+	reagent_mix = RECIPE_REAGENT_REPLACE
+	result = /obj/item/reagent_containers/food/snacks/chipplate/churros
+
 // Konyang
 
 /singleton/recipe/mossbowl
@@ -285,6 +303,15 @@
 	result = /obj/item/reagent_containers/food/snacks/bowl/eggrolls_meat
 	reagent_mix = RECIPE_REAGENT_REPLACE //Simplify end product
 
+/singleton/recipe/takoyaki //If Ginger ever gets added to the game please add it as an ingredient here
+	appliance = SKILLET | GRILL
+	reagents = list(/singleton/reagent/nutriment/coating/batter = 5, /singleton/reagent/nutriment/mayonnaise = 5, /singleton/reagent/spacespice = 1)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/squidmeat
+	)
+	result = /obj/item/reagent_containers/food/snacks/takoyaki
+	reagent_mix = RECIPE_REAGENT_REPLACE //Simplify end product
+
 // Mictlani
 
 /singleton/recipe/pozole
@@ -293,6 +320,7 @@
 	reagents = list(/singleton/reagent/water = 10)
 	items = list(/obj/item/reagent_containers/food/snacks/meat)
 	result = /obj/item/reagent_containers/food/snacks/soup/pozole
+	reagent_mix = RECIPE_REAGENT_REPLACE //Simplify end product
 
 /singleton/recipe/elotes
 	appliance = OVEN | GRILL
@@ -359,6 +387,23 @@
 	result = /obj/item/reagent_containers/food/snacks/imperial_scallops
 	reagent_mix = RECIPE_REAGENT_REPLACE //Simplify and replace
 
+/singleton/recipe/voidsman_stew
+	appliance = SKILLET
+	fruit = list("onion" = 1, "garlic" = 1)
+	reagents = list(/singleton/reagent/water = 5, /singleton/reagent/spacespice = 2, /singleton/reagent/blackpepper = 1)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/fish
+	)
+	result = /obj/item/reagent_containers/food/snacks/voidsman_stew
+	reagent_mix = RECIPE_REAGENT_REPLACE //Simplify and replace
+
+/singleton/recipe/carian_strogonoff
+	appliance = SKILLET
+	fruit = list("mushroom" = 2, "onion" = 1, "garlic" = 1)
+	reagents = list(/singleton/reagent/drink/milk/cream = 10)
+	reagent_mix = RECIPE_REAGENT_REPLACE //Simplify and replace
+	result = /obj/item/reagent_containers/food/snacks/carian_stroganoff
+
 // New Hai Phong
 
 /singleton/recipe/chetroinuoc
@@ -372,10 +417,9 @@
 
 /singleton/recipe/deepdive
 	fruit = list ("seaweed" = 1)
-	reagents = list(/singleton/reagent/drink/milk/cream = 5)
+	reagents = list(/singleton/reagent/nutriment/protein/cream_cheese = 10)
 	items = list(
-		/obj/item/reagent_containers/food/snacks/fish,
-		/obj/item/reagent_containers/food/snacks/cheesewedge
+		/obj/item/reagent_containers/food/snacks/fish
 	)
 	reagent_mix = RECIPE_REAGENT_REPLACE
 	result = /obj/item/reagent_containers/food/snacks/deepdive
@@ -431,7 +475,7 @@
 		/obj/item/reagent_containers/food/snacks/breadslice,
 		/obj/item/reagent_containers/food/snacks/bacon
 	)
-	result = /obj/item/reagent_containers/food/snacks/clams_casino
+	result = /obj/item/reagent_containers/food/snacks/bowl/clams_casino
 	reagent_mix = RECIPE_REAGENT_REPLACE //Simplify and replace
 
 /singleton/recipe/lady_lulaine
@@ -515,7 +559,7 @@
 	reagents = list(/singleton/reagent/blackpepper = 2, /singleton/reagent/spacespice = 2, /singleton/reagent/alcohol/beer = 5)
 	items = list(
 		/obj/item/reagent_containers/food/snacks/fish/fishfillet,
-		/obj/item/reagent_containers/food/snacks/clam,
+			/obj/item/reagent_containers/food/snacks/fish/mollusc,
 		/obj/item/reagent_containers/food/snacks/crabmeat
 
 	)
@@ -601,3 +645,83 @@
 	)
 	reagent_mix = RECIPE_REAGENT_REPLACE
 	result = /obj/item/reagent_containers/food/snacks/fire_loaf
+
+//Sankt Frederick
+
+/singleton/recipe/bierock
+	appliance = OVEN
+	fruit = list ("cabbage" = 1, "onion" = 1)
+	reagents = list(/singleton/reagent/sodiumchloride = 1)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/meat,
+		/obj/item/reagent_containers/food/snacks/dough
+	)
+	reagent_mix = RECIPE_REAGENT_REPLACE
+	result = /obj/item/reagent_containers/food/snacks/bierock
+
+/singleton/recipe/belinas
+	appliance = MIX
+	reagents = list(/singleton/reagent/nutriment/protein/cream_cheese = 15)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/fish,
+		/obj/item/reagent_containers/food/snacks/fish,
+		/obj/item/reagent_containers/food/snacks/pancakes
+	)
+	reagent_mix = RECIPE_REAGENT_REPLACE
+	result = /obj/item/reagent_containers/food/snacks/bowl/belinas
+
+//Venus
+
+/singleton/recipe/elata
+	appliance = MIX
+	reagents = list(/singleton/reagent/drink/berryjuice = 5, /singleton/reagent/drink/ice = 5, /singleton/reagent/drink/milk/cream = 5, /singleton/reagent/nutriment/vanilla = 5, /singleton/reagent/sugar = 10)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/whitechocolate
+	)
+	reagent_mix = RECIPE_REAGENT_REPLACE
+	result = /obj/item/reagent_containers/food/snacks/elata
+
+/singleton/recipe/filet_cabaret
+	appliance = SKILLET
+	fruit = list ("garlic" = 1)
+	reagents = list(/singleton/reagent/alcohol/wine/assunzione = 5, /singleton/reagent/drink/milk/cream = 5, /singleton/reagent/blackpepper = 1, /singleton/reagent/sodiumchloride = 1)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/rawcutlet,
+		/obj/item/reagent_containers/food/snacks/spreads/butter
+	)
+	reagent_mix = RECIPE_REAGENT_REPLACE
+	result = /obj/item/reagent_containers/food/snacks/filet_cabaret
+
+/singleton/recipe/embassy_strips
+	appliance = SKILLET
+	fruit = list ("lemon" = 1, "soybeans" = 1, "dyn leaf" = 1)
+	reagents = list(/singleton/reagent/enzyme = 5, /singleton/reagent/nutriment/mayonnaise = 5)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/fish
+	)
+	reagent_mix = RECIPE_REAGENT_REPLACE
+	result = /obj/item/reagent_containers/food/snacks/embassy_strips
+
+/singleton/recipe/blitz_shake
+	appliance = MIX
+	reagents = list(/singleton/reagent/drink/shake_strawberry = 30, /singleton/reagent/nutriment/sprinkles = 3, /singleton/reagent/drink/milk/cream = 5)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/candy,
+		/obj/item/reagent_containers/food/snacks/donut
+	)
+	reagent_mix = RECIPE_REAGENT_REPLACE
+	result = /obj/item/reagent_containers/food/snacks/blitz_shake
+
+
+	//Assunzione
+
+/singleton/recipe/stafylia_gyro
+	appliance = MIX
+	fruit = list ("grapes" = 1, "cabbage" = 1, "tomato" = 1)
+	reagents = list(/singleton/reagent/spacespice = 2)
+	items = list(
+		/obj/item/reagent_containers/food/snacks/cutlet,
+		/obj/item/reagent_containers/food/snacks/pita
+	)
+	reagent_mix = RECIPE_REAGENT_REPLACE
+	result = /obj/item/reagent_containers/food/snacks/stafylia_gyro

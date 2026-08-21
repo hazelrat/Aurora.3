@@ -1,18 +1,17 @@
 /mob/living
+	health = 100
+	maxhealth = 100
 	see_invisible = SEE_INVISIBLE_LIVING
-
-	//Health and life related vars
-	var/maxHealth = 100 //Maximum health that should be possible.
-	var/health = 100 	//A mob's health
 
 	var/hud_updateflag = 0
 
 	// Virtual Reality
-	var/remote_network // The network this mob is attached to, used in virtual reality and remote control things
-
-	var/hallucination = 0 //Directly affects how long a mob will hallucinate for
-
-	var/last_special = 0 //Used by the resist verb, likely used to prevent players from bypassing next_move by logging in/out.
+	/// The network this mob is attached to, used in virtual reality and remote control things
+	var/remote_network
+	/// Directly affects how long a mob will hallucinate for
+	var/hallucination = 0
+	/// Used by the resist verb, likely used to prevent players from bypassing next_move by logging in/out.
+	var/last_special = 0
 
 	var/t_phoron = null
 	var/t_oxygen = null
@@ -28,53 +27,112 @@
 
 	var/mob/living/cameraFollow = null
 	var/list/datum/action/actions = list()
+	var/datum/action/cancel_camera_view/camera_view_cancel_action
 
-	var/tod = null // Time of death
+	/// Time of death
+	var/tod = null
 	var/update_slimes = 1
-	var/silent = null 		// Can't talk. Value goes down every life proc.
-	var/on_fire = 0 //The "Are we on fire?" var
+	/// Can't talk. Value goes down every life proc.
+	var/silent = null
+	/// The "Are we on fire?" var
+	var/on_fire = 0
+	/// Used in handle_fire() and associated procs. Modifies body temperature, as moderated by var/fire_stacks_temp.
 	var/fire_stacks = 0
-	var/footstep = 0
+	/// Used in handle_fire() and associated procs. Couples fire_stacks to the gas environment temperature in which fire was applied, decreases when in cooler atmos.
+	var/fire_stacks_temperature = 0
 
-	var/failed_last_breath = 0 //This is used to determine if the mob failed a breath. If they did fail a brath, they will attempt to breathe each tick, otherwise just once per 4 ticks.
-	var/possession_candidate // Can be possessed by ghosts if unplayed.
+	var/footstep = 0
+	/// The type of footstep components spawned for the mob. Particularly important for humans, which have barefoot sounds.
+	var/footstep_component_type = /datum/component/mob_footsteps
+	/// The footstep sounds we want to play.
+	var/list/footstep_sound
+
+	/// This is used to determine if the mob failed a breath. If they did fail a breath, they will attempt to breathe each tick, otherwise just once per 4 ticks.
+	var/failed_last_breath = 0
+	/// Can be possessed by ghosts if unplayed.
+	var/possession_candidate
 
 	var/composition_reagent
 	var/composition_reagent_quantity
-	var/mouth_size = 2//how large of a creature it can swallow at once, and how big of a bite it can take out of larger things
-	var/eat_types = 0//This is a bitfield which must be initialised in New(). The valid values for it are in devour.dm
-	var/underdoor //Used for mobs that can walk through maintenance hatches - drones, pais, and spiderbots
-	var/life_tick = 0      // The amount of life ticks that have processed on this mob.
+	/// How large of a creature it can swallow at once, and how big of a bite it can take out of larger things
+	var/mouth_size = 2
+	/// This is a bitfield which must be initialised in New(). The valid values for it are in devour.dm
+	var/eat_types = 0
+	/// Used for mobs that can walk through maintenance hatches - drones, pais, and spiderbots
+	var/underdoor
+	/// The amount of life ticks that have processed on this mob.
+	var/life_tick = 0
 
 
 	//These values are duplicated from the species datum so we can handle things on a per-mob basis, allows for chemicals to affect them
 	var/stamina = 0
-	var/max_stamina = 100//Maximum stamina. We start taking oxyloss when this runs out while sprinting
+	/// Maximum stamina. We start taking oxyloss when this runs out while sprinting
+	var/max_stamina = 100
 	var/sprint_speed_factor = 0.4
-	var/lying_speed_factor = 0
 	var/sprint_cost_factor = 1
 	var/stamina_recovery = 1
-	var/min_walk_delay = 0//When move intent is walk, movedelay is clamped to this value as a lower bound
+	/// When move intent is walk, movedelay is clamped to this value as a lower bound
+	var/min_walk_delay = 0
 	var/exhaust_threshold = 50
-	var/datum/progressbar/stamina_bar	// Progress bar shown when stamina is not at full, and the mob supports stamina. Deleted on Logout or when stamina is full.
+	/// Progress bar shown when stamina is not at full, and the mob supports stamina. Deleted on Logout or when stamina is full.
+	var/datum/progressbar/stamina_bar
 
-	var/total_radiation	= 0 // DON'T MODIFY THIS DIRECTLY. USE apply_radiation()!
-	var/cloaked = 0//Set to 1 by cloaking devices, optimises update_icons
+	/// DON'T MODIFY THIS DIRECTLY. USE apply_radiation()!
+	var/total_radiation	= 0
+	/// Set to 1 by cloaking devices, optimises update_icons
+	var/cloaked = 0
 
-	var/tesla_ignore = 0	// If true, mob is not affected by tesla bolts.
+	/// If true, mob is not affected by tesla bolts.
+	var/tesla_ignore = 0
 
-	var/stop_sight_update = 0 //If true, it won't reset the mob vision flags
+	/// If true, it won't reset the mob vision flags
+	var/stop_sight_update = 0
 
 	var/burn_mod = 1
 	var/brute_mod = 1
 
-	var/limb_breaking = FALSE // used to limit people from queuing up limb-breaks
-	var/list/obj/aura/auras //Basically a catch-all aura/force-field thing.
+	/// Override for the visual attack effect shown on 'do_attack_animation()'.
+	var/attack_vis_effect
 
-	var/named = FALSE //Affects renaming animals and monkey species. Set to TRUE for animals with unique names, such as station pets. Doesn't affect any other mob.
+	/// used to limit people from queuing up limb-breaks
+	var/limb_breaking = FALSE
+	/// Basically a catch-all aura/force-field thing.
+	var/list/obj/aura/auras
 
-	///what icon the mob uses for speechbubbles
+	/// Affects renaming animals and monkey species. Set to TRUE for animals with unique names, such as station pets. Doesn't affect any other mob.
+	var/named = FALSE
+
+	/// What icon the mob uses for speechbubbles
 	var/bubble_icon = "default"
 
-	///If true, ignores weather effects
+	/// If true, ignores weather effects
 	var/resists_weather = FALSE
+
+	/// Time since last weather effect
+	var/weather_cooldown_time = 0
+
+	var/datum/psi_complexus/psi
+
+	///The obj to overlay on the aim target
+	var/obj/aiming_overlay/aiming
+
+	///A list of mobs the target is being aimed at by
+	var/list/aimed_at_by
+
+	var/singleton/maneuver/prepared_maneuver
+	var/list/available_maneuvers = list()
+
+	var/datum/language/default_language
+
+	var/atom/movable/z_observer/z_eye
+
+	atom_flags = CRITICAL_ATOM
+	var/instability = 0
+	var/last_instability = 0 // Used to calculate instability delta.
+	var/last_instability_event = null // most recent world.time that something bad happened due to instability.
+
+	var/datum/weakref/last_weather
+
+	var/tmp/last_push_notif
+
+	var/seer = 0 //for cult//Carbon, probably Human

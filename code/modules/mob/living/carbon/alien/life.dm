@@ -55,10 +55,10 @@
 			blinded = 1
 			set_stat(UNCONSCIOUS)
 			if(getHalLoss() > 0)
-				adjustHalLoss(-3)
+				adjustHalLoss(-0.03)
 
 		if(sleeping)
-			adjustHalLoss(-3)
+			adjustHalLoss(-0.03)
 			if (mind)
 				if(mind.active && client != null)
 					sleeping = max(sleeping-1, 0)
@@ -66,12 +66,12 @@
 			set_stat(UNCONSCIOUS)
 		else if(resting)
 			if(getHalLoss() > 0)
-				adjustHalLoss(-3)
+				adjustHalLoss(-0.03)
 
 		else
 			set_stat(CONSCIOUS)
 			if(getHalLoss() > 0)
-				adjustHalLoss(-1)
+				adjustHalLoss(-0.01)
 
 		// Eyes and blindness.
 		if(!has_eyes())
@@ -104,7 +104,7 @@
 
 	if (healths)
 		if (stat != DEAD)
-			switch((health - getHalLoss()) / maxHealth * 100) // Halloss should be factored in here for displaying
+			switch((health - getHalLoss()) / maxhealth * 100) // Halloss should be factored in here for displaying
 				if(100 to INFINITY)
 					healths.icon_state = "health0"
 				if(80 to 100)
@@ -148,14 +148,12 @@
 
 	if(environment.temperature > (T0C+66))
 		adjustFireLoss((environment.temperature - (T0C+66))/5) // Might be too high, check in testing.
-		if (fire) fire.icon_state = "fire2"
 		if(prob(20))
 			to_chat(src, SPAN_DANGER("You feel a searing heat!"))
-	else
-		if (fire) fire.icon_state = "fire0"
 
-/mob/living/carbon/alien/handle_fire()
+/mob/living/carbon/alien/handle_fire(var/seconds_per_tick, var/datum/gas_mixture/environment)
 	if(..())
 		return
-	bodytemperature += BODYTEMP_HEATING_MAX //If you're on fire, you heat up!
+	// Increment bodytemp up by up to BODYTEMP_HEATING_MAX C / sec.
+	bodytemperature += BODYTEMP_HEATING_MAX * 20 * seconds_per_tick
 	return

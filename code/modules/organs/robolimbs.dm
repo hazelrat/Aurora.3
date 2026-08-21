@@ -217,6 +217,13 @@ GLOBAL_DATUM(basic_robolimb, /datum/robolimb)
 	allowed_external_organs = list(BP_L_HAND, BP_R_HAND)
 	paintable = TRUE
 
+/datum/robolimb/vaurca/bulwark
+	company = PROSTHETIC_VAURCA_BULWARK
+	desc = "An adaptation of designs from old Sedantis, it has been redesigned to accomodate larger bioforms."
+	icon = 'icons/mob/human_races/vaurca/r_vaurcabulwarklimbs.dmi'
+	species_can_use = list(SPECIES_VAURCA_BULWARK)
+	paintable = TRUE
+
 /datum/robolimb/hoplan
 	company = PROSTHETIC_HOPLAN
 	desc = "A refined helmet with an industrial lean. Extra plating seems to be applied to the top surface while the rest of the head features \
@@ -269,3 +276,11 @@ GLOBAL_DATUM(basic_robolimb, /datum/robolimb)
 	linked_frame = SPECIES_IPC_BISHOP
 	icon = 'icons/mob/human_races/ipc/siseyo.dmi'
 	allowed_external_organs = list(BP_HEAD)
+
+/datum/robolimb/cheap
+	company = PROSTHETIC_CHEAP
+	desc = "A cheap, basic, and outdated prosthetic limb made out of plastic and metal. Straps onto the body."
+	allows_internal = FALSE
+	icon = 'icons/mob/human_races/cheap_prosthetic.dmi'
+	brute_mod = 1.1
+	burn_mod = 1.2
