@@ -103,11 +103,10 @@
 
 	movement_sounds = SFX_HEAVY_ARMOUR_FOOTSTEPS
 
-/obj/item/clothing/suit/armor/carrier/heavy/chestpouch
+/obj/item/clothing/suit/armor/carrier/heavy/chestpouch_noarms
 	starting_accessories = list(
 		/obj/item/clothing/accessory/armor_plate/heavy,
 		/obj/item/clothing/accessory/leg_guard/heavy,
-		/obj/item/clothing/accessory/arm_guard/heavy,
 		/obj/item/clothing/accessory/storage/chestpouch
 	)
 

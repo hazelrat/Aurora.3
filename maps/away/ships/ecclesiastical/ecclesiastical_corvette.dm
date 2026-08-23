@@ -33,7 +33,7 @@
 	vessel_mass = 5000
 	fore_dir = SOUTH
 	vessel_size = SHIP_SIZE_SMALL
-	designer = "Lodge of Temple Architect"
+	designer = "Lodge of Temple Architect, Ecclesiastical Authority of Axiom"
 	volume = "62 meters length, 29 meters beam/width, 12 meters vertical height"
 	drive = "Moderately Powerful Warp Drive"
 	weapons = "Dual ballistic gunnery pods."

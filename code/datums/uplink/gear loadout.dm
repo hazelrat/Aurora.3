@@ -68,6 +68,23 @@
 	path = /obj/structure/closet/crate/gear_loadout/ceres/single
 	telecrystal_cost = 10
 
+/datum/uplink_item/item/gear_loadout/ecclesiastical
+	name = "Order of Guardians Assets (Group)"
+	desc = "A crate containing gear for a group. The voidsuits are only usable by humans and synthetics."
+	path = /obj/structure/closet/crate/gear_loadout/order_of_guardians
+
+/datum/uplink_item/item/gear_loadout/ecclesiastical_single
+	name = "Order of Guardians Assets (Single)"
+	desc = "A crate containing gear for a single individual. Personally blessed by the Ecclesiarch, hallelujah."
+	path = /obj/structure/closet/crate/gear_loadout/order_of_guardians/single
+	telecrystal_cost = 10
+
+/datum/uplink_item/item/gear_loadout/ecclesiastical_single_officer
+	name = "Order of Guardians Officer Assets (Single)"
+	desc = "A crate containing gear for a single individual. Used by officers of the rank of Gefreiter and above."
+	path = /obj/structure/closet/crate/gear_loadout/order_of_guardians/single/officer
+	telecrystal_cost = 10
+
 /datum/uplink_item/item/gear_loadout/cowboys
 	name = "Frontier Cowboys (Group)"
 	desc = "A crate containing gear for a group. Yeehaw."
