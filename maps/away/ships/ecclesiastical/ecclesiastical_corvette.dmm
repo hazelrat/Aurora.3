@@ -9,9 +9,7 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/gunnery)
 "ad" = (
-/obj/structure/bed/stool/chair/office/bridge/pilot{
-	dir = 1
-	},
+/obj/structure/bed/stool/chair/office/bridge/pilot,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/random/dirt_75,
 /turf/simulated/floor/tiled/dark/full,
@@ -1691,11 +1689,11 @@
 /turf/simulated/wall/shuttle/dark/cardinal/red,
 /area/ecclesiastical_corvette/atmospherics)
 "ku" = (
-/obj/structure/machinery/computer/ship/sensors/terminal{
-	dir = 8;
-	req_access = list(258)
-	},
 /obj/effect/floor_decal/industrial/outline/security,
+/obj/structure/machinery/computer/ship/helm/terminal{
+	req_access = list(258);
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/full,
 /area/shuttle/ecclesiastical)
 "kD" = (
@@ -1835,6 +1833,11 @@
 /obj/random/dirt_75,
 /turf/simulated/floor/tiled/dark,
 /area/ecclesiastical_corvette/atmospherics)
+"ly" = (
+/obj/structure/lattice/catwalk/indoor,
+/obj/structure/ship_weapon_dummy,
+/turf/space,
+/area/ecclesiastical_corvette/gunnery)
 "lF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -3047,7 +3050,10 @@
 /obj/effect/landmark/entry_point/fore{
 	name = "fore, gunnery"
 	},
-/turf/simulated/floor/airless,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/space,
 /area/ecclesiastical_corvette/exterior)
 "ua" = (
 /obj/structure/machinery/portable_atmospherics/canister/air/airlock,
@@ -3331,6 +3337,10 @@
 /obj/item/clothing/accessory/poncho/trinary/shouldercape/blue,
 /obj/item/clothing/accessory/poncho/trinary/shouldercape/blue,
 /obj/random/dirt_75,
+/obj/item/clothing/accessory/bandanna/black,
+/obj/item/clothing/accessory/bandanna/black,
+/obj/item/clothing/accessory/bandanna/blue,
+/obj/item/clothing/accessory/bandanna/blue,
 /turf/simulated/floor/tiled/dark/full,
 /area/ecclesiastical_corvette/crew_quarters)
 "vC" = (
@@ -5843,13 +5853,11 @@
 /turf/simulated/floor/tiled/dark/full,
 /area/shuttle/ecclesiastical)
 "NA" = (
-/obj/structure/machinery/computer/ship/helm/terminal{
-	req_access = list(258)
-	},
 /obj/effect/floor_decal/industrial/outline/security,
 /obj/structure/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 10
 	},
+/obj/structure/machinery/computer/ship/sensors/terminal,
 /turf/simulated/floor/tiled/dark/full,
 /area/shuttle/ecclesiastical)
 "NQ" = (
@@ -6688,6 +6696,14 @@
 	dir = 4
 	},
 /obj/effect/map_effect/marker/airlock/ecclesiastical/cargo,
+/obj/structure/machinery/embedded_controller/radio/airlock/airlock_controller{
+	pixel_x = -7;
+	pixel_y = 25
+	},
+/obj/structure/machinery/airlock_sensor{
+	pixel_x = 6;
+	pixel_y = 26
+	},
 /turf/simulated/floor/plating,
 /area/ecclesiastical_corvette/cargo)
 "TW" = (
@@ -37034,8 +37050,8 @@ iB
 nl
 Uo
 kq
-FE
-FE
+Vk
+Vk
 Nq
 rY
 wu
@@ -37298,7 +37314,7 @@ Eb
 zE
 zE
 tQ
-Vk
+mi
 bK
 bK
 bK
@@ -37554,7 +37570,7 @@ fY
 Nl
 gM
 gM
-Nq
+ly
 Qo
 bK
 bK
@@ -37811,7 +37827,7 @@ py
 aa
 gM
 gM
-Nq
+ly
 Qo
 bK
 bK
@@ -38068,7 +38084,7 @@ JY
 gM
 gM
 gM
-Nq
+ly
 Qo
 bK
 bK
@@ -38325,8 +38341,8 @@ oY
 vR
 bv
 jP
-FE
 Vk
+jU
 bK
 bK
 bK
@@ -38582,8 +38598,8 @@ Gs
 Wh
 gG
 YT
-FE
 Vk
+jU
 bK
 bK
 bK
