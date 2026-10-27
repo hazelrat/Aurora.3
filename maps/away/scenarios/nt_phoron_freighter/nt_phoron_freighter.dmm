@@ -3730,7 +3730,7 @@
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock2{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/floor/airless,
 /area/ship/nt_phoron_freighter/eva)
 "yO" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -5546,7 +5546,7 @@
 "JB" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock4,
-/turf/space,
+/turf/simulated/floor/airless,
 /area/ship/nt_phoron_freighter/eva)
 "JC" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
@@ -5762,7 +5762,7 @@
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock5{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/floor/airless,
 /area/ship/nt_phoron_freighter/eva)
 "KM" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -6021,7 +6021,7 @@
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock3{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/floor/airless,
 /area/ship/nt_phoron_freighter/eva)
 "Mk" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -6542,7 +6542,7 @@
 "Pz" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock1,
-/turf/space,
+/turf/simulated/floor/airless,
 /area/ship/nt_phoron_freighter/eva)
 "PD" = (
 /obj/structure/lattice/catwalk/indoor/grate/dark,
@@ -7571,7 +7571,7 @@
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock6{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/floor/airless,
 /area/ship/nt_phoron_freighter/eva)
 "Wo" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -31773,7 +31773,7 @@ kc
 kc
 kc
 kc
-Gf
+Js
 KL
 kc
 kc
@@ -34346,7 +34346,7 @@ cs
 cs
 wK
 Gf
-Gf
+Js
 kc
 kc
 kc
@@ -35625,7 +35625,7 @@ kc
 kc
 kc
 kc
-Gf
+Js
 Gf
 cs
 cs
@@ -46162,7 +46162,7 @@ kc
 kc
 kc
 kc
-Gf
+Js
 Gf
 cs
 cs
@@ -46939,7 +46939,7 @@ cs
 cs
 wK
 Gf
-Gf
+Js
 kc
 kc
 kc
@@ -49764,7 +49764,7 @@ kc
 kc
 kc
 yN
-Gf
+Js
 kc
 kc
 kc

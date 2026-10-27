@@ -1,11 +1,11 @@
 // Actual docks.
 
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock1
-	name = "Scarab Salvage Vessel - Port Dock #1"
+	name = "NanoTrasen Freight Vessel - Port Dock #1"
 	landmark_tag = "nt_phoron_freighter_dock1"
 
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock2
-	name = "Scarab Salvage Vessel - Port Dock #2"
+	name = "NanoTrasen Freight Vessel - Port Dock #2"
 	landmark_tag = "nt_phoron_freighter_dock2"
 
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock3
@@ -13,15 +13,15 @@
 	landmark_tag = "nt_phoron_freighter_dock3"
 
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock4
-	name = "Scarab Salvage Vessel - Starboard Dock #1"
+	name = "NanoTrasen Freight Vessel - Starboard Dock #1"
 	landmark_tag = "nt_phoron_freighter_dock4"
 
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock5
-	name = "Scarab Salvage Vessel - Starboard Dock #2"
+	name = "NanoTrasen Freight Vessel - Starboard Dock #2"
 	landmark_tag = "nt_phoron_freighter_dock5"
 
 /obj/effect/shuttle_landmark/nt_phoron_freighter/dock6
-	name = "Scarab Salvage Vessel - Starboard Dock #3"
+	name = "NanoTrasen Freight Vessel - Starboard Dock #3"
 	landmark_tag = "nt_phoron_freighter_dock6"
 
 // -----------------
