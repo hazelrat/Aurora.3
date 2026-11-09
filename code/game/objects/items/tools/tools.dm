@@ -85,8 +85,8 @@
 	transform = tf
 
 /obj/item/screwdriver/get_belt_overlay()
-	var/mutable_appearance/body = mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "screwdriver")
-	var/mutable_appearance/head = mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "screwdriver_head")
+	var/mutable_appearance/body = mutable_appearance('icons/obj/item/clothing/belts/belt_overlays.dmi', "screwdriver")
+	var/mutable_appearance/head = mutable_appearance('icons/obj/item/clothing/belts/belt_overlays.dmi', "screwdriver_head")
 	body.color = color
 	head.AddOverlays(body)
 	return head
@@ -167,8 +167,8 @@
 	transform = tf
 
 /obj/item/wirecutters/get_belt_overlay()
-	var/mutable_appearance/body = mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "wirecutters")
-	var/mutable_appearance/head = mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "wirecutters_head")
+	var/mutable_appearance/body = mutable_appearance('icons/obj/item/clothing/belts/belt_overlays.dmi', "wirecutters")
+	var/mutable_appearance/head = mutable_appearance('icons/obj/item/clothing/belts/belt_overlays.dmi', "wirecutters_head")
 	body.color = color
 	head.AddOverlays(body)
 	return head
@@ -302,8 +302,7 @@
 	light_color = LIGHT_COLOR_BLUE
 
 	var/last_gen = 0
-	var/fuelgen_delay = 400 //The time, in deciseconds, required to regenerate one unit of fuel
-	//400 = 1 unit per 40 seconds
+	var/fuelgen_delay = 75 // One unit every 7.5 seconds; five minutes from empty to full.
 	change_icons = FALSE
 
 	var/obj/item/eyeshield/eyeshield
@@ -324,7 +323,7 @@
 	if(welding_blind)
 		delay *= 3
 
-	var/image/welding_sparks = image('icons/effects/effects.dmi', welding_state)
+	var/image/welding_sparks = overlay_image('icons/effects/effects.dmi', welding_state, flags = RESET_COLOR)
 	welding_sparks.plane = ABOVE_LIGHTING_PLANE
 	target.AddOverlays(welding_sparks)
 	. = ..()
@@ -491,7 +490,7 @@
 			to_chat(user, SPAN_WARNING("You are already heating \the [O]!"))
 			return
 		user.visible_message(SPAN_WARNING("[user] begins heating \the [O]..."), SPAN_WARNING("You start to heat \the [O]!"))
-		switch(alert("Are you sure you want to do this? It is quite dangerous and could get you in trouble.", "Heat up fuel tank", "No", "Yes"))
+		switch(tgui_alert(usr, "Are you sure you want to do this? It is quite dangerous and could get you in trouble.", "Heat up fuel tank", list("No", "Yes")))
 			if("Yes")
 				log_and_message_admins("is attempting to welderbomb", user)
 				to_chat(user, SPAN_ALERT("You start heating the fueltank..."))

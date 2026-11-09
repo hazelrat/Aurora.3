@@ -48,6 +48,9 @@
 /obj/item/nullrod/dominia/holodeck
 	can_change_form = FALSE
 
+/obj/item/nullrod/luceiansceptre/holodeck
+	can_change_form = FALSE
+
 /obj/item/nullrod/staff
 	name = "null staff"
 	desc = "A staff of pure obsidian, its very presence disrupts and dampens the powers of paranormal phenomenae."
@@ -306,7 +309,7 @@
 			if(vampire.status & VAMP_ISTHRALL)
 				if(do_after(user, 1.5 SECONDS))
 					K.visible_message(SPAN_DANGER("[user] waves \the [src] over \the [K]'s head, [K] looks captivated by it."), SPAN_WARNING("[user] waves the [src] over your head. <b>You see a foreign light, asking you to follow it. Its presence burns and blinds.</b>"))
-				var/choice = alert(K,"Do you want to give into the light and be freed from your vampiric master?","Become cleansed","Resist","Give in")
+				var/choice = tgui_alert(K, "Do you want to give into the light and be freed from your vampiric master?", "Become cleansed", list("Resist", "Give in"))
 				switch(choice)
 					if("Resist")
 						K.visible_message(SPAN_WARNING("The gaze in [K]'s eyes remains determined."), SPAN_NOTICE("You turn away from the light, remaining true to your vampiric master!"))
@@ -325,7 +328,7 @@
 		else if(GLOB.cult && (K.mind in GLOB.cult.current_antagonists) && prob(75))
 			if(do_after(user, 1.5 SECONDS))
 				K.visible_message(SPAN_DANGER("[user] waves \the [src] over \the [K]'s head, [K] looks captivated by it."), SPAN_WARNING("[user] waves the [src] over your head. <b>You see a foreign light, asking you to follow it. Its presence burns and blinds.</b>"))
-				var/choice = alert(K,"Do you want to give up your goal?","Become cleansed","Resist","Give in")
+				var/choice = tgui_alert(K, "Do you want to give up your goal?", "Become cleansed", list("Resist", "Give in"))
 				switch(choice)
 					if("Resist")
 						K.visible_message(SPAN_WARNING("The gaze in [K]'s eyes remains determined."), SPAN_NOTICE("You turn away from the light, remaining true to the Geometer!"))

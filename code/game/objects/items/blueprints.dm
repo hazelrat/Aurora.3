@@ -55,7 +55,7 @@
 
 /obj/item/blueprints/proc/set_valid_z_levels()
 	if(SSatlas.current_map.use_overmap)
-		var/obj/effect/overmap/visitable/sector/S = GLOB.map_sectors["[GET_Z(src)]"]
+		var/obj/effect/overmap/visitable/sector/S = get_map_sector(GET_Z(src))
 		if(!S) //Blueprints are useless now, but keep them around for fluff
 			desc = "Some dusty old blueprints. The markings are old, and seem entirely irrelevant for your wherabouts."
 			return FALSE
@@ -83,7 +83,7 @@
 /obj/item/blueprints/outpost/attack_self(mob/user)
 	if(!length(valid_z_levels) || !valid_z_levels) //Outpost blueprints can initialize before exoplanets, so put this in here to doublecheck it.
 		set_valid_z_levels()
-	var/obj/effect/overmap/visitable/sector/exoplanet/E = GLOB.map_sectors["[GET_Z(user)]"]
+	var/obj/effect/overmap/visitable/sector/exoplanet/E = get_map_sector(GET_Z(user))
 	if(istype(E))
 		if(E.generated_name) //Prevent the prefix from being super long with the planet type appended
 			area_prefix = E.planet_name
@@ -180,7 +180,7 @@
 
 /obj/item/storage/lockbox/shuttle_blueprints //Blueprints for modifying the Horizon's shuttles.
 	name = "shuttle blueprints lockbox"
-	req_access = list(ACCESS_CE)
+	req_access = list(/datum/access/ce::id)
 	starts_with = list(
 		/obj/item/blueprints/shuttle/intrepid = 1,
 		/obj/item/blueprints/shuttle/mining_shuttle = 1,

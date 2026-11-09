@@ -25,6 +25,8 @@
 		SPECIES_SKRELL,
 		SPECIES_SKRELL_AXIORI,
 		SPECIES_UNATHI,
+		SPECIES_UNATHI_URAWANI,
+		SPECIES_UNATHI_ZIRALIXI,
 		SPECIES_TAJARA,
 		SPECIES_TAJARA_MSAI,
 		SPECIES_TAJARA_ZHAN,
@@ -545,6 +547,8 @@
 
 		if(O.status & ORGAN_ROBOT)
 			wounds += "inorganic"
+		if(O.status & ORGAN_DEAD)
+			wounds += "necrotic"
 		if(O.status & ORGAN_ARTERY_CUT)
 			wounds += "severed [O.artery_name]"
 		if(O.tendon_status() & TENDON_CUT)
