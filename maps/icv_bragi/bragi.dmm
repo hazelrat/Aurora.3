@@ -5,6 +5,10 @@
 	},
 /turf/simulated/open,
 /area/space)
+"ai" = (
+/obj/structure/machinery/recharge_station,
+/turf/simulated/floor/tiled/dark/full,
+/area/space)
 "ak" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/arrow/yellow{
@@ -303,6 +307,12 @@
 	},
 /turf/simulated/floor/tiled/gridded,
 /area/space)
+"kj" = (
+/obj/structure/platform_deco/ledge{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/space)
 "kt" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark/full,
@@ -392,6 +402,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
+/area/space)
+"mu" = (
+/obj/structure/platform_deco/ledge{
+	dir = 8
+	},
+/turf/simulated/open,
 /area/space)
 "mB" = (
 /obj/effect/floor_decal/corner/dark_green/full,
@@ -936,6 +952,12 @@
 	},
 /turf/simulated/floor/tiled/gridded,
 /area/space)
+"Dx" = (
+/obj/structure/platform_deco/ledge{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/space)
 "DB" = (
 /obj/structure/platform/ledge,
 /obj/structure/platform/ledge{
@@ -978,6 +1000,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/gridded,
+/area/space)
+"Ed" = (
+/turf/simulated/floor/greengrid/nitrogen,
 /area/space)
 "En" = (
 /obj/effect/floor_decal/corner/dark_green{
@@ -1187,6 +1212,10 @@
 /obj/structure/lattice/catwalk/indoor,
 /turf/simulated/open,
 /area/space)
+"IR" = (
+/obj/structure/platform_deco/ledge,
+/turf/simulated/open,
+/area/space)
 "IU" = (
 /obj/structure/platform/ledge{
 	dir = 1
@@ -1355,6 +1384,10 @@
 /obj/structure/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/space)
+"Om" = (
+/obj/structure/machinery/drone_fabricator,
+/turf/simulated/floor/greengrid/nitrogen,
+/area/space)
 "Oo" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -1460,6 +1493,12 @@
 	},
 /obj/structure/platform_deco/column,
 /turf/simulated/floor/tiled/dark,
+/area/space)
+"RD" = (
+/obj/structure/machinery/computer/drone_control{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/full,
 /area/space)
 "RI" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -159391,11 +159430,11 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
+MW
+MW
+MW
+MW
+MW
 YH
 YH
 YH
@@ -159648,11 +159687,11 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
+MW
+WN
+RD
+WN
+MW
 YH
 YH
 YH
@@ -159903,15 +159942,15 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
+MW
+MW
+MW
+Go
+Go
+Go
+MW
+MW
+MW
 YH
 YH
 YH
@@ -160160,15 +160199,15 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
+MW
+Wu
+Dx
+ab
+IG
+ab
+kj
+Wu
+MW
 YH
 YH
 YH
@@ -160417,15 +160456,15 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
+MW
+Wu
+IR
+Vz
+IG
+Vz
+mu
+Wu
+MW
 YH
 YH
 YH
@@ -160674,15 +160713,15 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
+MW
+Wu
+qi
+Om
+Go
+ai
+yw
+Wu
+MW
 YH
 YH
 YH
@@ -160931,15 +160970,15 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
+WN
+IG
+IG
+Ed
+Go
+Go
+IG
+IG
+WN
 YH
 YH
 YH
@@ -161188,15 +161227,15 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
+MW
+Wu
+qi
+Ed
+Go
+ai
+yw
+Wu
+MW
 YH
 YH
 YH
@@ -161445,15 +161484,15 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
+MW
+Wu
+Dx
+ab
+IG
+ab
+kj
+Wu
+MW
 YH
 YH
 YH
@@ -161702,15 +161741,15 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
+MW
+Wu
+Wu
+Wu
+IG
+Wu
+Wu
+Wu
+MW
 YH
 YH
 YH
@@ -161959,15 +161998,15 @@ YH
 YH
 YH
 YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
-YH
+MW
+MW
+MW
+MW
+WN
+MW
+MW
+MW
+MW
 YH
 YH
 YH
