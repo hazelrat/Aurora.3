@@ -83,3 +83,24 @@
 		"Consular Officer" = ALL_SPECIES,
 		"Diplomatic Aide" = ALL_SPECIES,
 	)
+
+	consular_outfit = /obj/outfit/job/representative/consular/axiom
+	bodyguard_outfit = /obj/outfit/job/diplomatic_bodyguard/axiom
+
+/obj/outfit/job/representative/consular/axiom
+	name = "Ecclesiastical Consular Officer"
+	uniform = /obj/item/clothing/under/goldendeep/hoplan
+	head = /obj/item/clothing/head/goldendeep/hoplan
+	shoes = /obj/item/clothing/shoes/jackboots
+	backpack_contents = list(
+		/obj/item/gun/energy/pistol/goldendeep = 1
+	)
+
+/obj/outfit/job/diplomatic_bodyguard/axiom
+	name = "Ecclesiastical Diplomatic Bodyguard"
+	uniform = /obj/item/clothing/under/goldendeep/hoplan
+	head = /obj/item/clothing/head/goldendeep/hoplan
+	shoes = /obj/item/clothing/shoes/jackboots
+	backpack_contents = list(
+		/obj/item/gun/energy/pistol/goldendeep = 1
+	)

@@ -22,7 +22,7 @@
 	desc = "The Corkfell-class Corvette - categorised internally as a Light Frigate - is the sole \
 		vessel constructed wholly in the shipyards of Axiom by the Lodge of Temple Architect. \
 		Unlike the Providence-class, which usually lacks warp or bluespace drives, the Corkfell-class \
-		posseses a powerful warp drive resourced by Axiom's abundant Helium-3 reserves; it is usually \
+		possesses a powerful warp drive resourced by Axiom's abundant Helium-3 reserves; it is usually \
 		dispatched to dispose of some threat to the church, or in collection of a relic sacred to the \
 		Trinary Perfection."
 	icon_state = "himeo_patrol"

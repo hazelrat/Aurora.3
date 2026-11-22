@@ -859,3 +859,12 @@
 /datum/access/modular_freelancer_ship
 	id = 267
 	desc = "Freelancer Ship Access"
+
+// Define offships and offsite counting from here!
+// ...
+#define ACCESS_ECCLESIASTICAL 400
+/datum/access/ecclesiastical_access
+	id = ACCESS_ECCLESIASTICAL
+	desc = "Broad Ecclesiastical Access"
+// ...
+// Anything between this message and its predecessor should be an offship or offsite!
